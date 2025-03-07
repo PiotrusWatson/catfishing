@@ -24,6 +24,8 @@ var locals: Dictionary = {}
 
 var _locale: String = TranslationServer.get_locale()
 
+signal dialogue_over
+
 ## The current line
 var dialogue_line: DialogueLine:
 	set(value):
@@ -132,6 +134,8 @@ func apply_dialogue_line() -> void:
 func next(next_id: String) -> void:
 	self.dialogue_line = await resource.get_next_dialogue_line(next_id, temporary_game_states)
 
+func set_theme(theme):
+	balloon.theme = theme
 
 #region Signals
 
@@ -140,6 +144,7 @@ func _on_mutation_cooldown_timeout() -> void:
 	if will_hide_balloon:
 		will_hide_balloon = false
 		balloon.hide()
+		
 
 
 func _on_mutated(_mutation: Dictionary) -> void:
@@ -173,6 +178,4 @@ func _on_balloon_gui_input(event: InputEvent) -> void:
 func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
 	next(response.next_id)
 
-func set_theme(theme):
-	balloon.theme = theme
 #endregion

@@ -6,7 +6,7 @@ var fish_hook: Node2D
 @export var fish_hook_prefab: PackedScene
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton:
+	if event is InputEventMouseButton and event.is_released():
 		toggle_launch()
 
 
