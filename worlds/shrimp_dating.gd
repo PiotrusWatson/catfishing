@@ -45,3 +45,7 @@ func parse_tags(line):
 			shrimp_image.texture = shrimp_data.blushing_image
 		elif tag == "normal":
 			shrimp_image.texture = shrimp_data.basic_image
+		elif tag.begins_with("background"):
+			var index = int(tag.split("=")[1])
+			background.texture = shrimp_data.backgrounds[index]
+			
