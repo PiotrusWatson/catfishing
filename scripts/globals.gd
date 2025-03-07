@@ -1,3 +1,3 @@
 extends Node
 
-var current_shrimp: Node2D
+var current_shrimp: ShrimpType

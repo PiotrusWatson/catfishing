@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="ShrimpType" load_steps=3 format=3 uid="uid://654d7dklnoik"]
+[gd_resource type="Resource" script_class="ShrimpType" load_steps=4 format=3 uid="uid://654d7dklnoik"]
 
 [ext_resource type="Texture2D" uid="uid://c18wqskr2ouj3" path="res://placeholder/shimp.jpg" id="1_2t83w"]
+[ext_resource type="Resource" uid="uid://b478ito65olaa" path="res://dialogues/placeholder_shimp.dialogue" id="1_5fi3x"]
 [ext_resource type="Script" uid="uid://dtjomkji7bwyx" path="res://scripts/shrimptype.gd" id="1_f5o8c"]
 
 [resource]
 script = ExtResource("1_f5o8c")
 basic_image = ExtResource("1_2t83w")
+basic_dialogue = ExtResource("1_5fi3x")
 metadata/_custom_type_script = "uid://dtjomkji7bwyx"
