@@ -1,0 +1,85 @@
+[gd_scene load_steps=8 format=3 uid="uid://dwkykno188pt"]
+
+[ext_resource type="Theme" uid="uid://2gdxtsf4t82y" path="res://ui/title_ui_theme.tres" id="1_l580b"]
+[ext_resource type="Script" uid="uid://b7sfgrdmmt2gh" path="res://worlds/title.gd" id="2_8ml7d"]
+[ext_resource type="Texture2D" uid="uid://hx4brvjwakh8" path="res://placeholder/B01_4480d32e-5116-41c8-9638-3c8fd4c85415_large.webp" id="2_jyiac"]
+[ext_resource type="Texture2D" uid="uid://diirpas2c4t7n" path="res://placeholder/Fish_emoji_icon_png_large.webp" id="3_k5pgb"]
+
+[sub_resource type="Gradient" id="Gradient_l580b"]
+offsets = PackedFloat32Array(0, 0.402597, 0.961039, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.302738, 0.302738, 0.302738, 1, 0.597403, 0.597403, 0.597403, 1, 1, 1, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_jyiac"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_l580b"]
+width = 1150
+height = 600
+color_ramp = SubResource("Gradient_l580b")
+noise = SubResource("FastNoiseLite_jyiac")
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_l580b")
+script = ExtResource("2_8ml7d")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("NoiseTexture2D_l580b")
+
+[node name="CAT" type="TextureRect" parent="Background"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 34.0
+offset_right = 514.0
+offset_bottom = 453.0
+texture = ExtResource("2_jyiac")
+
+[node name="FISH" type="TextureRect" parent="Background"]
+layout_mode = 0
+offset_left = 494.0
+offset_top = 53.0
+offset_right = 974.0
+offset_bottom = 423.0
+texture = ExtResource("3_k5pgb")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -462.0
+offset_top = 125.0
+offset_right = 470.0
+offset_bottom = 305.0
+grow_horizontal = 2
+text = "CAT FISHING"
+
+[node name="ButtonContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -158.0
+offset_top = 124.0
+offset_right = 118.0
+offset_bottom = 184.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Play" type="Button" parent="ButtonContainer"]
+layout_mode = 2
+text = "Play"
+
+[connection signal="pressed" from="ButtonContainer/Play" to="." method="_on_play_pressed"]

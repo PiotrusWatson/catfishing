@@ -1,0 +1,22 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://2gdxtsf4t82y"]
+
+[ext_resource type="FontFile" uid="uid://bw7csb2v3xxdr" path="res://fonts/Ldfcomicsansbold-zgma.ttf" id="1_1yl33"]
+[ext_resource type="StyleBox" uid="uid://ckgdxc8f4gpyc" path="res://ui/button_style.tres" id="1_w5it2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w5it2"]
+bg_color = Color(1.49205e-06, 0.478195, 0.2391, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 10
+
+[resource]
+default_font = ExtResource("1_1yl33")
+Button/constants/line_spacing = 10
+Button/font_sizes/font_size = 50
+Button/styles/hover = SubResource("StyleBoxFlat_w5it2")
+Button/styles/normal = ExtResource("1_w5it2")
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/constants/outline_size = 20
+Label/font_sizes/font_size = 150
