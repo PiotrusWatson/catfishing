@@ -1,0 +1,38 @@
+[gd_scene load_steps=8 format=3 uid="uid://bqck0u20a4m15"]
+
+[ext_resource type="Texture2D" uid="uid://dbhukjwr2y67w" path="res://placeholder/Suolijärvi_lake.jpg" id="1_mr521"]
+[ext_resource type="Script" uid="uid://dh828xw3ebhk4" path="res://worlds/fishing_signals.gd" id="1_y1fot"]
+[ext_resource type="Script" uid="uid://iksvhdexlg7r" path="res://worlds/fishing_zone.gd" id="2_0ajfm"]
+[ext_resource type="PackedScene" uid="uid://cg4mkyrvkwji8" path="res://scenes/bubble.tscn" id="3_dhyud"]
+[ext_resource type="Script" uid="uid://b3hratgfrdjf7" path="res://scenes/basic_player.gd" id="5_u84ol"]
+[ext_resource type="PackedScene" uid="uid://duigu0nqk8gti" path="res://scenes/fish_hoke.tscn" id="6_jyiib"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1sbkd"]
+size = Vector2(387, 148)
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_y1fot")
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(-0.0416417, -0.0297901)
+zoom = Vector2(2, 2)
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("1_mr521")
+
+[node name="FishingZone" type="CollisionShape2D" parent="."]
+position = Vector2(103.5, 122)
+shape = SubResource("RectangleShape2D_1sbkd")
+script = ExtResource("2_0ajfm")
+thing_to_spawn = ExtResource("3_dhyud")
+shrimp_to_choose = Array[PackedScene]([null])
+
+[node name="SpawnTimer" type="Timer" parent="FishingZone"]
+wait_time = 3.0
+autostart = true
+
+[node name="BasicPlayer" type="Node2D" parent="."]
+script = ExtResource("5_u84ol")
+fish_hook_prefab = ExtResource("6_jyiib")
+
+[connection signal="timeout" from="FishingZone/SpawnTimer" to="FishingZone" method="_on_spawn_timer_timeout"]

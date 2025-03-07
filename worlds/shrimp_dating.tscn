@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1lh3ffvib7s1"]
+
+[ext_resource type="Texture2D" uid="uid://c18wqskr2ouj3" path="res://placeholder/shimp.jpg" id="1_tmjs4"]
+
+[node name="ShrimpDating" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Shrimp" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 444.0
+offset_top = 16.0
+offset_right = 1180.0
+offset_bottom = 733.0
+texture = ExtResource("1_tmjs4")
