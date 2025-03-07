@@ -1,22 +1,44 @@
 ~ start
+match Globals.current_shrimp.love
+	when 1
+		=> normal_love
+	when < 1
+		=> low_love
+	else
+		=> high_love
+
+~ normal_love
 Shimp: [[Hewwo|Moi|Heyyyy]] bbz
 Shimp: im so skibbidy rizz
 - what are u talking about
 	Shimp: u haaate me :(((( => traumadump
 - omg ur shrimply delectable
 	Shimp: <3 <3 <3 => love_path
-=> END
+
+
+~ low_love
+Shimp: don't talk to me >:(
+Shimp: I've talked to my therapist and they said we shouldn't talk any more
+Shimp: I think this is for the best
+=> END!
+
+~ high_love
+Shimp: heyyyyyy studddddd <3 <3
+Shimp: i have so much sexual moisture (ZOI, 2025) right now
+Shimp: rawr xD [i] pounces on u [/i]
+=> END!
 
 ~ traumadump
 Shimp: ever since i was a [i]krill[/i], noone touched my [wait=1]pee pee
 Shimp: [wave amp=25 freq=5]please[/wave], mr cat fish, can u touch it
 Shimp: im begging for it
 Shimp: im gagging for it
+do Globals.decrement_current_love()
 => END!
 
 ~ love_path
 Shimp: [shake rate=20 level=10]ough~~~[/shake]
 Shimp: [wave amp=25 freq=5]oh my~~~~~[/wave]
 Shimp: im going to shrimp out
-Shimp: i have so much sexual moisture tm (ZOI) right now
+do Globals.increment_current_love()
 => END!

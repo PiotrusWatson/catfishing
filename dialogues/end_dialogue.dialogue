@@ -1,2 +1,10 @@
-You throw the shrimp back into the lake. You think this date went pretty well.
+~ start
+You throw the shrimp back into the lake. 
+match Globals.current_shrimp.love
+	when 1
+		You feel pretty ambivalent about this date.
+	when < 1
+		You feel like this date went pretty badly.
+	when > 1
+		You feel like this date went pretty well.
 => END

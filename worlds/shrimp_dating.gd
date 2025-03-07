@@ -8,14 +8,15 @@ var shrimp_data: ShrimpType
 var shrimp_dialogue: DialogueResource
 var spawned_box: Node
 var state = DatingState.CHARACTER
+
 func _ready():
 	shrimp_data = Globals.current_shrimp
+	print("CURRENT_LOVE", shrimp_data.love)
 	shrimp_image = shrimp_data.basic_image
 	shrimp_dialogue = shrimp_data.basic_dialogue
 	make_box()
 	
 func handle_start_dialogue():
-	print("wow were doiujng it")
 	spawned_box.set_theme(shrimp_data.basic_theme)
 	if state == DatingState.CHARACTER:
 		DialogueManager.show_dialogue_balloon_scene(spawned_box, shrimp_dialogue)

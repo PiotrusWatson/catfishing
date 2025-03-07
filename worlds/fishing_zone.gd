@@ -3,6 +3,13 @@ extends CollisionShape2D
 @export var thing_to_spawn: PackedScene
 @export var shrimp_to_choose: Array[ShrimpType]
 
+func _ready():
+	if not Globals.first_time:
+		return
+	for shrimp in shrimp_to_choose:
+		shrimp.reset()
+	Globals.first_time = false
+
 func get_point_in_bounds():
 	var rect = shape.get_rect()
 	var end = rect.end
@@ -16,7 +23,6 @@ func spawn_thing():
 	var spawned_thing = thing_to_spawn.instantiate()
 	add_child(spawned_thing)
 	var chosen_shrimp = choose_shrimp()
-	print(chosen_shrimp)
 	spawned_thing.set_shrimp(chosen_shrimp)
 	spawned_thing.position = get_point_in_bounds()
 	return spawned_thing
