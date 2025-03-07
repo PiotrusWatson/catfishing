@@ -2,6 +2,8 @@
 match Globals.current_shrimp.love
 	when 1
 		=> normal_love
+	when 2
+		=> higher_love
 	when < 1
 		=> low_love
 	else
@@ -21,7 +23,15 @@ Shimp: don't talk to me >:(
 Shimp: I've talked to my therapist and they said we shouldn't talk any more
 Shimp: I think this is for the best
 => END!
-
+~ higher_love
+Shimp: let's take a walk
+Shimp: this is where i grew up. [wait=1] Duo Hervanta. [#background=1]
+Shimp: it was [wait=0.5] rough. The hesburger shuts at 10.
+Shimp: i had to fight to get those [wave]burgs[/wave].
+Shimp: but i did. and im so much stronger for it and now i only get head shots in counter strike.
+Shimp: thank you so much for accompanying me <3. it's always nice to take a trip down memory lane [#background=0]
+do Globals.increment_current_love()
+=> END!
 ~ high_love
 Shimp: heyyyyyy studddddd <3 <3
 Shimp: i have so much sexual moisture (ZOI, 2025) right now
