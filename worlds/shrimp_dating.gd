@@ -12,7 +12,6 @@ func _ready():
 	shrimp_data = Globals.current_shrimp
 	shrimp_image = shrimp_data.basic_image
 	shrimp_dialogue = shrimp_data.basic_dialogue
-	DialogueManager.dialogue_ended.connect(handle_end_dialogue)
 	make_box()
 	
 func handle_start_dialogue():
@@ -27,11 +26,12 @@ func handle_start_dialogue():
 	else:
 		get_tree().change_scene_to_file("res://worlds/piotrus_world.tscn")
 		
-func handle_end_dialogue():
+func handle_end_dialogue(resource):
 	spawned_box.queue_free()
 	make_box()
 	
 func make_box():
+	DialogueManager.dialogue_ended.connect(handle_end_dialogue)
 	spawned_box = dialogue_box_prefab.instantiate()
 	spawned_box.ready.connect(handle_start_dialogue)
 	add_child(spawned_box)
