@@ -2,6 +2,7 @@ extends Control
 enum DatingState{NONE, CHARACTER, END}
 
 @onready var shrimp_image = $Shrimp
+@onready var background = $Background
 @export var dialogue_box_prefab: PackedScene
 @onready var end_dialogue = preload("res://dialogues/end_dialogue.dialogue")
 var shrimp_data: ShrimpType
@@ -13,6 +14,7 @@ func _ready():
 	shrimp_data = Globals.current_shrimp
 	shrimp_image.texture = shrimp_data.basic_image
 	shrimp_dialogue = shrimp_data.basic_dialogue
+	background.texture = shrimp_data.backgrounds[0]
 	make_box()
 	
 func handle_start_dialogue():

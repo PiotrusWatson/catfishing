@@ -3,6 +3,7 @@ class_name ShrimpType
 
 @export var basic_image: Texture2D
 @export var blushing_image: Texture2D
+@export var backgrounds: Array[Texture2D]
 @export var basic_dialogue: DialogueResource
 @export var basic_theme: Theme
 @export var starting_love = 1
