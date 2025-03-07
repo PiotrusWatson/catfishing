@@ -11,8 +11,7 @@ var state = DatingState.CHARACTER
 
 func _ready():
 	shrimp_data = Globals.current_shrimp
-	print("CURRENT_LOVE", shrimp_data.love)
-	shrimp_image = shrimp_data.basic_image
+	shrimp_image.texture = shrimp_data.basic_image
 	shrimp_dialogue = shrimp_data.basic_dialogue
 	make_box()
 	
@@ -33,7 +32,14 @@ func handle_end_dialogue(resource):
 	
 func make_box():
 	DialogueManager.dialogue_ended.connect(handle_end_dialogue)
+	DialogueManager.got_dialogue.connect(parse_tags)
 	spawned_box = dialogue_box_prefab.instantiate()
 	spawned_box.ready.connect(handle_start_dialogue)
 	add_child(spawned_box)
 	
+func parse_tags(line):
+	for tag in line.tags:
+		if tag == "blushing":
+			shrimp_image.texture = shrimp_data.blushing_image
+		elif tag == "normal":
+			shrimp_image.texture = shrimp_data.basic_image

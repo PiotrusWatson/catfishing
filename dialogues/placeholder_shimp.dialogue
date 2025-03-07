@@ -8,7 +8,7 @@ match Globals.current_shrimp.love
 		=> high_love
 
 ~ normal_love
-Shimp: [[Hewwo|Moi|Heyyyy]] bbz
+Shimp: [[Hewwo|Moi|Heyyyy]] bbz [#normal]
 Shimp: im so skibbidy rizz
 - what are u talking about
 	Shimp: u haaate me :(((( => traumadump
@@ -31,14 +31,14 @@ Shimp: rawr xD [i] pounces on u [/i]
 ~ traumadump
 Shimp: ever since i was a [i]krill[/i], noone touched my [wait=1]pee pee
 Shimp: [wave amp=25 freq=5]please[/wave], mr cat fish, can u touch it
-Shimp: im begging for it
-Shimp: im gagging for it
+Shimp: im begging for it [#blushing]
+Shimp: im gagging for it [#normal]
 do Globals.decrement_current_love()
 => END!
 
 ~ love_path
-Shimp: [shake rate=20 level=10]ough~~~[/shake]
+Shimp: [shake rate=20 level=10]ough~~~[/shake] [#blushing]
 Shimp: [wave amp=25 freq=5]oh my~~~~~[/wave]
-Shimp: im going to shrimp out
+Shimp: im going to shrimp out [#normal]
 do Globals.increment_current_love()
 => END!
