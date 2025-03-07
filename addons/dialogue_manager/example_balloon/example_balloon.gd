@@ -54,6 +54,7 @@ var mutation_cooldown: Timer = Timer.new()
 
 func _ready() -> void:
 	balloon.hide()
+	print("balloon up")
 	Engine.get_singleton("DialogueManager").mutated.connect(_on_mutated)
 
 	# If the responses menu doesn't have a next action set, use this one
@@ -172,5 +173,6 @@ func _on_balloon_gui_input(event: InputEvent) -> void:
 func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
 	next(response.next_id)
 
-
+func set_theme(theme):
+	balloon.theme = theme
 #endregion

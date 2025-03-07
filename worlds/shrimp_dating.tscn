@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c1lh3ffvib7s1"]
+[gd_scene load_steps=5 format=3 uid="uid://c1lh3ffvib7s1"]
 
 [ext_resource type="Script" uid="uid://bxgdixl2nuvfk" path="res://worlds/shrimp_dating.gd" id="1_tdlqk"]
 [ext_resource type="Texture2D" uid="uid://c18wqskr2ouj3" path="res://placeholder/shimp.jpg" id="1_tmjs4"]
 [ext_resource type="Texture2D" uid="uid://d0uo1ltpkrl7" path="res://placeholder/duo.jpg" id="1_wem6c"]
+[ext_resource type="PackedScene" uid="uid://boje87mxmaur3" path="res://ui/placeholder_balloon.tscn" id="2_sx0bd"]
 
 [node name="ShrimpDating" type="Control"]
 layout_mode = 3
@@ -12,6 +13,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tdlqk")
+dialogue_box_prefab = ExtResource("2_sx0bd")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
