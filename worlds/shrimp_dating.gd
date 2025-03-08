@@ -4,6 +4,8 @@ enum DatingState{NONE, CHARACTER, END}
 @onready var shrimp_image = $Shrimp
 @onready var background = $Background
 @export var dialogue_box_prefab: PackedScene
+@export var debug_shrimp: ShrimpType
+@export var is_debug = false
 @onready var end_dialogue = preload("res://dialogues/end_dialogue.dialogue")
 var shrimp_data: ShrimpType
 var shrimp_dialogue: DialogueResource
@@ -11,6 +13,8 @@ var spawned_box: Node
 var state = DatingState.CHARACTER
 
 func _ready():
+	if is_debug:
+		Globals.current_shrimp = debug_shrimp
 	shrimp_data = Globals.current_shrimp
 	shrimp_image.texture = shrimp_data.basic_image
 	shrimp_dialogue = shrimp_data.basic_dialogue

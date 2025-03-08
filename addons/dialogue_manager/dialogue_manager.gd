@@ -77,6 +77,8 @@ func _ready() -> void:
 	# Make the dialogue manager available as a singleton
 	if not Engine.has_singleton("DialogueManager"):
 		Engine.register_singleton("DialogueManager", self)
+		
+	print("dialogue ready")
 
 
 ## Step through lines and run any mutations until we either hit some dialogue or the end of the conversation

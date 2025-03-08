@@ -30,4 +30,4 @@ enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogues/placeholder_shimp.dialogue", "res://dialogues/end_dialogue.dialogue", "res://dialogues/placeholder_shromp.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogues/placeholder_shimp.dialogue", "res://dialogues/end_dialogue.dialogue", "res://dialogues/placeholder_shromp.dialogue", "res://dialogues/intro_dialogue.dialogue")
