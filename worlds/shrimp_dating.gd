@@ -53,3 +53,4 @@ func parse_tags(line):
 			var index = int(tag.split("=")[1])
 			background.texture = shrimp_data.backgrounds[index]
 			
+			

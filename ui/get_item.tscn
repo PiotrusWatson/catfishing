@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=3 uid="uid://cieyycmet87mt"]
+
+[ext_resource type="StyleBox" uid="uid://ckgdxc8f4gpyc" path="res://ui/button_style.tres" id="1_8venn"]
+[ext_resource type="Script" uid="uid://b4tfdadpljbct" path="res://ui/get_item.gd" id="1_mo07m"]
+[ext_resource type="FontFile" uid="uid://bw7csb2v3xxdr" path="res://fonts/Ldfcomicsansbold-zgma.ttf" id="2_mo07m"]
+[ext_resource type="Texture2D" uid="uid://dcenng1r1tl75" path="res://placeholder/KIRB.png" id="3_pfcpc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w5it2"]
+bg_color = Color(1.49205e-06, 0.478195, 0.2391, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 10
+
+[sub_resource type="Theme" id="Theme_a4afa"]
+default_font = ExtResource("2_mo07m")
+Button/constants/line_spacing = 10
+Button/font_sizes/font_size = 50
+Button/styles/hover = SubResource("StyleBoxFlat_w5it2")
+Button/styles/normal = ExtResource("1_8venn")
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/constants/outline_size = 20
+Label/font_sizes/font_size = 50
+
+[node name="GetItem" type="CanvasLayer"]
+layer = 101
+script = ExtResource("1_mo07m")
+
+[node name="ItemBox" type="Panel" parent="."]
+z_index = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 320.0
+offset_top = 71.0
+offset_right = -269.0
+offset_bottom = -104.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_a4afa")
+
+[node name="Image" type="TextureRect" parent="ItemBox"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.5
+offset_top = -170.5
+offset_right = 149.5
+offset_bottom = 112.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_pfcpc")
+expand_mode = 2
+
+[node name="YouGot" type="Label" parent="ItemBox"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 373.0
+offset_right = 545.0
+offset_bottom = 447.0
+text = "You got the Kirby Toes"
+
+[connection signal="gui_input" from="ItemBox" to="." method="_on_item_box_gui_input"]

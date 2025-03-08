@@ -7,6 +7,7 @@ class_name ShrimpType
 @export var basic_dialogue: DialogueResource
 @export var basic_theme: Theme
 @export var starting_love = 1
+
 var love: int
 
 func _init():
@@ -20,6 +21,6 @@ func increment_love():
 
 func decrement_love():
 	love -= 1
-	
+
 func reset():
 	love = starting_love

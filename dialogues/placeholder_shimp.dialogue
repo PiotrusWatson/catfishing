@@ -11,8 +11,11 @@ match Globals.current_shrimp.love
 
 ~ normal_love
 Shimp: [[Hewwo|Moi|Heyyyy]] bbz [#normal]
-Shimp: im so skibbidy rizz
-- what are u talking about
+Shimp: hi... i want you to have this...
+do Inventory.add_and_show(Inventory.possible_items["kirby_toes"])
+Shimp: it's a family heirloom. I care a lot about it...
+Shimp: please keep it safe ....
+- i'm sorry!!! but toes aren't my thing
 	Shimp: u haaate me :(((( => traumadump
 - omg ur shrimply delectable
 	Shimp: <3 <3 <3 => love_path
