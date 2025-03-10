@@ -1,17 +1,22 @@
 extends Node
 
-enum ItemIs{ADDED, REMOVED}
+enum ItemIs{ADDED, REMOVED, ATTEMPTED_ADD}
 var items: Array[Item]
 @onready var item_get_prefab = preload("res://ui/get_item.tscn")
 @onready var possible_items = {"kirby_toes": preload("res://resources/items/placeholder/kirby_feet.tres")}
+@onready var inventory_menu_prefab = preload("res://ui/inventory.tscn")
 var item_get: Node
+var size = 20
+
 func add(item: Item):
-	items.append(item)
+	if len(items) < size:
+		items.append(item)
 
 func remove(index: int):
 	return items.pop_at(index)
 
 func add_and_show(item: Item):
+	##TODO: inform player when full
 	add(item)
 	show_get_item(item, ItemIs.ADDED)
 

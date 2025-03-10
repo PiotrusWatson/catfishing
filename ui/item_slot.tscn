@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://ow5eq3ms08jn"]
+
+[ext_resource type="Script" uid="uid://b7xfkvux56rg3" path="res://ui/item_slot.gd" id="1_gpwhp"]
+[ext_resource type="Texture2D" uid="uid://darx62eafnypx" path="res://placeholder/cross.svg" id="1_m0q4r"]
+[ext_resource type="Texture2D" uid="uid://d0qkf2o6wgqdj" path="res://placeholder/dustbin.png" id="2_lxngi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lxngi"]
+bg_color = Color(0.237206, 0.00065015, 0.531156, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gpwhp"]
+
+[sub_resource type="Theme" id="Theme_rjkvc"]
+Label/font_sizes/font_size = 30
+Panel/styles/panel = SubResource("StyleBoxFlat_lxngi")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_gpwhp")
+
+[node name="ItemSlot" type="PanelContainer"]
+layout_direction = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_rjkvc")
+script = ExtResource("1_gpwhp")
+
+[node name="FlowContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Image" type="TextureRect" parent="FlowContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("1_m0q4r")
+expand_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="FlowContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="FlowContainer/HBoxContainer"]
+layout_mode = 2
+text = "Empty  "
+horizontal_alignment = 1
+
+[node name="Delete" type="TextureButton" parent="FlowContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+texture_normal = ExtResource("2_lxngi")
+ignore_texture_size = true
+stretch_mode = 5
+
+[connection signal="pressed" from="FlowContainer/HBoxContainer/Delete" to="." method="_on_delete_pressed"]

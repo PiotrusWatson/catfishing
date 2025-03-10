@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://2cjixbckq2i8"]
+
+[ext_resource type="Script" uid="uid://bf3uiemt1ppri" path="res://ui/inventory_menu.gd" id="1_kosh3"]
+[ext_resource type="PackedScene" uid="uid://ow5eq3ms08jn" path="res://ui/item_slot.tscn" id="2_70ao8"]
+
+[node name="Inventory" type="CanvasLayer"]
+script = ExtResource("1_kosh3")
+item_slot_prefab = ExtResource("2_70ao8")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 123.0
+grow_horizontal = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+follow_focus = true
+horizontal_scroll_mode = 2
+vertical_scroll_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/ScrollContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ItemSlot" parent="Panel/ScrollContainer/HBoxContainer" instance=ExtResource("2_70ao8")]
+layout_mode = 2
