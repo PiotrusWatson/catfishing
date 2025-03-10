@@ -2,29 +2,50 @@ extends PanelContainer
 
 var empty_texture: Texture2D
 var empty_label = "Empty"
-@onready var image = $FlowContainer/Image
-@onready var label = $FlowContainer/HBoxContainer/Label
-@onready var delete_button = $FlowContainer/HBoxContainer/Delete
-signal item_deleted
+var index: int
+var filled = false
+@onready var image = $ItemDetails/Image
+@onready var label = $ItemDetails/Name
+@onready var button_box = $ButtonBox
+signal item_deleted(index: int)
 
 func _ready():
 	empty_texture = image.texture
-	delete_button.disabled = true
-	delete_button.visible = false
+	toggle_button_box(false)
 	
-func fill_details(item: Item):
+func fill_details(item: Item, index: int):
+	if item == null:
+		image.texture = empty_texture
+		label.text = empty_label
+		filled = false
+		return
 	image.texture = item.image
 	label.text = item.name
-	delete_button.disabled = false
-	delete_button.visible = true
+	self.index = index
+	filled = true
 
 func remove_details():
-	image.texture = empty_texture
-	label.text = empty_label
-	delete_button.disabled = true
-	delete_button.visible = false
-	item_deleted.emit()
-
+	item_deleted.emit(index)
+	toggle_button_box(false)
+	
 
 func _on_delete_pressed() -> void:
 	remove_details()
+	
+func toggle_button_box(is_show: bool):
+	button_box.visible = is_show
+	if is_show:
+		button_box.mouse_filter = button_box.MOUSE_FILTER_STOP
+		button_box.focus_mode = button_box.FOCUS_CLICK
+	else:
+		button_box.mouse_filter = button_box.MOUSE_FILTER_IGNORE
+		focus_mode = Control.FOCUS_CLICK
+
+
+func _on_close_pressed() -> void:
+	toggle_button_box(false)
+
+
+func _on_gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.is_pressed() and filled:
+		toggle_button_box(true)

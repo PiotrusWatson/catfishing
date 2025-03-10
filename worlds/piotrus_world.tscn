@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bqck0u20a4m15"]
+[gd_scene load_steps=11 format=3 uid="uid://bqck0u20a4m15"]
 
 [ext_resource type="Texture2D" uid="uid://dbhukjwr2y67w" path="res://placeholder/Suolijärvi_lake.jpg" id="1_mr521"]
 [ext_resource type="Script" uid="uid://dh828xw3ebhk4" path="res://worlds/fishing_signals.gd" id="1_y1fot"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://b3hratgfrdjf7" path="res://scenes/basic_player.gd" id="5_u84ol"]
 [ext_resource type="Resource" uid="uid://654d7dklnoik" path="res://resources/shrimps/placeholder/simp.tres" id="6_2qh0v"]
 [ext_resource type="PackedScene" uid="uid://duigu0nqk8gti" path="res://scenes/fish_hoke.tscn" id="6_jyiib"]
+[ext_resource type="Script" uid="uid://br3063apkpnh6" path="res://worlds/ui_buttons.gd" id="9_2qh0v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1sbkd"]
 size = Vector2(387, 148)
@@ -37,4 +38,17 @@ autostart = true
 script = ExtResource("5_u84ol")
 fish_hook_prefab = ExtResource("6_jyiib")
 
+[node name="UI Buttons" type="CanvasLayer" parent="."]
+script = ExtResource("9_2qh0v")
+
+[node name="Inventory" type="Button" parent="UI Buttons"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -8.0
+offset_bottom = 8.0
+grow_horizontal = 0
+text = "Inventory"
+
 [connection signal="timeout" from="FishingZone/SpawnTimer" to="FishingZone" method="_on_spawn_timer_timeout"]
+[connection signal="pressed" from="UI Buttons/Inventory" to="UI Buttons" method="_on_inventory_pressed"]

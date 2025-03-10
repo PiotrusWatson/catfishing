@@ -10,7 +10,6 @@ match Globals.current_shrimp.love
 		=> high_love
 
 ~ normal_love
-Shimp: [[Hewwo|Moi|Heyyyy]] bbz [#normal]
 Shimp: hi... i want you to have this...
 do Inventory.add_and_show(Inventory.possible_items["kirby_toes"])
 Shimp: it's a family heirloom. I care a lot about it...
@@ -42,10 +41,10 @@ Shimp: rawr xD [i] pounces on u [/i]
 => END!
 
 ~ traumadump
-Shimp: ever since i was a [i]krill[/i], noone touched my [wait=1]pee pee [#background=1]
-Shimp: [wave amp=25 freq=5]please[/wave], mr cat fish, can u touch it
-Shimp: im begging for it [#blushing]
-Shimp: im gagging for it [#normal]
+Shimp: ever since i was a [i]krill[/i], no-one licked my toes 
+Shimp: even here.... in Duo hervanta [#background=1]
+Shimp: this kirby toes is the only reminder of the life i could have had
+Shimp: why must you hurt me so....
 do Globals.decrement_current_love()
 => END!
 

@@ -6,6 +6,7 @@ var items: Array[Item]
 @onready var possible_items = {"kirby_toes": preload("res://resources/items/placeholder/kirby_feet.tres")}
 @onready var inventory_menu_prefab = preload("res://ui/inventory.tscn")
 var item_get: Node
+var inventory_menu: Node
 var size = 20
 
 func add(item: Item):
@@ -37,6 +38,18 @@ func show_get_item(item: Item, status: ItemIs):
 		item_get.show_get(item)
 	else:
 		item_get.show_give(item)
+		
+		
+func toggle_show_inventory(is_shown: bool):
+	if inventory_menu == null:
+		inventory_menu = inventory_menu_prefab.instantiate()
+		
+	var current_scene = get_current_scene.call()
+	if !has_child(current_scene, inventory_menu):
+		current_scene.add_child(inventory_menu)
+	
+	inventory_menu.update(items)
+	inventory_menu.toggle_show(is_shown)
 
 func has_child(node: Node, to_find: Node):
 	for child in node.get_children():
