@@ -19,3 +19,13 @@ func increment_current_love():
 func decrement_current_love():
 	current_shrimp.decrement_love()
 	print(current_shrimp.love)
+
+func strip_to_alphanumeric(name: String):
+	var regex = RegEx.new()
+	regex.compile("[^A-Za-z0-9]")
+	var result = regex.search(name)
+	return result.get_string(0)
+	
+func save(filename: String):
+	filename = strip_to_alphanumeric(filename)
+	var save_file = FileAccess.open("user://" + filename + ".save", FileAccess.WRITE)

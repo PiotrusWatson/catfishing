@@ -57,7 +57,8 @@ func has_child(node: Node, to_find: Node):
 			return true
 	return false
 		
-		
+func serialise():
+	pass		
 		
 var get_current_scene: Callable = func():
 	var current_scene: Node = Engine.get_main_loop().current_scene
