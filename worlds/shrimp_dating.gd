@@ -3,6 +3,7 @@ enum DatingState{NONE, CHARACTER, END}
 
 @onready var shrimp_image = $Shrimp
 @onready var background = $Background
+@onready var emotes = $Shrimp/Emotes
 @export var dialogue_box_prefab: PackedScene
 @export var debug_shrimp: ShrimpType
 @export var is_debug = false
@@ -46,9 +47,17 @@ func make_box():
 func parse_tags(line):
 	for tag in line.tags:
 		if tag == "blushing":
-			shrimp_image.texture = shrimp_data.blushing_image
+			emotes.start_blush()
+		elif tag == "sweating":
+			emotes.start_sweat()
+		elif tag == "sparkling":
+			emotes.start_sparkle()
+		elif tag == "questioning":
+			emotes.start_question()
+		elif tag == "alert":
+			emotes.start_exclamation()
 		elif tag == "normal":
-			shrimp_image.texture = shrimp_data.basic_image
+			emotes.reset_all()
 		elif tag.begins_with("background"):
 			var index = int(tag.split("=")[1])
 			background.texture = shrimp_data.backgrounds[index]

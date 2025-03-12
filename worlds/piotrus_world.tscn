@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bqck0u20a4m15"]
+[gd_scene load_steps=12 format=3 uid="uid://bqck0u20a4m15"]
 
 [ext_resource type="Texture2D" uid="uid://dbhukjwr2y67w" path="res://placeholder/Suolijärvi_lake.jpg" id="1_mr521"]
 [ext_resource type="Script" uid="uid://dh828xw3ebhk4" path="res://worlds/fishing_signals.gd" id="1_y1fot"]
@@ -9,6 +9,7 @@
 [ext_resource type="Resource" uid="uid://654d7dklnoik" path="res://resources/shrimps/placeholder/simp.tres" id="6_2qh0v"]
 [ext_resource type="PackedScene" uid="uid://duigu0nqk8gti" path="res://scenes/fish_hoke.tscn" id="6_jyiib"]
 [ext_resource type="Script" uid="uid://br3063apkpnh6" path="res://worlds/ui_buttons.gd" id="9_2qh0v"]
+[ext_resource type="Texture2D" uid="uid://br03kapttobgx" path="res://placeholder/Sam_Lake-MichaelFörtsch.jpg" id="10_6dury"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1sbkd"]
 size = Vector2(387, 148)
@@ -22,6 +23,12 @@ zoom = Vector2(2, 2)
 
 [node name="Background" type="Sprite2D" parent="."]
 texture = ExtResource("1_mr521")
+
+[node name="Lake" type="Sprite2D" parent="."]
+position = Vector2(111, 96)
+rotation = 1.5708
+scale = Vector2(0.25, 0.326933)
+texture = ExtResource("10_6dury")
 
 [node name="FishingZone" type="CollisionShape2D" parent="."]
 position = Vector2(103.5, 122)

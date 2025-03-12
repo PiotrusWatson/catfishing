@@ -15,7 +15,7 @@ do Inventory.add_and_show(Inventory.possible_items["kirby_toes"])
 Shimp: it's a family heirloom. I care a lot about it...
 Shimp: please keep it safe ....
 - i'm sorry!!! but toes aren't my thing
-	Shimp: u haaate me :(((( => traumadump
+	=> traumadump
 - omg ur shrimply delectable
 	Shimp: <3 <3 <3 => love_path
 
@@ -41,10 +41,14 @@ Shimp: rawr xD [i] pounces on u [/i]
 => END!
 
 ~ traumadump
-Shimp: ever since i was a [i]krill[/i], no-one licked my toes 
-Shimp: even here.... in Duo hervanta [#background=1]
+Shimp: omg??? what??? [#questioning]
+Shimp: u haaate me :(((( [#alert]
+Shimp: ever since i was a [i]krill[/i], no-one licked my toes [#blushing]
+Shimp: even here.... in Duo hervanta [#background=1] 
 Shimp: this kirby toes is the only reminder of the life i could have had
-Shimp: why must you hurt me so....
+Shimp: a life of licking toes.... imagine.... [#sparkling]
+Shimp: oughhh are u judging me [#sweating]
+Shimp: why must you hurt me so.... [#normal]
 do Globals.decrement_current_love()
 => END!
 
