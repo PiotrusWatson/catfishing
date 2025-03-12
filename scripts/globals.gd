@@ -2,6 +2,8 @@ extends Node
 
 var first_time = true
 var current_shrimp: ShrimpType
+var current_scene_type: Enums.SceneType
+var item_being_given: Item
 var current_love: int
 
 
@@ -14,11 +16,12 @@ func set_current_shrimp(new_shrimp):
 
 func increment_current_love():
 	current_shrimp.increment_love()
-	print(current_shrimp.love)
 
 func decrement_current_love():
 	current_shrimp.decrement_love()
-	print(current_shrimp.love)
+
+func set_given_item(item: Item):
+	item_being_given = item
 
 func strip_to_alphanumeric(name: String):
 	var regex = RegEx.new()

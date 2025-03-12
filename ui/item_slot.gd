@@ -7,6 +7,7 @@ var filled = false
 @onready var image = $ItemDetails/Image
 @onready var label = $ItemDetails/Name
 @onready var button_box = $ButtonBox
+@onready var give_button = $ButtonBox/Give
 signal item_deleted(index: int)
 
 func _ready():
@@ -41,6 +42,9 @@ func toggle_button_box(is_show: bool):
 		button_box.mouse_filter = button_box.MOUSE_FILTER_IGNORE
 		focus_mode = Control.FOCUS_CLICK
 
+func toggle_give(is_show: bool):
+	give_button.visible = is_show
+	give_button.disabled = !is_show
 
 func _on_close_pressed() -> void:
 	toggle_button_box(false)

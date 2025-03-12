@@ -6,7 +6,10 @@ class_name ShrimpType
 @export var basic_dialogue: DialogueResource
 @export var basic_theme: Theme
 @export var starting_love = 1
+@export var liked_item_types: Array[Enums.ItemType]
+@export var disliked_item_types: Array[Enums.ItemType]
 
+signal received_item(mood: Enums.Mood)
 var love: int
 
 func _init():
@@ -20,6 +23,21 @@ func increment_love():
 
 func decrement_love():
 	love -= 1
+	
+func give_item(item: Item):
+	Globals.set_given_item(item)
+	if item.type in liked_item_types:
+		increment_love()
+		increment_love()
+		received_item.emit(Enums.Mood.HAPPY)
+	elif item.type in disliked_item_types:
+		decrement_love()
+		received_item.emit(Enums.Mood.SAD)
+	else:
+		increment_love()
+		received_item.emit(Enums.Mood.NEUTRAL)
+		
+		
 
 func reset():
 	love = starting_love

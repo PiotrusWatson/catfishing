@@ -2,4 +2,4 @@ extends Control
 
 
 func _on_play_pressed() -> void:
-	get_tree().change_scene_to_file("res://worlds/piotrus_world.tscn")
+	SceneChanger.change_scene("placeholder_fishing")

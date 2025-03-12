@@ -31,7 +31,7 @@ func handle_start_dialogue():
 		DialogueManager.show_dialogue_balloon_scene(spawned_box, end_dialogue)
 		state = DatingState.NONE
 	else:
-		get_tree().change_scene_to_file("res://worlds/piotrus_world.tscn")
+		SceneChanger.change_scene("placeholder_fishing")
 		
 func handle_end_dialogue(resource):
 	spawned_box.queue_free()

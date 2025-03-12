@@ -25,5 +25,5 @@ func retract_hook():
 	fish_hook.queue_free()
 func handle_caught_shrimp(shrimp):
 	retract_hook()
-	get_tree().change_scene_to_file("res://worlds/shrimp_dating.tscn")
+	SceneChanger.change_scene("placeholder_dating")
 	

@@ -8,8 +8,8 @@
 [ext_resource type="Script" uid="uid://b3hratgfrdjf7" path="res://scenes/basic_player.gd" id="5_u84ol"]
 [ext_resource type="Resource" uid="uid://654d7dklnoik" path="res://resources/shrimps/placeholder/simp.tres" id="6_2qh0v"]
 [ext_resource type="PackedScene" uid="uid://duigu0nqk8gti" path="res://scenes/fish_hoke.tscn" id="6_jyiib"]
-[ext_resource type="Script" uid="uid://br3063apkpnh6" path="res://worlds/ui_buttons.gd" id="9_2qh0v"]
 [ext_resource type="Texture2D" uid="uid://br03kapttobgx" path="res://placeholder/Sam_Lake-MichaelFörtsch.jpg" id="10_6dury"]
+[ext_resource type="PackedScene" uid="uid://dvtgtbokriok7" path="res://ui/ui_buttons.tscn" id="10_e583f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1sbkd"]
 size = Vector2(387, 148)
@@ -45,17 +45,6 @@ autostart = true
 script = ExtResource("5_u84ol")
 fish_hook_prefab = ExtResource("6_jyiib")
 
-[node name="UI Buttons" type="CanvasLayer" parent="."]
-script = ExtResource("9_2qh0v")
-
-[node name="Inventory" type="Button" parent="UI Buttons"]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -8.0
-offset_bottom = 8.0
-grow_horizontal = 0
-text = "Inventory"
+[node name="UI Buttons" parent="." instance=ExtResource("10_e583f")]
 
 [connection signal="timeout" from="FishingZone/SpawnTimer" to="FishingZone" method="_on_spawn_timer_timeout"]
-[connection signal="pressed" from="UI Buttons/Inventory" to="UI Buttons" method="_on_inventory_pressed"]
