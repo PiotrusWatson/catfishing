@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://ccnyf3pwqjpa8"
+path="res://.godot/imported/shompy.dialogue-bd180eadc8e392919c23198dad025fb8.tres"
+
+[deps]
+
+source_file="res://dialogues/shompy.dialogue"
+dest_files=["res://.godot/imported/shompy.dialogue-bd180eadc8e392919c23198dad025fb8.tres"]
+
+[params]
+
+defaults=true
