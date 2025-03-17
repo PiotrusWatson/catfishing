@@ -47,7 +47,7 @@ func _build_gui() -> void:
 	_menu_toolbox.add_child(menu_button)
 	_menu_popup = menu_button.get_popup()
 	_menu_popup.add_check_item("Preview in Editor")
-	#s_menu_popup.set_item_checked(MENU_INDEX_UPDATE_IN_EDITOR, NativeRopeServer.update_in_editor)
+	_menu_popup.set_item_checked(MENU_INDEX_UPDATE_IN_EDITOR, NativeRopeServer.update_in_editor)
 	_menu_popup.add_item("Reset Rope")
 	_menu_popup.set_item_tooltip(MENU_INDEX_RESET_ROPE, "Reset the selected rope into its base position.")
 	_menu_popup.connect("id_pressed", self._menu_item_clicked)
@@ -58,7 +58,7 @@ func _menu_item_clicked(idx: int) -> void:
 		MENU_INDEX_UPDATE_IN_EDITOR:
 			var value := not _menu_popup.is_item_checked(idx)
 			_menu_popup.set_item_checked(MENU_INDEX_UPDATE_IN_EDITOR, value)
-			#NativeRopeServer.update_in_editor = value
+			NativeRopeServer.update_in_editor = value
 		MENU_INDEX_RESET_ROPE:
 			var rope := _edited_object as Rope
 			if rope:
