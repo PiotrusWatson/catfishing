@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqs3qry1n25j7"]
+
+[ext_resource type="PackedScene" uid="uid://i81g1cjl71i6" path="res://scenes/fishing_zone.tscn" id="1_5uw0j"]
+[ext_resource type="PackedScene" uid="uid://bjxfp5r5xfw4f" path="res://scenes/player.tscn" id="2_1kayd"]
+
+[node name="FishingWorld" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="FishingZone" parent="." instance=ExtResource("1_5uw0j")]
+position = Vector2(-71.25, 356.75)
+
+[node name="Player" parent="." instance=ExtResource("2_1kayd")]
+position = Vector2(515, 144)
+rope_tension = 4.0
