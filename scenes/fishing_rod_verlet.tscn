@@ -9,7 +9,7 @@ size = Vector2(285.5, 66.5)
 
 [node name="FishingRod" type="StaticBody2D"]
 script = ExtResource("1_x3ea4")
-starting_size = 100
+starting_size = 20
 rope_amount = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -25,6 +25,6 @@ texture = ExtResource("5_87p6s")
 [node name="VerletRopeContainer" type="Marker2D" parent="."]
 position = Vector2(-57, -22)
 script = ExtResource("3_q02ka")
-gravity = Vector2(0, -9.8)
+dampening = 0.5
 
 [node name="VisibleRope" type="Line2D" parent="VerletRopeContainer"]

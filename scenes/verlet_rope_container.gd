@@ -10,6 +10,8 @@ var max_size: int
 
 var positions: PackedVector2Array
 var previous_positions: PackedVector2Array
+var local_positions: PackedVector2Array
+var local_previous: PackedVector2Array
 var point_count : int
 
 func init(rope_length, max_size):
@@ -25,13 +27,16 @@ func get_point_count(distance: float) -> int:
 func resize_arrays():
 	positions.resize(point_count)
 	previous_positions.resize(point_count)
+	local_positions.resize(point_count)
 	
 func init_positions() -> void:
 	for i in range(point_count):
 		positions[i] = global_position + Vector2(constrain * i, 0)
 		previous_positions[i] = global_position + Vector2(constrain * i, 0)
 	#position = Vector2.ZERO
-	
+func get_local_positions():
+	for i in range(point_count):
+		local_positions[i] = to_local(positions[i])
 func set_start(point: Vector2):
 	positions[0] = point
 	previous_positions[0] = point
@@ -43,7 +48,8 @@ func set_last(point: Vector2):
 func update_line(delta):
 	update_points(delta)
 	update_constraints()
-	line.points = positions
+	get_local_positions()
+	line.points = local_positions
 
 func update_points(delta):
 	for i in range(point_count):
@@ -53,7 +59,6 @@ func update_points(delta):
 		previous_positions[i] = positions[i]
 		positions[i] += velocity + (gravity * delta)
 		
-
 
 func update_constraints() -> void:
 	for i in range(point_count):
