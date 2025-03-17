@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://1ar3xmeq1eis"]
+
+[ext_resource type="Script" uid="uid://cp1i26d5ckad5" path="res://scenes/fishing_rod.gd" id="1_x3ea4"]
+[ext_resource type="Script" uid="uid://pgvqca20wqg1" path="res://scenes/verlet_rope_container.gd" id="3_q02ka"]
+[ext_resource type="Texture2D" uid="uid://c5y2ogpdxwiyn" path="res://placeholder/IDLE.png" id="5_87p6s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8baaf"]
+size = Vector2(285.5, 66.5)
+
+[node name="FishingRod" type="StaticBody2D"]
+script = ExtResource("1_x3ea4")
+starting_size = 100
+rope_amount = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(95.25, -18.75)
+shape = SubResource("RectangleShape2D_8baaf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(92, -13)
+rotation = 1.5708
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_87p6s")
+
+[node name="VerletRopeContainer" type="Marker2D" parent="."]
+position = Vector2(-57, -22)
+script = ExtResource("3_q02ka")
+gravity = Vector2(0, -9.8)
+
+[node name="VisibleRope" type="Line2D" parent="VerletRopeContainer"]

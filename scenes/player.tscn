@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b2u6pnq3whpdm" path="res://scenes/player.gd" id="1_qhqgy"]
 [ext_resource type="Texture2D" uid="uid://bj8bdbqjww8rg" path="res://placeholder/channel-cat-600.png" id="2_dqkch"]
-[ext_resource type="PackedScene" uid="uid://c3t7ufag1d6k6" path="res://scenes/fishing_rod.tscn" id="3_qlg0r"]
+[ext_resource type="PackedScene" uid="uid://1ar3xmeq1eis" path="res://scenes/fishing_rod_verlet.tscn" id="4_dqkch"]
 
 [node name="Player" type="Node2D"]
 script = ExtResource("1_qhqgy")
@@ -16,10 +16,7 @@ texture = ExtResource("2_dqkch")
 position = Vector2(-18, -163)
 scale = Vector2(0.7, 0.7)
 
-[node name="FishingRod" parent="Pivot" instance=ExtResource("3_qlg0r")]
-position = Vector2(227.143, -7.14285)
-rotation = -3.12526
-scale = Vector2(1.42857, 1.42857)
+[node name="FishingRod" parent="Pivot" instance=ExtResource("4_dqkch")]
 
 [node name="Timers" type="Node" parent="."]
 

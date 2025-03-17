@@ -23,7 +23,12 @@ func _physics_process(delta: float) -> void:
 		fishing_rod.push_hook(rope_tension)
 	if rotating:
 		pivot.rotation = lerp(pivot.rotation, -PI, rotation_speed)
-
+	
+	fishing_rod.update_rope(delta)
+	
+func _process(delta: float):
+	pass
 
 func _on_extension_timer_timeout() -> void:
-	fishing_rod.extend()
+	#fishing_rod.extend()
+	pass

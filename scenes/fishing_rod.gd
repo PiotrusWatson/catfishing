@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-@onready var rope_container = $RopeContainer
+@onready var rope_container = $VerletRopeContainer
 @export var string_strength = 10
 @export var starting_size = 30
 @export var max_size = 300
@@ -9,7 +9,9 @@ var hook: RigidBody2D
 
 func _ready():
 	rope_container.init(starting_size, max_size)
-	hook = rope_container.hook
+	rope_container.set_start(rope_container.global_position)
+	rope_container.set_last(rope_container.global_position + Vector2(0, -starting_size))
+	#hook = rope_container.hook
 	
 	
 func push_hook(strength):
@@ -22,3 +24,7 @@ func extend():
 
 func reel():
 	rope_container.make_smaller()
+
+func update_rope(delta):
+	rope_container.set_start(rope_container.global_position)
+	rope_container.update_line(delta)
