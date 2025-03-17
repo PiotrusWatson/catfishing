@@ -18,10 +18,10 @@ If you like this plugin and want to support my work, consider leaving a tip on K
 ## Setup
 
 1. Get the addon
-    * [Download](https://godotengine.org/asset-library/asset/2334) from the asset store, or
-    * [Download](https://github.com/mphe/GDNative-Ropesim/releases/latest) the latest release from the release page, or
-    * [Download](https://github.com/mphe/GDNative-Ropesim/actions) it from the latest GitHub Actions run, or
-    * [Compile](#building) it yourself.
+	* [Download](https://godotengine.org/asset-library/asset/2334) from the asset store, or
+	* [Download](https://github.com/mphe/GDNative-Ropesim/releases/latest) the latest release from the release page, or
+	* [Download](https://github.com/mphe/GDNative-Ropesim/actions) it from the latest GitHub Actions run, or
+	* [Compile](#building) it yourself.
 2. Copy or symlink `addons/ropesim` to your project's `addons/` directory
 3. Enable the addon in the project settings
 4. Restart Godot
@@ -84,5 +84,3 @@ https://user-images.githubusercontent.com/7116001/216791913-35321ddb-ee35-44e2-8
 More advanced usage examples.
 
 https://github.com/user-attachments/assets/28e3dda1-6929-4ddf-8afa-041f66a5849b
-
-
