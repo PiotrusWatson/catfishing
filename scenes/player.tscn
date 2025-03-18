@@ -14,11 +14,12 @@ scale = Vector2(0.7, 0.7)
 texture = ExtResource("2_dqkch")
 
 [node name="Pivot" type="Marker2D" parent="."]
-position = Vector2(-7, -187)
+position = Vector2(-29, -165)
 scale = Vector2(0.7, 0.7)
 
 [node name="FishingRod" parent="Pivot" instance=ExtResource("4_dqkch")]
-position = Vector2(-227.143, -11.4286)
+position = Vector2(224.286, -1.42858)
+rotation = 3.14159
 starting_size = 50
 
 [node name="Timers" type="Node" parent="."]

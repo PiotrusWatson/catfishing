@@ -13,11 +13,13 @@ var rotating = false
 var hook_status = HookIs.OUT
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("Throw"):
+		fishing_rod.reset_reel()
 		extension_timer.start()
 	elif event.is_action_released("Throw"):
 		extension_timer.stop()
 		
 	if event.is_action_pressed("Pull"):
+		fishing_rod.reset_reel()
 		reduction_timer.start()
 	elif event.is_action_released("Pull"):
 		reduction_timer.stop()

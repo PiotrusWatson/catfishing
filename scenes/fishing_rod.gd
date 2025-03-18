@@ -4,20 +4,26 @@ extends StaticBody2D
 @export var starting_size = 30
 @export var max_size = 300
 @export var rope_amount = 10
+@export var starting_reel = 5
+@export var acceleration = 3
+var reel_amount
 @onready var rope = $Rope
 var hook: RigidBody2D
 
 func _ready():
-	pass
+	reel_amount = starting_reel
 
 func increase_rope():
 	if rope.rope_length < max_size:
-		rope.rope_length += 5
-		print(rope.rope_length)
+		rope.rope_length += reel_amount
+		reel_amount += acceleration
+		
 func decrease_rope():
 	if rope.rope_length > 1:
-		rope.rope_length -= 5
+		rope.rope_length -= reel_amount
+		reel_amount += acceleration
 
-
+func reset_reel():
+	reel_amount = starting_reel
 func update_rope(delta):
 	pass

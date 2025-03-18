@@ -29,12 +29,14 @@ texture = ExtResource("5_87p6s")
 [node name="Rope" type="Node2D" parent="."]
 position = Vector2(-53, -24)
 script = ExtResource("3_q02ka")
+num_segments = 20
 metadata/_custom_type_script = "uid://vf6628y4kj24"
 
 [node name="FishHoke" parent="." instance=ExtResource("4_x3ea4")]
 position = Vector2(-53, 86)
-mass = 3.0
+mass = 30.0
 physics_material_override = SubResource("PhysicsMaterial_x3ea4")
+linear_damp = 0.5
 
 [node name="RopeInteraction" type="Node" parent="." node_paths=PackedStringArray("target_node", "input_node_override", "rope")]
 script = ExtResource("4_mt3jc")
