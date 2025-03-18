@@ -4,6 +4,7 @@ enum HookIs{OUT, IN, BITTEN}
 @onready var fishing_rod = $Pivot/FishingRod
 @onready var pivot = $Pivot
 @onready var extension_timer = $Timers/ExtensionTimer
+@onready var reduction_timer = $Timers/ReductionTimer
 @export var rope_tension = 20.0
 
 var is_tense = false
@@ -15,14 +16,19 @@ func _unhandled_input(event: InputEvent) -> void:
 		extension_timer.start()
 	elif event.is_action_released("Throw"):
 		extension_timer.stop()
-	if event.is_action_pressed("Throw") and hook_status == HookIs.OUT:
-		rotating = true	
+		
+	if event.is_action_pressed("Pull"):
+		reduction_timer.start()
+	elif event.is_action_released("Pull"):
+		reduction_timer.stop()
+	#if event.is_action_pressed("Throw") and hook_status == HookIs.OUT:
+		#rotating = true	
+	if event is InputEventMouseMotion:
+		pivot.look_at(get_global_mouse_position())
 		
 func _physics_process(delta: float) -> void:
-	if is_tense:
-		fishing_rod.push_hook(rope_tension)
 	if rotating:
-		pivot.rotation = lerp(pivot.rotation, -PI, rotation_speed)
+		pivot.rotation = lerp(pivot.rotation, deg_to_rad(-45), rotation_speed)
 	
 	fishing_rod.update_rope(delta)
 	
@@ -30,5 +36,9 @@ func _process(delta: float):
 	pass
 
 func _on_extension_timer_timeout() -> void:
-	#fishing_rod.extend()
-	pass
+	fishing_rod.increase_rope()
+
+
+func _on_reduction_timer_timeout() -> void:
+	fishing_rod.decrease_rope()
+	
