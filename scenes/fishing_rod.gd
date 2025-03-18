@@ -8,11 +8,11 @@ extends StaticBody2D
 var hook: RigidBody2D
 
 func _ready():
-	rope_container.init(starting_size, max_size)
-	rope_container.set_start(rope_container.global_position)
-	rope_container.set_last(rope_container.global_position + Vector2(0, -starting_size))
+#	rope_container.init(starting_size, max_size)
+#	rope_container.set_start(rope_container.global_position)
+#	rope_container.set_last(rope_container.global_position + Vector2(0, -starting_size))
 	#hook = rope_container.hook
-	
+	pass
 	
 func push_hook(strength):
 	var direction = rope_container.get_rope_direction()
@@ -26,5 +26,6 @@ func reel():
 	rope_container.make_smaller()
 
 func update_rope(delta):
-	rope_container.set_start(rope_container.global_position)
-	rope_container.update_line(delta)
+#	rope_container.set_start(rope_container.global_position)
+# rope_container.update_line(delta)
+	pass
