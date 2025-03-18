@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://bajrq5fmp5squ"]
 
-[ext_resource type="Script" path="res://addons/ropesim/RopeHandle.gd" id="1_n2oah"]
-[ext_resource type="Script" path="res://rope_examples/scripts/animation_player.gd" id="3_g6662"]
-[ext_resource type="Script" path="res://addons/ropesim/Rope.gd" id="3_h0p3k"]
+[ext_resource type="Script" uid="uid://csyiap1odptxi" path="res://addons/ropesim/RopeHandle.gd" id="1_n2oah"]
+[ext_resource type="Script" uid="uid://ivfdxiwuwbix" path="res://rope_dump/rope_examples/scripts/animation_player.gd" id="3_g6662"]
+[ext_resource type="Script" uid="uid://vf6628y4kj24" path="res://addons/ropesim/Rope.gd" id="3_h0p3k"]
 
 [sub_resource type="Animation" id="Animation_1pnxe"]
 length = 0.001
