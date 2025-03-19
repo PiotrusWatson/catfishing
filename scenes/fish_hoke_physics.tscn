@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://btr48hebut8dv"]
+
+[ext_resource type="Script" uid="uid://o1b5recr3tcd" path="res://scenes/fish_hoke_physics.gd" id="1_v7qni"]
+[ext_resource type="Texture2D" uid="uid://dasqr4v32rqcm" path="res://placeholder/hoke_tuah.png" id="2_8wcag"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n01p3"]
+radius = 7.0
+height = 22.0
+
+[node name="FishHoke" type="RigidBody2D"]
+mass = 10.0
+script = ExtResource("1_v7qni")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_n01p3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("2_8wcag")
+
+[node name="Hook" type="PinJoint2D" parent="."]
+position = Vector2(-6, 1)
+node_a = NodePath("..")

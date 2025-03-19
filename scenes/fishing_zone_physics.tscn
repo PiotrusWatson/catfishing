@@ -1,0 +1,48 @@
+[gd_scene load_steps=9 format=3 uid="uid://c5viyjrpp6xob"]
+
+[ext_resource type="Script" uid="uid://iksvhdexlg7r" path="res://worlds/fishing_zone.gd" id="1_gp0ue"]
+[ext_resource type="PackedScene" uid="uid://cg4mkyrvkwji8" path="res://scenes/bubble.tscn" id="2_ca631"]
+[ext_resource type="Script" uid="uid://dtjomkji7bwyx" path="res://scripts/shrimptype.gd" id="3_fi7oa"]
+[ext_resource type="Resource" uid="uid://654d7dklnoik" path="res://resources/shrimps/placeholder/simp.tres" id="4_0cchh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ca631"]
+size = Vector2(1142, 596)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gp0ue"]
+size = Vector2(1146, 33)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fi7oa"]
+size = Vector2(1146, 33)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0cchh"]
+size = Vector2(1146, 33)
+
+[node name="FishingZone" type="CollisionShape2D"]
+shape = SubResource("RectangleShape2D_ca631")
+script = ExtResource("1_gp0ue")
+thing_to_spawn = ExtResource("2_ca631")
+shrimp_to_choose = Array[ExtResource("3_fi7oa")]([ExtResource("4_0cchh")])
+
+[node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-2, -315)
+shape = SubResource("RectangleShape2D_gp0ue")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-590, 244)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_fi7oa")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(591, 242)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_0cchh")
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]

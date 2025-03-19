@@ -6,3 +6,5 @@ func catch_shrimp(shrimp: ShrimpType):
 	Globals.current_shrimp = shrimp
 	caught_shrimp.emit(shrimp)
 	queue_free()
+
+	
