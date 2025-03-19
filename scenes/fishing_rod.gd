@@ -8,7 +8,7 @@ extends StaticBody2D
 @export var acceleration = 3
 var reel_amount
 @onready var rope = $Rope
-var hook: RigidBody2D
+@onready var hoke = $FishHoke
 
 func _ready():
 	reel_amount = starting_reel

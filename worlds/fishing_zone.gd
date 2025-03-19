@@ -31,4 +31,5 @@ func choose_shrimp():
 	return shrimp_to_choose.pick_random()
 
 func _on_spawn_timer_timeout() -> void:
-	spawn_thing()
+	#spawn_thing()
+	pass

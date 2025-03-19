@@ -23,6 +23,8 @@ func _physics_process(delta: float) -> void:
 	
 	move_and_slide()
 
+func set_shrimp(shrimp: ShrimpType):
+	contained_shrimp = shrimp
 
 func _on_bored_timer_timeout() -> void:
 	pick_direction()
