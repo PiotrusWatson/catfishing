@@ -1,14 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://dn46lkmmrym33"]
+[gd_scene load_steps=6 format=3 uid="uid://dn46lkmmrym33"]
 
 [ext_resource type="Texture2D" uid="uid://d22xl4xof8sdy" path="res://placeholder/shrimp-silhouette-000000-md.png" id="1_rrfxm"]
 [ext_resource type="Script" uid="uid://04bklhku5jre" path="res://scenes/shimp.gd" id="1_sx6ip"]
+[ext_resource type="Script" uid="uid://cuc7twhcgrsrw" path="res://addons/vision_cone_2d/vision_cone_2d.gd" id="3_hcvnh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sx6ip"]
+radius = 300.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sx6ip"]
 radius = 20.0
 height = 44.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_sx6ip"]
-radius = 100.0
 
 [node name="Shimp" type="CharacterBody2D"]
 collision_layer = 2
@@ -17,18 +18,30 @@ motion_mode = 1
 script = ExtResource("1_sx6ip")
 speed = 200.0
 
+[node name="WallDetector" type="Area2D" parent="."]
+scale = Vector2(0.1, 0.1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallDetector"]
+shape = SubResource("CircleShape2D_sx6ip")
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_rrfxm")
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_sx6ip")
 
-[node name="BaitDetector" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BaitDetector"]
-shape = SubResource("CircleShape2D_sx6ip")
+[node name="VisionCone2D" type="Node2D" parent="." node_paths=PackedStringArray("write_polygon2d")]
+position = Vector2(30, -6)
+rotation = -1.5708
+scale = Vector2(1, 1)
+script = ExtResource("3_hcvnh")
+angle_deg = 90
+write_polygon2d = NodePath("")
+debug_lines = true
+metadata/_custom_type_script = "uid://cuc7twhcgrsrw"
 
 [node name="Timers" type="Node" parent="."]
 
@@ -36,4 +49,5 @@ shape = SubResource("CircleShape2D_sx6ip")
 wait_time = 6.0
 autostart = true
 
+[connection signal="body_entered" from="WallDetector" to="." method="_on_wall_detector_body_entered"]
 [connection signal="timeout" from="Timers/BoredTimer" to="." method="_on_bored_timer_timeout"]
