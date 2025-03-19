@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://bqck0u20a4m15"]
+[gd_scene load_steps=7 format=3 uid="uid://bqck0u20a4m15"]
 
 [ext_resource type="Texture2D" uid="uid://dbhukjwr2y67w" path="res://placeholder/Suolijärvi_lake.jpg" id="1_mr521"]
-[ext_resource type="Script" uid="uid://dh828xw3ebhk4" path="res://worlds/fishing_signals.gd" id="1_y1fot"]
 [ext_resource type="PackedScene" uid="uid://i81g1cjl71i6" path="res://scenes/fishing_zone.tscn" id="4_mkxgu"]
 [ext_resource type="Script" uid="uid://b3hratgfrdjf7" path="res://scenes/basic_player.gd" id="5_u84ol"]
 [ext_resource type="PackedScene" uid="uid://duigu0nqk8gti" path="res://scenes/fish_hoke.tscn" id="6_jyiib"]
@@ -9,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://dvtgtbokriok7" path="res://ui/ui_buttons.tscn" id="10_e583f"]
 
 [node name="World" type="Node2D"]
-script = ExtResource("1_y1fot")
 
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(-0.0416417, -0.0297901)
@@ -25,7 +23,7 @@ scale = Vector2(0.25, 0.326933)
 texture = ExtResource("10_6dury")
 
 [node name="FishingZone" parent="." instance=ExtResource("4_mkxgu")]
-position = Vector2(103.5, 122)
+position = Vector2(105, 98)
 
 [node name="BasicPlayer" type="Node2D" parent="."]
 script = ExtResource("5_u84ol")

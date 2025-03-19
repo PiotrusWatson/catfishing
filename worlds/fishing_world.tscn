@@ -32,7 +32,6 @@ position = Vector2(515, 144)
 
 [node name="FishingZone" parent="." instance=ExtResource("2_ncbgm")]
 position = Vector2(-15, 470)
-thing_to_spawn = null
 
 [node name="Shimp" parent="." instance=ExtResource("3_ncbgm")]
 position = Vector2(169, 190)

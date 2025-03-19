@@ -12,3 +12,4 @@ func catch_shrimp(shrimp: CharacterBody2D):
 func push_hook(target: Vector2):
 	var direction = (target - global_position).normalized()
 	apply_central_force(direction * strength)
+	

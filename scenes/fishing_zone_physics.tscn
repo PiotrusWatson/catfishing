@@ -1,9 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://c5viyjrpp6xob"]
+[gd_scene load_steps=6 format=3 uid="uid://c5viyjrpp6xob"]
 
-[ext_resource type="Script" uid="uid://iksvhdexlg7r" path="res://worlds/fishing_zone.gd" id="1_gp0ue"]
-[ext_resource type="PackedScene" uid="uid://cg4mkyrvkwji8" path="res://scenes/bubble.tscn" id="2_ca631"]
-[ext_resource type="Script" uid="uid://dtjomkji7bwyx" path="res://scripts/shrimptype.gd" id="3_fi7oa"]
-[ext_resource type="Resource" uid="uid://654d7dklnoik" path="res://resources/shrimps/placeholder/simp.tres" id="4_0cchh"]
+[ext_resource type="Script" uid="uid://mh2cm312kjpx" path="res://scenes/fishing_zone_physics.gd" id="1_qp5sr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gp0ue"]
 size = Vector2(1146, 33)
@@ -18,9 +15,9 @@ size = Vector2(1146, 33)
 size = Vector2(1140, 1086)
 
 [node name="FishingZone" type="Area2D"]
-script = ExtResource("1_gp0ue")
-thing_to_spawn = ExtResource("2_ca631")
-shrimp_to_choose = Array[ExtResource("3_fi7oa")]([ExtResource("4_0cchh")])
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_qp5sr")
 
 [node name="SpawnTimer" type="Timer" parent="."]
 wait_time = 3.0
