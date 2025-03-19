@@ -5,9 +5,6 @@
 [ext_resource type="Script" uid="uid://dtjomkji7bwyx" path="res://scripts/shrimptype.gd" id="3_fi7oa"]
 [ext_resource type="Resource" uid="uid://654d7dklnoik" path="res://resources/shrimps/placeholder/simp.tres" id="4_0cchh"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ca631"]
-size = Vector2(1142, 596)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gp0ue"]
 size = Vector2(1146, 33)
 
@@ -17,8 +14,10 @@ size = Vector2(1146, 33)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0cchh"]
 size = Vector2(1146, 33)
 
-[node name="FishingZone" type="CollisionShape2D"]
-shape = SubResource("RectangleShape2D_ca631")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ca631"]
+size = Vector2(1140, 1086)
+
+[node name="FishingZone" type="Area2D"]
 script = ExtResource("1_gp0ue")
 thing_to_spawn = ExtResource("2_ca631")
 shrimp_to_choose = Array[ExtResource("3_fi7oa")]([ExtResource("4_0cchh")])
@@ -45,4 +44,10 @@ position = Vector2(591, 242)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_0cchh")
 
+[node name="Shape" type="CollisionShape2D" parent="."]
+position = Vector2(4, 233)
+shape = SubResource("RectangleShape2D_ca631")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
