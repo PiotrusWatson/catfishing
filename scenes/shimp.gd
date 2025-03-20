@@ -24,8 +24,11 @@ func _physics_process(delta: float) -> void:
 		apply_central_force(speed * target_direction* delta)
 	elif shimp_status == ShimpIs.CHASING:
 		var direction = get_direction_to_target()
-		add_constant_central_force(speed * direction * delta)
+		rotation = direction.angle()
+		apply_central_force(speed * direction * delta)
 	elif shimp_status == ShimpIs.ON_HOOK:
+		var direction = get_direction_to_target()
+		rotation = direction.angle()
 		set_collision_layer_value(2, false)
 		set_collision_mask_value(2, false)
 	
