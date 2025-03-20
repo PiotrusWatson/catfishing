@@ -3,12 +3,11 @@
 importer="dialogue_manager_compiler_14"
 type="Resource"
 uid="uid://07rnf4xdc1in"
-path="res://.godot/imported/placeholder_shromp.dialogue-b23d0ba6bc83112945f0ab4dca59438d.tres"
+valid=false
 
 [deps]
 
 source_file="res://dialogues/placeholder_shromp.dialogue"
-dest_files=["res://.godot/imported/placeholder_shromp.dialogue-b23d0ba6bc83112945f0ab4dca59438d.tres"]
 
 [params]
 

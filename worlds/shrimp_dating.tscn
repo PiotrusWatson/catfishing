@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c18wqskr2ouj3" path="res://placeholder/shimp.jpg" id="1_tmjs4"]
 [ext_resource type="Texture2D" uid="uid://d0uo1ltpkrl7" path="res://placeholder/duo.jpg" id="1_wem6c"]
 [ext_resource type="PackedScene" uid="uid://boje87mxmaur3" path="res://ui/placeholder_balloon.tscn" id="2_sx0bd"]
-[ext_resource type="Resource" uid="uid://654d7dklnoik" path="res://resources/shrimps/placeholder/simp.tres" id="3_4mnog"]
+[ext_resource type="Resource" uid="uid://fwd73v0vtp10" path="res://resources/shrimps/placeholder/shompy.tres" id="3_apya8"]
 [ext_resource type="PackedScene" uid="uid://cnudpd6buxmt2" path="res://scenes/emotes.tscn" id="6_apya8"]
 
 [node name="ShrimpDating" type="Control"]
@@ -16,7 +16,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tdlqk")
 dialogue_box_prefab = ExtResource("2_sx0bd")
-debug_shrimp = ExtResource("3_4mnog")
+debug_shrimp = ExtResource("3_apya8")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1

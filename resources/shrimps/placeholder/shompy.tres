@@ -1,13 +1,19 @@
-[gd_resource type="Resource" script_class="ShrimpType" load_steps=4 format=3 uid="uid://fwd73v0vtp10"]
+[gd_resource type="Resource" script_class="ShrimpType" load_steps=6 format=3 uid="uid://fwd73v0vtp10"]
 
 [ext_resource type="Texture2D" uid="uid://bwgqmpady6krp" path="res://placeholder/7df93c13b3072e564de08c8d6360fc84.jpg" id="1_2cupw"]
 [ext_resource type="Texture2D" uid="uid://fu00akmc5wg" path="res://placeholder/574581849.jpg" id="1_7dvrv"]
 [ext_resource type="Script" uid="uid://dtjomkji7bwyx" path="res://scripts/shrimptype.gd" id="1_vtwdr"]
+[ext_resource type="Theme" uid="uid://sh6ju41csl7u" path="res://ui/character_theme.tres" id="4_xr5xi"]
+
+[sub_resource type="Resource" id="Resource_6utb6"]
+metadata/__load_path__ = "res://dialogues/placeholder_shromp.dialogue"
 
 [resource]
 script = ExtResource("1_vtwdr")
 basic_image = ExtResource("1_2cupw")
 backgrounds = Array[Texture2D]([ExtResource("1_7dvrv")])
+basic_dialogue = SubResource("Resource_6utb6")
+basic_theme = ExtResource("4_xr5xi")
 starting_love = 1
 liked_item_types = Array[int]([])
 disliked_item_types = Array[int]([])
