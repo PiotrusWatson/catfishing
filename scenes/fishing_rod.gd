@@ -11,6 +11,7 @@ var reel_amount
 @onready var rope = $Rope
 @onready var hoke = $FishHoke
 @onready var rope_interaction = $RopeInteraction
+@onready var pin_point = $PinPoint
 
 signal hooked_shrimp()
 signal caught_shrimp(shrimp: ShrimpType)
@@ -33,7 +34,9 @@ func reset_reel():
 	reel_amount = starting_reel
 	
 func push_hook(point: Vector2):
-	pass
+	var direction = (point - pin_point.global_position).normalized()
+	pin_point.velocity = direction * hook_speed
+	pin_point.move_and_slide()
 
 func _on_fish_hoke_hooked_shrimp() -> void:
 	hooked_shrimp.emit()
