@@ -27,8 +27,6 @@ func _physics_process(delta: float) -> void:
 		rotation = direction.angle()
 		apply_central_force(speed * direction * delta)
 	elif shimp_status == ShimpIs.ON_HOOK:
-		var direction = get_direction_to_target()
-		rotation = direction.angle()
 		set_collision_layer_value(2, false)
 		set_collision_mask_value(2, false)
 	

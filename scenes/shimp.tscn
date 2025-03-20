@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://cuc7twhcgrsrw" path="res://addons/vision_cone_2d/vision_cone_2d.gd" id="3_hcvnh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sx6ip"]
-radius = 300.0
+radius = 127.74
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sx6ip"]
 radius = 20.0
@@ -22,9 +22,13 @@ contained_shrimp = ExtResource("2_wfdoo")
 speed = 4000.0
 
 [node name="WallDetector" type="Area2D" parent="."]
+position = Vector2(38, -3)
 scale = Vector2(0.1, 0.1)
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallDetector"]
+position = Vector2(-180, -40)
 shape = SubResource("CircleShape2D_sx6ip")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
