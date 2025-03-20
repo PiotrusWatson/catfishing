@@ -40,14 +40,12 @@ flip_h = true
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_sx6ip")
 
-[node name="VisionCone2D" type="Node2D" parent="." node_paths=PackedStringArray("write_collision_polygon", "write_polygon2d")]
+[node name="VisionCone2D" type="Node2D" parent="." node_paths=PackedStringArray("write_collision_polygon")]
 position = Vector2(30, -6)
 rotation = -1.5708
-scale = Vector2(1, 1)
 script = ExtResource("3_hcvnh")
 angle_deg = 90
 write_collision_polygon = NodePath("../ShimpVision/CollisionPolygon2D")
-write_polygon2d = NodePath("")
 debug_lines = true
 metadata/_custom_type_script = "uid://cuc7twhcgrsrw"
 
