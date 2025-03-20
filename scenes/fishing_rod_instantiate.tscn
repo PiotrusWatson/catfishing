@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cnr3wp033kit5" path="res://scenes/rope_container.gd" id="2_uhxoy"]
 [ext_resource type="PackedScene" uid="uid://b2c2bd70l4nct" path="res://scenes/rope_segment.tscn" id="3_j47h3"]
 [ext_resource type="PackedScene" uid="uid://duigu0nqk8gti" path="res://scenes/fish_hoke.tscn" id="4_w0dd7"]
-[ext_resource type="Texture2D" uid="uid://c5y2ogpdxwiyn" path="res://placeholder/IDLE.png" id="5_al8fi"]
+[ext_resource type="Texture2D" uid="uid://bxe1umjjl3h5b" path="res://assets/placeholder/fishingrod.png" id="5_jjpkk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8baaf"]
 size = Vector2(285.5, 66.5)
@@ -26,7 +26,7 @@ rope_segment_prefab = ExtResource("3_j47h3")
 hook_prefab = ExtResource("4_w0dd7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(92, -13)
-rotation = 1.5708
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("5_al8fi")
+position = Vector2(78, -9)
+rotation = 2.19911
+scale = Vector2(0.235, 0.235)
+texture = ExtResource("5_jjpkk")

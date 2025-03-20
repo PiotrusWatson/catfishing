@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bjxfp5r5xfw4f"]
 
 [ext_resource type="Script" uid="uid://b2u6pnq3whpdm" path="res://scenes/player.gd" id="1_qhqgy"]
-[ext_resource type="Texture2D" uid="uid://bj8bdbqjww8rg" path="res://placeholder/channel-cat-600.png" id="2_dqkch"]
+[ext_resource type="Texture2D" uid="uid://cncvdi56pj4hk" path="res://assets/placeholder/catfishpng.png" id="2_qhqgy"]
 [ext_resource type="PackedScene" uid="uid://1ar3xmeq1eis" path="res://scenes/fishing_rod_verlet.tscn" id="4_dqkch"]
 
 [node name="Player" type="Node2D"]
@@ -9,16 +9,15 @@ script = ExtResource("1_qhqgy")
 rotation_speed = 0.3
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-rotation = 1.5708
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("2_dqkch")
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_qhqgy")
 
 [node name="Pivot" type="Marker2D" parent="."]
-position = Vector2(-18, -87)
+position = Vector2(-34, 13)
 scale = Vector2(0.7, 0.7)
 
 [node name="FishingRod" parent="Pivot" instance=ExtResource("4_dqkch")]
-position = Vector2(48.5714, 5.71433)
+position = Vector2(124.286, 7.14287)
 rotation = 3.14159
 starting_size = 50
 max_size = 600

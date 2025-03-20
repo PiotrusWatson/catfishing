@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://1ar3xmeq1eis"]
 
 [ext_resource type="Script" uid="uid://cp1i26d5ckad5" path="res://scenes/fishing_rod.gd" id="1_x3ea4"]
-[ext_resource type="Script" uid="uid://b2shq2gjd4fvt" path="res://addons/ropesim/Rope.gd" id="3_q02ka"]
-[ext_resource type="Script" uid="uid://dvxegqp0cf77n" path="res://addons/ropesim/RopeInteraction.gd" id="4_mt3jc"]
-[ext_resource type="Texture2D" uid="uid://c5y2ogpdxwiyn" path="res://placeholder/IDLE.png" id="5_87p6s"]
+[ext_resource type="Texture2D" uid="uid://bxe1umjjl3h5b" path="res://assets/placeholder/fishingrod.png" id="2_x3ea4"]
+[ext_resource type="Script" uid="uid://vf6628y4kj24" path="res://addons/ropesim/Rope.gd" id="3_q02ka"]
+[ext_resource type="Script" uid="uid://cce3qovp5nxkt" path="res://addons/ropesim/RopeInteraction.gd" id="4_mt3jc"]
 [ext_resource type="PackedScene" uid="uid://btr48hebut8dv" path="res://scenes/fish_hoke_physics.tscn" id="5_x3ea4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8baaf"]
@@ -21,9 +21,10 @@ hook_speed = 300
 shape = SubResource("RectangleShape2D_8baaf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-rotation = 1.5708
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("5_87p6s")
+position = Vector2(52, -9)
+rotation = -0.879646
+scale = Vector2(0.14, 0.14)
+texture = ExtResource("2_x3ea4")
 
 [node name="Rope" type="Node2D" parent="."]
 position = Vector2(-49, -3)
