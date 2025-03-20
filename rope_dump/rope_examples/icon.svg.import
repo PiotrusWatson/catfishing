@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://criwv6nuivcxy"
-path="res://.godot/imported/icon.svg-4a363dd8a0910a06d0eee7b7bad8c85b.ctex"
+path="res://.godot/imported/icon.svg-7f7f36dd0933dae09e65faa7543c3b9b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://rope_examples/icon.svg"
-dest_files=["res://.godot/imported/icon.svg-4a363dd8a0910a06d0eee7b7bad8c85b.ctex"]
+source_file="res://rope_dump/rope_examples/icon.svg"
+dest_files=["res://.godot/imported/icon.svg-7f7f36dd0933dae09e65faa7543c3b9b.ctex"]
 
 [params]
 
