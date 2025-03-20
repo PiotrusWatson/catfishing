@@ -14,7 +14,7 @@ func _ready():
 	
 func pick_direction():
 	target_direction = Vector2(randf_range(-1, 1), randf_range(-1, 1)).normalized()
-	rotation = target_direction.angle()
+	sprite.rotation = target_direction.angle()
 	will_stop = true
 
 func get_direction_to_target():
@@ -24,7 +24,7 @@ func _physics_process(delta: float) -> void:
 		apply_central_force(speed * target_direction* delta)
 	elif shimp_status == ShimpIs.CHASING:
 		var direction = get_direction_to_target()
-		rotation = direction.angle()
+		sprite.rotation = direction.angle()
 		apply_central_force(speed * direction * delta)
 	elif shimp_status == ShimpIs.ON_HOOK:
 		set_collision_layer_value(2, false)

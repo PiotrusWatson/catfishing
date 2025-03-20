@@ -32,6 +32,7 @@ wait_time = 0.1
 wait_time = 0.1
 
 [connection signal="caught_shrimp" from="Pivot/FishingRod" to="." method="_on_fishing_rod_caught_shrimp"]
+[connection signal="changed_fishing_status" from="Pivot/FishingRod" to="." method="_on_fishing_rod_changed_fishing_status"]
 [connection signal="hooked_shrimp" from="Pivot/FishingRod" to="." method="_on_fishing_rod_hooked_shrimp"]
 [connection signal="timeout" from="Timers/ExtensionTimer" to="." method="_on_extension_timer_timeout"]
 [connection signal="timeout" from="Timers/ReductionTimer" to="." method="_on_reduction_timer_timeout"]
