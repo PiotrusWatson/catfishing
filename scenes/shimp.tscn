@@ -28,7 +28,7 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallDetector"]
-position = Vector2(-180, -40)
+position = Vector2(-140, -40)
 shape = SubResource("CircleShape2D_sx6ip")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -36,18 +36,24 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_rrfxm")
 flip_h = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_sx6ip")
-
-[node name="VisionCone2D" type="Node2D" parent="." node_paths=PackedStringArray("write_collision_polygon")]
-position = Vector2(30, -6)
+[node name="VisionCone2D" type="Node2D" parent="Sprite2D" node_paths=PackedStringArray("write_collision_polygon")]
+position = Vector2(330, -70)
 rotation = -1.5708
+scale = Vector2(10, 10)
 script = ExtResource("3_hcvnh")
 angle_deg = 90
 write_collision_polygon = NodePath("../ShimpVision/CollisionPolygon2D")
 debug_lines = true
 metadata/_custom_type_script = "uid://cuc7twhcgrsrw"
+
+[node name="ShimpVision" type="Area2D" parent="Sprite2D"]
+scale = Vector2(10, 10)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/ShimpVision"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_sx6ip")
 
 [node name="Timers" type="Node" parent="."]
 
@@ -55,10 +61,6 @@ metadata/_custom_type_script = "uid://cuc7twhcgrsrw"
 wait_time = 6.0
 autostart = true
 
-[node name="ShimpVision" type="Area2D" parent="."]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ShimpVision"]
-
 [connection signal="body_entered" from="WallDetector" to="." method="_on_wall_detector_body_entered"]
+[connection signal="body_entered" from="Sprite2D/ShimpVision" to="." method="_on_shimp_vision_body_entered"]
 [connection signal="timeout" from="Timers/BoredTimer" to="." method="_on_bored_timer_timeout"]
-[connection signal="body_entered" from="ShimpVision" to="." method="_on_shimp_vision_body_entered"]

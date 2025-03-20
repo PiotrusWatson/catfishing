@@ -3,10 +3,12 @@ extends RigidBody2D
 signal hooked_shrimp
 signal hook_moved(amount)
 signal caught_shrimp(shrimp: ShrimpType)
+signal changed_fishing_status(is_fishing: bool)
 @export var strength = 3.0
 
 @onready var hook = $Hook
 var is_hooked = false
+var is_fishing = false
 var shrimp_info: ShrimpType
 
 func hook_shrimp(shrimp: Node2D):
@@ -23,4 +25,7 @@ func push_hook(target: Vector2):
 func catch_shrimp():
 	if is_hooked:
 		caught_shrimp.emit(shrimp_info)
-		
+
+func toggle_fishing(fishing):
+	is_fishing = fishing		
+	changed_fishing_status.emit(is_fishing)
