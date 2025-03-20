@@ -22,7 +22,10 @@ func _physics_process(delta: float) -> void:
 	if shimp_status == ShimpIs.ROAMING:
 		velocity = speed * target_direction
 	elif shimp_status == ShimpIs.CHASING:
-		velocity = speed * get_direction_to_target()
+		var direction = get_direction_to_target()
+		velocity = speed * direction
+	elif shimp_status == ShimpIs.ON_HOOK:
+		velocity = Vector2.ZERO
 	
 	move_and_slide()
 
@@ -34,5 +37,16 @@ func _on_bored_timer_timeout() -> void:
 
 
 func _on_wall_detector_body_entered(body: Node2D) -> void:
+	if shimp_status == ShimpIs.CHASING and body.is_in_group("Hook"):
+		body.catch_shrimp(self)
+		shimp_status = ShimpIs.ON_HOOK
+		return
+	
 	if shimp_status == ShimpIs.ROAMING:
 		pick_direction()
+
+
+func _on_shimp_vision_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Hook") and shimp_status == ShimpIs.ROAMING:
+		target = body
+		shimp_status = ShimpIs.CHASING
