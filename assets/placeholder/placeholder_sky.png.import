@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxe1umjjl3h5b"
-path="res://.godot/imported/fishingrod.png-db5f334cd3954e7d9bbb15d35001755b.ctex"
+uid="uid://crwq8fv3dv4h0"
+path="res://.godot/imported/placeholder_sky.png-e52562ac3bd439f5b2ba1cf745237c23.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/placeholder/fishingrod.png"
-dest_files=["res://.godot/imported/fishingrod.png-db5f334cd3954e7d9bbb15d35001755b.ctex"]
+source_file="res://assets/placeholder/placeholder_sky.png"
+dest_files=["res://.godot/imported/placeholder_sky.png-e52562ac3bd439f5b2ba1cf745237c23.ctex"]
 
 [params]
 
