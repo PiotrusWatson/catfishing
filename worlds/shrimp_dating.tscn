@@ -17,7 +17,6 @@ grow_vertical = 2
 script = ExtResource("1_tdlqk")
 dialogue_box_prefab = ExtResource("2_sx0bd")
 debug_shrimp = ExtResource("3_4mnog")
-is_debug = true
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1

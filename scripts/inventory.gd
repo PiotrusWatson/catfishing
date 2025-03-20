@@ -3,7 +3,9 @@ extends Node
 enum ItemIs{ADDED, REMOVED, ATTEMPTED_ADD}
 var items: Array[Item]
 @onready var item_get_prefab = preload("res://ui/get_item.tscn")
-@onready var possible_items = {"kirby_toes": preload("res://resources/items/placeholder/kirby_feet.tres")}
+@onready var possible_items = {
+	"kirby_toes": preload("res://resources/items/placeholder/kirby_feet.tres")
+	}
 @onready var inventory_menu_prefab = preload("res://ui/inventory.tscn")
 var item_get: Node
 var inventory_menu: Node
