@@ -1,8 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://c5viyjrpp6xob"]
+[gd_scene load_steps=7 format=3 uid="uid://c5viyjrpp6xob"]
 
 [ext_resource type="Script" uid="uid://mh2cm312kjpx" path="res://scenes/fishing_zone_physics.gd" id="1_qp5sr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gp0ue"]
+size = Vector2(1146, 33)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qp5sr"]
 size = Vector2(1146, 33)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fi7oa"]
@@ -30,6 +33,10 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-2, -315)
 shape = SubResource("RectangleShape2D_gp0ue")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(7, 796)
+shape = SubResource("RectangleShape2D_qp5sr")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-590, 244)

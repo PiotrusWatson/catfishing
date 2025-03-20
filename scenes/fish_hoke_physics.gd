@@ -7,6 +7,7 @@ signal hook_moved(amount)
 @onready var hook = $Hook
 
 func catch_shrimp(shrimp: Node2D):
+	shrimp.global_position = hook.global_position
 	hook.node_a = shrimp.get_path()
 
 func push_hook(target: Vector2):
