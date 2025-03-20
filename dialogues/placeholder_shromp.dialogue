@@ -1,3 +1,27 @@
 ~ start
 
+
+[i] You see a preoccupied shrimp caught up in his book. He seems to be mumbling to himself. [/i]
+Huizinga? … No… No…
+- Make eye contact.
+	=> eyecontact
+- Who's Huizinga?
+	=> huizinga
+
+
+
+
+
+
+
+
+
+~ eyecontact
+You try to make eye contact, but it is almost like he is deliberately avoiding your gaze.
+- Keep staring at him
+- Who's Huizinga?
+	=> huizinga
+	
+~ huizinga
+
 => END
