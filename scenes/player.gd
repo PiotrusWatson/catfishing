@@ -7,6 +7,9 @@ extends Node2D
 @export var rotation_speed = 0.5
 var hook: RigidBody2D
 
+signal hooked_shrimp
+signal caught_shrimp(shrimp: ShrimpType)
+
 func _ready():
 	hook = fishing_rod.hoke
 
@@ -33,3 +36,11 @@ func _on_extension_timer_timeout() -> void:
 func _on_reduction_timer_timeout() -> void:
 	fishing_rod.decrease_rope()
 	
+
+
+func _on_fishing_rod_hooked_shrimp() -> void:
+	hooked_shrimp.emit()
+
+
+func _on_fishing_rod_caught_shrimp(shrimp: ShrimpType) -> void:
+	caught_shrimp.emit(shrimp)

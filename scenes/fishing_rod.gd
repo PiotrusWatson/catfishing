@@ -10,6 +10,9 @@ var reel_amount
 @onready var rope = $Rope
 @onready var hoke = $FishHoke
 
+signal hooked_shrimp()
+signal caught_shrimp(shrimp: ShrimpType)
+
 func _ready():
 	reel_amount = starting_reel
 
@@ -27,3 +30,11 @@ func reset_reel():
 	reel_amount = starting_reel
 func update_rope(delta):
 	pass
+
+
+func _on_fish_hoke_hooked_shrimp() -> void:
+	hooked_shrimp.emit()
+
+
+func _on_fish_hoke_caught_shrimp(shrimp: ShrimpType) -> void:
+	caught_shrimp.emit(shrimp)

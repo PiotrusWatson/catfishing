@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bqs3qry1n25j7"]
+[gd_scene load_steps=9 format=3 uid="uid://bqs3qry1n25j7"]
 
 [ext_resource type="Script" uid="uid://dh828xw3ebhk4" path="res://worlds/fishing_signals.gd" id="1_585q5"]
 [ext_resource type="PackedScene" uid="uid://bjxfp5r5xfw4f" path="res://scenes/player.tscn" id="2_1kayd"]
@@ -6,6 +6,8 @@
 [ext_resource type="Script" uid="uid://csli8svrwjc2p" path="res://scenes/hook_camera.gd" id="2_odgnr"]
 [ext_resource type="PackedScene" uid="uid://dn46lkmmrym33" path="res://scenes/shimp.tscn" id="3_ncbgm"]
 [ext_resource type="PackedScene" uid="uid://cor8igwxetpgn" path="res://addons/dynamic_water_2d/water.tscn" id="6_eo0ky"]
+[ext_resource type="Theme" uid="uid://by8wyn837d0af" path="res://ui/ui_theme.tres" id="7_585q5"]
+[ext_resource type="Script" uid="uid://d0votwagi38uu" path="res://worlds/ui.gd" id="7_d3nh4"]
 
 [node name="FishingWorld" type="Node2D"]
 script = ExtResource("1_585q5")
@@ -38,3 +40,40 @@ position = Vector2(-670, -208)
 scale = Vector2(2.56, 4.96)
 point_per_distance = 20
 point_independent_stiffness = 3.0
+
+[node name="UI" type="CanvasLayer" parent="."]
+script = ExtResource("7_d3nh4")
+
+[node name="UILayer" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("7_585q5")
+
+[node name="BigScreenText" type="Label" parent="UI/UILayer"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -567.5
+offset_top = -119.5
+offset_right = 567.5
+offset_bottom = 119.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "SHRIMP ON"
+horizontal_alignment = 1
+
+[node name="Timers" type="Node" parent="UI"]
+
+[node name="FadeTimer" type="Timer" parent="UI/Timers"]
+one_shot = true
+
+[connection signal="caught_text_faded" from="UI" to="." method="_on_ui_caught_text_faded"]
+[connection signal="timeout" from="UI/Timers/FadeTimer" to="UI" method="_on_fade_timer_timeout"]

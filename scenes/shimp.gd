@@ -29,7 +29,8 @@ func _physics_process(delta: float) -> void:
 	elif shimp_status == ShimpIs.ON_HOOK:
 		set_collision_layer_value(2, false)
 		set_collision_mask_value(2, false)
-	
+		set_collision_layer_value(3, true)
+		set_collision_mask_value(3, true)
 
 
 func set_shrimp(shrimp: ShrimpType):
@@ -42,7 +43,7 @@ func _on_bored_timer_timeout() -> void:
 
 func _on_wall_detector_body_entered(body: Node2D) -> void:
 	if shimp_status == ShimpIs.CHASING and body.is_in_group("Hook"):
-		body.catch_shrimp(self)
+		body.hook_shrimp(self)
 		shimp_status = ShimpIs.ON_HOOK
 		return
 	

@@ -48,3 +48,6 @@ softness = 0.05
 
 [node name="FishHoke" parent="." instance=ExtResource("5_x3ea4")]
 position = Vector2(-48, 109)
+
+[connection signal="caught_shrimp" from="FishHoke" to="." method="_on_fish_hoke_caught_shrimp"]
+[connection signal="hooked_shrimp" from="FishHoke" to="." method="_on_fish_hoke_hooked_shrimp"]

@@ -2,16 +2,16 @@
 
 [ext_resource type="Script" uid="uid://mh2cm312kjpx" path="res://scenes/fishing_zone_physics.gd" id="1_qp5sr"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gp0ue"]
-size = Vector2(1146, 33)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qp5sr"]
-size = Vector2(1146, 33)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fi7oa"]
 size = Vector2(1146, 33)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0cchh"]
+size = Vector2(1146, 33)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gp0ue"]
+size = Vector2(1146, 33)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qp5sr"]
 size = Vector2(1146, 33)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ca631"]
@@ -26,27 +26,31 @@ script = ExtResource("1_qp5sr")
 wait_time = 3.0
 autostart = true
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-collision_layer = 2
-collision_mask = 2
+[node name="Walls" type="StaticBody2D" parent="."]
+collision_layer = 7
+collision_mask = 7
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-2, -315)
-shape = SubResource("RectangleShape2D_gp0ue")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(7, 796)
-shape = SubResource("RectangleShape2D_qp5sr")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-590, 244)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls"]
+position = Vector2(-566, 240)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_fi7oa")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls"]
 position = Vector2(591, 242)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_0cchh")
+
+[node name="Ceiling" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ceiling"]
+position = Vector2(-2, -315)
+shape = SubResource("RectangleShape2D_gp0ue")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ceiling"]
+position = Vector2(7, 796)
+shape = SubResource("RectangleShape2D_qp5sr")
 
 [node name="Shape" type="CollisionShape2D" parent="."]
 position = Vector2(4, 233)

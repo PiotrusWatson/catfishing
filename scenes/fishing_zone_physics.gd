@@ -39,3 +39,6 @@ func _on_body_entered(body: Node2D) -> void:
 func _on_body_exited(body: Node2D) -> void:
 	if body.has_method("toggle_fishing"):
 		body.toggle_fishing(false)
+		
+	if body.is_in_group("Hook"):
+		body.catch_shrimp()
