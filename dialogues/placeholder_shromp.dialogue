@@ -1,8 +1,8 @@
 ~ start
 
 
-[i] You see a preoccupied shrimp caught up in his book. He seems to be mumbling to himself. [/i]
-Huizinga? … No… No…
+You see a preoccupied shrimp caught up in his book. He seems to be mumbling to himself.
+Shompy: Huizinga? … No… No…
 - Make eye contact.
 	=> eyecontact
 - Who's Huizinga?
@@ -19,9 +19,30 @@ Huizinga? … No… No…
 ~ eyecontact
 You try to make eye contact, but it is almost like he is deliberately avoiding your gaze.
 - Keep staring at him
+	=> keepstaring
 - Who's Huizinga?
 	=> huizinga
 	
 ~ huizinga
-
+Shompy: Oh… You scared me… Didn’t realize you were there.
+- I literally fished you like 5 seconds ago...
+	=> fivesec
+- It's alright, sometimes I too get lost in stories
+	=> getlost
+	
+~ keepstaring
+The man seems to be unyielding in his pursuit of eye-contact-avoidance. He stalwartly keeps reading his book.
+Shompy: Narratologist prick...
+- I thought you wanted to be here?
+	=> tobehere
+- You seem to really like that book.
+	=> likebook
+	
 => END
+
+~ tobehere
+
+~ likebook
+
+~ fivesec
+Shompy: I'm sorry, I'm just nervous... It was my aunt's idea to get into the dating pool. I'm not quite sure if I'm ready to date yet...
