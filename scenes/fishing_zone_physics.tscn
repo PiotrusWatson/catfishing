@@ -55,6 +55,7 @@ shape = SubResource("RectangleShape2D_qp5sr")
 [node name="Shape" type="CollisionShape2D" parent="."]
 position = Vector2(4, 233)
 shape = SubResource("RectangleShape2D_ca631")
+debug_color = Color(0, 0.6, 0.701961, 0.2)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

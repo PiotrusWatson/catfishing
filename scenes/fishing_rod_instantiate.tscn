@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cnr3wp033kit5" path="res://scenes/rope_container.gd" id="2_uhxoy"]
 [ext_resource type="PackedScene" uid="uid://b2c2bd70l4nct" path="res://scenes/rope_segment.tscn" id="3_j47h3"]
 [ext_resource type="PackedScene" uid="uid://duigu0nqk8gti" path="res://scenes/fish_hoke.tscn" id="4_w0dd7"]
-[ext_resource type="Texture2D" uid="uid://bxe1umjjl3h5b" path="res://assets/placeholder/fishingrod.png" id="5_jjpkk"]
+[ext_resource type="Texture2D" uid="uid://bxe1umjjl3h5b" path="res://assets/fishingrod.png" id="5_jjpkk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8baaf"]
 size = Vector2(285.5, 66.5)

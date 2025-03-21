@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bd87gc7gaohwp"
-path="res://.godot/imported/loveletter.png-0e0f1de615f6af9b1c078305db180bd6.ctex"
+uid="uid://bxe1umjjl3h5b"
+path="res://.godot/imported/fishingrod.png-c2e982668eebfa3f1a5513b9960318ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/placeholder/loveletter.png"
-dest_files=["res://.godot/imported/loveletter.png-0e0f1de615f6af9b1c078305db180bd6.ctex"]
+source_file="res://assets/fishingrod.png"
+dest_files=["res://.godot/imported/fishingrod.png-c2e982668eebfa3f1a5513b9960318ad.ctex"]
 
 [params]
 

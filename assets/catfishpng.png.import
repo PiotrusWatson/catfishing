@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cncvdi56pj4hk"
-path="res://.godot/imported/catfishpng.png-8028bea08bf1c80637f1f7566a7ffe2f.ctex"
+path="res://.godot/imported/catfishpng.png-142096d7e44a96d8ffb345366a1eb908.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/placeholder/catfishpng.png"
-dest_files=["res://.godot/imported/catfishpng.png-8028bea08bf1c80637f1f7566a7ffe2f.ctex"]
+source_file="res://assets/catfishpng.png"
+dest_files=["res://.godot/imported/catfishpng.png-142096d7e44a96d8ffb345366a1eb908.ctex"]
 
 [params]
 
