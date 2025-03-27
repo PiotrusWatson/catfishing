@@ -1,11 +1,17 @@
 extends Node2D
 
 @export var active_shrimps: Array[ShrimpType]
+@export var fishing_limit = 1
 @onready var player = $Player
 @onready var hoke_cam = $HookCamera
 @onready var ui = $UI
 
 func _ready():
+	if Globals.end_status != Enums.EndStatus.NOT_END or Globals.number_of_successful_fishes == -1:
+		Globals.number_of_successful_fishes = fishing_limit
+		Globals.end_status = Enums.EndStatus.NOT_END
+	if Globals.number_of_successful_fishes == 0:
+		game_end()
 	hoke_cam.follow_target = player.hook
 	player.hooked_shrimp.connect(ui.shrimp_on)
 	player.caught_shrimp.connect(catch_shrimp)
@@ -21,7 +27,6 @@ func catch_shrimp(shrimp: ShrimpType):
 	ui.caught()
 	
 func game_end():
-	print("game over")
 	ui.show_final_selection(active_shrimps)
 
 func _on_ui_caught_text_faded() -> void:

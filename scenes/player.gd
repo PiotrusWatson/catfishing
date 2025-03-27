@@ -18,10 +18,6 @@ var is_fishing = false
 
 
 func _ready():
-	if Globals.number_of_successful_fishes == -1:
-		Globals.number_of_successful_fishes = number_of_successful_fishes
-	if Globals.number_of_successful_fishes == 0:
-		get_tree().create_timer(0.5).timeout.connect(game_ended.emit)
 
 	hook = fishing_rod.hoke
 
