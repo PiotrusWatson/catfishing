@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bqs3qry1n25j7"]
+[gd_scene load_steps=15 format=3 uid="uid://bqs3qry1n25j7"]
 
 [ext_resource type="Script" uid="uid://dh828xw3ebhk4" path="res://worlds/fishing_signals.gd" id="1_585q5"]
 [ext_resource type="PackedScene" uid="uid://bjxfp5r5xfw4f" path="res://scenes/player.tscn" id="2_1kayd"]
@@ -19,6 +19,10 @@ colors = PackedColorArray(0, 0.360784, 1, 1, 0.366502, 0.83846, 0.766449, 1)
 gradient = SubResource("Gradient_d3nh4")
 fill_from = Vector2(0.518349, 1)
 fill_to = Vector2(0.5, 0)
+
+[sub_resource type="Theme" id="Theme_6jn77"]
+Label/font_sizes/font_size = 30
+Label/fonts/font = null
 
 [node name="FishingWorld" type="Node2D"]
 script = ExtResource("1_585q5")
@@ -98,6 +102,17 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "SHRIMP ON"
 horizontal_alignment = 1
+
+[node name="FishesLeft" type="Label" parent="UI/UILayer"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -141.0
+offset_bottom = 239.0
+grow_horizontal = 0
+theme = SubResource("Theme_6jn77")
+text = "Fishes left: 9"
 
 [node name="Timers" type="Node" parent="UI"]
 

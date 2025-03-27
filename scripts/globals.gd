@@ -5,6 +5,7 @@ var current_shrimp: ShrimpType
 var current_scene_type: Enums.SceneType
 var item_being_given: Item
 var current_love: int
+var number_of_successful_fishes: int = -1
 
 
 func make_tiny_timer():

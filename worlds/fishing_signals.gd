@@ -8,7 +8,11 @@ func _ready():
 	hoke_cam.follow_target = player.hook
 	player.hooked_shrimp.connect(ui.shrimp_on)
 	player.caught_shrimp.connect(catch_shrimp)
+	player.caught_shrimp.connect(ui.update_fishes_left)
+	ui.update_fishes_left("JUNK")
 	
+
+
 func catch_shrimp(shrimp: ShrimpType):
 	Globals.current_shrimp = shrimp
 	ui.caught()
