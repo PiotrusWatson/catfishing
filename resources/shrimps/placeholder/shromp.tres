@@ -7,11 +7,10 @@
 
 [resource]
 script = ExtResource("4_tmp6y")
+name = ""
 basic_image = ExtResource("2_potec")
 backgrounds = Array[Texture2D]([null])
 basic_dialogue = ExtResource("1_ggdxr")
 basic_theme = ExtResource("3_nyfny")
 starting_love = 2
-liked_item_types = Array[int]([2, 3])
-disliked_item_types = Array[int]([0])
 metadata/_custom_type_script = "uid://dtjomkji7bwyx"
