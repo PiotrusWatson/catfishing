@@ -1,6 +1,68 @@
 ~ start
+match Globals.current_shrimp.love
+	when 1
+		=> normal_love
+	when 2
+		=> higher_love
+	when < 1
+		=> low_love
+	else
+		=> high_love
 
 
+~ low_love
+Shompy: you hurt me ........
+Shompy: please leave me alone ......
+=> END!
+
+~ higher_love
+Shompy sits, preoccupied in a book as always. It looks like a different book from the one he was reading the first time you met.
+His eyes light up as he notices you
+Shompy: Oh hey! I'm working my way through another really interesting book in the field of game studies
+Shompy: If you're interested in hearing? 
+He looks at you, expectantly
+- Sure, I'm interested!
+	=> higher_love_interest
+- hmmmm I'm really busy today.... sorry....
+	=> higher_love_no_interest
+
+~ higher_love_interest
+Shompy: Fantastic! This one is an exciting paper by Bo Ruberg on the queer posthuman implications of unplayable games....
+...You begin to tune out again....
+Shompy: ...And while the deer ass [i]is[/i] luscious and large, I'm unsure how it ties into queer identity as a whole....
+...You fade back into your own thoughts ....
+Shompy: ...But a video game that cannot be played??? How cool is that??? 
+Shompy looks at you, waiting for an answer
+- It's pretty cool!
+	=> higher_love_love
+- Isn't that just a "movie"?
+	=> higher_love_sad
+	
+~ higher_love_no_interest
+Shompy: ...oh....
+Shompy: I thought you were more interested.....
+Shompy: I'll see myself out ....
+do Globals.decrement_current_love()
+do Globals.decrement_current_love()
+Shompy seems sad
+=> END!
+	
+~ higher_love_sad
+Shompy: ....I guess it is....
+Shompy: God, I was talking so long and making such a fool of myself....
+Shompy: Excuse me. I need some air.
+do Globals.decrement_current_love()
+do Globals.decrement_current_love()
+Shompy seems despondent....
+=> END!
+~ higher_love_love
+Shompy: Yeah!!! Maybe we could meet some time and....
+Shompy: Watch some posthuman unplayable games together??? [#blushing]
+Shompy: I really appreciate how much interest you're showing in my special interest!
+do Globals.increment_current_love()
+Shompy seems overjoyed!
+=> END!
+~ normal_love
 You see a preoccupied shrimp caught up in his book. He seems to be mumbling to himself.
 Shompy: Huizinga? … No… No…
 - Make eye contact.
@@ -91,3 +153,8 @@ Shompy: ... I'll go away now ...
 do Globals.decrement_current_love()
 Shompy seems hurt....
 => END
+
+~ high_love
+Shompy: Don't think I haven't forgotten about watching some deer games!
+Shompy: I have a whole itinerary planned!
+=> END!

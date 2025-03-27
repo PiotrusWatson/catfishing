@@ -10,6 +10,8 @@ func _ready():
 	if Globals.end_status != Enums.EndStatus.NOT_END or Globals.number_of_successful_fishes == -1:
 		Globals.number_of_successful_fishes = fishing_limit
 		Globals.end_status = Enums.EndStatus.NOT_END
+		for shrimp in active_shrimps:
+			shrimp.reset()
 	if Globals.number_of_successful_fishes == 0:
 		game_end()
 	hoke_cam.follow_target = player.hook

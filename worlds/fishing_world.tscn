@@ -74,6 +74,12 @@ angular_damp_mode = 1
 contained_shrimp = ExtResource("6_2l1a4")
 speed = 1500.0
 
+[node name="Shimp2" parent="." instance=ExtResource("3_ncbgm")]
+position = Vector2(-274, 613)
+linear_damp_mode = 1
+angular_damp_mode = 1
+speed = 1500.0
+
 [node name="Water" parent="." instance=ExtResource("6_eo0ky")]
 position = Vector2(-670, -208)
 scale = Vector2(2.56, 4.96)
