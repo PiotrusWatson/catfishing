@@ -1,20 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://ow5eq3ms08jn"]
+[gd_scene load_steps=4 format=3 uid="uid://ow5eq3ms08jn"]
 
-[ext_resource type="FontFile" uid="uid://bw7csb2v3xxdr" path="res://fonts/Ldfcomicsansbold-zgma.ttf" id="1_c1ndx"]
+[ext_resource type="Theme" uid="uid://b7cfsb3ly6dfg" path="res://ui/item_slot_theme.tres" id="1_c1ndx"]
 [ext_resource type="Script" uid="uid://b7xfkvux56rg3" path="res://ui/item_slot.gd" id="1_gpwhp"]
 [ext_resource type="Texture2D" uid="uid://darx62eafnypx" path="res://placeholder/cross.svg" id="1_m0q4r"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lxngi"]
-bg_color = Color(0.237206, 0.00065015, 0.531156, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gpwhp"]
-
-[sub_resource type="Theme" id="Theme_rjkvc"]
-Button/font_sizes/font_size = 50
-Button/fonts/font = ExtResource("1_c1ndx")
-Label/font_sizes/font_size = 30
-Panel/styles/panel = SubResource("StyleBoxFlat_lxngi")
-PanelContainer/styles/panel = SubResource("StyleBoxFlat_gpwhp")
 
 [node name="ItemSlot" type="PanelContainer"]
 layout_direction = 2
@@ -25,7 +13,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 2
 size_flags_vertical = 3
-theme = SubResource("Theme_rjkvc")
+theme = ExtResource("1_c1ndx")
 script = ExtResource("1_gpwhp")
 
 [node name="ItemDetails" type="VBoxContainer" parent="."]

@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=3 uid="uid://c31pps066o5xw"]
+
+[ext_resource type="Theme" uid="uid://b7cfsb3ly6dfg" path="res://ui/item_slot_theme.tres" id="1_xmy22"]
+[ext_resource type="Texture2D" uid="uid://darx62eafnypx" path="res://placeholder/cross.svg" id="2_5s3dt"]
+[ext_resource type="Script" uid="uid://bt4hwnlnr7epc" path="res://ui/shrimp_slot.gd" id="2_hu8ol"]
+[ext_resource type="Theme" uid="uid://2gdxtsf4t82y" path="res://ui/title_ui_theme.tres" id="3_c2pfh"]
+
+[node name="ShrimpSlot" type="PanelContainer"]
+layout_direction = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 2
+theme = ExtResource("1_xmy22")
+script = ExtResource("2_hu8ol")
+
+[node name="ShrimpDeets" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Image" type="TextureRect" parent="ShrimpDeets"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("2_5s3dt")
+expand_mode = 3
+
+[node name="Name" type="Label" parent="ShrimpDeets"]
+layout_mode = 2
+text = "Empty Slot"
+horizontal_alignment = 1
+
+[node name="Menu" type="VBoxContainer" parent="."]
+z_index = 2
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Menu"]
+z_index = 2
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Commit to a loving and beautiful relationship with this shrimp?"
+autowrap_mode = 2
+
+[node name="Selection" type="HBoxContainer" parent="Menu"]
+layout_mode = 2
+theme = ExtResource("3_c2pfh")
+theme_override_constants/separation = 50
+
+[node name="Yes" type="Button" parent="Menu/Selection"]
+layout_mode = 2
+text = "Yes"
+
+[node name="No" type="Button" parent="Menu/Selection"]
+layout_mode = 2
+text = "No
+"
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="pressed" from="Menu/Selection/No" to="." method="_on_no_pressed"]

@@ -13,8 +13,10 @@ shadow_size = 10
 
 [resource]
 default_font = ExtResource("1_1yl33")
+Button/constants/h_separation = 10
+Button/constants/icon_max_width = 100
 Button/constants/line_spacing = 10
-Button/font_sizes/font_size = 50
+Button/font_sizes/font_size = 60
 Button/styles/hover = SubResource("StyleBoxFlat_w5it2")
 Button/styles/normal = ExtResource("1_w5it2")
 Label/colors/font_outline_color = Color(0, 0, 0, 1)
