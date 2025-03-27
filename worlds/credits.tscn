@@ -62,7 +62,7 @@ grow_vertical = 2
 
 [node name="Venni" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "Venni: Middle Manager, Fishing Artist, Producer, Dreamweaver, Visionary, UI manager, Concept Artist, Actor, Director"
+text = "Venni: Middle Manager, Fishing Artist, Producer, Dreamweaver, Visionary, UI manager, Concept Artist, Actor, Director, Report Writer, Sonic"
 autowrap_mode = 2
 
 [node name="Zoi" type="Label" parent="VBoxContainer"]

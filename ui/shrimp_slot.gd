@@ -24,7 +24,6 @@ func toggle_menu(is_active):
 func _on_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		toggle_menu(true)
-		print("woa its oipen")
 
 
 func _on_no_pressed() -> void:
@@ -32,4 +31,6 @@ func _on_no_pressed() -> void:
 
 
 func _on_yes_pressed() -> void:
-	pass
+	Globals.current_shrimp = shrimp_info
+	Globals.end_status = Enums.EndStatus.PICKED
+	SceneChanger.change_scene(SceneChanger.Worlds.END_SCENE)

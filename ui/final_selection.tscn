@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://8etsp4bfmcgm" path="res://ui/final_selection.gd" id="1_owekc"]
 [ext_resource type="Script" uid="uid://dtjomkji7bwyx" path="res://scripts/shrimptype.gd" id="2_kt6t5"]
 [ext_resource type="Resource" uid="uid://654d7dklnoik" path="res://resources/shrimps/placeholder/simp.tres" id="3_sl8jx"]
-[ext_resource type="Resource" uid="uid://b3qh4d23hex01" path="res://resources/shrimps/placeholder/shromp.tres" id="4_eq16i"]
+[ext_resource type="Resource" uid="uid://fwd73v0vtp10" path="res://resources/shrimps/placeholder/shompy.tres" id="5_sabvf"]
 [ext_resource type="PackedScene" uid="uid://c31pps066o5xw" path="res://ui/shrimp_slot.tscn" id="5_sl8jx"]
 [ext_resource type="Theme" uid="uid://2gdxtsf4t82y" path="res://ui/title_ui_theme.tres" id="7_sabvf"]
 
@@ -17,9 +17,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_eq16i")
 script = ExtResource("1_owekc")
-debug_shrimps = Array[ExtResource("2_kt6t5")]([ExtResource("3_sl8jx"), ExtResource("4_eq16i")])
+debug_shrimps = Array[ExtResource("2_kt6t5")]([ExtResource("3_sl8jx"), ExtResource("5_sabvf")])
 slot_scene = ExtResource("5_sl8jx")
-is_debug = true
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1

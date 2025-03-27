@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://deov2kdhtl76e"]
+[gd_scene load_steps=4 format=3 uid="uid://deov2kdhtl76e"]
 
 [ext_resource type="Script" uid="uid://wc71ix3ttpy1" path="res://worlds/end_scene.gd" id="1_55mtw"]
+[ext_resource type="Resource" uid="uid://dmuggkrnqv1dx" path="res://dialogues/alone_end.dialogue" id="2_qdqlm"]
+[ext_resource type="PackedScene" uid="uid://boje87mxmaur3" path="res://ui/placeholder_balloon.tscn" id="3_40n01"]
 
 [node name="EndScene" type="Control"]
 layout_mode = 3
@@ -10,3 +12,5 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_55mtw")
+bad_end_scene = ExtResource("2_qdqlm")
+dialogue_box_prefab = ExtResource("3_40n01")
