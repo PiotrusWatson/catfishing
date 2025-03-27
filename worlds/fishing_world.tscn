@@ -30,6 +30,7 @@ Label/fonts/font = null
 [node name="FishingWorld" type="Node2D"]
 script = ExtResource("1_585q5")
 active_shrimps = Array[ExtResource("2_iq87m")]([ExtResource("3_idyiq"), ExtResource("6_2l1a4")])
+fishing_limit = 3
 
 [node name="HookCamera" type="Camera2D" parent="."]
 position = Vector2(-14, 111)

@@ -9,7 +9,6 @@ Shompy: Huizinga? … No… No…
 	=> huizinga
 
 
-
 ~ eyecontact
 You try to make eye contact, but it is almost like he is deliberately avoiding your gaze.
 - Keep staring at him
@@ -33,7 +32,7 @@ He stalwartly keeps reading his book.
 Shompy: Narratologist prick...
 - I thought you wanted to be here?
 - You seem to really like that book.
-=> END!
+	=> END!
 
 
 ~ fivesec
@@ -42,6 +41,7 @@ Shompy: I'm sorry, I'm just nervous... It was my aunt's idea to get into the dat
 Shompy: I'm not quite sure if I'm ready to date yet...
 - You shouldn't blindly follow other people's advice.
 	Catfish: You shouldn't blindly follow other people's advice.
+	=> END!
 - Well... Sorry for being rude... 
 	Catfish: Well... Sorry for being rude... 
 	Catfish: I get unpleasant sometimes when I'm nervous. 
@@ -52,12 +52,42 @@ Shompy: I'm not quite sure if I'm ready to date yet...
 	Eyes fixed to earth, almost looking for...
 	Something that isn't there anymore.
 	Catfish: So maybe we can just... Talk, for now?
-=> END!
+	=> END!
 
 
 ~ getlost
 Shompy: Well, it's not a story. I was reading an article by... 
 Shompy: Well, never mind, I don't want to bore you with my interests...
 - Don't be silly, I'd love to know who you were reading.
+	=> ough
 - Yeah, I'd rather talk about anything else than science, really
-=> END!
+	=> END!
+
+~ ough
+Shompy: A-are you sure???
+Shompy: Nobody's ever taken an interest in my reading before....
+- I'm taking an interest.
+	=> wow
+- lmao pranked sorry ahahaaha u fell for it
+	=> hurt
+
+~ wow
+Shompy: Well! It's an article by Espen Aarseth where he defines what a video game is using several thousand flow charts
+Shompy: As you can see a game is made up of several "sub elements" involving "narrative segments", "paidea particles", "ludus particles", "infogrames"....
+.... You tune out ....
+.... Shompy doesn't notice....
+Shompy: .... And overall I think it's quite exhaustive but I'm unsure if "cozy games" fit into this frame work ....
+.... You zone out again ....
+Shompy: ....Anyway! You've been so attentive!!! I never thought someone would care so much about formalist game studies!!
+do Globals.increment_current_love()
+Shompy likes you more now!
+=> END
+
+
+~ hurt
+Shompy: ...oh....
+Shompy: .... I guess nobody does care about formalist game studies....
+Shompy: ... I'll go away now ...
+do Globals.decrement_current_love()
+Shompy seems hurt....
+=> END
