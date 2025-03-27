@@ -22,9 +22,11 @@ func toggle_selection(is_active: bool):
 func show_shrimps(shrimps: Array[ShrimpType]):
 	for shrimp in shrimps:
 		if shrimp.love > love_threshold:
+			print("started")
 			var slot = slot_scene.instantiate()
 			character_box.add_child(slot)
 			slot.fill_deets(shrimp)
+			print(shrimp)
 			
 	toggle_selection(true)
 	

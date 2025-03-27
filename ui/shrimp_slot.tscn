@@ -12,7 +12,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = ExtResource("1_xmy22")
 script = ExtResource("2_hu8ol")
 
@@ -30,31 +31,36 @@ layout_mode = 2
 text = "Empty Slot"
 horizontal_alignment = 1
 
-[node name="Menu" type="VBoxContainer" parent="."]
+[node name="Menu" type="PanelContainer" parent="."]
 z_index = 2
 layout_mode = 2
 mouse_filter = 2
 
-[node name="Label" type="Label" parent="Menu"]
-z_index = 2
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 100
-text = "Commit to a loving and beautiful relationship with this shrimp?"
-autowrap_mode = 2
 
-[node name="Selection" type="HBoxContainer" parent="Menu"]
+[node name="Label" type="Label" parent="Menu/VBoxContainer"]
+z_index = 2
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Commit to a loving and beautiful relationship with this shrimp?"
+autowrap_mode = 3
+
+[node name="Selection" type="HBoxContainer" parent="Menu/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_c2pfh")
-theme_override_constants/separation = 50
+theme_override_constants/separation = 10
 
-[node name="Yes" type="Button" parent="Menu/Selection"]
+[node name="Yes" type="Button" parent="Menu/VBoxContainer/Selection"]
 layout_mode = 2
 text = "Yes"
 
-[node name="No" type="Button" parent="Menu/Selection"]
+[node name="No" type="Button" parent="Menu/VBoxContainer/Selection"]
 layout_mode = 2
 text = "No
 "
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
-[connection signal="pressed" from="Menu/Selection/No" to="." method="_on_no_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/Selection/No" to="." method="_on_no_pressed"]
