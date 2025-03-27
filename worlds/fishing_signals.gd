@@ -20,4 +20,4 @@ func catch_shrimp(shrimp: ShrimpType):
 
 
 func _on_ui_caught_text_faded() -> void:
-	SceneChanger.change_scene("placeholder_dating")
+	SceneChanger.change_scene(SceneChanger.Worlds.PLACEHOLDER_DATING)

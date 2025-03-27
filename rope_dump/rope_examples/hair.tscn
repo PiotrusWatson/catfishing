@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://meudxbssctd7"]
 
-[ext_resource type="Script" uid="uid://ivfdxiwuwbix" path="res://rope_dump/rope_examples/scripts/animation_player.gd" id="1_hhfs1"]
-[ext_resource type="Texture2D" uid="uid://criwv6nuivcxy" path="res://rope_dump/rope_examples/icon.svg" id="2_3mr5p"]
-[ext_resource type="PackedScene" uid="uid://das2x73tumbrb" path="res://rope_dump/rope_examples/scripts/hair.tscn" id="3_xmkdr"]
-[ext_resource type="Script" uid="uid://csyiap1odptxi" path="res://addons/ropesim/RopeHandle.gd" id="4_r73xa"]
+[ext_resource type="Script" uid="uid://b5jgc42jfxsl4" path="res://rope_dump/rope_examples/scripts/animation_player.gd" id="1_hhfs1"]
+[ext_resource type="Texture2D" uid="uid://criwv6nuivcxy" path="res://rope_examples/icon.svg" id="2_3mr5p"]
+[ext_resource type="PackedScene" uid="uid://das2x73tumbrb" path="res://rope_examples/scripts/hair.tscn" id="3_xmkdr"]
+[ext_resource type="Script" uid="uid://1xluodkpnre3" path="res://addons/ropesim/RopeHandle.gd" id="4_r73xa"]
 
 [sub_resource type="Animation" id="Animation_rnorx"]
 length = 0.001

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://dmuggkrnqv1dx"
+path="res://.godot/imported/alone_end.dialogue-fb293272d176e633fc1166a475d1cffe.tres"
+
+[deps]
+
+source_file="res://dialogues/alone_end.dialogue"
+dest_files=["res://.godot/imported/alone_end.dialogue-fb293272d176e633fc1166a475d1cffe.tres"]
+
+[params]
+
+defaults=true

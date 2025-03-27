@@ -29,3 +29,7 @@ func _on_gui_input(event: InputEvent) -> void:
 
 func _on_no_pressed() -> void:
 	toggle_menu(false)
+
+
+func _on_yes_pressed() -> void:
+	pass

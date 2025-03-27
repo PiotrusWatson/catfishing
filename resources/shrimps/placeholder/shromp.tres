@@ -7,7 +7,7 @@
 
 [resource]
 script = ExtResource("4_tmp6y")
-name = ""
+name = "Shremp"
 basic_image = ExtResource("2_potec")
 backgrounds = Array[Texture2D]([null])
 basic_dialogue = ExtResource("1_ggdxr")

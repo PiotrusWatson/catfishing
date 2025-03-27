@@ -1,0 +1,97 @@
+[gd_scene load_steps=5 format=3 uid="uid://c38f1v21f5iql"]
+
+[ext_resource type="Theme" uid="uid://dklfh5537gj42" path="res://ui/credit_theme.tres" id="1_4ep43"]
+[ext_resource type="Script" uid="uid://b4d251acffa3p" path="res://worlds/credits.gd" id="2_coxcc"]
+[ext_resource type="FontFile" uid="uid://bw7csb2v3xxdr" path="res://fonts/Ldfcomicsansbold-zgma.ttf" id="2_yqpls"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4ep43"]
+font = ExtResource("2_yqpls")
+font_size = 100
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_4ep43")
+script = ExtResource("2_coxcc")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -199.0
+offset_top = -114.0
+offset_right = 142.0
+offset_bottom = -66.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Thanks for playing!"
+horizontal_alignment = 1
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -161.0
+offset_right = 161.0
+offset_bottom = 239.0
+grow_horizontal = 2
+text = "Credits"
+label_settings = SubResource("LabelSettings_4ep43")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 19.0
+offset_top = 109.0
+offset_right = -23.0
+offset_bottom = -123.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Venni" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Venni: Middle Manager, Fishing Artist, Producer, Dreamweaver, Visionary, UI manager, Concept Artist, Actor, Director"
+autowrap_mode = 2
+
+[node name="Zoi" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Zoi: Artist, Narrative consultant, other manager"
+
+[node name="Berk" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Berk: Narrative Designer, Dialogue Writer"
+
+[node name="Alina" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Alina: Artist, Musician, Shrimp"
+
+[node name="Maruf" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Maruf: Musician"
+
+[node name="Piotrus" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Piotrus: Programmer"
+
+[node name="BackToMenu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 754.0
+offset_top = 563.0
+offset_right = 1141.0
+offset_bottom = 635.0
+text = "Back To Menu
+"
+
+[connection signal="pressed" from="BackToMenu" to="." method="_on_back_to_menu_pressed"]

@@ -30,3 +30,7 @@ func show_shrimps(shrimps: Array[ShrimpType]):
 			
 	toggle_selection(true)
 	
+
+
+func _on_go_alone_pressed() -> void:
+	pass # Replace with function body.
