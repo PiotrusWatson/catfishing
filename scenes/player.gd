@@ -11,6 +11,7 @@ var hook: RigidBody2D
 signal hooked_shrimp
 signal caught_shrimp(shrimp: ShrimpType)
 signal reduced_fish_counter(counter: int)
+signal game_ended
 var is_fishing = false
 
 
@@ -19,6 +20,9 @@ var is_fishing = false
 func _ready():
 	if Globals.number_of_successful_fishes == -1:
 		Globals.number_of_successful_fishes = number_of_successful_fishes
+	if Globals.number_of_successful_fishes == 0:
+		get_tree().create_timer(0.5).timeout.connect(game_ended.emit)
+
 	hook = fishing_rod.hoke
 
 func handle_not_fishing_input(event: InputEvent):
@@ -64,8 +68,8 @@ func _on_fishing_rod_hooked_shrimp() -> void:
 
 
 func _on_fishing_rod_caught_shrimp(shrimp: ShrimpType) -> void:
-	caught_shrimp.emit(shrimp)
 	Globals.number_of_successful_fishes -=1
+	caught_shrimp.emit(shrimp)
 	reduced_fish_counter.emit(number_of_successful_fishes)
 
 
