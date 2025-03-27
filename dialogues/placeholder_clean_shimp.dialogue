@@ -83,4 +83,5 @@ Shimp: [shake rate=20 level=10]ough~~~[/shake] [#blushing]
 Shimp: [wave amp=25 freq=5]oh my~~~~~[/wave]
 Shimp: im going to shrimp out [#normal]
 do Globals.increment_current_love()
+Shimp seems really excited by you :)
 => END!
