@@ -33,3 +33,25 @@ func strip_to_alphanumeric(name: String):
 func save(filename: String):
 	filename = strip_to_alphanumeric(filename)
 	var save_file = FileAccess.open("user://" + filename + ".save", FileAccess.WRITE)
+	
+func intersect_arrays(arr1, arr2):
+	var arr2_dict = {}
+	for v in arr2:
+		arr2_dict[v] = true
+
+	var in_both_arrays = []
+	for v in arr1:
+		if arr2_dict.get(v, false):
+			in_both_arrays.append(v)
+	return in_both_arrays
+	
+func not_in_second_array(arr1, arr2):
+	var arr2_dict = {}
+	for v in arr2:
+		arr2_dict[v] = true
+
+	var not_in_second_array = []
+	for v in arr1:
+		if not arr2_dict.get(v, false):
+			not_in_second_array.append(v)
+	return not_in_second_array
