@@ -13,9 +13,11 @@ func _ready():
 		Globals.end_status = Enums.EndStatus.NOT_END
 		for shrimp in active_shrimps:
 			shrimp.reset()
+		Inventory.reset()
 	
 	if Globals.number_of_successful_fishes == 0:
 		game_end()
+	
 	hoke_cam.follow_target = player.hook
 	player.hooked_shrimp.connect(ui.shrimp_on)
 	player.caught_shrimp.connect(catch_shrimp)
@@ -25,10 +27,12 @@ func _ready():
 	fishing_zone.init(active_shrimps)
 	
 
-
-func catch_shrimp(shrimp: ShrimpType):
-	Globals.current_shrimp = shrimp
-	ui.caught()
+func catch_shrimp(shrimp: ItemOrShrimp):
+	if shrimp is Item:
+		Inventory.add_and_show(shrimp)
+	else:
+		Globals.current_shrimp = shrimp
+		ui.caught()
 	
 func game_end():
 	ui.show_final_selection(active_shrimps)

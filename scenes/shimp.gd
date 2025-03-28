@@ -4,11 +4,12 @@ enum ShimpIs{ROAMING, CHASING, ON_HOOK, CAUGHT}
 
 @onready var sprite = $Sprite2D
 var shimp_status = ShimpIs.ROAMING
-@export var contained_shrimp: ShrimpType
+@export var contained_shrimp: ItemOrShrimp
 @export var speed = 40.0
 var target_direction: Vector2
 var target: Node2D
 var will_stop = false
+
 func _ready():
 	pick_direction()
 	
@@ -33,7 +34,7 @@ func _physics_process(delta: float) -> void:
 		set_collision_mask_value(3, true)
 
 
-func set_shrimp(shrimp: ShrimpType):
+func set_shrimp(shrimp: ItemOrShrimp):
 	contained_shrimp = shrimp
 
 func _on_bored_timer_timeout() -> void:

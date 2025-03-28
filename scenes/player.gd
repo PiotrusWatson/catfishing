@@ -9,16 +9,13 @@ extends Node2D
 var hook: RigidBody2D
 
 signal hooked_shrimp
-signal caught_shrimp(shrimp: ShrimpType)
+signal caught_shrimp(shrimp: ItemOrShrimp)
 signal reduced_fish_counter(counter: int)
 signal game_ended
 var is_fishing = false
 
 
-
-
 func _ready():
-
 	hook = fishing_rod.hoke
 
 func handle_not_fishing_input(event: InputEvent):
@@ -63,10 +60,9 @@ func _on_fishing_rod_hooked_shrimp() -> void:
 	hooked_shrimp.emit()
 
 
-func _on_fishing_rod_caught_shrimp(shrimp: ShrimpType) -> void:
+func _on_fishing_rod_caught_shrimp(shrimp: ItemOrShrimp) -> void:
 	Globals.number_of_successful_fishes -=1
 	caught_shrimp.emit(shrimp)
-	reduced_fish_counter.emit(number_of_successful_fishes)
 
 
 func _on_fishing_rod_changed_fishing_status(is_fishing: bool) -> void:

@@ -2,14 +2,14 @@ extends RigidBody2D
 
 signal hooked_shrimp
 signal hook_moved(amount)
-signal caught_shrimp(shrimp: ShrimpType)
+signal caught_shrimp(shrimp: ItemOrShrimp)
 signal changed_fishing_status(is_fishing: bool)
 @export var strength = 3.0
 
 @onready var hook = $Hook
 var is_hooked = false
 var is_fishing = false
-var shrimp_info: ShrimpType
+var shrimp_info: ItemOrShrimp
 
 func hook_shrimp(shrimp: Node2D):
 	shrimp.global_position = hook.global_position

@@ -1,4 +1,4 @@
-extends Resource
+extends ItemOrShrimp
 class_name ShrimpType
 
 @export var name: String
