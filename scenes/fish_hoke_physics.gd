@@ -10,9 +10,11 @@ signal changed_fishing_status(is_fishing: bool)
 var is_hooked = false
 var is_fishing = false
 var shrimp_info: ItemOrShrimp
+var current_shrimp: Node2D
 
 func hook_shrimp(shrimp: Node2D):
 	shrimp.global_position = hook.global_position
+	current_shrimp = shrimp
 	hook.node_a = shrimp.get_path()
 	hooked_shrimp.emit()
 	is_hooked = true
@@ -25,6 +27,8 @@ func push_hook(target: Vector2):
 func catch_shrimp():
 	if is_hooked:
 		caught_shrimp.emit(shrimp_info)
+		if shrimp_info is Item:
+			current_shrimp.queue_free()
 
 func toggle_fishing(fishing):
 	is_fishing = fishing		

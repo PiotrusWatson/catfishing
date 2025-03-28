@@ -30,6 +30,8 @@ func _ready():
 func catch_shrimp(shrimp: ItemOrShrimp):
 	if shrimp is Item:
 		Inventory.add_and_show(shrimp)
+		if Globals.number_of_successful_fishes == 0:
+			game_end()
 	else:
 		Globals.current_shrimp = shrimp
 		ui.caught()
