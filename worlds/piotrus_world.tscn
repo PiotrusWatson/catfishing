@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://bqck0u20a4m15"]
 
 [ext_resource type="Texture2D" uid="uid://dbhukjwr2y67w" path="res://placeholder/Suolijärvi_lake.jpg" id="1_mr521"]
-[ext_resource type="PackedScene" uid="uid://i81g1cjl71i6" path="res://scenes/fishing_zone.tscn" id="4_mkxgu"]
-[ext_resource type="Script" uid="uid://b3hratgfrdjf7" path="res://scenes/basic_player.gd" id="5_u84ol"]
-[ext_resource type="PackedScene" uid="uid://duigu0nqk8gti" path="res://scenes/fish_hoke.tscn" id="6_jyiib"]
+[ext_resource type="PackedScene" uid="uid://i81g1cjl71i6" path="res://scenes/old_game/fishing_zone.tscn" id="4_mkxgu"]
+[ext_resource type="Script" uid="uid://b3hratgfrdjf7" path="res://scenes/old_game/basic_player.gd" id="5_u84ol"]
+[ext_resource type="PackedScene" uid="uid://duigu0nqk8gti" path="res://scenes/old_game/fish_hoke.tscn" id="6_jyiib"]
 [ext_resource type="Texture2D" uid="uid://br03kapttobgx" path="res://placeholder/Sam_Lake-MichaelFörtsch.jpg" id="10_6dury"]
 [ext_resource type="PackedScene" uid="uid://dvtgtbokriok7" path="res://ui/ui_buttons.tscn" id="10_e583f"]
 

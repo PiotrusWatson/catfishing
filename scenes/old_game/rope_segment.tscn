@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b2c2bd70l4nct"]
 
 [ext_resource type="Texture2D" uid="uid://ccyx33xjxiacf" path="res://placeholder/rope_segment.png" id="1_u4y6a"]
-[ext_resource type="Script" uid="uid://bb430wnsg8spx" path="res://scenes/rope_segment.gd" id="1_w5qyg"]
+[ext_resource type="Script" uid="uid://bb430wnsg8spx" path="res://scenes/old_game/rope_segment.gd" id="1_w5qyg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w5qyg"]
 radius = 3.0
