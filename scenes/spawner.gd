@@ -46,11 +46,12 @@ func spawn_shrimp():
 func get_possible_items():
 	var inventory = Inventory.items
 	var given_items = Inventory.given_items
-	var items_to_not_give = inventory + given_items
+	var items_to_not_give = inventory + given_items + spawned
 	return Globals.not_in_second_array(Inventory.get_possible_items(), items_to_not_give)
 
 func pick_item():
 	var possible_items = get_possible_items()
+	print(possible_items)
 	if len(possible_items) == 0:
 		return null
 	return possible_items.pick_random()
