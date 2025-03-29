@@ -2,6 +2,8 @@ extends Node
 
 enum ItemIs{ADDED, REMOVED, ATTEMPTED_ADD}
 var items: Array[Item]
+var given_items: Array[Item]
+
 @onready var item_get_prefab = preload("res://ui/get_item.tscn")
 @onready var possible_items = {
 	"kirby_toes": preload("res://resources/items/placeholder/kirby_feet.tres")
@@ -11,6 +13,12 @@ var item_get: Node
 var inventory_menu: Node
 var size = 20
 
+func get_possible_items():
+	return possible_items.values()
+func reset():
+	items.clear()
+	given_items.clear()
+	
 func add(item: Item):
 	if len(items) < size:
 		items.append(item)
@@ -26,6 +34,7 @@ func add_and_show(item: Item):
 func remove_and_show(index: int):
 	var removed = remove(index)
 	show_get_item(removed, ItemIs.REMOVED)
+	given_items.append(removed)
 	return removed
 
 func show_get_item(item: Item, status: ItemIs):

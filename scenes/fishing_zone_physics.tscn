@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://c5viyjrpp6xob"]
 
-[ext_resource type="Script" uid="uid://mh2cm312kjpx" path="res://scenes/fishing_zone_physics.gd" id="1_qp5sr"]
+[ext_resource type="Script" uid="uid://dywmcve6td1my" path="res://scenes/spawner.gd" id="1_qp5sr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fi7oa"]
 size = Vector2(1146, 33)
@@ -23,19 +23,18 @@ collision_mask = 3
 script = ExtResource("1_qp5sr")
 
 [node name="SpawnTimer" type="Timer" parent="."]
-wait_time = 3.0
-autostart = true
+wait_time = 5.0
 
 [node name="Walls" type="StaticBody2D" parent="."]
 collision_layer = 7
 collision_mask = 7
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls"]
+[node name="Left" type="CollisionShape2D" parent="Walls"]
 position = Vector2(-566, 240)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_fi7oa")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls"]
+[node name="Right" type="CollisionShape2D" parent="Walls"]
 position = Vector2(591, 242)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_0cchh")
@@ -44,11 +43,11 @@ shape = SubResource("RectangleShape2D_0cchh")
 collision_layer = 2
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ceiling"]
+[node name="Top" type="CollisionShape2D" parent="Ceiling"]
 position = Vector2(-2, -315)
 shape = SubResource("RectangleShape2D_gp0ue")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ceiling"]
+[node name="Bottom" type="CollisionShape2D" parent="Ceiling"]
 position = Vector2(7, 796)
 shape = SubResource("RectangleShape2D_qp5sr")
 

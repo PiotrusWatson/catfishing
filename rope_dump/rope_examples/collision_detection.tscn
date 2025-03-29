@@ -1,10 +1,10 @@
 [gd_scene load_steps=10 format=3 uid="uid://d3hb4pwl1ucly"]
 
-[ext_resource type="Script" uid="uid://ivfdxiwuwbix" path="res://rope_dump/rope_examples/scripts/animation_player.gd" id="1_auvbo"]
-[ext_resource type="Script" uid="uid://dona14oy2op6t" path="res://addons/ropesim/RopeCollisionShapeGenerator.gd" id="3_10pwp"]
-[ext_resource type="Texture2D" uid="uid://criwv6nuivcxy" path="res://rope_dump/rope_examples/icon.svg" id="3_jqc61"]
-[ext_resource type="Script" uid="uid://brsir3t58yxsn" path="res://rope_dump/rope_examples/scripts/collision_detector.gd" id="4_b0a70"]
-[ext_resource type="Script" uid="uid://vf6628y4kj24" path="res://addons/ropesim/Rope.gd" id="4_wgvfy"]
+[ext_resource type="Script" uid="uid://b5jgc42jfxsl4" path="res://rope_dump/rope_examples/scripts/animation_player.gd" id="1_auvbo"]
+[ext_resource type="Script" uid="uid://p7agqkyx3kru" path="res://addons/ropesim/RopeCollisionShapeGenerator.gd" id="3_10pwp"]
+[ext_resource type="Texture2D" uid="uid://criwv6nuivcxy" path="res://rope_examples/icon.svg" id="3_jqc61"]
+[ext_resource type="Script" uid="uid://s7lpy8p2yjcw" path="res://rope_dump/rope_examples/scripts/collision_detector.gd" id="4_b0a70"]
+[ext_resource type="Script" uid="uid://b2shq2gjd4fvt" path="res://addons/ropesim/Rope.gd" id="4_wgvfy"]
 
 [sub_resource type="Animation" id="Animation_1pnxe"]
 length = 0.001

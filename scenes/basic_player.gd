@@ -25,5 +25,5 @@ func retract_hook():
 	fish_hook.queue_free()
 func handle_caught_shrimp(shrimp):
 	retract_hook()
-	SceneChanger.change_scene("placeholder_dating")
+	SceneChanger.change_scene(SceneChanger.Worlds.PLACEHOLDER_DATING)
 	

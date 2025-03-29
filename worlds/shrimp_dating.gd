@@ -30,7 +30,7 @@ func handle_start_dialogue():
 		DialogueManager.show_dialogue_balloon_scene(spawned_box, end_dialogue)
 		state = DatingState.NONE
 	else:
-		SceneChanger.change_scene("physics_fishing")
+		SceneChanger.change_scene(SceneChanger.Worlds.PHYSICS_FISHING)
 		
 func handle_end_dialogue(resource):
 	spawned_box.queue_free()

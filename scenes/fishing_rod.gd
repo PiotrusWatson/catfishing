@@ -14,7 +14,7 @@ var reel_amount
 @onready var pin_point = $PinPoint
 
 signal hooked_shrimp()
-signal caught_shrimp(shrimp: ShrimpType)
+signal caught_shrimp(shrimp: ItemOrShrimp)
 signal changed_fishing_status(is_fishing: bool)
 
 func _ready():
@@ -42,7 +42,7 @@ func _on_fish_hoke_hooked_shrimp() -> void:
 	hooked_shrimp.emit()
 
 
-func _on_fish_hoke_caught_shrimp(shrimp: ShrimpType) -> void:
+func _on_fish_hoke_caught_shrimp(shrimp: ItemOrShrimp) -> void:
 	caught_shrimp.emit(shrimp)
 
 

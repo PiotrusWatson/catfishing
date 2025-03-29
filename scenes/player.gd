@@ -5,10 +5,13 @@ extends Node2D
 @onready var extension_timer = $Timers/ExtensionTimer
 @onready var reduction_timer = $Timers/ReductionTimer
 @export var rotation_speed = 0.5
+@export var number_of_successful_fishes = 10
 var hook: RigidBody2D
 
 signal hooked_shrimp
-signal caught_shrimp(shrimp: ShrimpType)
+signal caught_shrimp(shrimp: ItemOrShrimp)
+signal reduced_fish_counter(counter: int)
+signal game_ended
 var is_fishing = false
 
 
@@ -57,7 +60,8 @@ func _on_fishing_rod_hooked_shrimp() -> void:
 	hooked_shrimp.emit()
 
 
-func _on_fishing_rod_caught_shrimp(shrimp: ShrimpType) -> void:
+func _on_fishing_rod_caught_shrimp(shrimp: ItemOrShrimp) -> void:
+	Globals.number_of_successful_fishes -=1
 	caught_shrimp.emit(shrimp)
 
 

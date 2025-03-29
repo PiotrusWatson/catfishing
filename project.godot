@@ -47,7 +47,7 @@ Pull={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogues/placeholder_shimp.dialogue", "res://dialogues/end_dialogue.dialogue", "res://dialogues/placeholder_shromp.dialogue", "res://dialogues/intro_dialogue.dialogue", "res://dialogues/shompy.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogues/placeholder_shimp.dialogue", "res://dialogues/end_dialogue.dialogue", "res://dialogues/placeholder_shromp.dialogue", "res://dialogues/intro_dialogue.dialogue", "res://dialogues/shompy.dialogue", "res://dialogues/placeholder_nerd_end.dialogue", "res://dialogues/placeholder_shimp_end.dialogue", "res://dialogues/alone_end.dialogue", "res://dialogues/placeholder_clean_shimp.dialogue")
 
 [rendering]
 
