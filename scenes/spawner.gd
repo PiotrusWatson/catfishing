@@ -97,7 +97,7 @@ func spawn_silhouette(shrimp: ItemOrShrimp):
 	spawned_thing.contained_shrimp = shrimp
 	spawned.append(shrimp)
 	add_child(spawned_thing)
-	spawned_thing.position = pick_point_in_bounds()
+	spawned_thing.position = pick_point_in_bounds() + position
 	return spawned_thing
 	
 	
