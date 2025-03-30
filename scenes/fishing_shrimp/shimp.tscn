@@ -39,7 +39,7 @@ rotation = -1.5708
 script = ExtResource("3_hcvnh")
 angle_deg = 90
 write_collision_polygon = NodePath("../ShimpVision/CollisionPolygon2D")
-debug_lines = true
+debug_shape = true
 metadata/_custom_type_script = "uid://cuc7twhcgrsrw"
 
 [node name="WallDetector" type="Area2D" parent="SubShimp"]
@@ -58,6 +58,9 @@ texture = ExtResource("1_rrfxm")
 flip_h = true
 
 [node name="ShimpVision" type="Area2D" parent="SubShimp"]
+rotation = -1.5708
+collision_layer = 5
+collision_mask = 5
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SubShimp/ShimpVision"]
 

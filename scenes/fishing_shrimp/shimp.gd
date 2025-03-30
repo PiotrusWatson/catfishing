@@ -4,6 +4,8 @@ enum ShimpIs{ROAMING, CHASING, ON_HOOK, CAUGHT}
 
 @onready var sprite = $SubShimp/Sprite2D
 @onready var sub_shrimp = $SubShimp
+@onready var vision_cone = $SubShimp/VisionCone2D
+@onready var vision_area = $SubShimp/ShimpVision
 var shimp_status = ShimpIs.ROAMING
 @export var contained_shrimp: ItemOrShrimp
 @export var speed = 40.0
@@ -27,9 +29,14 @@ func pick_direction():
 	if is_left:
 		target_direction = Vector2(-1, 0)
 		sub_shrimp.scale = Vector2(-1, 1)
+		vision_cone.scale = Vector2(-1, 1)
+		vision_area.scale = Vector2(-1, 1)
+		
 	else:
 		target_direction = Vector2(1, 0)
 		sub_shrimp.scale = Vector2(1, 1)
+		vision_cone.scale = Vector2(1, 1)
+		vision_area.scale = Vector2(1, 1)
 	will_stop = true
 
 func reached_wall():
@@ -44,6 +51,8 @@ func _physics_process(delta: float) -> void:
 		ShimpIs.CHASING:
 			var direction = get_direction_to_target()
 			sub_shrimp.scale = Vector2(1, 1)
+			vision_cone.scale = Vector2(1, 1)
+			vision_area.scale = Vector2(1, 1)
 			sub_shrimp.rotation = direction.angle()
 			apply_central_force(speed * direction * delta)
 		ShimpIs.ON_HOOK:
