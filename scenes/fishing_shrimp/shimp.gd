@@ -9,29 +9,48 @@ var shimp_status = ShimpIs.ROAMING
 var target_direction: Vector2
 var target: Node2D
 var will_stop = false
+var left_wall: float
+var right_wall: float
 
 func _ready():
 	pick_direction()
 	
+func init(thing: ItemOrShrimp, walls: Walls):
+	contained_shrimp = thing
+	left_wall = walls.left_wall.global_position.x
+	right_wall = walls.right_wall.global_position.x
+	
+	
 func pick_direction():
-	target_direction = Vector2(randf_range(-1, 1), randf_range(-1, 1)).normalized()
-	sprite.rotation = target_direction.angle()
+	var is_left = bool(randi_range(0, 1))
+	if is_left:
+		target_direction = Vector2(-1, 0)
+		scale = Vector2(1, 1)
+	else:
+		target_direction = Vector2(1, 0)
+		scale = Vector2(-1, 1)
 	will_stop = true
 
+func reached_wall():
+	return global_position.x < left_wall or global_position.x > right_wall
+	
 func get_direction_to_target():
 	return (target.global_position - global_position).normalized()
 func _physics_process(delta: float) -> void:
-	if shimp_status == ShimpIs.ROAMING:
-		apply_central_force(speed * target_direction* delta)
-	elif shimp_status == ShimpIs.CHASING:
-		var direction = get_direction_to_target()
-		sprite.rotation = direction.angle()
-		apply_central_force(speed * direction * delta)
-	elif shimp_status == ShimpIs.ON_HOOK:
-		set_collision_layer_value(2, false)
-		set_collision_mask_value(2, false)
-		set_collision_layer_value(3, true)
-		set_collision_mask_value(3, true)
+	match shimp_status:
+		ShimpIs.ROAMING:
+			apply_central_force(speed * target_direction* delta)
+		ShimpIs.CHASING:
+			var direction = get_direction_to_target()
+			sprite.rotation = direction.angle()
+			apply_central_force(speed * direction * delta)
+		ShimpIs.ON_HOOK:
+			set_collision_layer_value(2, false)
+			set_collision_mask_value(2, false)
+			set_collision_layer_value(3, true)
+			set_collision_mask_value(3, true)
+		_:
+			pass
 
 
 func set_shrimp(shrimp: ItemOrShrimp):
@@ -56,7 +75,7 @@ func _on_shimp_vision_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Hook") and shimp_status == ShimpIs.ROAMING:
 		target = body
 		shimp_status = ShimpIs.CHASING
-		pass
+		
 
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	if will_stop:

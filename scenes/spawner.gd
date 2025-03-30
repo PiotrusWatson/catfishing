@@ -4,6 +4,7 @@ extends Area2D
 @export var item_thing_to_spawn: PackedScene
 @export var max_stuff = 9
 @export var shrimp_to_item_ratio = 0.3
+@onready var walls = $Walls
 @onready var left_wall = $Walls/Left
 @onready var right_wall = $Walls/Right
 @onready var shape = $Shape
@@ -95,7 +96,7 @@ func spawn_silhouette(shrimp: ItemOrShrimp):
 		spawned_thing = thing_to_spawn.instantiate()
 	elif shrimp is Item:
 		spawned_thing = item_thing_to_spawn.instantiate()
-	spawned_thing.contained_shrimp = shrimp
+	spawned_thing.init(shrimp, walls)
 	spawned.append(shrimp)
 	add_child(spawned_thing)
 	spawned_thing.position = pick_point_in_bounds() + position

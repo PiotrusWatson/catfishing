@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://csli8svrwjc2p" path="res://scenes/hook_camera.gd" id="2_odgnr"]
 [ext_resource type="Texture2D" uid="uid://crwq8fv3dv4h0" path="res://assets/placeholder/placeholder_sky.png" id="3_2l1a4"]
 [ext_resource type="Resource" uid="uid://654d7dklnoik" path="res://resources/shrimps/placeholder/simp.tres" id="3_idyiq"]
-[ext_resource type="PackedScene" uid="uid://dn46lkmmrym33" path="res://scenes/shimp.tscn" id="3_ncbgm"]
+[ext_resource type="PackedScene" uid="uid://dn46lkmmrym33" path="res://scenes/fishing_shrimp/shimp.tscn" id="3_ncbgm"]
 [ext_resource type="Texture2D" uid="uid://ccu6mlnvq64fy" path="res://assets/placeholder/placeholder_dock.png" id="4_gqmpw"]
 [ext_resource type="Resource" uid="uid://fwd73v0vtp10" path="res://resources/shrimps/placeholder/shompy.tres" id="6_2l1a4"]
 [ext_resource type="PackedScene" uid="uid://cor8igwxetpgn" path="res://addons/dynamic_water_2d/water.tscn" id="6_eo0ky"]

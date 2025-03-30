@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dn46lkmmrym33"]
 
 [ext_resource type="Texture2D" uid="uid://d22xl4xof8sdy" path="res://placeholder/shrimp-silhouette-000000-md.png" id="1_rrfxm"]
-[ext_resource type="Script" uid="uid://04bklhku5jre" path="res://scenes/shimp.gd" id="1_sx6ip"]
+[ext_resource type="Script" uid="uid://04bklhku5jre" path="res://scenes/fishing_shrimp/shimp.gd" id="1_sx6ip"]
 [ext_resource type="Resource" uid="uid://654d7dklnoik" path="res://resources/shrimps/placeholder/simp.tres" id="2_wfdoo"]
 [ext_resource type="Script" uid="uid://cuc7twhcgrsrw" path="res://addons/vision_cone_2d/vision_cone_2d.gd" id="3_hcvnh"]
 

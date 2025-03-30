@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://c5viyjrpp6xob"]
+[gd_scene load_steps=8 format=3 uid="uid://c5viyjrpp6xob"]
 
 [ext_resource type="Script" uid="uid://dywmcve6td1my" path="res://scenes/spawner.gd" id="1_qp5sr"]
+[ext_resource type="Script" uid="uid://cqltqr2cwjuav" path="res://scenes/walls.gd" id="2_1lfod"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fi7oa"]
 size = Vector2(1146, 33)
@@ -28,6 +29,7 @@ wait_time = 5.0
 [node name="Walls" type="StaticBody2D" parent="."]
 collision_layer = 7
 collision_mask = 7
+script = ExtResource("2_1lfod")
 
 [node name="Left" type="CollisionShape2D" parent="Walls"]
 position = Vector2(-566, 240)
