@@ -2,7 +2,8 @@ extends RigidBody2D
 
 enum ShimpIs{ROAMING, CHASING, ON_HOOK, CAUGHT}
 
-@onready var sprite = $Sprite2D
+@onready var sprite = $SubShimp/Sprite2D
+@onready var sub_shrimp = $SubShimp
 var shimp_status = ShimpIs.ROAMING
 @export var contained_shrimp: ItemOrShrimp
 @export var speed = 40.0
@@ -25,10 +26,10 @@ func pick_direction():
 	var is_left = bool(randi_range(0, 1))
 	if is_left:
 		target_direction = Vector2(-1, 0)
-		scale = Vector2(1, 1)
+		sub_shrimp.scale = Vector2(-1, 1)
 	else:
 		target_direction = Vector2(1, 0)
-		scale = Vector2(-1, 1)
+		sub_shrimp.scale = Vector2(1, 1)
 	will_stop = true
 
 func reached_wall():
@@ -42,7 +43,8 @@ func _physics_process(delta: float) -> void:
 			apply_central_force(speed * target_direction* delta)
 		ShimpIs.CHASING:
 			var direction = get_direction_to_target()
-			sprite.rotation = direction.angle()
+			sub_shrimp.scale = Vector2(1, 1)
+			sub_shrimp.rotation = direction.angle()
 			apply_central_force(speed * direction * delta)
 		ShimpIs.ON_HOOK:
 			set_collision_layer_value(2, false)
