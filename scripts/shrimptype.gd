@@ -2,7 +2,7 @@ extends ItemOrShrimp
 class_name ShrimpType
 
 @export var name: String
-@export var basic_image: Texture2D
+@export var images: ShrimpImages
 @export var backgrounds: Array[Texture2D]
 @export var basic_dialogue: DialogueResource
 @export var ending_dialogue: DialogueResource

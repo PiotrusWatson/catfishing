@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cnudpd6buxmt2"]
 
-[ext_resource type="Script" uid="uid://djrpcr6tb7jdc" path="res://worlds/emotes.gd" id="1_g8dtf"]
+[ext_resource type="Script" uid="uid://djrpcr6tb7jdc" path="res://ui/emotes.gd" id="1_g8dtf"]
 [ext_resource type="Texture2D" uid="uid://3ri0ows5j3da" path="res://placeholder/picmix.com_1907793.png" id="2_ia60t"]
 [ext_resource type="Texture2D" uid="uid://c8of2d1r2cxww" path="res://placeholder/sweat.webp" id="3_2y15d"]
 [ext_resource type="Texture2D" uid="uid://bwc5jjbfr301l" path="res://placeholder/sparkles.png" id="4_h4w70"]

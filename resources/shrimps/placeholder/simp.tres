@@ -1,17 +1,17 @@
 [gd_resource type="Resource" script_class="ShrimpType" load_steps=8 format=3 uid="uid://654d7dklnoik"]
 
 [ext_resource type="Texture2D" uid="uid://dbhukjwr2y67w" path="res://placeholder/Suolijärvi_lake.jpg" id="1_1qm0w"]
-[ext_resource type="Texture2D" uid="uid://c18wqskr2ouj3" path="res://placeholder/shimp.jpg" id="1_2t83w"]
 [ext_resource type="Script" uid="uid://dtjomkji7bwyx" path="res://scripts/shrimptype.gd" id="1_f5o8c"]
 [ext_resource type="Texture2D" uid="uid://d0uo1ltpkrl7" path="res://placeholder/duo.jpg" id="2_jvd58"]
 [ext_resource type="Resource" uid="uid://l17otjaow3eq" path="res://dialogues/placeholder_clean_shimp.dialogue" id="3_845x8"]
 [ext_resource type="Theme" uid="uid://sh6ju41csl7u" path="res://ui/character_theme.tres" id="3_mbs3c"]
+[ext_resource type="Resource" uid="uid://d1chuxtct6nc0" path="res://resources/shrimps/placeholder/shrimp_images/simp.tres" id="6_6n7oq"]
 [ext_resource type="Resource" uid="uid://p0j6ni4t8mpg" path="res://dialogues/placeholder_shimp_end.dialogue" id="6_845x8"]
 
 [resource]
 script = ExtResource("1_f5o8c")
 name = "Simp"
-basic_image = ExtResource("1_2t83w")
+images = ExtResource("6_6n7oq")
 backgrounds = Array[Texture2D]([ExtResource("1_1qm0w"), ExtResource("2_jvd58")])
 basic_dialogue = ExtResource("3_845x8")
 ending_dialogue = ExtResource("6_845x8")

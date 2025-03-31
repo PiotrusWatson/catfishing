@@ -16,7 +16,7 @@ func _ready():
 	if Globals.current_shrimp == null:
 		Globals.current_shrimp = debug_shrimp
 	shrimp_data = Globals.current_shrimp
-	shrimp_image.texture = shrimp_data.basic_image
+	shrimp_image.texture = shrimp_data.images.basic
 	shrimp_dialogue = shrimp_data.basic_dialogue
 	background.texture = shrimp_data.backgrounds[0]
 	make_box()
@@ -45,18 +45,18 @@ func make_box():
 	
 func parse_tags(line):
 	for tag in line.tags:
-		if tag == "blushing":
-			emotes.start_blush()
-		elif tag == "sweating":
-			emotes.start_sweat()
-		elif tag == "sparkling":
-			emotes.start_sparkle()
-		elif tag == "questioning":
-			emotes.start_question()
-		elif tag == "alert":
-			emotes.start_exclamation()
+		if tag == "angry":
+			shrimp_image.texture = shrimp_data.images.angry
+		elif tag == "nervous":
+			shrimp_image.texture = shrimp_data.images.nervous
+		elif tag == "sparkle":
+			shrimp_image.texture = shrimp_data.images.sparkle
+		elif tag == "love":
+			shrimp_image.texture = shrimp_data.images.love
+		elif tag == "sad":
+			shrimp_image.texture = shrimp_data.images.sad
 		elif tag == "normal":
-			emotes.reset_all()
+			shrimp_image.texture = shrimp_data.images.basic
 		elif tag.begins_with("background"):
 			var index = int(tag.split("=")[1])
 			background.texture = shrimp_data.backgrounds[index]
