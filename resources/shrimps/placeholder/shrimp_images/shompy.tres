@@ -16,5 +16,4 @@ love = ExtResource("3_dmjto")
 nervous = ExtResource("4_yeyf2")
 sad = ExtResource("5_64fnj")
 sparkle = ExtResource("7_y507r")
-use_legacy_emotes = false
 metadata/_custom_type_script = "uid://2g3jx1xjm2m0"

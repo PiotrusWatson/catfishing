@@ -1,6 +1,5 @@
-[gd_resource type="Resource" script_class="ShrimpType" load_steps=8 format=3 uid="uid://654d7dklnoik"]
+[gd_resource type="Resource" script_class="ShrimpType" load_steps=7 format=3 uid="uid://654d7dklnoik"]
 
-[ext_resource type="Texture2D" uid="uid://dbhukjwr2y67w" path="res://placeholder/Suolijärvi_lake.jpg" id="1_1qm0w"]
 [ext_resource type="Script" uid="uid://dtjomkji7bwyx" path="res://scripts/shrimptype.gd" id="1_f5o8c"]
 [ext_resource type="Texture2D" uid="uid://d0uo1ltpkrl7" path="res://placeholder/duo.jpg" id="2_jvd58"]
 [ext_resource type="Resource" uid="uid://l17otjaow3eq" path="res://dialogues/placeholder_clean_shimp.dialogue" id="3_845x8"]
@@ -12,7 +11,7 @@
 script = ExtResource("1_f5o8c")
 name = "Simp"
 images = ExtResource("6_6n7oq")
-backgrounds = Array[Texture2D]([ExtResource("1_1qm0w"), ExtResource("2_jvd58")])
+backgrounds = Array[Texture2D]([null, ExtResource("2_jvd58")])
 basic_dialogue = ExtResource("3_845x8")
 ending_dialogue = ExtResource("6_845x8")
 basic_theme = ExtResource("3_mbs3c")

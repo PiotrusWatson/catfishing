@@ -10,76 +10,76 @@ match Globals.current_shrimp.love
 		=> high_love
 
 ~ normal_love
-Shimp: heyyyyy studdddddd
+Shimp: heyyyyy studdddddd [#love]
 Shimp: I've never seen a shrimp like you before....
 Shimp: with those delightful cat-like eyes....
 Shimp: that je ne sais quois....
-Shimp: striped shirt
-Shimp: you here to show me a good time?
-- you're coming on way too strong....
+Shimp: striped shirt [#nervous]
+Shimp: you here to show me a good time? [#sparkle]
+- you're coming on way too strong....[#normal]
 	=> traumadump
-- omg ur shrimply delectable
+- omg ur shrimply delectable [#normal]
 	Shimp: <3 <3 <3 => love_path
 
 
 ~ low_love
-Shimp: don't talk to me >:(
+Shimp: don't talk to me >:( [#angry]
 Shimp: I've talked to my therapist and they said we shouldn't talk any more
 Shimp: I think this is for the best
 => END!
 
 ~ higher_love
-Shimp: let's take a walk
-Shimp: this is where i grew up. [wait=1] Duo Hervanta. [#background=1]
-Shimp: it was [wait=0.5] rough. The hesburger shuts at 10.
-Shimp: i had to fight to get those [wave]burgs[/wave].
-- that sounds super difficult for you....
+Shimp: let's take a walk 
+Shimp: this is where i grew up. [wait=1] Duo Hervanta. [#background=1] [#sparkle]
+Shimp: it was [wait=0.5] rough. The hesburger shuts at 10. [#nervous]
+Shimp: i had to fight to get those [wave]burgs[/wave]. [#angry]
+- that sounds super difficult for you.... [#normal]
 	=> higher_love_difficult
-- you know mcdonalds has better quality for the price
+- you know mcdonalds has better quality for the price [#normal]
 	=> sacreliege
 => END!
 
 ~ higher_love_difficult
-Shimp: it was!!! every day i would wake up and run to the hesmond at the crack of dawn
-Shimp: i'd have so many classes but i'd sill get my [wave]burgs[/wave]
-Shimp: i was so tired all the time.....
-Shimp: but i perservered. and im so much stronger for it and now i only get head shots in counter strike.
+Shimp: it was!!! every day i would wake up and run to the hesmond at the crack of dawn 
+Shimp: i'd have so many classes but i'd sill get my [wave]burgs[/wave] [#sparkle]
+Shimp: i was so tired all the time..... [#sad]
+Shimp: but i perservered. and im so much stronger for it and now i only get head shots in counter strike. [#love]
 Shimp: thank you so much for accompanying me <3. it's always nice to take a trip down memory lane [#background=0]
 do Globals.increment_current_love()
 Shimp seems really happy!
 => END!
 
 ~ sacreliege
-Shimp: how DARE you [#alert]
+Shimp: how DARE you [#angry]
 Shimp: i will NOT stand for some sad mcdonalds lad in MY duo
 Shimp: i can't belIEVE i thought you could understand me...
-Shimp: and i was so honest and really deep and this is how i'm repaid???
-Shimp: leave my sight. i never want to see you again.
+Shimp: and i was so honest and really deep and this is how i'm repaid??? [#sad]
+Shimp: leave my sight. i never want to see you again. [#angry]
 do Globals.decrement_current_love()
 do Globals.decrement_current_love()
 Shimp seems really angry at you ....
 => END!
 
 ~ high_love
-Shimp: heyyyyyy studddddd <3 <3
-Shimp: lets go get burgers sometime ok???
-Shimp: rawr xD [i] pounces on u [/i]
+Shimp: heyyyyyy studddddd <3 <3 [#love]
+Shimp: lets go get burgers sometime ok???[#sparkle]
+Shimp: rawr xD [i] pounces on u [/i] [#love]
 => END!
 
 ~ traumadump
-Shimp: omg??? what??? [#questioning]
-Shimp: u haaate me :(((( [#alert]
-Shimp: why would you fish me out if you were going to reject me like this....?[#blushing]
-Shimp: i've been rejected so many times by so many shrimp.... i thought this would be my time ....
-Shimp: and you're such a cutie too..... [#sparkling]
-Shimp: oughhh are u judging me [#sweating]
-Shimp: why must you hurt me so.... [#normal]
+Shimp: omg??? what??? [#sad]
+Shimp: u haaate me :(((( 
+Shimp: why would you fish me out if you were going to reject me like this....?[#angry]
+Shimp: i've been rejected so many times by so many shrimp.... i thought this would be my time ....[#nervous]
+Shimp: and you're such a cutie too..... [#sparkle]
+Shimp: oughhh are u judging me [#nervous]
+Shimp: why must you hurt me so.... [#sad]
 do Globals.decrement_current_love()
 Shimp seems hurt.....
 => END!
 
 ~ love_path
-Shimp: [shake rate=20 level=10]ough~~~[/shake] [#blushing]
+Shimp: [shake rate=20 level=10]ough~~~[/shake] [#love]
 Shimp: [wave amp=25 freq=5]oh my~~~~~[/wave]
 Shimp: im going to shrimp out [#normal]
 do Globals.increment_current_love()
