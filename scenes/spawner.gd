@@ -10,7 +10,7 @@ extends Area2D
 @onready var shape = $Shape
 @onready var spawn_timer = $SpawnTimer
 var spawning_pool: Array[ShrimpType]
-var spawned: Array[ShrimpType]
+var spawned: Array[ItemOrShrimp]
 signal pool_exhausted
 
 var max_shrimp
@@ -61,8 +61,10 @@ func spawn_item():
 	var item = pick_item()
 	if item == null:
 		return
+	spawned.append(item)
 	spawn_silhouette(item)
 	item_counter += 1
+
 
 func pick_shrimp(shrimp_pool: Array[ShrimpType]):
 	var legal_shrimps = Globals.not_in_second_array(shrimp_pool, spawned)
@@ -119,7 +121,12 @@ func spawn_item_or_shrimp():
 	else:
 		spawn_shrimp()
 		
-	
+
+func remove_spawned(thing_to_look_for: ItemOrShrimp):
+	for i in range(len(spawned)):
+		if spawned[i] == thing_to_look_for:
+			spawned.remove_at(i)
+			return
 
 
 func _on_spawn_timer_timeout() -> void:

@@ -27,7 +27,7 @@ func push_hook(target: Vector2):
 func catch_shrimp():
 	if is_hooked:
 		caught_shrimp.emit(shrimp_info)
-		if shrimp_info is Item:
+		if shrimp_info is Item and current_shrimp != null:
 			current_shrimp.queue_free()
 
 func toggle_fishing(fishing):
