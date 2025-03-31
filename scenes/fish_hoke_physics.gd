@@ -28,6 +28,7 @@ func catch_shrimp():
 	if is_hooked:
 		caught_shrimp.emit(shrimp_info)
 		if shrimp_info is Item and current_shrimp != null:
+			is_hooked = false
 			current_shrimp.queue_free()
 
 func toggle_fishing(fishing):
