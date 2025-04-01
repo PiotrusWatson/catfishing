@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cor8igwxetpgn" path="res://addons/dynamic_water_2d/water.tscn" id="6_eo0ky"]
 [ext_resource type="Theme" uid="uid://by8wyn837d0af" path="res://ui/ui_theme.tres" id="7_585q5"]
 [ext_resource type="Script" uid="uid://d0votwagi38uu" path="res://worlds/ui.gd" id="7_d3nh4"]
-[ext_resource type="PackedScene" uid="uid://brg78tl8y7spr" path="res://scenes/item_shimp.tscn" id="11_p325l"]
+[ext_resource type="PackedScene" uid="uid://brg78tl8y7spr" path="res://scenes/fishing_shrimp/item_shimp.tscn" id="11_p325l"]
 [ext_resource type="PackedScene" uid="uid://cjea8b7ceg8p7" path="res://ui/final_selection.tscn" id="12_mcxpu"]
 
 [sub_resource type="Gradient" id="Gradient_d3nh4"]
