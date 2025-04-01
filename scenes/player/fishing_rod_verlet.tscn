@@ -29,7 +29,7 @@ texture = ExtResource("2_x3ea4")
 [node name="Rope" type="Node2D" parent="."]
 position = Vector2(-49, -3)
 script = ExtResource("3_q02ka")
-num_segments = 20
+num_segments = 40
 num_constraint_iterations = 20
 
 [node name="RopeInteraction" type="Node" parent="." node_paths=PackedStringArray("target_node", "input_node_override", "rope")]

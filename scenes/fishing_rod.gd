@@ -19,6 +19,9 @@ signal changed_fishing_status(is_fishing: bool)
 
 func _ready():
 	reel_amount = starting_reel
+	
+func set_rope(amount):
+	rope.rope_length = amount
 
 func increase_rope():
 	if rope.rope_length < max_size:
@@ -32,11 +35,20 @@ func decrease_rope():
 
 func reset_reel():
 	reel_amount = starting_reel
+
+func launch_hook(target: Vector2, force: float):
+	hoke.push_hook(target, force)
 	
-func push_hook(point: Vector2):
+func push_hook_at_force(point: Vector2, force: float):
 	var direction = (point - pin_point.global_position).normalized()
-	pin_point.velocity = direction * hook_speed
+	pin_point.velocity = direction * force
 	pin_point.move_and_slide()
+	
+func push_hook_with_gravity(point: Vector2, force: float):
+	push_hook_at_force(point, force)
+	push_hook_at_force(Vector2.DOWN, force)
+func push_hook(point: Vector2):
+	push_hook_at_force(point, hook_speed)
 
 func _on_fish_hoke_hooked_shrimp() -> void:
 	hooked_shrimp.emit()

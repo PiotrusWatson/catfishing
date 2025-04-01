@@ -20,9 +20,9 @@ func hook_shrimp(shrimp: Node2D):
 	is_hooked = true
 	shrimp_info = shrimp.contained_shrimp
 
-func push_hook(target: Vector2):
+func push_hook(target: Vector2, force: float):
 	var direction = (target - global_position).normalized()
-	apply_central_force(direction * strength)
+	apply_central_force(direction * force)
 	
 func catch_shrimp():
 	if is_hooked:
