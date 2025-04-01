@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://bqs3qry1n25j7"]
 
 [ext_resource type="Script" uid="uid://dh828xw3ebhk4" path="res://worlds/fishing_signals.gd" id="1_585q5"]
-[ext_resource type="PackedScene" uid="uid://bjxfp5r5xfw4f" path="res://scenes/player.tscn" id="2_1kayd"]
+[ext_resource type="PackedScene" uid="uid://bjxfp5r5xfw4f" path="res://scenes/player/player.tscn" id="2_1kayd"]
 [ext_resource type="Script" uid="uid://dtjomkji7bwyx" path="res://scripts/shrimptype.gd" id="2_iq87m"]
 [ext_resource type="PackedScene" uid="uid://c5viyjrpp6xob" path="res://scenes/fishing_zone_physics.tscn" id="2_ncbgm"]
 [ext_resource type="Script" uid="uid://csli8svrwjc2p" path="res://scenes/hook_camera.gd" id="2_odgnr"]
