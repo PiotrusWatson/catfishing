@@ -21,6 +21,7 @@ var saved_mouse_point: Vector2
 var force = 5000
 
 
+
 func set_target(target_position: Vector2):
 	target.global_position = target_position
 	target.freeze = false
