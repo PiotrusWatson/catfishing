@@ -16,20 +16,25 @@ signal caught_shrimp(shrimp: ItemOrShrimp)
 signal changed_fishing_status(is_fishing: bool)
 
 func _ready():
-	reel_amount = starting_reel
+	reset_reel()
 	
 func set_rope(amount):
 	rope.rope_length = amount
+	reset_reel()
+	print("SETTING ROPE TO ", rope.rope_length)
 
 func increase_rope():
 	if rope.rope_length < max_size:
 		rope.rope_length += reel_amount
 		reel_amount += acceleration
 		
+	print("ROPE IS INCREASING TO ", rope.rope_length)
+		
 func decrease_rope():
 	if rope.rope_length > 1:
 		rope.rope_length -= reel_amount
 		reel_amount += acceleration
+	print("ROPE IS DECREASING TO ", rope.rope_length)
 
 func reset_reel():
 	reel_amount = starting_reel

@@ -57,6 +57,7 @@ func _physics_process(delta: float) -> void:
 			apply_central_force(speed * direction * delta)
 		ShimpIs.ON_HOOK:
 			set_collision_mask_value(3, false)
+			set_collision_layer_value(2, false)
 		_:
 			pass
 

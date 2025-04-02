@@ -35,6 +35,10 @@ wait_time = 0.1
 [node name="ReductionTimer" type="Timer" parent="Timers"]
 wait_time = 0.1
 
+[node name="ChangeStateTimer" type="Timer" parent="Timers"]
+wait_time = 0.5
+one_shot = true
+
 [node name="GravityPoint" type="RigidBody2D" parent="."]
 collision_layer = 0
 collision_mask = 0
@@ -54,3 +58,4 @@ position = Vector2(-1108, 6)
 [connection signal="hooked_shrimp" from="Pivot/FishingRod" to="." method="_on_fishing_rod_hooked_shrimp"]
 [connection signal="timeout" from="Timers/ExtensionTimer" to="." method="_on_extension_timer_timeout"]
 [connection signal="timeout" from="Timers/ReductionTimer" to="." method="_on_reduction_timer_timeout"]
+[connection signal="timeout" from="Timers/ChangeStateTimer" to="." method="_on_change_state_timer_timeout"]

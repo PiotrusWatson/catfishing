@@ -41,7 +41,7 @@ segment_length_distribution = SubResource("Curve_6lk27")
 stiffness = 0.1
 damping = 0.5
 damping_curve = SubResource("Curve_sbryq")
-num_constraint_iterations = 14
+num_constraint_iterations = 21
 
 [node name="RopeInteraction" type="Node" parent="." node_paths=PackedStringArray("target_node", "input_node_override", "rope")]
 script = ExtResource("4_mt3jc")
