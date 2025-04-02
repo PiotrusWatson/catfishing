@@ -19,26 +19,33 @@ var is_fishing = false
 var player_status = PlayerIs.IDLE
 var distance_to_target: float
 var force = 5000
-
+var first_time: bool
+var moving_target = false
 
 
 
 func set_target(target_position: Vector2):
 	target.freeze = false
-	target.global_position = target_position
+	PhysicsServer2D.body_set_state(
+	target.get_rid(),
+	PhysicsServer2D.BODY_STATE_TRANSFORM,
+	Transform2D.IDENTITY.translated(target_position)
+)
 	distance_to_target = target_position.distance_to(global_position)
+	moving_target = true
 	
 	
 func stop_target():
 	target.freeze = true
+	
 
 func _ready():
 	hook = fishing_rod.hoke
 	player_status = PlayerIs.IDLE
 	stop_target()
+	first_time = true
 
 
-	
 func _unhandled_input(event: InputEvent) -> void:
 	match player_status:
 		PlayerIs.FISHING:
@@ -53,12 +60,11 @@ func handle_not_fishing_input(event: InputEvent):
 	if event.is_action_released("Throw"):
 		fishing_rod.reset_reel()
 		extension_timer.start()
-		set_target(get_global_mouse_position())
-		fishing_rod.set_rope(force * distance_to_target / 9000) 
+		set_target(get_mouse_position_hack())
+		fishing_rod.set_rope(force * distance_to_target / 6000) 
 		player_status = PlayerIs.CASTING
 		
 	
-
 func handle_fishing_input(event: InputEvent):
 	if event is InputEventMouseMotion:
 		fishing_rod.push_hook(get_global_mouse_position())
@@ -68,13 +74,15 @@ func handle_fishing_input(event: InputEvent):
 		extension_timer.start()
 	elif event.is_action_released("Throw"):
 		extension_timer.stop()
+		fishing_rod.reset_reel()
 		
 	if event.is_action_pressed("Pull"):
 		fishing_rod.reset_reel()
 		reduction_timer.start()
 	elif event.is_action_released("Pull"):
 		reduction_timer.stop()
-
+		fishing_rod.reset_reel()
+		
 func _physics_process(delta: float) -> void:
 	if player_status == PlayerIs.FISHING:
 		fishing_rod.push_hook(get_global_mouse_position())
@@ -88,7 +96,6 @@ func _on_extension_timer_timeout() -> void:
 func _on_reduction_timer_timeout() -> void:
 	fishing_rod.decrease_rope()
 	
-
 
 func _on_fishing_rod_hooked_shrimp() -> void:
 	hooked_shrimp.emit()
@@ -104,5 +111,14 @@ func _on_fishing_rod_changed_fishing_status(is_fishing: bool) -> void:
 		player_status = PlayerIs.FISHING
 		extension_timer.stop()
 		stop_target()
+		first_time = false
 	else:
 		player_status = PlayerIs.IDLE
+		fishing_rod.reset_rope()
+		
+func get_mouse_position_hack():
+	if first_time:
+		return get_global_mouse_position()
+	else:
+		var pos = get_global_mouse_position()
+		return Vector2(pos.x - 14, pos.y + 111)

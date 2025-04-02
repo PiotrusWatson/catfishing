@@ -35,6 +35,10 @@ func decrease_rope():
 
 func reset_reel():
 	reel_amount = starting_reel
+	
+func reset_rope():
+	reset_reel()
+	rope.rope_length = starting_size
 
 func launch_hook(target: Vector2, force: float):
 	hoke.push_hook(target, force)
