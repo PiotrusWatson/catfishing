@@ -43,6 +43,10 @@ one_shot = true
 [node name="ForceIncreaser" type="Timer" parent="Timers"]
 wait_time = 0.1
 
+[node name="LeavingWaterTimer" type="Timer" parent="Timers"]
+wait_time = 0.2
+one_shot = true
+
 [node name="GravityPoint" type="RigidBody2D" parent="."]
 collision_layer = 0
 collision_mask = 0
@@ -79,3 +83,4 @@ script = ExtResource("6_75vfm")
 [connection signal="timeout" from="Timers/ReductionTimer" to="." method="_on_reduction_timer_timeout"]
 [connection signal="timeout" from="Timers/CastTimer" to="." method="_on_cast_timer_timeout"]
 [connection signal="timeout" from="Timers/ForceIncreaser" to="." method="_on_force_increaser_timeout"]
+[connection signal="timeout" from="Timers/LeavingWaterTimer" to="." method="_on_leaving_water_timer_timeout"]

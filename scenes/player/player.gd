@@ -1,13 +1,14 @@
 extends Node2D
 
 
-enum PlayerIs{IDLE, THROWING, CASTING, FISHING, HOOKING, CATCHING}
+enum PlayerIs{IDLE, LEAVING_WATER, THROWING, CASTING, FISHING, HOOKING, CATCHING}
 @onready var fishing_rod = $Pivot/FishingRod
 @onready var pivot = $Pivot
 @onready var extension_timer = $Timers/ExtensionTimer
 @onready var reduction_timer = $Timers/ReductionTimer
 @onready var cast_timer = $Timers/CastTimer
 @onready var force_increaser = $Timers/ForceIncreaser
+@onready var leaving_water_timer = $Timers/LeavingWaterTimer
 @onready var target: GravityPoint = $GravityPoint
 @onready var gravity_spawn_point = $GravitySpawnPoint
 @onready var fishing_bar = $FishingBar
@@ -100,6 +101,8 @@ func _physics_process(delta: float) -> void:
 			fishing_rod.push_hook_with_gravity(get_global_mouse_position(), hook_speed)
 		PlayerIs.CASTING:
 			fishing_rod.push_hook_at_force(target.global_position, force)
+		PlayerIs.LEAVING_WATER:
+			fishing_rod.push_hook_with_gravity(global_position, hook_speed)
 
 func _update_rope_amount_on_throw():
 	set_target(get_target_from_mouse())
@@ -131,9 +134,9 @@ func _on_fishing_rod_changed_fishing_status(is_fishing: bool) -> void:
 	if is_fishing:
 		player_status = PlayerIs.FISHING
 	else:
-		player_status = PlayerIs.IDLE
-		reduction_timer.stop()
-		fishing_rod.reset_rope()
+		player_status = PlayerIs.LEAVING_WATER
+		leaving_water_timer.start()
+		
 		
 func get_target_from_mouse():
 	var mouse_position = get_global_mouse_position()
@@ -154,3 +157,9 @@ func _on_force_increaser_timeout() -> void:
 	if desired_force < max_force:
 		desired_force += 0.3
 		fishing_bar.update(desired_force)
+
+
+func _on_leaving_water_timer_timeout() -> void:
+	reduction_timer.stop()
+	fishing_rod.reset_rope()
+	player_status = PlayerIs.IDLE
