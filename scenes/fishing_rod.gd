@@ -1,9 +1,7 @@
 extends StaticBody2D
 
-@export var string_strength = 10
 @export var starting_size = 30
 @export var max_size = 300
-@export var rope_amount = 10
 @export var starting_reel = 5
 @export var acceleration = 3
 @export var hook_speed = 50

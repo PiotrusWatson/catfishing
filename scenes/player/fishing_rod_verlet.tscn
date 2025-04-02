@@ -14,7 +14,6 @@ size = Vector2(93, 33)
 [node name="FishingRod" type="StaticBody2D"]
 script = ExtResource("1_x3ea4")
 starting_size = 20
-rope_amount = 1
 hook_speed = 300
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
