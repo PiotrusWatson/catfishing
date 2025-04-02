@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://1n48fuxjr8lg" path="res://placeholder/sneakers-2791491_1280.png" id="2_h7htw"]
 
 [node name="Shimp" instance=ExtResource("1_4dwaa")]
+rotation = 0.000454339
 
 [node name="Sprite2D" parent="SubShimp" index="2"]
 texture = ExtResource("2_h7htw")
