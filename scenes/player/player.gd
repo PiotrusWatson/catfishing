@@ -114,10 +114,7 @@ func _on_fishing_rod_changed_fishing_status(is_fishing: bool) -> void:
 	if player_status == PlayerIs.CASTING:
 		return
 	if is_fishing:
-		extension_timer.stop()
-		stop_target.call_deferred()
 		player_status = PlayerIs.FISHING
-		fishing_rod.reset_reel()
 	else:
 		player_status = PlayerIs.IDLE
 		reduction_timer.stop()

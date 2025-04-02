@@ -16,7 +16,8 @@ signal caught_shrimp(shrimp: ItemOrShrimp)
 signal changed_fishing_status(is_fishing: bool)
 
 func _ready():
-	reset_reel()
+	set_rope(starting_size)
+	
 	
 func set_rope(amount):
 	rope.rope_length = amount
