@@ -11,7 +11,8 @@ enum PlayerIs{IDLE, LEAVING_WATER, THROWING, CASTING, FISHING, HOOKING, CATCHING
 @onready var leaving_water_timer = $Timers/LeavingWaterTimer
 @onready var target: GravityPoint = $GravityPoint
 @onready var gravity_spawn_point = $GravitySpawnPoint
-@onready var fishing_bar = $FishingBar
+@onready var fishing_bar = $UI/FishingBar
+@onready var tooltip = $UI/Tooltip
 @export var rotation_speed = 0.5
 @export var max_force = 5.0
 @export var force_step = 0.3
@@ -156,6 +157,7 @@ func _on_cast_timer_timeout() -> void:
 	player_status = PlayerIs.FISHING
 	fishing_rod.reset_reel()
 	reset_force()
+	tooltip.fade_out()
 
 
 func _on_force_increaser_timeout() -> void:
@@ -168,3 +170,4 @@ func _on_leaving_water_timer_timeout() -> void:
 	reduction_timer.stop()
 	fishing_rod.reset_rope()
 	player_status = PlayerIs.IDLE
+	tooltip.fade_in()

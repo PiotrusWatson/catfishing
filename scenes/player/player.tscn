@@ -1,11 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://bjxfp5r5xfw4f"]
+[gd_scene load_steps=12 format=3 uid="uid://bjxfp5r5xfw4f"]
 
 [ext_resource type="Script" uid="uid://b2u6pnq3whpdm" path="res://scenes/player/player.gd" id="1_qhqgy"]
 [ext_resource type="SpriteFrames" uid="uid://x7nr4ebm7nc4" path="res://scenes/player/player_anims.tres" id="2_qhqgy"]
 [ext_resource type="PackedScene" uid="uid://1ar3xmeq1eis" path="res://scenes/player/fishing_rod_verlet.tscn" id="4_dqkch"]
 [ext_resource type="Texture2D" uid="uid://h4wrjgbi7cof" path="res://placeholder/2755--white-exclamation-mark-512.webp" id="4_lvxji"]
 [ext_resource type="Script" uid="uid://bhuv78l3b3rx8" path="res://scenes/player/gravity_point.gd" id="4_p47bc"]
-[ext_resource type="Script" uid="uid://016fsx1pi425" path="res://scenes/player/fishing_bar.gd" id="6_75vfm"]
+[ext_resource type="Script" uid="uid://016fsx1pi425" path="res://ui/fishing_bar.gd" id="6_75vfm"]
+[ext_resource type="PackedScene" uid="uid://bow3giawr2rd" path="res://ui/left_click.tscn" id="7_0owmy"]
+[ext_resource type="Theme" uid="uid://3ydsxh3h11mw" path="res://ui/tooltip_theme.tres" id="7_qek5x"]
+[ext_resource type="Script" uid="uid://c6h46m0d6uex1" path="res://ui/tooltip.gd" id="8_5gtgg"]
+[ext_resource type="PackedScene" uid="uid://c3k4tne8tirwg" path="res://ui/fader.tscn" id="10_h17s1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gmlin"]
 
@@ -62,19 +66,52 @@ texture = ExtResource("4_lvxji")
 [node name="GravitySpawnPoint" type="Marker2D" parent="."]
 position = Vector2(-1108, 6)
 
-[node name="FishingBar" type="VSlider" parent="."]
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="FishingBar" type="VSlider" parent="UI"]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 61.0
-offset_top = 9.0
-offset_right = 77.0
-offset_bottom = 99.0
+offset_left = 65.0
+offset_top = -19.0
+offset_right = 81.0
+offset_bottom = 71.0
 grow_horizontal = 2
 grow_vertical = 2
 editable = false
 scrollable = false
 script = ExtResource("6_75vfm")
+
+[node name="Tooltip" type="Control" parent="UI"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("7_qek5x")
+script = ExtResource("8_5gtgg")
+
+[node name="LeftClick" parent="UI/Tooltip" instance=ExtResource("7_0owmy")]
+layout_mode = 0
+offset_left = -518.0
+offset_top = -3.0
+offset_right = 330.0
+offset_bottom = 1024.0
+
+[node name="Label" type="Label" parent="UI/Tooltip"]
+layout_mode = 0
+offset_left = -417.0
+offset_top = 16.0
+offset_right = -200.0
+offset_bottom = 96.0
+text = "Hold to aim
+Release to cast!"
+
+[node name="Fader" parent="UI/Tooltip" instance=ExtResource("10_h17s1")]
 
 [connection signal="caught_shrimp" from="Pivot/FishingRod" to="." method="_on_fishing_rod_caught_shrimp"]
 [connection signal="changed_fishing_status" from="Pivot/FishingRod" to="." method="_on_fishing_rod_changed_fishing_status"]

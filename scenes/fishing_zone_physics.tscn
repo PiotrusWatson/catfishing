@@ -1,7 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://c5viyjrpp6xob"]
+[gd_scene load_steps=14 format=3 uid="uid://c5viyjrpp6xob"]
 
 [ext_resource type="Script" uid="uid://dywmcve6td1my" path="res://scenes/spawner.gd" id="1_qp5sr"]
 [ext_resource type="Script" uid="uid://cqltqr2cwjuav" path="res://scenes/walls.gd" id="2_1lfod"]
+[ext_resource type="PackedScene" uid="uid://bow3giawr2rd" path="res://ui/left_click.tscn" id="3_4ncjp"]
+[ext_resource type="Theme" uid="uid://3ydsxh3h11mw" path="res://ui/tooltip_theme.tres" id="3_ca631"]
+[ext_resource type="Script" uid="uid://dfam5toopoauv" path="res://scenes/tool_tip.gd" id="4_0cchh"]
+[ext_resource type="Texture2D" uid="uid://b6y6jd8ss432a" path="res://placeholder/mice.png" id="5_fi7oa"]
+[ext_resource type="Script" uid="uid://b4ox8c53hnxuw" path="res://ui/ui_fader.gd" id="7_xqfk0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fi7oa"]
 size = Vector2(1146, 33)
@@ -17,6 +22,10 @@ size = Vector2(1146, 33)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ca631"]
 size = Vector2(1140, 1086)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ca631"]
+atlas = ExtResource("5_fi7oa")
+region = Rect2(825.536, 0, 821.641, 1000)
 
 [node name="FishingZone" type="Area2D"]
 collision_layer = 3
@@ -57,6 +66,73 @@ shape = SubResource("RectangleShape2D_qp5sr")
 position = Vector2(4, 233)
 shape = SubResource("RectangleShape2D_ca631")
 debug_color = Color(0, 0.6, 0.701961, 0.2)
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -550.0
+offset_top = -296.0
+offset_right = 564.0
+offset_bottom = 774.0
+mouse_filter = 2
+
+[node name="ToolTip" type="Control" parent="UI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -130.0
+offset_right = 130.0
+offset_bottom = 175.0
+grow_horizontal = 2
+theme = ExtResource("3_ca631")
+script = ExtResource("4_0cchh")
+
+[node name="LeftClick" parent="UI/ToolTip" instance=ExtResource("3_4ncjp")]
+layout_mode = 0
+offset_left = 11.0
+offset_top = -3.0
+offset_right = 859.0
+offset_bottom = 1024.0
+
+[node name="HookGoDown" type="Label" parent="UI/ToolTip"]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 31.0
+offset_right = 260.0
+offset_bottom = 66.0
+text = "Extend line (hook go down)"
+
+[node name="TextureRect" type="TextureRect" parent="UI/ToolTip"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 93.0
+offset_right = 860.0
+offset_bottom = 1133.0
+scale = Vector2(0.1, 0.1)
+texture = SubResource("AtlasTexture_ca631")
+expand_mode = 4
+stretch_mode = 1
+
+[node name="HookGoUp" type="Label" parent="UI/ToolTip"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 125.0
+offset_right = 361.0
+offset_bottom = 160.0
+text = "Reel in (hook go up)"
+
+[node name="Label" type="Label" parent="UI/ToolTip"]
+layout_mode = 0
+offset_left = -44.0
+offset_top = 206.0
+offset_right = 466.0
+offset_bottom = 241.0
+text = "The hook will follow your mouse cursor!"
+
+[node name="Fader" type="Node" parent="UI/ToolTip"]
+script = ExtResource("7_xqfk0")
+metadata/_custom_type_script = "uid://b4ox8c53hnxuw"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
