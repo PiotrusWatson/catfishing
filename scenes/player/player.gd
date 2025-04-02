@@ -15,6 +15,7 @@ enum PlayerIs{IDLE, THROWING, CASTING, FISHING, HOOKING, CATCHING}
 @export var max_force = 5.0
 @export var force_step = 0.3
 @export var rope_float_divisor = 5
+@export var hook_speed = 300
 var starting_force = 0.1
 var desired_force
 
@@ -96,7 +97,7 @@ func _physics_process(delta: float) -> void:
 		PlayerIs.THROWING:
 			_update_rope_amount_on_throw()
 		PlayerIs.FISHING:
-			fishing_rod.push_hook(get_global_mouse_position())
+			fishing_rod.push_hook_with_gravity(get_global_mouse_position(), hook_speed)
 		PlayerIs.CASTING:
 			fishing_rod.push_hook_at_force(target.global_position, force)
 

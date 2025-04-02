@@ -12,6 +12,7 @@
 [node name="Player" type="Node2D"]
 script = ExtResource("1_qhqgy")
 rotation_speed = 0.3
+max_force = 4.0
 rope_float_divisor = 40
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
@@ -25,7 +26,7 @@ scale = Vector2(0.7, 0.7)
 [node name="FishingRod" parent="Pivot" instance=ExtResource("4_dqkch")]
 position = Vector2(-80, 15.7143)
 rotation = 0.00291133
-starting_size = 10
+starting_size = 5
 max_size = 1000
 
 [node name="Timers" type="Node" parent="."]

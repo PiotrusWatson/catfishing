@@ -5,6 +5,7 @@ extends StaticBody2D
 @export var starting_reel = 5
 @export var acceleration = 3
 @export var hook_speed = 50
+@export var gravity = 100
 var reel_amount
 @onready var rope = $Rope
 @onready var hoke = $FishHoke
@@ -35,6 +36,8 @@ func decrease_rope():
 	if rope.rope_length > 1:
 		rope.rope_length -= reel_amount
 		reel_amount += acceleration
+	else:
+		rope.rope_length = 1
 	print("ROPE IS DECREASING TO ", rope.rope_length)
 
 func reset_reel():
@@ -51,10 +54,11 @@ func push_hook_at_force(point: Vector2, force: float):
 	var direction = (point - pin_point.global_position).normalized()
 	pin_point.velocity = direction * force
 	pin_point.move_and_slide()
-	
+
 func push_hook_with_gravity(point: Vector2, force: float):
 	push_hook_at_force(point, force)
-	push_hook_at_force(Vector2.DOWN, force)
+	push_hook_at_force(Vector2.DOWN, gravity)
+	
 func push_hook(point: Vector2):
 	push_hook_at_force(point, hook_speed)
 

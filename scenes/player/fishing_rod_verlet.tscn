@@ -35,8 +35,8 @@ script = ExtResource("3_q02ka")
 num_segments = 40
 max_endpoint_distance = 0.0
 segment_length_distribution = SubResource("Curve_sbryq")
-stiffness = 0.3
-damping = 0.5
+stiffness = 0.2
+damping = 0.3
 num_constraint_iterations = 15
 
 [node name="RopeInteraction" type="Node" parent="." node_paths=PackedStringArray("target_node", "input_node_override", "rope")]
