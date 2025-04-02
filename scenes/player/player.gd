@@ -17,14 +17,17 @@ signal reduced_fish_counter(counter: int)
 signal game_ended
 var is_fishing = false
 var player_status = PlayerIs.IDLE
-var saved_mouse_point: Vector2
+var distance_to_target: float
 var force = 5000
 
 
 
+
 func set_target(target_position: Vector2):
-	target.global_position = target_position
 	target.freeze = false
+	target.global_position = target_position
+	distance_to_target = target_position.distance_to(global_position)
+	
 	
 func stop_target():
 	target.freeze = true
@@ -49,9 +52,9 @@ func handle_not_fishing_input(event: InputEvent):
 		pivot.look_at(get_global_mouse_position())
 	if event.is_action_released("Throw"):
 		fishing_rod.reset_reel()
-		fishing_rod.set_rope(force / 40)
 		extension_timer.start()
 		set_target(get_global_mouse_position())
+		fishing_rod.set_rope(force * distance_to_target / 9000) 
 		player_status = PlayerIs.CASTING
 		
 	
