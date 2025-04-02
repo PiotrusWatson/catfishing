@@ -63,7 +63,6 @@ texture = SubResource("GradientTexture2D_2l1a4")
 
 [node name="Player" parent="." instance=ExtResource("2_1kayd")]
 position = Vector2(485, -114)
-number_of_successful_fishes = 1
 
 [node name="FishingZone" parent="." instance=ExtResource("2_ncbgm")]
 position = Vector2(-66, 416)
