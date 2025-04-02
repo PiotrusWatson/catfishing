@@ -4,7 +4,7 @@
 [ext_resource type="SpriteFrames" uid="uid://x7nr4ebm7nc4" path="res://scenes/player/player_anims.tres" id="2_qhqgy"]
 [ext_resource type="PackedScene" uid="uid://1ar3xmeq1eis" path="res://scenes/player/fishing_rod_verlet.tscn" id="4_dqkch"]
 [ext_resource type="Texture2D" uid="uid://h4wrjgbi7cof" path="res://placeholder/2755--white-exclamation-mark-512.webp" id="4_lvxji"]
-[ext_resource type="Script" uid="uid://bhuv78l3b3rx8" path="res://scenes/player/gravity_point.gd" id="4_p47bc"]
+[ext_resource type="Script" path="res://scenes/player/gravity_point.gd" id="4_p47bc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gmlin"]
 
@@ -12,7 +12,7 @@
 script = ExtResource("1_qhqgy")
 rotation_speed = 0.3
 desired_force = 10
-rope_float_divisor = 10
+rope_float_divisor = 40
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.4, 0.4)

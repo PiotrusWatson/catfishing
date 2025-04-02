@@ -88,7 +88,7 @@ func _physics_process(delta: float) -> void:
 func _update_rope_amount_on_throw():
 	set_target(get_target_from_mouse())
 	var rope_amount = force / rope_float_divisor
-	#fishing_rod.set_rope(distance_to_target)
+	fishing_rod.set_rope(rope_amount)
 	player_status = PlayerIs.CASTING
 
 func _on_extension_timer_timeout() -> void:
