@@ -7,15 +7,20 @@ enum PlayerIs{IDLE, THROWING, CASTING, FISHING, HOOKING, CATCHING}
 @onready var extension_timer = $Timers/ExtensionTimer
 @onready var reduction_timer = $Timers/ReductionTimer
 @onready var cast_timer = $Timers/CastTimer
+@onready var force_increaser = $Timers/ForceIncreaser
 @onready var target: GravityPoint = $GravityPoint
 @onready var gravity_spawn_point = $GravitySpawnPoint
+@onready var fishing_bar = $FishingBar
 @export var rotation_speed = 0.5
-@export var desired_force = 5000
+@export var max_force = 5.0
+@export var force_step = 0.3
 @export var rope_float_divisor = 5
+var starting_force = 0.1
+var desired_force
+
 var hook: RigidBody2D
 var force
 
-var transitioning_state = false
 signal hooked_shrimp
 signal caught_shrimp(shrimp: ItemOrShrimp)
 signal reduced_fish_counter(counter: int)
@@ -35,11 +40,17 @@ func set_target(target_position: Vector2):
 func stop_target():
 	target.freeze = true
 
+func reset_force():
+	desired_force = starting_force
+	force_increaser.stop()
+	fishing_bar.update(desired_force)
 
 func _ready():
 	hook = fishing_rod.hoke
 	player_status = PlayerIs.IDLE
+	reset_force()
 	stop_target()
+	fishing_bar.init(max_force, force_step, starting_force)
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -54,7 +65,10 @@ func handle_not_fishing_input(event: InputEvent):
 	if event is InputEventMouseMotion:
 		#pivot.look_at(get_global_mouse_position())
 		pass
+	if event.is_action_pressed("Throw"):
+		force_increaser.start()
 	if event.is_action_released("Throw"):
+		force_increaser.stop()
 		fishing_rod.reset_reel()
 		extension_timer.start()
 		player_status = PlayerIs.THROWING
@@ -132,3 +146,10 @@ func _on_cast_timer_timeout() -> void:
 	stop_target.call_deferred()
 	player_status = PlayerIs.FISHING
 	fishing_rod.reset_reel()
+	reset_force()
+
+
+func _on_force_increaser_timeout() -> void:
+	if desired_force < max_force:
+		desired_force += 0.3
+		fishing_bar.update(desired_force)
