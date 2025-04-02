@@ -19,7 +19,7 @@ enum PlayerIs{IDLE, LEAVING_WATER, THROWING, CASTING, FISHING, HOOKING, CATCHING
 @export var hook_speed = 300
 var starting_force = 0.1
 var desired_force
-
+var is_reeling = false
 var hook: RigidBody2D
 var force
 
@@ -89,9 +89,11 @@ func handle_fishing_input(event: InputEvent):
 	if event.is_action_pressed("Pull"):
 		fishing_rod.reset_reel()
 		reduction_timer.start()
+		is_reeling = true
 	elif event.is_action_released("Pull"):
 		reduction_timer.stop()
 		fishing_rod.reset_reel()
+		is_reeling = false
 		
 func _physics_process(delta: float) -> void:
 	match player_status:
@@ -99,6 +101,8 @@ func _physics_process(delta: float) -> void:
 			_update_rope_amount_on_throw()
 		PlayerIs.FISHING:
 			fishing_rod.push_hook_with_gravity(get_global_mouse_position(), hook_speed)
+			if is_reeling:
+				fishing_rod.push_hook(global_position)
 		PlayerIs.CASTING:
 			fishing_rod.push_hook_at_force(target.global_position, force)
 		PlayerIs.LEAVING_WATER:
@@ -136,6 +140,7 @@ func _on_fishing_rod_changed_fishing_status(is_fishing: bool) -> void:
 	else:
 		player_status = PlayerIs.LEAVING_WATER
 		leaving_water_timer.start()
+		is_reeling = false
 		
 		
 func get_target_from_mouse():
