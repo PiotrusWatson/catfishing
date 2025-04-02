@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://1ar3xmeq1eis"]
+[gd_scene load_steps=9 format=3 uid="uid://1ar3xmeq1eis"]
 
 [ext_resource type="Script" uid="uid://cp1i26d5ckad5" path="res://scenes/fishing_rod.gd" id="1_x3ea4"]
 [ext_resource type="Texture2D" uid="uid://bxe1umjjl3h5b" path="res://assets/fishingrod.png" id="2_x3ea4"]
@@ -9,12 +9,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8baaf"]
 size = Vector2(93, 33)
 
-[sub_resource type="Curve" id="Curve_6lk27"]
-_data = [Vector2(0.0820895, 0.955056), 0.0, 0.0, 0, 0, Vector2(0.426471, 0.179775), 0.0, 0.0, 0, 0, Vector2(0.798507, 0), 0.0, 0.0, 0, 0]
-point_count = 3
-
 [sub_resource type="Curve" id="Curve_sbryq"]
-_data = [Vector2(0.0671642, 0.224719), 0.0, 0.0, 0, 0, Vector2(0.656716, 0.752809), 0.0, 0.0, 0, 0]
+_data = [Vector2(0.179104, 0.842697), 0.0, 0.0, 0, 0, Vector2(0.69403, 0.0224719), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x3ea4"]
@@ -38,10 +34,9 @@ position = Vector2(-49, -3)
 script = ExtResource("3_q02ka")
 num_segments = 40
 max_endpoint_distance = 0.0
-segment_length_distribution = SubResource("Curve_6lk27")
+segment_length_distribution = SubResource("Curve_sbryq")
 stiffness = 0.3
 damping = 0.5
-damping_curve = SubResource("Curve_sbryq")
 num_constraint_iterations = 15
 
 [node name="RopeInteraction" type="Node" parent="." node_paths=PackedStringArray("target_node", "input_node_override", "rope")]
@@ -50,7 +45,7 @@ position_update_mode = 1
 target_node = NodePath("../PinPoint")
 input_node_override = NodePath("../FishHoke")
 rope = NodePath("../Rope")
-strength = 0.9
+strength = 0.8
 
 [node name="PinPoint" type="CharacterBody2D" parent="."]
 position = Vector2(-48, 106)

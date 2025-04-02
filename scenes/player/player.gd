@@ -6,7 +6,7 @@ enum PlayerIs{IDLE, THROWING, CASTING, FISHING, HOOKING, CATCHING}
 @onready var pivot = $Pivot
 @onready var extension_timer = $Timers/ExtensionTimer
 @onready var reduction_timer = $Timers/ReductionTimer
-@onready var change_state_timer = $Timers/ChangeStateTimer
+@onready var cast_timer = $Timers/CastTimer
 @onready var target: GravityPoint = $GravityPoint
 @onready var gravity_spawn_point = $GravitySpawnPoint
 @export var rotation_speed = 0.5
@@ -15,6 +15,7 @@ enum PlayerIs{IDLE, THROWING, CASTING, FISHING, HOOKING, CATCHING}
 var hook: RigidBody2D
 var force
 
+var transitioning_state = false
 signal hooked_shrimp
 signal caught_shrimp(shrimp: ItemOrShrimp)
 signal reduced_fish_counter(counter: int)
@@ -90,6 +91,7 @@ func _update_rope_amount_on_throw():
 	var rope_amount = force / rope_float_divisor
 	fishing_rod.set_rope(rope_amount)
 	player_status = PlayerIs.CASTING
+	cast_timer.start()
 
 func _on_extension_timer_timeout() -> void:
 	fishing_rod.increase_rope()
@@ -109,6 +111,8 @@ func _on_fishing_rod_caught_shrimp(shrimp: ItemOrShrimp) -> void:
 
 
 func _on_fishing_rod_changed_fishing_status(is_fishing: bool) -> void:
+	if player_status == PlayerIs.CASTING:
+		return
 	if is_fishing:
 		extension_timer.stop()
 		stop_target.call_deferred()
@@ -117,9 +121,17 @@ func _on_fishing_rod_changed_fishing_status(is_fishing: bool) -> void:
 	else:
 		player_status = PlayerIs.IDLE
 		reduction_timer.stop()
+		fishing_rod.reset_rope()
 		
 func get_target_from_mouse():
 	var mouse_position = get_global_mouse_position()
 	return Vector2(mouse_position.x, gravity_spawn_point.global_position.y)
 
 	
+
+
+func _on_cast_timer_timeout() -> void:
+	extension_timer.stop()
+	stop_target.call_deferred()
+	player_status = PlayerIs.FISHING
+	fishing_rod.reset_reel()

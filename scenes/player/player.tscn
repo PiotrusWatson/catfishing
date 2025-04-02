@@ -4,7 +4,7 @@
 [ext_resource type="SpriteFrames" uid="uid://x7nr4ebm7nc4" path="res://scenes/player/player_anims.tres" id="2_qhqgy"]
 [ext_resource type="PackedScene" uid="uid://1ar3xmeq1eis" path="res://scenes/player/fishing_rod_verlet.tscn" id="4_dqkch"]
 [ext_resource type="Texture2D" uid="uid://h4wrjgbi7cof" path="res://placeholder/2755--white-exclamation-mark-512.webp" id="4_lvxji"]
-[ext_resource type="Script" path="res://scenes/player/gravity_point.gd" id="4_p47bc"]
+[ext_resource type="Script" uid="uid://bhuv78l3b3rx8" path="res://scenes/player/gravity_point.gd" id="4_p47bc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gmlin"]
 
@@ -25,7 +25,7 @@ scale = Vector2(0.7, 0.7)
 [node name="FishingRod" parent="Pivot" instance=ExtResource("4_dqkch")]
 position = Vector2(-80, 15.7143)
 rotation = 0.00291133
-starting_size = 50
+starting_size = 10
 max_size = 1000
 
 [node name="Timers" type="Node" parent="."]
@@ -36,8 +36,7 @@ wait_time = 0.1
 [node name="ReductionTimer" type="Timer" parent="Timers"]
 wait_time = 0.1
 
-[node name="ChangeStateTimer" type="Timer" parent="Timers"]
-wait_time = 0.5
+[node name="CastTimer" type="Timer" parent="Timers"]
 one_shot = true
 
 [node name="GravityPoint" type="RigidBody2D" parent="."]
@@ -60,4 +59,4 @@ position = Vector2(-1108, 6)
 [connection signal="hooked_shrimp" from="Pivot/FishingRod" to="." method="_on_fishing_rod_hooked_shrimp"]
 [connection signal="timeout" from="Timers/ExtensionTimer" to="." method="_on_extension_timer_timeout"]
 [connection signal="timeout" from="Timers/ReductionTimer" to="." method="_on_reduction_timer_timeout"]
-[connection signal="timeout" from="Timers/ChangeStateTimer" to="." method="_on_change_state_timer_timeout"]
+[connection signal="timeout" from="Timers/CastTimer" to="." method="_on_cast_timer_timeout"]
