@@ -1,13 +1,13 @@
 extends Node2D
 
 
-enum PlayerIs{IDLE, CASTING, FISHING, HOOKING, CATCHING}
+enum PlayerIs{IDLE, THROWING, CASTING, FISHING, HOOKING, CATCHING}
 @onready var fishing_rod = $Pivot/FishingRod
 @onready var pivot = $Pivot
 @onready var extension_timer = $Timers/ExtensionTimer
 @onready var reduction_timer = $Timers/ReductionTimer
 @onready var change_state_timer = $Timers/ChangeStateTimer
-@onready var target = $GravityPoint
+@onready var target: GravityPoint = $GravityPoint
 @onready var gravity_spawn_point = $GravitySpawnPoint
 @export var rotation_speed = 0.5
 @export var desired_force = 5000
@@ -23,32 +23,22 @@ var is_fishing = false
 var player_status = PlayerIs.IDLE
 var distance_to_target: float
 
-var first_time: bool
-var moving_target = false
-
-
 
 func set_target(target_position: Vector2):
 	target.freeze = false
-	PhysicsServer2D.body_set_state(
-	target.get_rid(),
-	PhysicsServer2D.BODY_STATE_TRANSFORM,
-	Transform2D.IDENTITY.translated(target_position)
-	)
+	target.politely_command_to_teleport_to(target_position)
 	distance_to_target = target_position.distance_to(global_position)
 	force = desired_force * distance_to_target
-	moving_target = true
-	
-	
+
+
 func stop_target():
 	target.freeze = true
-	
+
 
 func _ready():
 	hook = fishing_rod.hoke
 	player_status = PlayerIs.IDLE
 	stop_target()
-	first_time = true
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -58,7 +48,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		PlayerIs.IDLE:
 			handle_not_fishing_input(event)
 
-		
+
 func handle_not_fishing_input(event: InputEvent):
 	if event is InputEventMouseMotion:
 		#pivot.look_at(get_global_mouse_position())
@@ -66,11 +56,7 @@ func handle_not_fishing_input(event: InputEvent):
 	if event.is_action_released("Throw"):
 		fishing_rod.reset_reel()
 		extension_timer.start()
-		set_target(get_target_from_mouse())
-		var rope_amount = force / rope_float_divisor
-		#fishing_rod.set_rope(distance_to_target)
-		player_status = PlayerIs.CASTING
-		
+		player_status = PlayerIs.THROWING
 	
 func handle_fishing_input(event: InputEvent):
 	if event is InputEventMouseMotion:
@@ -91,10 +77,19 @@ func handle_fishing_input(event: InputEvent):
 		fishing_rod.reset_reel()
 		
 func _physics_process(delta: float) -> void:
-	if player_status == PlayerIs.FISHING:
-		fishing_rod.push_hook(get_global_mouse_position())
-	elif player_status == PlayerIs.CASTING:
-		fishing_rod.push_hook_at_force(target.global_position, force)
+	match player_status:
+		PlayerIs.THROWING:
+			_update_rope_amount_on_throw()
+		PlayerIs.FISHING:
+			fishing_rod.push_hook(get_global_mouse_position())
+		PlayerIs.CASTING:
+			fishing_rod.push_hook_at_force(target.global_position, force)
+
+func _update_rope_amount_on_throw():
+	set_target(get_target_from_mouse())
+	var rope_amount = force / rope_float_divisor
+	#fishing_rod.set_rope(distance_to_target)
+	player_status = PlayerIs.CASTING
 
 func _on_extension_timer_timeout() -> void:
 	fishing_rod.increase_rope()
@@ -116,7 +111,7 @@ func _on_fishing_rod_caught_shrimp(shrimp: ItemOrShrimp) -> void:
 func _on_fishing_rod_changed_fishing_status(is_fishing: bool) -> void:
 	if is_fishing:
 		extension_timer.stop()
-		stop_target()
+		stop_target.call_deferred()
 		player_status = PlayerIs.FISHING
 		fishing_rod.reset_reel()
 	else:

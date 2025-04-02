@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bjxfp5r5xfw4f"]
+[gd_scene load_steps=7 format=3 uid="uid://bjxfp5r5xfw4f"]
 
 [ext_resource type="Script" uid="uid://b2u6pnq3whpdm" path="res://scenes/player/player.gd" id="1_qhqgy"]
 [ext_resource type="SpriteFrames" uid="uid://x7nr4ebm7nc4" path="res://scenes/player/player_anims.tres" id="2_qhqgy"]
 [ext_resource type="PackedScene" uid="uid://1ar3xmeq1eis" path="res://scenes/player/fishing_rod_verlet.tscn" id="4_dqkch"]
 [ext_resource type="Texture2D" uid="uid://h4wrjgbi7cof" path="res://placeholder/2755--white-exclamation-mark-512.webp" id="4_lvxji"]
+[ext_resource type="Script" uid="uid://bhuv78l3b3rx8" path="res://scenes/player/gravity_point.gd" id="4_p47bc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gmlin"]
 
@@ -42,6 +43,7 @@ one_shot = true
 [node name="GravityPoint" type="RigidBody2D" parent="."]
 collision_layer = 0
 collision_mask = 0
+script = ExtResource("4_p47bc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GravityPoint"]
 shape = SubResource("CircleShape2D_gmlin")
