@@ -5,6 +5,7 @@ enum DatingState{NONE, ITEM_CHECK, ITEM_GIVE, CHARACTER, END}
 @onready var background = $Background
 @onready var emotes = $Shrimp/Emotes
 @export var dialogue_box_prefab: PackedScene
+@export var generic_item_ask_dialogue: DialogueResource
 @export var debug_shrimp: ShrimpType
 @onready var end_dialogue = preload("res://dialogues/end_dialogue.dialogue")
 var shrimp_data: ShrimpType
@@ -29,6 +30,12 @@ func handle_start_dialogue():
 	elif state == DatingState.END:
 		DialogueManager.show_dialogue_balloon_scene(spawned_box, end_dialogue)
 		state = DatingState.NONE
+	elif state == DatingState.ITEM_CHECK:
+		if len(Inventory.items) > 0:
+			DialogueManager.show_dialogue_balloon_scene(spawned_box, generic_item_ask_dialogue)
+			state = DatingState.ITEM_GIVE
+		else:
+			state = DatingState.CHARACTER
 	else:
 		SceneChanger.change_scene(SceneChanger.Worlds.PHYSICS_FISHING)
 		
