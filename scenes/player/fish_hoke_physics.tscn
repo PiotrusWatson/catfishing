@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://btr48hebut8dv"]
+[gd_scene load_steps=5 format=3 uid="uid://btr48hebut8dv"]
 
 [ext_resource type="Script" uid="uid://o1b5recr3tcd" path="res://scenes/player/fish_hoke_physics.gd" id="1_v7qni"]
 [ext_resource type="Texture2D" uid="uid://bd87gc7gaohwp" path="res://assets/loveletter.png" id="2_v7qni"]
+[ext_resource type="AudioStream" uid="uid://cdovlcomhse0o" path="res://audio/sfx/Tiny Water Splash.wav" id="3_kegdf"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n01p3"]
 radius = 7.0
@@ -23,3 +24,6 @@ texture = ExtResource("2_v7qni")
 [node name="Hook" type="PinJoint2D" parent="."]
 position = Vector2(0, 13)
 node_b = NodePath("..")
+
+[node name="Plop" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_kegdf")

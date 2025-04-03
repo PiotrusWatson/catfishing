@@ -5,6 +5,7 @@ enum ShownText{ON, CAUGHT}
 @onready var fade_timer = $Timers/FadeTimer
 @onready var fishes_left = $UILayer/FishesLeft
 @onready var final_selection = $FinalSelection
+@onready var jingle = $Jingle
 signal caught_text_faded
 var shown_text : ShownText
 func _ready():
@@ -23,6 +24,10 @@ func caught():
 	big_text.text = "Caught!"
 	shown_text = ShownText.CAUGHT
 	show_text()
+	play_jingle()
+
+func play_jingle():
+	jingle.play()
 	
 func show_final_selection(shrimps: Array[ShrimpType]):
 	final_selection.show_shrimps(shrimps)

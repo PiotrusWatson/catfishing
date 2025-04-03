@@ -7,6 +7,7 @@ signal changed_fishing_status(is_fishing: bool)
 @export var strength = 3.0
 
 @onready var hook = $Hook
+@onready var plop = $Plop
 var is_hooked = false
 var is_fishing = false
 var shrimp_info: ItemOrShrimp
@@ -34,4 +35,6 @@ func catch_shrimp():
 func toggle_fishing(fishing):
 	is_fishing = fishing		
 	changed_fishing_status.emit(is_fishing)
+	if is_fishing:
+		plop.play()
 	

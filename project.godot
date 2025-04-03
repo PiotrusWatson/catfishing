@@ -22,7 +22,7 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 Enums="*res://scripts/enums.gd"
 Inventory="*res://scripts/inventory.gd"
 SceneChanger="*res://scripts/scene_changer.gd"
-PhantomCameraManager="res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
+GlobalMusicPlayer="*res://scenes/global_music_player.tscn"
 
 [display]
 

@@ -2,6 +2,7 @@ extends Node
 
 enum Worlds{PLACEHOLDER_FISHING, PHYSICS_FISHING, PLACEHOLDER_DATING, END_SCENE, MAIN_MENU, CREDITS}
 var current_scene_type: Enums.SceneType
+var current_scene = Worlds.MAIN_MENU
 @onready var scene_names_to_scenes = {
 	Worlds.PLACEHOLDER_FISHING : "res://worlds/piotrus_world.tscn",
 	Worlds.PHYSICS_FISHING: "res://worlds/fishing_world.tscn",
@@ -22,4 +23,19 @@ var current_scene_type: Enums.SceneType
 
 func change_scene(name: Worlds):
 	current_scene_type = scene_names_to_types[name]
+	var last_scene = current_scene
+	current_scene = name
+	handle_music(last_scene, current_scene)
 	get_tree().change_scene_to_file(scene_names_to_scenes[name])
+	
+
+func handle_music(last_scene: Worlds, new_scene: Worlds):
+	if scene_names_to_types[last_scene] == scene_names_to_types[new_scene]:
+		return
+	match scene_names_to_types[new_scene]:
+		Enums.SceneType.FISHING:
+			GlobalMusicPlayer.stop()
+		Enums.SceneType.DATING:
+			GlobalMusicPlayer.play_dating()
+		Enums.SceneType.MENU:
+			GlobalMusicPlayer.play_menu()
