@@ -1,31 +1,47 @@
-[gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://x7nr4ebm7nc4"]
+[gd_resource type="SpriteFrames" load_steps=13 format=3 uid="uid://x7nr4ebm7nc4"]
 
 [ext_resource type="Texture2D" uid="uid://bm1f3ry23optl" path="res://assets/catfish_idle.png" id="1_gf0mk"]
-[ext_resource type="Texture2D" uid="uid://311vd0q5g3u3" path="res://assets/placeholder/catfish_anim.png" id="2_gf0mk"]
+[ext_resource type="Texture2D" uid="uid://bd3f3jvojhq33" path="res://assets/catfish_fishing_animation.png" id="2_gf0mk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hjws1"]
 atlas = ExtResource("2_gf0mk")
-region = Rect2(0, 0, 1020, 600)
+region = Rect2(3060, 0, 1020, 600)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w7j2j"]
 atlas = ExtResource("2_gf0mk")
-region = Rect2(1020, 0, 1020, 600)
+region = Rect2(4080, 0, 1020, 600)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_spduy"]
 atlas = ExtResource("2_gf0mk")
-region = Rect2(2040, 0, 1020, 600)
+region = Rect2(5100, 0, 1020, 600)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rke6w"]
 atlas = ExtResource("2_gf0mk")
-region = Rect2(3060, 0, 1020, 600)
+region = Rect2(6120, 0, 1020, 600)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ms40s"]
 atlas = ExtResource("2_gf0mk")
-region = Rect2(4080, 0, 1020, 600)
+region = Rect2(7140, 0, 1020, 600)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gf0mk"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_k3a7c"]
+atlas = ExtResource("2_gf0mk")
+region = Rect2(8160, 0, 1020, 600)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0q7qg"]
+atlas = ExtResource("2_gf0mk")
+region = Rect2(9180, 0, 1020, 600)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oeehm"]
+atlas = ExtResource("2_gf0mk")
+region = Rect2(0, 0, 1020, 600)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qs1c1"]
 atlas = ExtResource("2_gf0mk")
 region = Rect2(1020, 0, 1020, 600)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_20dl8"]
+atlas = ExtResource("2_gf0mk")
+region = Rect2(2040, 0, 1020, 600)
 
 [resource]
 animations = [{
@@ -52,6 +68,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ms40s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k3a7c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0q7qg")
 }],
 "loop": true,
 "name": &"fibf",
@@ -59,7 +81,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gf0mk")
+"texture": SubResource("AtlasTexture_oeehm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qs1c1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_20dl8")
 }],
 "loop": true,
 "name": &"start_fish",
