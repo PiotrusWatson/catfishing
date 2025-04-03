@@ -53,3 +53,7 @@ func _on_close_pressed() -> void:
 func _on_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.is_pressed() and filled:
 		toggle_button_box(true)
+		if SceneChanger.current_scene_type == Enums.SceneType.FISHING:
+			toggle_give(false)
+		else:
+			toggle_give(true)
