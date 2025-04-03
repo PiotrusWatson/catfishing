@@ -10,12 +10,12 @@ extends Node2D
 func _ready():
 	if Globals.end_status != Enums.EndStatus.NOT_END:
 		Globals.number_of_successful_fishes = fishing_limit
-		Globals.end_status = Enums.EndStatus.NOT_END
 		for shrimp in active_shrimps:
 			shrimp.reset()
 		Inventory.reset()
+		Globals.end_status = Enums.EndStatus.NOT_END
 	
-	if Globals.number_of_successful_fishes == 0:
+	if Globals.number_of_successful_fishes <= 0:
 		game_end()
 	
 	hoke_cam.follow_target = player.hook
@@ -35,6 +35,7 @@ func catch_shrimp(shrimp: ItemOrShrimp):
 			game_end()
 	else:
 		Globals.current_shrimp = shrimp
+		Globals.has_been_on_a_date = true
 		ui.caught()
 	
 func game_end():

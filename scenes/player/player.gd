@@ -51,6 +51,8 @@ func reset_force():
 	fishing_bar.update(desired_force)
 
 func _ready():
+	if Globals.has_been_on_a_date:
+		tooltip.visible = false
 	hook = fishing_rod.hoke
 	player_status = PlayerIs.IDLE
 	reset_force()

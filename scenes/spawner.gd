@@ -20,6 +20,8 @@ var shrimp_counter: int
 var item_counter: int
 
 func init(shrimps: Array[ShrimpType]):
+	if Globals.has_been_on_a_date:
+		tooltip.visible = false
 	spawning_pool = shrimps
 	spawn_timer.start()
 	max_shrimp = int(max_stuff * shrimp_to_item_ratio)
