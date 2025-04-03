@@ -1,5 +1,5 @@
 extends Control
-enum DatingState{NONE, CHARACTER, END}
+enum DatingState{NONE, ITEM_CHECK, ITEM_GIVE, CHARACTER, END}
 
 @onready var shrimp_image = $Shrimp
 @onready var background = $Background
