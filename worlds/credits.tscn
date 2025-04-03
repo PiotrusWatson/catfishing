@@ -62,7 +62,7 @@ grow_vertical = 2
 
 [node name="Venni" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "Venni: Middle Manager, Fishing Artist, Producer, Dreamweaver, Visionary, UI manager, Concept Artist, Actor, Director, Report Writer, Sonic"
+text = "Venni: Middle Manager, Fishing Artist, Producer, Dreamweaver, Visionary, UI manager, Concept Artist, Actor"
 autowrap_mode = 2
 
 [node name="Zoi" type="Label" parent="VBoxContainer"]
@@ -84,6 +84,10 @@ text = "Maruf: Musician"
 [node name="Piotrus" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 text = "Piotrus: Programmer"
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Special thanks to Inari, for reeling this game in"
 
 [node name="BackToMenu" type="Button" parent="."]
 layout_mode = 0

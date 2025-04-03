@@ -1,12 +1,11 @@
 extends StaticBody2D
 
-@export var string_strength = 10
 @export var starting_size = 30
 @export var max_size = 300
-@export var rope_amount = 10
 @export var starting_reel = 5
 @export var acceleration = 3
 @export var hook_speed = 50
+@export var gravity = 100
 var reel_amount
 @onready var rope = $Rope
 @onready var hoke = $FishHoke
@@ -18,25 +17,50 @@ signal caught_shrimp(shrimp: ItemOrShrimp)
 signal changed_fishing_status(is_fishing: bool)
 
 func _ready():
-	reel_amount = starting_reel
+	set_rope(starting_size)
+	
+	
+func set_rope(amount):
+	rope.rope_length = amount
+	reset_reel()
+	print("SETTING ROPE TO ", rope.rope_length)
 
 func increase_rope():
 	if rope.rope_length < max_size:
 		rope.rope_length += reel_amount
 		reel_amount += acceleration
 		
+	print("ROPE IS INCREASING TO ", rope.rope_length)
+		
 func decrease_rope():
 	if rope.rope_length > 1:
 		rope.rope_length -= reel_amount
 		reel_amount += acceleration
+	else:
+		rope.rope_length = 1
+	print("ROPE IS DECREASING TO ", rope.rope_length)
 
 func reset_reel():
 	reel_amount = starting_reel
 	
-func push_hook(point: Vector2):
+func reset_rope():
+	reset_reel()
+	rope.rope_length = starting_size
+
+func launch_hook(target: Vector2, force: float):
+	hoke.push_hook(target, force)
+	
+func push_hook_at_force(point: Vector2, force: float):
 	var direction = (point - pin_point.global_position).normalized()
-	pin_point.velocity = direction * hook_speed
+	pin_point.velocity = direction * force
 	pin_point.move_and_slide()
+
+func push_hook_with_gravity(point: Vector2, force: float):
+	push_hook_at_force(point, force)
+	push_hook_at_force(Vector2.DOWN, gravity)
+	
+func push_hook(point: Vector2):
+	push_hook_at_force(point, hook_speed)
 
 func _on_fish_hoke_hooked_shrimp() -> void:
 	hooked_shrimp.emit()

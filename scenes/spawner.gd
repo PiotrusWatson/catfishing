@@ -9,6 +9,7 @@ extends Area2D
 @onready var right_wall = $Walls/Right
 @onready var shape = $Shape
 @onready var spawn_timer = $SpawnTimer
+@onready var tooltip = $UI/ToolTip
 var spawning_pool: Array[ShrimpType]
 var spawned: Array[ItemOrShrimp]
 signal pool_exhausted
@@ -25,6 +26,7 @@ func init(shrimps: Array[ShrimpType]):
 	max_item = int(max_stuff * (1 - shrimp_to_item_ratio))
 	shrimp_counter = 0
 	item_counter = 0
+	tooltip.fade_out()
 	
 func get_non_haters() -> Array[ShrimpType]:
 	var not_haters: Array[ShrimpType] = []
@@ -75,11 +77,14 @@ func pick_shrimp(shrimp_pool: Array[ShrimpType]):
 func _on_body_entered(body: Node2D) -> void:
 	if body.has_method("toggle_fishing"):
 		body.toggle_fishing(true)
+		tooltip.fade_in()
+		
 
 
 func _on_body_exited(body: Node2D) -> void:
 	if body.has_method("toggle_fishing"):
 		body.toggle_fishing(false)
+		tooltip.fade_out()
 		
 	if body.is_in_group("Hook"):
 		body.catch_shrimp()

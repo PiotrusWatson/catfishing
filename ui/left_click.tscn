@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bow3giawr2rd"]
+
+[ext_resource type="Texture2D" uid="uid://b6y6jd8ss432a" path="res://placeholder/mice.png" id="1_oynov"]
+
+[node name="LeftClick" type="TextureRect"]
+offset_left = -531.0
+offset_top = 3.0
+offset_right = 317.0
+offset_bottom = 1030.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_oynov")
+expand_mode = 4
+stretch_mode = 1

@@ -6,7 +6,7 @@ var given_items: Array[Item]
 
 @onready var item_get_prefab = preload("res://ui/get_item.tscn")
 @onready var possible_items = {
-	"kirby_toes": preload("res://resources/items/placeholder/sam_lake.tres") as Item
+	"sam_lake": preload("res://resources/items/placeholder/sam_lake.tres") as Item
 	}
 @onready var inventory_menu_prefab = preload("res://ui/inventory.tscn")
 var item_get: Node
