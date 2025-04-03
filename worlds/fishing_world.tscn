@@ -55,22 +55,22 @@ scale = Vector2(0.247, 0.188)
 texture = ExtResource("4_gqmpw")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -810.0
-offset_top = 115.0
-offset_right = 589.0
-offset_bottom = 1247.0
+offset_left = -798.0
+offset_top = 178.0
+offset_right = 601.0
+offset_bottom = 1310.0
 texture = SubResource("GradientTexture2D_2l1a4")
 
 [node name="Player" parent="." instance=ExtResource("2_1kayd")]
 position = Vector2(485, -114)
 
 [node name="FishingZone" parent="." instance=ExtResource("2_ncbgm")]
-position = Vector2(-66, 416)
+position = Vector2(-66, 488)
 thing_to_spawn = ExtResource("3_ncbgm")
 item_thing_to_spawn = ExtResource("11_p325l")
 
 [node name="Water" parent="." instance=ExtResource("6_eo0ky")]
-position = Vector2(-670, -208)
+position = Vector2(-666, -148)
 scale = Vector2(2.56, 4.96)
 point_per_distance = 20
 point_independent_stiffness = 3.0

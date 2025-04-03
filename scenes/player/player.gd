@@ -13,6 +13,7 @@ enum PlayerIs{IDLE, LEAVING_WATER, THROWING, CASTING, FISHING, HOOKING, CATCHING
 @onready var gravity_spawn_point = $GravitySpawnPoint
 @onready var fishing_bar = $UI/FishingBar
 @onready var tooltip = $UI/Tooltip
+@onready var animator = $AnimationPlayer
 @export var rotation_speed = 0.5
 @export var max_force = 5.0
 @export var force_step = 0.3
@@ -54,6 +55,7 @@ func _ready():
 	reset_force()
 	stop_target()
 	fishing_bar.init(max_force, force_step, starting_force)
+	animator.play("default")
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -70,11 +72,13 @@ func handle_not_fishing_input(event: InputEvent):
 		pass
 	if event.is_action_pressed("Throw"):
 		force_increaser.start()
+		animator.play("start_fish")
 	if event.is_action_released("Throw"):
 		force_increaser.stop()
 		fishing_rod.reset_reel()
 		extension_timer.start()
 		player_status = PlayerIs.THROWING
+		animator.play("fish")
 	
 func handle_fishing_input(event: InputEvent):
 	if event is InputEventMouseMotion:
@@ -171,3 +175,4 @@ func _on_leaving_water_timer_timeout() -> void:
 	fishing_rod.reset_rope()
 	player_status = PlayerIs.IDLE
 	tooltip.fade_in()
+	animator.play("default")
