@@ -33,7 +33,7 @@ func catch_shrimp():
 			current_shrimp.queue_free()
 
 func toggle_fishing(fishing):
-	is_fishing = fishing		
+	is_fishing = fishing
 	changed_fishing_status.emit(is_fishing)
 	if is_fishing:
 		plop.play()

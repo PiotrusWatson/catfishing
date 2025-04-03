@@ -118,7 +118,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_je7p5"]
 resource_name = "fish"
-length = 0.4
+length = 0.18
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -150,10 +150,10 @@ tracks/2/path = NodePath("Pivot/FishingRod:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.100103),
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(75.7143, -151.429), Vector2(125.714, -111.429), Vector2(-104.286, -148.571), Vector2(-127.143, 137.143)]
+"values": [Vector2(75.7143, -151.429), Vector2(125.714, -111.429), Vector2(-104.286, -148.571), Vector2(-148.571, 71.4286)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -162,10 +162,10 @@ tracks/3/path = NodePath("Pivot/FishingRod:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.100103),
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [-4.56578, -4.18879, -5.41052, -0.698132]
+"values": [-4.56578, -4.18879, -5.41052, -6.28319]
 }
 
 [sub_resource type="Animation" id="Animation_gx1jg"]
@@ -338,6 +338,7 @@ Release to cast!"
 libraries = {
 &"": SubResource("AnimationLibrary_je7p5")
 }
+speed_scale = 0.7
 
 [connection signal="caught_shrimp" from="Pivot/FishingRod" to="." method="_on_fishing_rod_caught_shrimp"]
 [connection signal="changed_fishing_status" from="Pivot/FishingRod" to="." method="_on_fishing_rod_changed_fishing_status"]

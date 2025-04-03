@@ -45,13 +45,13 @@ drag_right_margin = 1.0
 script = ExtResource("2_odgnr")
 speed = 0.2
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sky" type="Sprite2D" parent="."]
 position = Vector2(-110.25, -357)
 scale = Vector2(0.73375, 0.618)
 texture = ExtResource("3_2l1a4")
 
 [node name="PlaceholderDock" type="Sprite2D" parent="."]
-position = Vector2(410, -49)
+position = Vector2(410, -9)
 scale = Vector2(0.247, 0.188)
 texture = ExtResource("4_gqmpw")
 
@@ -64,7 +64,7 @@ texture = SubResource("GradientTexture2D_2l1a4")
 expand_mode = 2
 
 [node name="Player" parent="." instance=ExtResource("2_1kayd")]
-position = Vector2(485, -114)
+position = Vector2(485, -66)
 
 [node name="FishingZone" parent="." instance=ExtResource("2_ncbgm")]
 position = Vector2(-66, 488)
