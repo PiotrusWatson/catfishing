@@ -276,6 +276,7 @@ script = ExtResource("4_p47bc")
 shape = SubResource("CircleShape2D_gmlin")
 
 [node name="Sprite2D" type="Sprite2D" parent="GravityPoint"]
+visible = false
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("4_lvxji")
 

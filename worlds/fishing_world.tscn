@@ -58,8 +58,9 @@ texture = ExtResource("4_gqmpw")
 offset_left = -798.0
 offset_top = 178.0
 offset_right = 601.0
-offset_bottom = 1310.0
+offset_bottom = 1578.0
 texture = SubResource("GradientTexture2D_2l1a4")
+expand_mode = 2
 
 [node name="Player" parent="." instance=ExtResource("2_1kayd")]
 position = Vector2(485, -114)
