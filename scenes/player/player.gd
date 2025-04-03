@@ -32,6 +32,7 @@ signal game_ended
 var is_fishing = false
 var player_status = PlayerIs.IDLE
 var distance_to_target: float
+var is_starting = true
 
 
 func set_target(target_position: Vector2):
@@ -59,6 +60,8 @@ func _ready():
 
 
 func _unhandled_input(event: InputEvent) -> void:
+	if is_starting:
+		return
 	match player_status:
 		PlayerIs.FISHING:
 			handle_fishing_input(event)
@@ -176,3 +179,7 @@ func _on_leaving_water_timer_timeout() -> void:
 	player_status = PlayerIs.IDLE
 	tooltip.fade_in()
 	animator.play("default")
+
+
+func _on_start_timer_timeout() -> void:
+	is_starting = false

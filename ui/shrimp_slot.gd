@@ -10,7 +10,7 @@ func _ready() -> void:
 	
 func fill_deets(shrimp: ShrimpType):
 	shrimp_info = shrimp
-	image.texture = shrimp.basic_image
+	image.texture = shrimp.images.basic
 	name_text.text = shrimp.name
 
 func toggle_menu(is_active):

@@ -8,7 +8,7 @@ extends Node2D
 @onready var fishing_zone = $FishingZone
 
 func _ready():
-	if Globals.end_status != Enums.EndStatus.NOT_END or Globals.number_of_successful_fishes == -1:
+	if Globals.end_status != Enums.EndStatus.NOT_END:
 		Globals.number_of_successful_fishes = fishing_limit
 		Globals.end_status = Enums.EndStatus.NOT_END
 		for shrimp in active_shrimps:
