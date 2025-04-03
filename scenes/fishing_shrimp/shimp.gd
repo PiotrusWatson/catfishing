@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-enum ShimpIs{ROAMING, CHASING, ON_HOOK, CAUGHT}
+enum ShimpIs{ROAMING, CHASING, ON_HOOK, SCARED, CAUGHT}
 
 @onready var sprite = $SubShimp/Sprite2D
 @onready var sub_shrimp = $SubShimp
@@ -71,7 +71,7 @@ func _on_bored_timer_timeout() -> void:
 
 
 func _on_wall_detector_body_entered(body: Node2D) -> void:
-	if shimp_status == ShimpIs.CHASING and body.is_in_group("Hook"):
+	if shimp_status == ShimpIs.CHASING and body.is_in_group("Hook") and !body.is_hooked:
 		body.hook_shrimp(self)
 		shimp_status = ShimpIs.ON_HOOK
 		return
@@ -81,7 +81,7 @@ func _on_wall_detector_body_entered(body: Node2D) -> void:
 
 
 func _on_shimp_vision_body_entered(body: Node2D) -> void:
-	if body.is_in_group("Hook") and shimp_status == ShimpIs.ROAMING:
+	if body.is_in_group("Hook") and shimp_status == ShimpIs.ROAMING and !body.is_hooked:
 		target = body
 		shimp_status = ShimpIs.CHASING
 		

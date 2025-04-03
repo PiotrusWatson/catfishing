@@ -34,3 +34,4 @@ func catch_shrimp():
 func toggle_fishing(fishing):
 	is_fishing = fishing		
 	changed_fishing_status.emit(is_fishing)
+	
