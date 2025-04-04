@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://dtqeucsiqli2t"
+path="res://.godot/imported/generic_item_giver.dialogue-9f0ba95888d7b79439e58e436b46111b.tres"
+
+[deps]
+
+source_file="res://dialogues/generic_item_giver.dialogue"
+dest_files=["res://.godot/imported/generic_item_giver.dialogue-9f0ba95888d7b79439e58e436b46111b.tres"]
+
+[params]
+
+defaults=true

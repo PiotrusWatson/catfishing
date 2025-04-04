@@ -1,0 +1,7 @@
+~ start
+You have items in your inventory. Do you want to give one of them to this shrimp?
+- Yes
+	do Inventory.toggle_show_inventory(true)
+	=> END
+- No
+	=> END

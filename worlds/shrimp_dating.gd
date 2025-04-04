@@ -11,7 +11,7 @@ enum DatingState{NONE, ITEM_CHECK, ITEM_GIVE, CHARACTER, END}
 var shrimp_data: ShrimpType
 var shrimp_dialogue: DialogueResource
 var spawned_box: Node
-var state = DatingState.CHARACTER
+var state = DatingState.ITEM_CHECK
 
 func _ready():
 	if Globals.current_shrimp == null:
@@ -36,6 +36,7 @@ func handle_start_dialogue():
 			state = DatingState.ITEM_GIVE
 		else:
 			state = DatingState.CHARACTER
+			handle_end_dialogue("junk")
 	else:
 		SceneChanger.change_scene(SceneChanger.Worlds.PHYSICS_FISHING)
 		
