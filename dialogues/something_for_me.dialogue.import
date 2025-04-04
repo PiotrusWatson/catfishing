@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://cg8yc5aql1y8y"
+path="res://.godot/imported/something_for_me.dialogue-11a6025f2a1cd882746cfd59a60e804c.tres"
+
+[deps]
+
+source_file="res://dialogues/something_for_me.dialogue"
+dest_files=["res://.godot/imported/something_for_me.dialogue-11a6025f2a1cd882746cfd59a60e804c.tres"]
+
+[params]
+
+defaults=true

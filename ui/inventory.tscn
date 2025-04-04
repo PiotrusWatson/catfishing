@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://ow5eq3ms08jn" path="res://ui/item_slot.tscn" id="2_70ao8"]
 
 [node name="Inventory" type="CanvasLayer"]
+layer = 101
 script = ExtResource("1_kosh3")
 item_slot_prefab = ExtResource("2_70ao8")
 
