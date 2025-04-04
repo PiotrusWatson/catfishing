@@ -6,6 +6,7 @@ class_name ShrimpType
 @export var backgrounds: Array[Texture2D]
 @export var basic_dialogue: DialogueResource
 @export var ending_dialogue: DialogueResource
+@export var item_receive_dialogue: DialogueResource
 @export var basic_theme: Theme
 @export var starting_love = 1
 @export var liked_item: Item

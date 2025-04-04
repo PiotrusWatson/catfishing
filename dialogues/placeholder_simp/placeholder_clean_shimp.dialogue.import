@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://l17otjaow3eq"
+path="res://.godot/imported/placeholder_clean_shimp.dialogue-058916ead71fecb6b3130974ffff1ba6.tres"
+
+[deps]
+
+source_file="res://dialogues/placeholder_simp/placeholder_clean_shimp.dialogue"
+dest_files=["res://.godot/imported/placeholder_clean_shimp.dialogue-058916ead71fecb6b3130974ffff1ba6.tres"]
+
+[params]
+
+defaults=true

@@ -1,18 +1,20 @@
-[gd_resource type="Resource" script_class="ShrimpType" load_steps=6 format=3 uid="uid://fwd73v0vtp10"]
+[gd_resource type="Resource" script_class="ShrimpType" load_steps=7 format=3 uid="uid://fwd73v0vtp10"]
 
 [ext_resource type="Script" uid="uid://dtjomkji7bwyx" path="res://scripts/shrimptype.gd" id="1_vtwdr"]
-[ext_resource type="Resource" uid="uid://07rnf4xdc1in" path="res://dialogues/placeholder_shromp.dialogue" id="2_nolni"]
-[ext_resource type="Resource" uid="uid://dd7tmdwqtitpb" path="res://dialogues/placeholder_nerd_end.dialogue" id="4_nolni"]
+[ext_resource type="Resource" uid="uid://07rnf4xdc1in" path="res://dialogues/placeholder_nerd/placeholder_shromp.dialogue" id="1_xr5xi"]
+[ext_resource type="Resource" uid="uid://dd7tmdwqtitpb" path="res://dialogues/placeholder_nerd/placeholder_nerd_end.dialogue" id="3_wnnnt"]
 [ext_resource type="Resource" uid="uid://1fk6fwy22705" path="res://resources/shrimps/placeholder/shrimp_images/shompy.tres" id="4_wnnnt"]
 [ext_resource type="Theme" uid="uid://sh6ju41csl7u" path="res://ui/character_theme.tres" id="4_xr5xi"]
+[ext_resource type="Resource" uid="uid://cy6jwvmyi4cxw" path="res://dialogues/placeholder_nerd/placeholder_nerd_item.dialogue" id="5_1e1qd"]
 
 [resource]
 script = ExtResource("1_vtwdr")
 name = "Shompy"
 images = ExtResource("4_wnnnt")
 backgrounds = Array[Texture2D]([null])
-basic_dialogue = ExtResource("2_nolni")
-ending_dialogue = ExtResource("4_nolni")
+basic_dialogue = ExtResource("1_xr5xi")
+ending_dialogue = ExtResource("3_wnnnt")
+item_receive_dialogue = ExtResource("5_1e1qd")
 basic_theme = ExtResource("4_xr5xi")
 starting_love = 1
 metadata/_custom_type_script = "uid://dtjomkji7bwyx"

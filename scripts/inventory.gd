@@ -1,9 +1,9 @@
 extends Node
 
-enum ItemIs{ADDED, REMOVED, ATTEMPTED_ADD}
+enum ItemIs{ADDED, REMOVED,GIVEN, ATTEMPTED_ADD}
 var items: Array[Item]
 var given_items: Array[Item]
-
+var currently_giving: Item
 @onready var item_get_prefab = preload("res://ui/get_item.tscn")
 @onready var possible_items = {
 	"sam_lake": preload("res://resources/items/placeholder/sam_lake.tres") as Item
@@ -36,6 +36,14 @@ func remove_and_show(index: int):
 	show_get_item(removed, ItemIs.REMOVED)
 	given_items.append(removed)
 	return removed
+	
+func give_and_show(index: int):
+	var given = remove(index)
+	show_get_item(given, ItemIs.GIVEN)
+	given_items.append(given)
+	currently_giving = given
+	return given
+	
 
 func show_get_item(item: Item, status: ItemIs):
 	if item_get == null:
@@ -47,6 +55,8 @@ func show_get_item(item: Item, status: ItemIs):
 	
 	if status == ItemIs.ADDED:
 		item_get.show_get(item)
+	elif status == ItemIs.REMOVED:
+		item_get.show_delete(item)
 	else:
 		item_get.show_give(item)
 		

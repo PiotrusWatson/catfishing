@@ -17,6 +17,12 @@ func show_give(item: Item):
 	get_text.text = "Gave away your " + item.name
 	visible = true
 	item_box.focus_mode = Control.FocusMode.FOCUS_ALL
+	
+func show_delete(item: Item):
+	image.texture = item.image
+	get_text.text = "Threw away your " + item.name
+	visible = true
+	item_box.focus_mode = Control.FocusMode.FOCUS_ALL
 
 func _on_item_box_gui_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_accept") and item_box.focus_mode != Control.FocusMode.FOCUS_NONE:

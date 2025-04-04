@@ -1,5 +1,5 @@
 extends Control
-enum DatingState{NONE, ITEM_CHECK, ITEM_GIVE, CHARACTER, END}
+
 
 @onready var shrimp_image = $Shrimp
 @onready var background = $Background
@@ -13,7 +13,8 @@ enum DatingState{NONE, ITEM_CHECK, ITEM_GIVE, CHARACTER, END}
 var shrimp_data: ShrimpType
 var shrimp_dialogue: DialogueResource
 var spawned_box: Node
-var state = DatingState.ITEM_CHECK
+var state = Enums.DatingState.ITEM_CHECK
+var check_state_at_end = false
 
 func _ready():
 	if Globals.current_shrimp == null:
@@ -26,25 +27,34 @@ func _ready():
 	
 func handle_start_dialogue():
 	spawned_box.set_theme(shrimp_data.basic_theme)
-	if state == DatingState.CHARACTER:
-		DialogueManager.show_dialogue_balloon_scene(spawned_box, shrimp_dialogue)
-		state = DatingState.END
-	elif state == DatingState.END:
-		DialogueManager.show_dialogue_balloon_scene(spawned_box, end_dialogue)
-		state = DatingState.NONE
-	elif state == DatingState.ITEM_CHECK:
-		if len(Inventory.items) > 0:
-			DialogueManager.show_dialogue_balloon_scene(spawned_box, generic_item_ask_dialogue)
-			state = DatingState.ITEM_GIVE
-		else:
-			state = DatingState.CHARACTER
-			handle_end_dialogue("junk")
-	elif state == DatingState.ITEM_GIVE:
-		DialogueManager.show_dialogue_balloon_scene(spawned_box, something_for_me_dialogue)
-	else:
-		SceneChanger.change_scene(SceneChanger.Worlds.PHYSICS_FISHING)
+	match state:
+		Enums.DatingState.CHARACTER:
+			DialogueManager.show_dialogue_balloon_scene(spawned_box, shrimp_dialogue)
+			state = Enums.DatingState.END
+		Enums.DatingState.END:
+			DialogueManager.show_dialogue_balloon_scene(spawned_box, end_dialogue)
+			state = Enums.DatingState.NONE
+		Enums.DatingState.ITEM_CHECK:
+			if len(Inventory.items) > 0:
+				DialogueManager.show_dialogue_balloon_scene(spawned_box, generic_item_ask_dialogue)
+				check_state_at_end = true
+			else:
+				state = Enums.DatingState.CHARACTER
+				handle_end_dialogue("junk")
+		Enums.DatingState.ITEM_GIVE:
+			Inventory.toggle_show_inventory(true)
+			DialogueManager.show_dialogue_balloon_scene(spawned_box, something_for_me_dialogue)
+			check_state_at_end = true
+		Enums.DatingState.ITEM_RECEIVE:
+			DialogueManager.show_dialogue_balloon_scene(spawned_box, shrimp_data.item_receive_dialogue)
+			state = Enums.DatingState.END
+		_:
+			SceneChanger.change_scene(SceneChanger.Worlds.PHYSICS_FISHING)
 		
 func handle_end_dialogue(resource):
+	if check_state_at_end:
+		state = Globals.temp_dating_state
+		check_state_at_end = false
 	spawned_box.queue_free()
 	make_box()
 	
