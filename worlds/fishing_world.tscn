@@ -33,7 +33,7 @@ Label/fonts/font = null
 [node name="FishingWorld" type="Node2D"]
 script = ExtResource("1_585q5")
 active_shrimps = Array[ExtResource("2_iq87m")]([ExtResource("3_idyiq"), ExtResource("6_2l1a4")])
-fishing_limit = 3
+fishing_limit = 5
 
 [node name="HookCamera" type="Camera2D" parent="."]
 position = Vector2(-14, 111)
@@ -125,6 +125,7 @@ text = "Fishes left: 9"
 one_shot = true
 
 [node name="FinalSelection" parent="UI" instance=ExtResource("12_mcxpu")]
+love_threshold = 1
 
 [node name="Jingle" type="AudioStreamPlayer2D" parent="UI"]
 stream = ExtResource("16_svnk6")
