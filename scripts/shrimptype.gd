@@ -28,17 +28,21 @@ func decrement_love():
 	love -= 1
 	
 func give_item(item: Item):
-	Globals.set_given_item(item)
 	if item == liked_item:
 		increment_love()
 		increment_love()
-		received_item.emit(Enums.Mood.HAPPY)
+		increment_love()
+		increment_love()
+		return Enums.Mood.HAPPY
 	elif item == disliked_item:
 		decrement_love()
-		received_item.emit(Enums.Mood.SAD)
+		decrement_love()
+		decrement_love()
+		decrement_love()
+		return Enums.Mood.SAD
 	else:
 		increment_love()
-		received_item.emit(Enums.Mood.NEUTRAL)
+		return Enums.Mood.NEUTRAL
 		
 		
 

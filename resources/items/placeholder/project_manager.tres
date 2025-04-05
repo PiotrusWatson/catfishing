@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://civ6b7sragafd"]
+
+[ext_resource type="Texture2D" uid="uid://c6fjg2r6fut7d" path="res://placeholder/frog.webp" id="1_8widg"]
+[ext_resource type="Script" uid="uid://1pp7g7hcg8it" path="res://scripts/item.gd" id="1_ggu5p"]
+
+[resource]
+script = ExtResource("1_ggu5p")
+name = "Project Manager"
+image = ExtResource("1_8widg")
+metadata/_custom_type_script = "uid://1pp7g7hcg8it"

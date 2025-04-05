@@ -1,4 +1,47 @@
 ~ start
+match Globals.give_item():
+	when Enums.Mood.HAPPY:
+		=> like_samuel
+	when Enums.Mood.SAD:
+		=> hate_toes
+	when Enums.Mood.NEUTRAL:
+		=> its_ok
+		
+		
+~ like_samuel
+Shompy: Oh my god is that....[#love]
+Shompy: Is that....
+Shompy: Is that THE Samuel Lake???
+Shompy: Award winning gamesmith...a true Finnish hero....
+Shompy: Where did you get your hands on him?? 
+Sam: thank god someone's here!!!! i've been locked up in this car trunk for 5 hours
+Sam: please!!! call the cops!!! this cat is a maniac
+Shompy: Oh dear....you didn't hurt him much did you?? [#nervous]
+Shompy: Don't worry Mr Lake! I'll keep you nice and safe..... [#love]
+Shompy: If you could just come with me....
+Shompy: I need your expert input on my AhtixMax slashfic. I've written 1000 pages but maybe you can take it to 2000 <3
+Sam: please.... i have a family.....
+Sam: noooooooouuuu....
+You watch as Shompy drags Sam off into his car trunk
+Shompy: I can't believe you brought him to me <3
+Shompy: This means more than you could possibly imagine
+Shompy seems overjoyed!
+=> END
+
+~ hate_toes
+Shompy: Oh wow is that...
+Shompy: THE hollow knight???
+Shompy: It's a pretty derivative game....
+Shompy: Why are his toes in my face??? I don't know if I like this.... [#nervous]
+Shompy: They really smell something fierce
+Shompy: Ugh why did you give this to me? It's disgusting [#angry]
+Shompy: Take him away! Please....
+Shompy: Are you enjoying this??? Do you get a kick out of my suffering? 
+Shompy: Do you hate me???? I don't want to see you again
+Shompy seems really angry with you!
+=> END!
+
+~ its_ok
 Shompy: Ohhh that's nice.... I guess....
 Shompy: I'm not sure how to respond to be honest ....
 Shompy: This feels like it's going too fast...

@@ -1,12 +1,14 @@
-[gd_resource type="Resource" script_class="ShrimpType" load_steps=8 format=3 uid="uid://654d7dklnoik"]
+[gd_resource type="Resource" script_class="ShrimpType" load_steps=10 format=3 uid="uid://654d7dklnoik"]
 
 [ext_resource type="Script" uid="uid://dtjomkji7bwyx" path="res://scripts/shrimptype.gd" id="1_f5o8c"]
 [ext_resource type="Resource" uid="uid://l17otjaow3eq" path="res://dialogues/placeholder_simp/placeholder_clean_shimp.dialogue" id="2_845x8"]
 [ext_resource type="Texture2D" uid="uid://d0uo1ltpkrl7" path="res://placeholder/duo.jpg" id="2_jvd58"]
 [ext_resource type="Theme" uid="uid://sh6ju41csl7u" path="res://ui/character_theme.tres" id="3_mbs3c"]
 [ext_resource type="Resource" uid="uid://p0j6ni4t8mpg" path="res://dialogues/placeholder_simp/placeholder_shimp_end.dialogue" id="4_6n7oq"]
+[ext_resource type="Resource" uid="uid://bbijoedo15ltw" path="res://resources/items/placeholder/sam_lake.tres" id="4_oacpk"]
 [ext_resource type="Resource" uid="uid://d1chuxtct6nc0" path="res://resources/shrimps/placeholder/shrimp_images/simp.tres" id="6_6n7oq"]
 [ext_resource type="Resource" uid="uid://b458qe78un5p7" path="res://dialogues/placeholder_simp/placeholder_shimp_item.dialogue" id="6_oacpk"]
+[ext_resource type="Resource" uid="uid://dssbi4n8odudg" path="res://resources/items/placeholder/hollow_knight_toes.tres" id="8_o2mi2"]
 
 [resource]
 script = ExtResource("1_f5o8c")
@@ -18,4 +20,6 @@ ending_dialogue = ExtResource("4_6n7oq")
 item_receive_dialogue = ExtResource("6_oacpk")
 basic_theme = ExtResource("3_mbs3c")
 starting_love = 1
+liked_item = ExtResource("8_o2mi2")
+disliked_item = ExtResource("4_oacpk")
 metadata/_custom_type_script = "uid://dtjomkji7bwyx"

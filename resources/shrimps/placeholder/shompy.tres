@@ -1,11 +1,13 @@
-[gd_resource type="Resource" script_class="ShrimpType" load_steps=7 format=3 uid="uid://fwd73v0vtp10"]
+[gd_resource type="Resource" script_class="ShrimpType" load_steps=9 format=3 uid="uid://fwd73v0vtp10"]
 
 [ext_resource type="Script" uid="uid://dtjomkji7bwyx" path="res://scripts/shrimptype.gd" id="1_vtwdr"]
 [ext_resource type="Resource" uid="uid://07rnf4xdc1in" path="res://dialogues/placeholder_nerd/placeholder_shromp.dialogue" id="1_xr5xi"]
+[ext_resource type="Resource" uid="uid://dssbi4n8odudg" path="res://resources/items/placeholder/hollow_knight_toes.tres" id="3_1e1qd"]
 [ext_resource type="Resource" uid="uid://dd7tmdwqtitpb" path="res://dialogues/placeholder_nerd/placeholder_nerd_end.dialogue" id="3_wnnnt"]
 [ext_resource type="Resource" uid="uid://1fk6fwy22705" path="res://resources/shrimps/placeholder/shrimp_images/shompy.tres" id="4_wnnnt"]
 [ext_resource type="Theme" uid="uid://sh6ju41csl7u" path="res://ui/character_theme.tres" id="4_xr5xi"]
 [ext_resource type="Resource" uid="uid://cy6jwvmyi4cxw" path="res://dialogues/placeholder_nerd/placeholder_nerd_item.dialogue" id="5_1e1qd"]
+[ext_resource type="Resource" uid="uid://bbijoedo15ltw" path="res://resources/items/placeholder/sam_lake.tres" id="7_7q3rq"]
 
 [resource]
 script = ExtResource("1_vtwdr")
@@ -17,4 +19,6 @@ ending_dialogue = ExtResource("3_wnnnt")
 item_receive_dialogue = ExtResource("5_1e1qd")
 basic_theme = ExtResource("4_xr5xi")
 starting_love = 1
+liked_item = ExtResource("7_7q3rq")
+disliked_item = ExtResource("3_1e1qd")
 metadata/_custom_type_script = "uid://dtjomkji7bwyx"

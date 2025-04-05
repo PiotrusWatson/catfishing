@@ -3,7 +3,6 @@ extends Node
 var first_time = true
 var current_shrimp: ShrimpType
 var current_scene_type: Enums.SceneType
-var item_being_given: Item
 var current_love: int
 var number_of_successful_fishes: int
 var end_status = Enums.EndStatus.JUST_STARTED
@@ -22,9 +21,6 @@ func increment_current_love():
 
 func decrement_current_love():
 	current_shrimp.decrement_love()
-
-func set_given_item(item: Item):
-	item_being_given = item
 
 func strip_to_alphanumeric(name: String):
 	var regex = RegEx.new()
@@ -60,3 +56,6 @@ func not_in_second_array(arr1, arr2):
 	
 func set_dating_state(state: Enums.DatingState):
 	temp_dating_state = state
+	
+func give_item():
+	return current_shrimp.give_item(Inventory.currently_giving)
