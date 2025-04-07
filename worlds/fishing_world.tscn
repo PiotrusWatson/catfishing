@@ -72,6 +72,12 @@ position = Vector2(-66, 488)
 thing_to_spawn = ExtResource("3_ncbgm")
 item_thing_to_spawn = ExtResource("11_p325l")
 
+[node name="Bottom" parent="FishingZone/Ceiling" index="1"]
+position = Vector2(-1, 1054)
+
+[node name="Shape" parent="FishingZone" index="3"]
+position = Vector2(11, 281.5)
+
 [node name="Water" parent="." instance=ExtResource("6_eo0ky")]
 position = Vector2(-666, -148)
 scale = Vector2(2.56, 4.96)
@@ -134,3 +140,5 @@ stream = ExtResource("16_svnk6")
 
 [connection signal="caught_text_faded" from="UI" to="." method="_on_ui_caught_text_faded"]
 [connection signal="timeout" from="UI/Timers/FadeTimer" to="UI" method="_on_fade_timer_timeout"]
+
+[editable path="FishingZone"]

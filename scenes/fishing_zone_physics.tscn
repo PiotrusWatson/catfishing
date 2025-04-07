@@ -21,7 +21,7 @@ size = Vector2(1146, 33)
 size = Vector2(1146, 33)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ca631"]
-size = Vector2(1140, 1400)
+size = Vector2(1086, 1101)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ca631"]
 atlas = ExtResource("5_fi7oa")
