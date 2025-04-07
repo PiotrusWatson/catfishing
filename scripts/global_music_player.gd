@@ -1,4 +1,4 @@
-extends AudioStreamPlayer2D
+extends AudioStreamPlayer
 
 @onready var menu_music = preload("res://audio/music/ShrimpMenu2.mp3")
 @onready var dating_music = preload("res://audio/music/ShrimpDate1.mp3")
