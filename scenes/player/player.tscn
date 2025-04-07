@@ -318,19 +318,21 @@ script = ExtResource("8_5gtgg")
 
 [node name="LeftClick" parent="UI/Tooltip" instance=ExtResource("7_0owmy")]
 layout_mode = 0
-offset_left = -518.0
-offset_top = -3.0
-offset_right = 330.0
-offset_bottom = 1024.0
+offset_left = -603.0
+offset_top = 4.0
+offset_right = 245.0
+offset_bottom = 1031.0
 
 [node name="Label" type="Label" parent="UI/Tooltip"]
 layout_mode = 0
-offset_left = -417.0
-offset_top = 16.0
-offset_right = -200.0
-offset_bottom = 96.0
+offset_left = -516.0
+offset_top = -20.0
+offset_right = -81.0
+offset_bottom = 129.0
 text = "Hold to aim
-Release to cast!"
+Release to cast
+The further you move the mouse,
+the further you cast"
 
 [node name="Fader" parent="UI/Tooltip" instance=ExtResource("10_h17s1")]
 
