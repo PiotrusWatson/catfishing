@@ -1,0 +1,24 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://b7cfsb3ly6dfg"]
+
+[ext_resource type="FontFile" uid="uid://bw7csb2v3xxdr" path="res://fonts/Ldfcomicsansbold-zgma.ttf" id="1_u8wy7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u8wy7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oxk5h"]
+bg_color = Color(0.281187, 0.281187, 0.281187, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lxngi"]
+bg_color = Color(0, 0, 0, 0.568627)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gpwhp"]
+
+[resource]
+Button/constants/h_separation = 10
+Button/font_sizes/font_size = 50
+Button/fonts/font = ExtResource("1_u8wy7")
+CheckBox/styles/normal = SubResource("StyleBoxFlat_u8wy7")
+CheckBox/styles/pressed = SubResource("StyleBoxFlat_oxk5h")
+Label/font_sizes/font_size = 37
+Label/fonts/font = ExtResource("1_u8wy7")
+Panel/styles/panel = SubResource("StyleBoxFlat_lxngi")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_gpwhp")

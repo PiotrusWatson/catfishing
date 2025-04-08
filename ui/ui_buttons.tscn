@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dvtgtbokriok7"]
 
-[ext_resource type="Script" uid="uid://br3063apkpnh6" path="res://worlds/ui_buttons.gd" id="1_ednlj"]
+[ext_resource type="Script" uid="uid://br3063apkpnh6" path="res://ui/ui_buttons.gd" id="1_ednlj"]
 
 [node name="UI Buttons" type="CanvasLayer"]
 layer = 101

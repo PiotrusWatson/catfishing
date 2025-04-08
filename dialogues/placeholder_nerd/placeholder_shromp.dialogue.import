@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://07rnf4xdc1in"
+path="res://.godot/imported/placeholder_shromp.dialogue-0cde6c092bd2a5c1ef85c1d07439dc83.tres"
+
+[deps]
+
+source_file="res://dialogues/placeholder_nerd/placeholder_shromp.dialogue"
+dest_files=["res://.godot/imported/placeholder_shromp.dialogue-0cde6c092bd2a5c1ef85c1d07439dc83.tres"]
+
+[params]
+
+defaults=true

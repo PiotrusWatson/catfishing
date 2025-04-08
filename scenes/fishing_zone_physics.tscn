@@ -1,12 +1,18 @@
-[gd_scene load_steps=7 format=3 uid="uid://c5viyjrpp6xob"]
+[gd_scene load_steps=14 format=3 uid="uid://c5viyjrpp6xob"]
 
-[ext_resource type="Script" uid="uid://mh2cm312kjpx" path="res://scenes/fishing_zone_physics.gd" id="1_qp5sr"]
+[ext_resource type="Script" uid="uid://dywmcve6td1my" path="res://scenes/spawner.gd" id="1_qp5sr"]
+[ext_resource type="Script" uid="uid://cqltqr2cwjuav" path="res://scenes/walls.gd" id="2_1lfod"]
+[ext_resource type="PackedScene" uid="uid://bow3giawr2rd" path="res://ui/left_click.tscn" id="3_4ncjp"]
+[ext_resource type="Theme" uid="uid://3ydsxh3h11mw" path="res://ui/tooltip_theme.tres" id="3_ca631"]
+[ext_resource type="Script" uid="uid://dfam5toopoauv" path="res://scenes/tool_tip.gd" id="4_0cchh"]
+[ext_resource type="Texture2D" uid="uid://b6y6jd8ss432a" path="res://placeholder/mice.png" id="5_fi7oa"]
+[ext_resource type="Script" uid="uid://b4ox8c53hnxuw" path="res://ui/ui_fader.gd" id="7_xqfk0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fi7oa"]
-size = Vector2(1146, 33)
+size = Vector2(1440, 33)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0cchh"]
-size = Vector2(1146, 33)
+size = Vector2(1440, 33)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gp0ue"]
 size = Vector2(1146, 33)
@@ -15,7 +21,11 @@ size = Vector2(1146, 33)
 size = Vector2(1146, 33)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ca631"]
-size = Vector2(1140, 1086)
+size = Vector2(1086, 1101)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ca631"]
+atlas = ExtResource("5_fi7oa")
+region = Rect2(825.536, 0, 821.641, 1000)
 
 [node name="FishingZone" type="Area2D"]
 collision_layer = 3
@@ -23,39 +33,106 @@ collision_mask = 3
 script = ExtResource("1_qp5sr")
 
 [node name="SpawnTimer" type="Timer" parent="."]
-wait_time = 3.0
-autostart = true
+wait_time = 5.0
 
 [node name="Walls" type="StaticBody2D" parent="."]
 collision_layer = 7
 collision_mask = 7
+script = ExtResource("2_1lfod")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls"]
-position = Vector2(-566, 240)
+[node name="Left" type="CollisionShape2D" parent="Walls"]
+position = Vector2(-566.001, 387)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_fi7oa")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls"]
-position = Vector2(591, 242)
+[node name="Right" type="CollisionShape2D" parent="Walls"]
+position = Vector2(590.999, 389)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_0cchh")
 
 [node name="Ceiling" type="StaticBody2D" parent="."]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 4
+collision_mask = 6
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ceiling"]
+[node name="Top" type="CollisionShape2D" parent="Ceiling"]
 position = Vector2(-2, -315)
 shape = SubResource("RectangleShape2D_gp0ue")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ceiling"]
-position = Vector2(7, 796)
+[node name="Bottom" type="CollisionShape2D" parent="Ceiling"]
+position = Vector2(18, 1100)
 shape = SubResource("RectangleShape2D_qp5sr")
 
 [node name="Shape" type="CollisionShape2D" parent="."]
-position = Vector2(4, 233)
+position = Vector2(15, 408)
 shape = SubResource("RectangleShape2D_ca631")
 debug_color = Color(0, 0.6, 0.701961, 0.2)
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -550.0
+offset_top = -296.0
+offset_right = 564.0
+offset_bottom = 774.0
+mouse_filter = 2
+
+[node name="ToolTip" type="Control" parent="UI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -130.0
+offset_right = 130.0
+offset_bottom = 175.0
+grow_horizontal = 2
+theme = ExtResource("3_ca631")
+script = ExtResource("4_0cchh")
+
+[node name="LeftClick" parent="UI/ToolTip" instance=ExtResource("3_4ncjp")]
+layout_mode = 0
+offset_left = 11.0
+offset_top = -3.0
+offset_right = 859.0
+offset_bottom = 1024.0
+
+[node name="HookGoDown" type="Label" parent="UI/ToolTip"]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 31.0
+offset_right = 260.0
+offset_bottom = 66.0
+text = "Extend line (hook go down)"
+
+[node name="TextureRect" type="TextureRect" parent="UI/ToolTip"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 93.0
+offset_right = 860.0
+offset_bottom = 1133.0
+scale = Vector2(0.1, 0.1)
+texture = SubResource("AtlasTexture_ca631")
+expand_mode = 4
+stretch_mode = 1
+
+[node name="HookGoUp" type="Label" parent="UI/ToolTip"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 125.0
+offset_right = 361.0
+offset_bottom = 160.0
+text = "Reel in (hook go up)"
+
+[node name="Label" type="Label" parent="UI/ToolTip"]
+layout_mode = 0
+offset_left = -44.0
+offset_top = 206.0
+offset_right = 466.0
+offset_bottom = 241.0
+text = "The hook will follow your mouse cursor!"
+
+[node name="Fader" type="Node" parent="UI/ToolTip"]
+script = ExtResource("7_xqfk0")
+metadata/_custom_type_script = "uid://b4ox8c53hnxuw"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

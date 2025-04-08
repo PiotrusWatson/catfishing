@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://brg78tl8y7spr"]
+
+[ext_resource type="PackedScene" uid="uid://dn46lkmmrym33" path="res://scenes/fishing_shrimp/shimp.tscn" id="1_4dwaa"]
+[ext_resource type="Texture2D" uid="uid://1n48fuxjr8lg" path="res://placeholder/sneakers-2791491_1280.png" id="2_h7htw"]
+
+[node name="Shimp2" instance=ExtResource("1_4dwaa")]
+
+[node name="Sprite2D" parent="SubShimp" index="2"]
+texture = ExtResource("2_h7htw")
+flip_h = false

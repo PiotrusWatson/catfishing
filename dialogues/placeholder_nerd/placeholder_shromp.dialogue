@@ -1,0 +1,160 @@
+~ start
+match Globals.current_shrimp.love
+	when 1
+		=> normal_love
+	when 2
+		=> higher_love
+	when < 1
+		=> low_love
+	else
+		=> high_love
+
+
+~ low_love
+Shompy: you hurt me ........[#sad]
+Shompy: please leave me alone ......
+=> END!
+
+~ higher_love
+Shompy sits, preoccupied in a book as always. It looks like a different book from the one he was reading the first time you met.
+His eyes light up as he notices you [#sparkle]
+Shompy: Oh hey! I'm working my way through another really interesting book in the field of game studies
+Shompy: If you're interested in hearing? 
+He looks at you, expectantly [#normal]
+- Sure, I'm interested!
+	=> higher_love_interest
+- hmmmm I'm really busy today.... sorry....
+	=> higher_love_no_interest
+
+~ higher_love_interest
+Shompy: Fantastic! This one is an exciting paper by Bo Ruberg on the queer posthuman implications of unplayable games....[#love]
+...You begin to tune out again....
+Shompy: ...And while the deer ass [i]is[/i] luscious and large, I'm unsure how it ties into queer identity as a whole....[#nervous]
+...You fade back into your own thoughts ....
+Shompy: ...But a video game that cannot be played??? How cool is that??? [#sparkle]
+Shompy looks at you, waiting for an answer [#normal]
+- It's pretty cool!
+	=> higher_love_love
+- Isn't that just a "movie"?
+	=> higher_love_sad
+	
+~ higher_love_no_interest
+Shompy: ...oh....[#angry]
+Shompy: I thought you were more interested.....
+Shompy: I'll see myself out ....[#sad]
+do Globals.decrement_current_love()
+do Globals.decrement_current_love()
+Shompy seems sad
+=> END!
+	
+~ higher_love_sad
+Shompy: ....I guess it is....[#nervous]
+Shompy: God, I was talking so long and making such a fool of myself....[#sad]
+Shompy: Excuse me. I need some air.
+do Globals.decrement_current_love()
+do Globals.decrement_current_love()
+Shompy seems despondent....
+=> END!
+~ higher_love_love
+Shompy: Yeah!!! Maybe we could meet some time and....
+Shompy: Watch some posthuman unplayable games together??? [#sparkle]
+Shompy: I really appreciate how much interest you're showing in my special interest![#love]
+do Globals.increment_current_love()
+Shompy seems overjoyed!
+=> END!
+~ normal_love
+You see a preoccupied shrimp caught up in his book. He seems to be mumbling to himself.
+Shompy: Huizinga? … No… No…[#nervous]
+- Make eye contact.
+	=> eyecontact
+- Who's Huizinga?
+	=> huizinga
+
+
+~ eyecontact
+You try to make eye contact, but it is almost like he is deliberately avoiding your gaze.[#nervous]
+- Keep staring at him
+	=> keepstaring
+- Who's Huizinga?
+	=> huizinga
+	
+~ huizinga
+Catfish: Who's Huizinga? [#normal]
+Shompy: Oh… You scared me… Didn’t realize you were there.
+- I literally fished you like 5 seconds ago...
+	=> fivesec
+- It's alright...
+	Catfish: It's alright, sometimes I also lose myself in stories.
+	=> getlost
+
+
+~ keepstaring
+The man seems to be unyielding in his pursuit of eye-contact-avoidance. [#nervous]
+He stalwartly keeps reading his book.
+Shompy: Narratologist prick...
+- I thought you wanted to be here? [#normal]
+- You seem to really like that book.[#normal]
+	=> END!
+
+
+~ fivesec
+
+Shompy: I'm sorry, I'm just nervous... It was my aunt's idea to get into the dating pool. [#sad]
+Shompy: I'm not quite sure if I'm ready to date yet...
+- You shouldn't blindly follow other people's advice.[#normal]
+	Catfish: You shouldn't blindly follow other people's advice.
+	=> END!
+- Well... Sorry for being rude... [#normal]
+	Catfish: Well... Sorry for being rude... 
+	Catfish: I get unpleasant sometimes when I'm nervous. 
+	Catfish: Truth to be told...
+	Catfish: I'm also not sure if I'm ready to date anyone yet.
+	Catfish: After all that...
+	You aimlessly kick a pebble on the ground.
+	Eyes fixed to earth, almost looking for...
+	Something that isn't there anymore.
+	Catfish: So maybe we can just... Talk, for now?
+	=> END!
+
+
+~ getlost
+Shompy: Well, it's not a story. I was reading an article by... 
+Shompy: Well, never mind, I don't want to bore you with my interests...[#sad]
+- Don't be silly, I'd love to know who you were reading.[#normal]
+	=> ough
+- Yeah, I'd rather talk about anything else than science, really[#normal]
+	=> END!
+
+~ ough
+Shompy: A-are you sure???[#nervous]
+Shompy: Nobody's ever taken an interest in my reading before....
+- I'm taking an interest.[#normal]
+	=> wow
+- lmao pranked sorry ahahaaha u fell for it[#normal]
+	=> hurt
+
+~ wow
+Shompy: Well! It's an article by Espen Aarseth where he defines what a video game is using several thousand flow charts [#sparkle]
+Shompy: As you can see a game is made up of several "sub elements" involving "narrative segments", "paidea particles", "ludus particles", "infogrames"....
+.... You tune out ....
+.... Shompy doesn't notice....[#normal]
+Shompy: .... And overall I think it's quite exhaustive but I'm unsure if "cozy games" fit into this frame work .... [#nervous]
+.... You zone out again ....
+Shompy: ....Anyway! You've been so attentive!!! I never thought someone would care so much about formalist game studies!! [#sparkle]
+do Globals.increment_current_love()
+Shompy likes you more now!
+=> END
+
+
+~ hurt
+Shompy: ...oh....[#angry]
+Shompy: .... I guess nobody does care about formalist game studies....[#sad]
+Shompy: ... I'll go away now ...
+do Globals.decrement_current_love()
+Shompy seems hurt....
+=> END
+
+~ high_love
+Shompy: Don't think I haven't forgotten about watching some deer games!
+Shompy: I have a whole itinerary planned!
+=> END!

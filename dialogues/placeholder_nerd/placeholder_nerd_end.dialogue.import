@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://dd7tmdwqtitpb"
+path="res://.godot/imported/placeholder_nerd_end.dialogue-783aa36b269cf6d69d3ed4fd5361469f.tres"
+
+[deps]
+
+source_file="res://dialogues/placeholder_nerd/placeholder_nerd_end.dialogue"
+dest_files=["res://.godot/imported/placeholder_nerd_end.dialogue-783aa36b269cf6d69d3ed4fd5361469f.tres"]
+
+[params]
+
+defaults=true

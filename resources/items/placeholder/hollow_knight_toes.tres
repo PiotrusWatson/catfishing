@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dssbi4n8odudg"]
+
+[ext_resource type="Texture2D" uid="uid://c23n8msfl223x" path="res://placeholder/TOES.jpg" id="1_jkgsp"]
+[ext_resource type="Script" uid="uid://1pp7g7hcg8it" path="res://scripts/item.gd" id="1_xi2rk"]
+
+[resource]
+script = ExtResource("1_xi2rk")
+name = "Hollow Knight Toes"
+image = ExtResource("1_jkgsp")
+metadata/_custom_type_script = "uid://1pp7g7hcg8it"

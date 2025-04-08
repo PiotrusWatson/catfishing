@@ -1,0 +1,38 @@
+~ start
+match Globals.give_item():
+	when Enums.Mood.HAPPY:
+		=> like_toes
+	when Enums.Mood.SAD:
+		=> hate_samuel
+	when Enums.Mood.NEUTRAL:
+		=> its_ok
+		
+		
+~ like_toes
+Shimp: omg!!!! i love this cute lil guy
+Shimp: he looks both very hollow and very knight like
+Shimp: and wow!!! those toes..... [#nervous]
+Shimp: how did you know how much i [wave amp=25 freq=5]love[/wave] toes
+Shimp: especially from something so decidedly humanoid and knightly
+Shimp: i cant believe you'd do this for me
+Shimp: im going to shrimp
+Shimp: [shake rate=20 level=10]ough[/shake]
+Shimp seems overjoyed!
+=> END!
+
+~ hate_samuel
+Shimp: wait who's this guy?
+Shimp: did u kidnap this guy? and give him to me?
+Shimp: this decidedly not shrimp-like or sexy guy?
+Shimp: i don't need another felony on my hands
+Shimp: get him away from me...you're completely insane
+Sam: thank you......please get help...
+Shimp: of course sir. excuse me cops police? can someone arrest this cat??
+Shimp starts talking into his phone. You need to get out of here
+=> END!
+
+~ its_ok
+Shimp: for me???? wowwwwwwwwwww
+Shimp: ur so [wait=1]thought full
+Shimp: god ur so shrexy (shrimp sexy)
+=> END

@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://i81g1cjl71i6"]
+
+[ext_resource type="Script" uid="uid://iksvhdexlg7r" path="res://worlds/fishing_zone.gd" id="1_jsswe"]
+[ext_resource type="PackedScene" uid="uid://cg4mkyrvkwji8" path="res://scenes/old_game/bubble.tscn" id="2_3l37i"]
+[ext_resource type="Script" uid="uid://dtjomkji7bwyx" path="res://scripts/shrimptype.gd" id="3_fg6is"]
+[ext_resource type="Resource" uid="uid://654d7dklnoik" path="res://resources/shrimps/placeholder/simp.tres" id="4_4a3sk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1sbkd"]
+size = Vector2(1142, 596)
+
+[node name="FishingZone" type="CollisionShape2D"]
+shape = SubResource("RectangleShape2D_1sbkd")
+script = ExtResource("1_jsswe")
+thing_to_spawn = ExtResource("2_3l37i")
+shrimp_to_choose = Array[ExtResource("3_fg6is")]([ExtResource("4_4a3sk")])
+
+[node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]

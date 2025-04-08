@@ -3,3 +3,5 @@ extends Node
 enum ItemType {TRASH, LURE, SALTY, SWEET, BOB}
 enum Mood {HAPPY, SAD, NEUTRAL}
 enum SceneType {DATING, FISHING, MENU}
+enum EndStatus {PICKED, ALONE, NOT_END, JUST_STARTED}
+enum DatingState{NONE, ITEM_CHECK, ITEM_GIVE, ITEM_RECEIVE, CHARACTER, END}

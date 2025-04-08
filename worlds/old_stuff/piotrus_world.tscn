@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3 uid="uid://bqck0u20a4m15"]
+
+[ext_resource type="Texture2D" uid="uid://dbhukjwr2y67w" path="res://placeholder/Suolijärvi_lake.jpg" id="1_mr521"]
+[ext_resource type="PackedScene" uid="uid://i81g1cjl71i6" path="res://scenes/old_game/fishing_zone.tscn" id="4_mkxgu"]
+[ext_resource type="Script" uid="uid://b3hratgfrdjf7" path="res://scenes/old_game/basic_player.gd" id="5_u84ol"]
+[ext_resource type="PackedScene" uid="uid://duigu0nqk8gti" path="res://scenes/old_game/fish_hoke.tscn" id="6_jyiib"]
+[ext_resource type="Texture2D" uid="uid://br03kapttobgx" path="res://placeholder/Sam_Lake-MichaelFörtsch.jpg" id="10_6dury"]
+[ext_resource type="PackedScene" uid="uid://dvtgtbokriok7" path="res://ui/ui_buttons.tscn" id="10_e583f"]
+
+[node name="World" type="Node2D"]
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(-0.0416417, -0.0297901)
+zoom = Vector2(2, 2)
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("1_mr521")
+
+[node name="Lake" type="Sprite2D" parent="."]
+position = Vector2(111, 96)
+rotation = 1.5708
+scale = Vector2(0.25, 0.326933)
+texture = ExtResource("10_6dury")
+
+[node name="FishingZone" parent="." instance=ExtResource("4_mkxgu")]
+position = Vector2(105, 98)
+
+[node name="BasicPlayer" type="Node2D" parent="."]
+script = ExtResource("5_u84ol")
+fish_hook_prefab = ExtResource("6_jyiib")
+
+[node name="UI Buttons" parent="." instance=ExtResource("10_e583f")]

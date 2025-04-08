@@ -9,6 +9,7 @@ var filled = false
 @onready var button_box = $ButtonBox
 @onready var give_button = $ButtonBox/Give
 signal item_deleted(index: int)
+signal item_given(index: int)
 
 func _ready():
 	empty_texture = image.texture
@@ -53,3 +54,12 @@ func _on_close_pressed() -> void:
 func _on_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.is_pressed() and filled:
 		toggle_button_box(true)
+		if SceneChanger.current_scene_type == Enums.SceneType.FISHING:
+			toggle_give(false)
+		else:
+			toggle_give(true)
+
+
+func _on_give_pressed() -> void:
+	item_given.emit(index)
+	toggle_button_box(false)

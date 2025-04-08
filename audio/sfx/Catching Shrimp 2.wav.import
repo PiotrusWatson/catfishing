@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d14w6y61yc0e7"
+path="res://.godot/imported/Catching Shrimp 2.wav-a165ab86cdd02e483cf5f907006d8f5a.sample"
+
+[deps]
+
+source_file="res://audio/sfx/Catching Shrimp 2.wav"
+dest_files=["res://.godot/imported/Catching Shrimp 2.wav-a165ab86cdd02e483cf5f907006d8f5a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

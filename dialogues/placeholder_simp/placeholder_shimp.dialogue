@@ -1,0 +1,61 @@
+~ start
+match Globals.current_shrimp.love
+	when 1
+		=> normal_love
+	when 2
+		=> higher_love
+	when < 1
+		=> low_love
+	else
+		=> high_love
+
+~ normal_love
+Shimp: hii .... i want you to have this .....
+do Inventory.add_and_show(Inventory.possible_items["kirby_toes"])
+Shimp: it's a family heirloom. I care a lot about it...
+Shimp: please keep it safe ....
+- i'm sorry!!! but toes aren't my thing
+	=> traumadump
+- omg ur shrimply delectable
+	Shimp: <3 <3 <3 => love_path
+
+
+~ low_love
+Shimp: don't talk to me >:(
+Shimp: I've talked to my therapist and they said we shouldn't talk any more
+Shimp: I think this is for the best
+=> END!
+
+~ higher_love
+Shimp: let's take a walk
+Shimp: this is where i grew up. [wait=1] Duo Hervanta. [#background=1]
+Shimp: it was [wait=0.5] rough. The hesburger shuts at 10.
+Shimp: i had to fight to get those [wave]burgs[/wave].
+Shimp: but i did. and im so much stronger for it and now i only get head shots in counter strike.
+Shimp: thank you so much for accompanying me <3. it's always nice to take a trip down memory lane [#background=0]
+do Globals.increment_current_love()
+=> END!
+~ high_love
+Shimp: heyyyyyy studddddd <3 <3
+Shimp: i have so much sexual moisture (ZOI, 2025) right now
+Shimp: rawr xD [i] pounces on u [/i]
+=> END!
+
+~ traumadump
+Shimp: omg??? what??? [#questioning]
+Shimp: u haaate me :(((( [#alert]
+Shimp: ever since i was a [i]krill[/i], no-one licked my toes [#blushing]
+Shimp: even here.... in Duo hervanta [#background=1] 
+Shimp: this kirby toes is the only reminder of the life i could have had
+Shimp: a life of licking toes.... imagine.... [#sparkling]
+Shimp: oughhh are u judging me [#sweating]
+Shimp: why must you hurt me so.... [#normal]
+do Globals.decrement_current_love()
+=> END!
+
+~ love_path
+Shimp: [shake rate=20 level=10]ough~~~[/shake] [#blushing]
+Shimp: [wave amp=25 freq=5]oh my~~~~~[/wave]
+Shimp: im going to shrimp out [#normal]
+do Globals.increment_current_love()
+=> END!
