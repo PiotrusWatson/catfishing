@@ -36,9 +36,9 @@ Your Ex: Super awkward. I wasn't aware you were fishing today... I didn't mean t
 They look as sheepishly as you do. [#normal]
 
 - Oh no, that's perfectly fine...
-
+	=> its_fine
 - I'm not sure I'm ready to talk to you yet
-
+	=> not_ready
 ~ awkward_hand_pull
 The shrimp’s eyes widen slightly as you pull your hand back. There's a brief moment of tension, where everything feels... off. They rub the back of their neck, clearly unsure of what to do next.
 Your Ex: Uh... what? Did I—did I do something wrong?
@@ -77,8 +77,29 @@ Your Ex: Yeah... Why not?
 	=> shake_2
 	
 ~ its_fine
-
+You rub behind your neck.
+Your Ex: Soooo... How have you been?
+- We don't need to pretend we care 
+	=> huge_rejection
+- I've been excellent...
+	=> been_excellent
 ~ not_ready
+Your Ex: Yeah, I'm not sure as well. 
+Your Ex: Although, it's been a while, and I wonder how you've been.
+
+- We don't need to pretend we care
+	=> huge_rejection
+- I've been excellent
+	=> awkward_rejection
+
+~ funny_joke
+OBVIOUSLY, you were joking. 
+Catfish: I know what you meant. I was just teasing you.
+They chuckle nervously.
+
+Catfish: I missed seeing you laugh. So let's try again.
+- Shake their hand again
+	=> shake_2
 
 ~ woah_youre_back
 Your Ex: WOW. Uhm...
@@ -86,20 +107,23 @@ They seem to struggle to find the correct words.
 Your Ex: What I meant was... I meant the handshake, Cat. 
 Your Ex: Not the whole thing. I thought we left it behind.
 - I didn't
+	=> down_bad
 - I was joking
+	=> funny_joke
 
 ~ shake_2
 You shake their hand again, this time with a smile on your face. 
 You feel calmer now. They seem calmer too.
 
-Their gaze penetrates you as they, haltingly, begin to talk again.
+Their gaze penetrates you as, haltingly, they begin to talk again.
 
 Your Ex: So... uh... we good now? Or, uh, do we need to talk about... that whole thing?
 
 - Gods, no
 	=> gods_no
 - We all made mistakes
-
+	=> all_mistakes
+	
 ~ gods_no
 Your Ex: Right, well... I guess we can just... forget about it. 
 Your Ex: I'm just glad I get to see you again.
@@ -111,5 +135,91 @@ Your Ex: So many things I wanted to say, but I can't seem to remember any of the
 They look at you nervously.
 
 Your Ex: So like, are we, like... still cool? Or...?
+- We're cool
+	=> we_cool
+- I'm not sure I'm ready to talk to you yet
+	=> not_ready
+~ all_mistakes
+You don't feel the need to dwell in the past. 
+You're not sure if you want to try things again, but it seems like you have forgiven them.
 
+Your Ex: So... We don't need to talk about how things went last time we talked right?
+- Gods, no
+	=> gods_no
+- I'd rather leave things behind
+	=> leave_behind
+	
+~ leave_behind
+Your Ex: So, you mean, you don't want to talk to me?
+
+Catfish: I don't know...
+- Maybe we can talk again?
+	=> maybe_talk
+- I spent a lot of energy...
+
+~ we_cool
+Your Ex: Alright, that’s... that’s a huge relief.
+Your Ex: I mean, I don’t like to mess things up, but, y’know, sometimes I do. Guess I’m just... not always great with the whole 'social' thing.
+
+They look you in the eyes for a moment, and there’s a slight, unspoken understanding between the two of you, like you both know things could’ve gone really weird but, somehow, they didn’t.
+Your Ex: So uh... what's next?
+- Maybe we can talk again?
+	=> maybe_talk
+- I'm not sure I'm ready to talk to you yet
+	=> not_ready
+	
+~ been_excellent
+Catfish: I've been excellent. You know me, I always bounce back.
+You might be lying, but who's to say, really?
+
+Your Ex: Well... Glad to hear that, really.
+
+- How have you been?
+	=> awkward_rejection
+~ down_bad
+You blurt out the words. 
+It almost felt like you had no control over your huge mouth.
+
+Your Ex: Cat, I'm sorry but... I really don't want to reopen old wounds. 
+Your Ex: It took me a great while to heal from... What we had...
+Your Ex: So I guess it's better to back off while I can. I don't want us to get hurt again.
+
+Deep down, you know they are right.
+
+You do not fight. 
+You let it end.
+For good now.
+do Globals.decrement_current_love()
 => END
+
+~ huge_rejection
+Catfish: We don't need to pretend that we care about each other
+Catfish: You made it VERY clear that you didn't care about me anymore the last time we spoke.
+
+Your voice shakes, but your pride stands firm, or so you think.
+
+Your Ex: Oh, here we go, always the victim. You know what... Just... Just toss me back.
+do Globals.decrement_current_love()
+=> END!
+
+~ awkward_rejection
+Your Ex: Well, you know. It's been rough but I feel better now. 
+Your Ex: Went to the vacation I always wanted to take. 
+Your Ex: Got to see new places and all...
+You have a cordial conversation for exactly 10 minutes, and then part ways
+You desperately hope you won't see them again.
+do Globals.decrement_current_love()
+=> END!
+
+~ maybe_talk
+Your Ex: Sure, I'll be around. Catch me later, I guess?
+do Globals.increment_current_love()
+=> END!
+
+~ rejection_3
+Catfish: I spent a lot of energy to leave you behind. So I'm sorry but...
+Catfish: I don't really want to step in the same river twice.
+
+Your Ex: Fine, I guess that's for the best.
+do Globals.decrement_current_love()
+=> END!
