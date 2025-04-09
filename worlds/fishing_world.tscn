@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bqs3qry1n25j7"]
+[gd_scene load_steps=27 format=3 uid="uid://bqs3qry1n25j7"]
 
 [ext_resource type="Script" uid="uid://dh828xw3ebhk4" path="res://worlds/fishing_signals.gd" id="1_585q5"]
 [ext_resource type="PackedScene" uid="uid://bjxfp5r5xfw4f" path="res://scenes/player/player.tscn" id="2_1kayd"]
@@ -10,16 +10,34 @@
 [ext_resource type="Resource" uid="uid://bpnh5uiwnicyr" path="res://resources/shrimps/real/braxton.tres" id="3_svnk6"]
 [ext_resource type="Resource" uid="uid://disy54n5x36rg" path="res://resources/shrimps/real/ex.tres" id="4_5u7dg"]
 [ext_resource type="Texture2D" uid="uid://ccu6mlnvq64fy" path="res://assets/placeholder/placeholder_dock.png" id="4_gqmpw"]
+[ext_resource type="Resource" uid="uid://654d7dklnoik" path="res://resources/shrimps/placeholder/simp.tres" id="3_idyiq"]
+[ext_resource type="Resource" uid="uid://fwd73v0vtp10" path="res://resources/shrimps/placeholder/shompy.tres" id="6_2l1a4"]
 [ext_resource type="PackedScene" uid="uid://cor8igwxetpgn" path="res://addons/dynamic_water_2d/water.tscn" id="6_eo0ky"]
+[ext_resource type="Texture2D" uid="uid://baixus7mx330v" path="res://assets/environment/pilviä_small.png" id="6_h3v2a"]
 [ext_resource type="Theme" uid="uid://by8wyn837d0af" path="res://ui/ui_theme.tres" id="7_585q5"]
 [ext_resource type="Script" uid="uid://d0votwagi38uu" path="res://ui/ui.gd" id="7_d3nh4"]
+[ext_resource type="Texture2D" uid="uid://degaq6pgcsc2g" path="res://assets/environment/rocdoc.png" id="7_p325l"]
+[ext_resource type="Texture2D" uid="uid://dlxifx2uyr7d" path="res://assets/environment/tregrarock.png" id="7_svnk6"]
+[ext_resource type="Texture2D" uid="uid://cc51hytgj6fsx" path="res://assets/environment/lakeweeds.png" id="9_c7061"]
+[ext_resource type="Texture2D" uid="uid://bcfbip3jxr8si" path="res://assets/environment/grassss.png" id="10_5u7dg"]
+[ext_resource type="Texture2D" uid="uid://dgkxxhq2kgkr" path="res://assets/environment/lakeweed1.png" id="10_h3v2a"]
 [ext_resource type="PackedScene" uid="uid://brg78tl8y7spr" path="res://scenes/fishing_shrimp/item_shimp.tscn" id="11_p325l"]
 [ext_resource type="PackedScene" uid="uid://cjea8b7ceg8p7" path="res://ui/final_selection.tscn" id="12_mcxpu"]
 [ext_resource type="FontFile" uid="uid://e221dwkwx17l" path="res://fonts/Halogen.ttf" id="15_5u7dg"]
 [ext_resource type="AudioStream" uid="uid://d14w6y61yc0e7" path="res://audio/sfx/Catching Shrimp 2.wav" id="16_svnk6"]
+[ext_resource type="Texture2D" uid="uid://dpvc520la0k68" path="res://assets/environment/lakeweeds_blurry.png" id="13_r7d3h"]
+[ext_resource type="Texture2D" uid="uid://bdu3mogvkwtij" path="res://assets/environment/bottom_noplants.png" id="15_1thy1"]
+
+[sub_resource type="Gradient" id="Gradient_5u7dg"]
+colors = PackedColorArray(0.917647, 1, 1, 1, 0, 0.870588, 0.956863, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1thy1"]
+gradient = SubResource("Gradient_5u7dg")
+fill_from = Vector2(0.521368, 1)
+fill_to = Vector2(0.5, 0)
 
 [sub_resource type="Gradient" id="Gradient_d3nh4"]
-colors = PackedColorArray(0, 0.360784, 1, 1, 0.366502, 0.83846, 0.766449, 1)
+colors = PackedColorArray(0, 0.0862745, 0.12549, 1, 0.366502, 0.83846, 0.766449, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_2l1a4"]
 gradient = SubResource("Gradient_d3nh4")
@@ -46,46 +64,117 @@ drag_right_margin = 1.0
 script = ExtResource("2_odgnr")
 speed = 0.2
 
-[node name="Sky" type="Sprite2D" parent="."]
-position = Vector2(-110.25, -357)
-scale = Vector2(0.73375, 0.618)
-texture = ExtResource("3_2l1a4")
+[node name="sky" type="TextureRect" parent="."]
+offset_left = -801.0
+offset_top = -494.0
+offset_right = 698.0
+offset_bottom = 286.0
+texture = SubResource("GradientTexture2D_1thy1")
 
-[node name="PlaceholderDock" type="Sprite2D" parent="."]
-position = Vector2(410, -9)
-scale = Vector2(0.247, 0.188)
-texture = ExtResource("4_gqmpw")
+[node name="Parallax2D" type="Parallax2D" parent="."]
+repeat_size = Vector2(1000, 0)
+autoscroll = Vector2(10, 0)
+repeat_times = 3
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -798.0
-offset_top = 178.0
-offset_right = 601.0
-offset_bottom = 1578.0
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(22, -163)
+texture = ExtResource("6_h3v2a")
+
+[node name="lake" type="TextureRect" parent="."]
+offset_left = -779.0
+offset_top = 115.0
+offset_right = 620.0
+offset_bottom = 1247.0
 texture = SubResource("GradientTexture2D_2l1a4")
 expand_mode = 2
+
+[node name="watergrass3" type="Sprite2D" parent="."]
+modulate = Color(0.607843, 0.729412, 1, 0.784314)
+position = Vector2(-244, -117)
+rotation = 3.14159
+scale = Vector2(0.45, -0.45)
+texture = ExtResource("10_5u7dg")
+region_enabled = true
+region_rect = Rect2(217.766, 0, 782.234, 1061.42)
+
+[node name="Tree" type="Sprite2D" parent="."]
+position = Vector2(-327, -69)
+scale = Vector2(-0.11, 0.11)
+texture = ExtResource("7_svnk6")
+
+[node name="Dock" type="Sprite2D" parent="."]
+position = Vector2(437, -85)
+scale = Vector2(0.107, 0.081)
+texture = ExtResource("7_p325l")
+
+[node name="bottom" type="Sprite2D" parent="."]
+position = Vector2(-52, 1037)
+scale = Vector2(0.675, 0.674557)
+texture = ExtResource("15_1thy1")
+
+[node name="Lakeweed1" type="Sprite2D" parent="."]
+position = Vector2(-466.25, 1070.25)
+scale = Vector2(0.26083, 0.207556)
+texture = ExtResource("10_h3v2a")
+
+[node name="Lakeweed2" type="Sprite2D" parent="."]
+position = Vector2(-78, 1090)
+rotation = -0.523599
+scale = Vector2(0.26083, 0.207556)
+texture = ExtResource("10_h3v2a")
 
 [node name="Player" parent="." instance=ExtResource("2_1kayd")]
 position = Vector2(485, -66)
 
-[node name="FishingZone" parent="." instance=ExtResource("2_ncbgm")]
-position = Vector2(-66, 488)
-thing_to_spawn = ExtResource("3_ncbgm")
-item_thing_to_spawn = ExtResource("11_p325l")
-shrimp_to_item_ratio = 1.0
+[node name="watergrass" type="Sprite2D" parent="."]
+position = Vector2(401, -144)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_5u7dg")
 
-[node name="Bottom" parent="FishingZone/Ceiling" index="1"]
-position = Vector2(-1, 1054)
+[node name="watergrass2" type="Sprite2D" parent="."]
+position = Vector2(-420, -119)
+scale = Vector2(-0.45, 0.45)
+texture = ExtResource("10_5u7dg")
+region_enabled = true
+region_rect = Rect2(217.766, 0, 782.234, 1061.42)
 
-[node name="Shape" parent="FishingZone" index="3"]
-position = Vector2(11, 281.5)
+[node name="Lakeweeds2" type="Sprite2D" parent="."]
+position = Vector2(143.625, 1039.48)
+rotation = -2.99673
+scale = Vector2(0.441, -0.329)
+texture = ExtResource("9_c7061")
+
+[node name="Lakeweeds" type="Sprite2D" parent="."]
+position = Vector2(-223.375, 1075.48)
+scale = Vector2(0.407938, 0.33086)
+texture = ExtResource("9_c7061")
+
+[node name="LakeweedsBlurry2" type="Sprite2D" parent="."]
+position = Vector2(472, 1005)
+scale = Vector2(-0.987, 0.703)
+texture = ExtResource("13_r7d3h")
+
+[node name="LakeweedsBlurry" type="Sprite2D" parent="."]
+position = Vector2(-530, 972)
+scale = Vector2(0.993453, 0.83828)
+texture = ExtResource("13_r7d3h")
 
 [node name="Water" parent="." instance=ExtResource("6_eo0ky")]
-position = Vector2(-666, -148)
+position = Vector2(-666, -198)
 scale = Vector2(2.56, 4.96)
+surface_thickness = 3.0
+surface_color = Color(0.776471, 0.984314, 0.952941, 1)
+water_color = Color(0.529412, 0.878431, 0.843137, 0)
 point_per_distance = 20
 point_independent_stiffness = 3.0
 
+[node name="FishingZone" parent="." instance=ExtResource("2_ncbgm")]
+position = Vector2(-155, 424)
+thing_to_spawn = ExtResource("3_ncbgm")
+item_thing_to_spawn = ExtResource("11_p325l")
+
 [node name="UI" type="CanvasLayer" parent="."]
+visible = false
 script = ExtResource("7_d3nh4")
 
 [node name="UILayer" type="Control" parent="UI"]
