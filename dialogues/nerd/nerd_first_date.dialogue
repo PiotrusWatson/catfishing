@@ -1,0 +1,284 @@
+~ start
+You see a preoccupied shrimp caught up in his book. He seems to be mumbling to himself. 
+If you had to guess his name, it'd probably be "Lauri".
+Lauri: [shake rate=20 level=10]Huizinga?[/shake] … No… No…[#nervous]
+- Make eye contact
+	[#normal]
+	=> contact
+- Who's Huizinga?
+	[#normal]
+	=> whos_huizinga
+
+~ contact
+You try to make eye contact, but it is almost like he is deliberately avoiding your gaze.
+- Keep staring at him
+	=> continue_stare
+- Who's Huizinga?
+	=> whos_huizinga
+
+~ whos_huizinga
+Lauri: Oh… You scared me… Didn’t realize you were there.[#nervous]
+- I literally fished you like five seconds ago.
+	[#normal]
+	=> fished_you_five_seconds
+- It's alright, I also get lost in stories sometimes
+	[#normal]
+	=> get_lost_in_stories
+
+~ continue_stare
+The man seems to be unyielding in his pursuit of eye-contact-avoidance. He stalwartly keeps reading his book.
+
+Lauri: Narratologist prick...
+- I thought you wanted to be here?
+	=> wanted_to_be_here
+- You seem to really like that book
+	=> like_that_book
+
+~ wanted_to_be_here
+Lauri: Oh... I'm sorry. I sometimes lose my awareness when I'm deeply interested in something.[#nervous]
+- It's alright...I also get lost in stories sometimes
+	[#normal]
+	=> get_lost_in_stories
+- Don't come here if you can't hold a conversation
+	[#normal]
+	=> brutal_rejection
+	
+~ like_that_book
+Lauri: Well...[#nervous]
+He seems to be fighting REALLY hard to not correct you...
+
+Lauri: It's not a book really...[#love]
+Yet he fails gloriously.[#normal]
+
+Lauri: You wouldn't be interested in it anyway, don't worry about it...
+
+- I'm taking an interest
+	=> taking_interest
+- You guessed right
+	=> dont_care_didnt_ask
+
+~ taking_interest
+Lauri: Well! It's an article by [wave amp=25 freq=5]Espen Aarseth[/wave] where he defines what a video game is using several thousand flow charts [#love]
+Lauri: As you can see a game is made up of several "sub elements" involving "narrative segments", "paidea particles", "ludus particles", "infogrames"....[#sparkle]
+
+.... You tune out ....[#normal]
+
+.... Lauri doesn't notice....
+
+Lauri: .... And overall I think it's quite exhaustive but I'm unsure if [wait=1][wave amp=25 freq=5]"cozy games"[/wave] fit into this framework...
+.... You zone out again ....
+Lauri: ....Anyway! You've been so attentive!!! I never thought someone would care so much about formalist game studies!![#love]
+- I love passionate people
+	[#normal]
+	=> love_passion
+- Did I fall asleep standing up??
+	[#normal]
+	=> dream_sequence
+
+~ dream_sequence
+You find yourself in a dense coral reef, drifting lazilly in the deep.
+
+A little hole under a field of anemones piques your interest. You make your way towards it.
+
+Suddenly, disaster! A [wait=1]blue lobster jumps at you...
+
+Aggressive piano music echoes in your head...
+
+Claws [shake rate=20 level=10]clashing[/shake] and maxillipeds [wave amp=25 freq=5]vibrating[/wave]...
+
+It's so close now. You smell salt and metal. 
+It reaches for its own head, and with one swift movement tears it clean off.
+You're met with the unmistakable face of [wait=1][shake rate=20 level=10]your ex[/shake].
+
+You wake up with a start.
+Lauri is still talking...
+
+- Act natural
+	=> act_natural
+- I need to get out of here or I'll die
+	=> leave
+
+~ act_natural
+Lauri: So yeah, I think formalism is the best way to approach aesthetic experiences...[#sparkle]
+You're sure he didn't notice you falling asleep.[#normal]
+
+As a matter of fact, you don't even remember when he looked at you last.
+Lauri: ...especially when exploring narrative-heavy games. [#sparkle]
+
+He seems to be calming down now.[#normal]
+
+Lauri: This date went better than I expected. Thank you for being such a great listener...
+
+Lauri: I'd love to... Uhm...[#nervous]
+
+Lauri squeezes words out of his mouth.
+
+Lauri: Get to know you better!![#love]
+
+- I'd love another date
+	[#normal]
+	=> love_another_date
+- I don't think this can work
+	[#normal]
+	=> cant_work
+
+~ fished_you_five_seconds
+Lauri: I'm sorry, I'm just nervous... It was my aunt's idea to get into the dating pool. I'm not quite sure if I'm ready to date yet...[#nervous]
+- You shouldn't blindly follow other people's advice
+	[#normal]
+	=> advice_rejection
+- You seem to really like that book
+	[#normal]
+	=> like_that_book
+
+
+~ dont_care_didnt_ask
+Lauri looks upset. [#sad]
+Lauri: So... you really don't care about social sciences??
+
+- I couldn't care less about social whatever
+	[#normal]
+	=> hate_social_whatever
+
+~ get_lost_in_stories
+Lauri: Well, it's not a story. I was reading an article by... [#sparkle]
+Lauri: Never mind... I don't want to bore you with my interests... [#normal]
+- Don't be silly, I'd love to know who you were reading
+	=> love_to_know_who
+- Yeah, I'd rather talk about anything else than science, really
+	=> rather_talk_about_anything_else
+	
+~ love_to_know_who
+Lauri: A-are you sure???[#love]
+Lauri: Nobody's ever taken an interest in my reading before....[#nervous]
+
+- I'm taking an interest
+	[#normal]
+	=> taking_interest
+- lmao pranked sorry ahahaaha u fell for it
+	[#normal]
+	=> pranked_bro
+
+~ rather_talk_about_anything_else
+Lauri: Oh, I'm glad you think the social sciences are actually as respectable as other sciences...[#love]
+Lauri: That's why you called it a science, right?[#nervous]
+- Never thought otherwise
+	[#normal]
+	=> never_thought_otherwise
+- I couldn't care less about social whatever
+	[#normal]
+	=> hate_social_whatever
+	
+~ never_thought_otherwise
+Lauri perks up and smiles at you. [#sparkle]
+He seems to be enjoying your presence.[#normal]
+
+Lauri: I'm glad I'm with a like-minded individual who is also interested in my passion!
+- I love passionate people
+	=> love_passion
+- lmao pranked sorry ahahaha u fell for it
+	=> pranked_bro
+	
+~ love_passion
+Lauri clutches his article more tightly.[#nervous]
+Lauri: Well... I am really passionate about lots of stuff...
+
+Lauri: Especially about people I really care about...[#love]
+Lauri: I can be very passionate and giving when I'm with them...
+- I'd love to explore that side of you...
+	[#normal]
+	=> love_kink
+- Too much information
+	[#normal]
+	=> too_much_info
+	
+~ love_kink
+Lauri blushes. [#love]
+You can see his little cheeks are rose red.
+
+Lauri: Well....[#sparkle]
+
+Lauri: How about a second date?[#nervous]
+- I'd love another date
+	[#normal]
+	=> love_another_date
+- I don't think this can work
+	[#normal]
+	=> cant_work
+
+
+~ too_much_info
+Lauri: Sorry, but I can't pretend to be someone else...[#angry]
+Lauri: Maybe it's best if we don't continue this dialogue...[#sad]
+
+You upset Lauri.
+Lauri leaves, silently sobbing.
+do Globals.decrement_current_love()
+=> END
+
+~ hate_social_whatever
+Lauri seems defeated.[#sad]
+He hunches over his book and hugs it firmly.
+
+Lauri: I'm sorry if I'm rude but... I don't want to be friends with anyone...
+
+Lauri: Who doesn't show any interest in my passion...
+Lauri: I think I'll go home now...
+Lauri: I know I shouldn't have come here.
+Lauri silently leaves.
+do Globals.decrement_current_love()
+=> END
+
+~ brutal_rejection
+Lauri: Oh... [#sad]
+Lauri: I guess you're right...
+Lauri: I'll... leave...
+
+Lauri seems depressed...
+
+He holds his article to his chest and clutches it...
+And silently leaves...
+do Globals.decrement_current_love()
+=> END
+
+~ advice_rejection
+Lauri keeps looking away from you. [#nervous]
+Lauri: Well... I'm not always good at this 'being social' stuff. 
+Lauri: So I listen to other people's advice a lot of the time...[#sad]
+Lauri looks on the verge of tears. You decide to give him some space.
+do Globals.decrement_current_love()
+=> END
+
+~ pranked_bro
+Lauri: ...oh...[#sad]
+Lauri: .... I guess nobody does care about formalist game studies...
+Lauri: ... I'll go away now ...
+
+Lauri seems hurt....
+do Globals.decrement_current_love()
+=> END
+
+~ love_another_date
+Lauri: Great!! Can't wait!!! What a playful experience!!!![#sparkle]
+Lauri leaves, skipping along the way.
+do Globals.increment_current_love()
+=> END!
+
+~ cant_work
+Lauri: Oh... That's fine... [#nervous]
+Lauri: I'm glad I've gotten to know you anyways...[#sad]
+Lauri leaves silently.
+do Globals.decrement_current_love()
+=> END!
+
+~ leave
+You make up a petty excuse to leave Lauri.
+Lauri seems glum, but replies understandingly...[#sad]
+
+Lauri: Oh, I understand...
+Lauri: Of course...
+Lauri: I'm really sorry, I'm really bad at this...
+
+You leave Lauri behind.
+do Globals.decrement_current_love()
+=> END

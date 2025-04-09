@@ -150,10 +150,23 @@ His expressions are becoming even more unhinged.
 	=> walk_away
 - Let him talk
 	[#normal]
+	=> talking
+~ talking
+Josh: So like I think I should also be able to call people prawns...
 
+He's now using antiquated slurs you only heard in history class. You're almost impressed.
 
+Josh: Some shrimps are just made to be put in rice, we can't do anything about that.
+
+- Start walking away
+	=> walk_away
+- I can fix him
+	=> can_fix_him
 ~ turn_back
-
+It's insane what you're even considering. You shake yourself, cartoon-like.
+He's still talking. The term "kruckhold" is used. He seems very small now.
+- Start walking away
+	=> walk_away
 
 ~ owned_shit
 Josh: That's because all the companies hire Tiger Shrimps and Cherry Shrimps for [shake rate=20 level=10]"DEI"[/shake].[#angry]
@@ -184,7 +197,7 @@ He starts walking away.
 
 You feel relief.
 You hope you never see him again.
-do Globals.decrease_current_love()
+do Globals.decrement_current_love()
 => END
 
 ~ one_punch

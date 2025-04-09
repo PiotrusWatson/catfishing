@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ShrimpImages" load_steps=8 format=3 uid="uid://d0gq7taf31pjk"]
+
+[ext_resource type="Script" uid="uid://2g3jx1xjm2m0" path="res://scripts/shrimp_images.gd" id="1_6l40q"]
+[ext_resource type="Texture2D" uid="uid://csg5ytntbkiqq" path="res://assets/shrimp/nerd/shrimp_Nerd_angry.png" id="1_f2pnu"]
+[ext_resource type="Texture2D" uid="uid://bmurudoajuw5u" path="res://assets/shrimp/nerd/shrimp_Nerd.png" id="2_oenka"]
+[ext_resource type="Texture2D" uid="uid://7j6aea8nng8q" path="res://assets/shrimp/nerd/shrimp_Nerd_love.png" id="3_sfxrr"]
+[ext_resource type="Texture2D" uid="uid://bumo3guikitdh" path="res://assets/shrimp/nerd/shrimp_Nerd_nervous.png" id="4_dwljh"]
+[ext_resource type="Texture2D" uid="uid://bnmv2tyq1y2ur" path="res://assets/shrimp/nerd/shrimp_Nerd_sad.png" id="5_v0mug"]
+[ext_resource type="Texture2D" uid="uid://dn0qmd52vqfgg" path="res://assets/shrimp/nerd/shrimp_Nerd_sparkle.png" id="7_i6osf"]
+
+[resource]
+script = ExtResource("1_6l40q")
+basic = ExtResource("2_oenka")
+angry = ExtResource("1_f2pnu")
+love = ExtResource("3_sfxrr")
+nervous = ExtResource("4_dwljh")
+sad = ExtResource("5_v0mug")
+sparkle = ExtResource("7_i6osf")
+metadata/_custom_type_script = "uid://2g3jx1xjm2m0"

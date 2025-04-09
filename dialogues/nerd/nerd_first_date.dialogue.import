@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://crmyi38usf82h"
+path="res://.godot/imported/nerd_first_date.dialogue-62b7869758697a1dc50eda225bf377cd.tres"
+
+[deps]
+
+source_file="res://dialogues/nerd/nerd_first_date.dialogue"
+dest_files=["res://.godot/imported/nerd_first_date.dialogue-62b7869758697a1dc50eda225bf377cd.tres"]
+
+[params]
+
+defaults=true

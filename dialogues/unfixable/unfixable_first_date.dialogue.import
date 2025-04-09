@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://4mettandtx4n"
+path="res://.godot/imported/unfixable_first_date.dialogue-7709a3edfe3a2998633f2c482a51b0da.tres"
+
+[deps]
+
+source_file="res://dialogues/unfixable/unfixable_first_date.dialogue"
+dest_files=["res://.godot/imported/unfixable_first_date.dialogue-7709a3edfe3a2998633f2c482a51b0da.tres"]
+
+[params]
+
+defaults=true

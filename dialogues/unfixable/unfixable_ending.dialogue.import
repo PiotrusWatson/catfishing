@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://b35xxfaqr2p3d"
+path="res://.godot/imported/unfixable_ending.dialogue-d4a81cc5a6346338c26fa8f5b5d0c637.tres"
+
+[deps]
+
+source_file="res://dialogues/unfixable/unfixable_ending.dialogue"
+dest_files=["res://.godot/imported/unfixable_ending.dialogue-d4a81cc5a6346338c26fa8f5b5d0c637.tres"]
+
+[params]
+
+defaults=true

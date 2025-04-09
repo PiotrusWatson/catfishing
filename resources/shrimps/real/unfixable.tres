@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ShrimpType" load_steps=6 format=3 uid="uid://01o4o080b0ho"]
+
+[ext_resource type="Resource" uid="uid://4mettandtx4n" path="res://dialogues/unfixable/unfixable_first_date.dialogue" id="1_7xr2s"]
+[ext_resource type="Theme" uid="uid://sh6ju41csl7u" path="res://ui/character_theme.tres" id="2_lawp6"]
+[ext_resource type="Resource" uid="uid://b35xxfaqr2p3d" path="res://dialogues/unfixable/unfixable_ending.dialogue" id="3_skyy5"]
+[ext_resource type="Resource" uid="uid://dq1oveasq6njg" path="res://resources/shrimps/real/shrimp_images/unfixable.tres" id="4_vdyqt"]
+[ext_resource type="Script" uid="uid://dtjomkji7bwyx" path="res://scripts/shrimptype.gd" id="5_alqaq"]
+
+[resource]
+script = ExtResource("5_alqaq")
+name = "Josh"
+images = ExtResource("4_vdyqt")
+backgrounds = Array[Texture2D]([null])
+basic_dialogue = ExtResource("1_7xr2s")
+ending_dialogue = ExtResource("3_skyy5")
+basic_theme = ExtResource("2_lawp6")
+starting_love = 1
+metadata/_custom_type_script = "uid://dtjomkji7bwyx"

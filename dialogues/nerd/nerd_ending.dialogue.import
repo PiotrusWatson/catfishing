@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://mun0o0kf214y"
+path="res://.godot/imported/nerd_ending.dialogue-f42bdfc6a78205e33da660a451f46734.tres"
+
+[deps]
+
+source_file="res://dialogues/nerd/nerd_ending.dialogue"
+dest_files=["res://.godot/imported/nerd_ending.dialogue-f42bdfc6a78205e33da660a451f46734.tres"]
+
+[params]
+
+defaults=true

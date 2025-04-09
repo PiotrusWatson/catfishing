@@ -2,10 +2,10 @@
 
 [ext_resource type="Theme" uid="uid://dklfh5537gj42" path="res://ui/credit_theme.tres" id="1_4ep43"]
 [ext_resource type="Script" uid="uid://b4d251acffa3p" path="res://worlds/credits.gd" id="2_coxcc"]
-[ext_resource type="FontFile" uid="uid://bw7csb2v3xxdr" path="res://fonts/Ldfcomicsansbold-zgma.ttf" id="2_yqpls"]
+[ext_resource type="FontFile" uid="uid://k4rlbr6l5dpt" path="res://fonts/Janitor.ttf" id="3_yqpls"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4ep43"]
-font = ExtResource("2_yqpls")
+font = ExtResource("3_yqpls")
 font_size = 100
 outline_size = 20
 outline_color = Color(0, 0, 0, 1)
@@ -67,11 +67,11 @@ autowrap_mode = 2
 
 [node name="Zoi" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "Zoi: Artist, Narrative consultant, other manager"
+text = "Zoi: Artist, Narrative Consultant, Other Manager"
 
 [node name="Berk" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "Berk: Narrative Designer, Dialogue Writer"
+text = "Berk: Narrative Designer, Dialogue Writer, Datemaster"
 
 [node name="Alina" type="Label" parent="VBoxContainer"]
 layout_mode = 2
@@ -83,7 +83,7 @@ text = "Maruf: Musician"
 
 [node name="Piotrus" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "Piotrus: Programmer"
+text = "Piotrus: Programmer, Editor, Ending/Intro Writer"
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
