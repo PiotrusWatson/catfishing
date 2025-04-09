@@ -3,11 +3,12 @@
 importer="dialogue_manager_compiler_14"
 type="Resource"
 uid="uid://c7xv4niwtv083"
-valid=false
+path="res://.godot/imported/braxton_first_date.dialogue-c301409700be8df1028a6c0b040aa7fe.tres"
 
 [deps]
 
 source_file="res://dialogues/braxton/braxton_first_date.dialogue"
+dest_files=["res://.godot/imported/braxton_first_date.dialogue-c301409700be8df1028a6c0b040aa7fe.tres"]
 
 [params]
 

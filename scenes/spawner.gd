@@ -33,7 +33,8 @@ func init(shrimps: Array[ShrimpType]):
 func get_non_haters() -> Array[ShrimpType]:
 	var not_haters: Array[ShrimpType] = []
 	for shrimp in spawning_pool:
-		if shrimp.love >= 0:
+		# TODO: CHANGE THIS IF WE HAVE SECOND DATES
+		if shrimp.love == 1:
 			not_haters.append(shrimp)
 	return not_haters
 	
