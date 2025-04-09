@@ -53,6 +53,7 @@ position = Vector2(-140, -40)
 shape = SubResource("CircleShape2D_sx6ip")
 
 [node name="Sprite2D" type="Sprite2D" parent="SubShimp"]
+z_index = 1
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_rrfxm")
 flip_h = true
