@@ -1,0 +1,213 @@
+~ start
+You see a shrimp smoking a vape.
+He seems like he just left his bed.
+He reeks of seaweed.
+
+He approaches and slightly bows before you.[#sparkle]
+Josh: 'Sup dude, I'm Josh. 
+He puffs aggressively.[#normal]
+
+Josh: Do you have, like a phone I can use? I really have to call my kids.
+- Don't you have your own phone?
+	=> own_phone
+~ own_phone
+Josh: Yeah I had a phone but it's complicated. I REALLY needed to sell it 'cause ShrubLord69 was dropping a sweet sea slug NFT...[#nervous]
+Josh: And like only two people have it...[#angry]
+
+Josh: They're laughing now but I'll have the last laugh when I'm rich af drinking my Reefshot IPA's in my submarine after I sell it.[#normal]
+- Keep listening
+	=> keep_listening
+- I think you got scammed
+	=> got_scammed
+
+~ keep_listening
+Josh: Besides, my baby mama doesn't answer my calls if I ring her from my number.
+He keeps aggressively puffing.
+
+Josh: You try to sell your baby's name rights to a crypto brand ONCE and they divorce you.[#angry]
+He shakes his head while continuing to vape. You imagine his little lungs filled with seaweed.[#sad]
+
+Josh: I sometimes feel like nobody gets my entrepreneurial spirit.
+- Are you insane?
+	[#normal]
+	=> insanity_plea
+- That's genius! I don't know why they'd do that...
+	[#normal]
+	=> genius_vapeman
+
+~ got_scammed
+Josh: That's what you think because you don't know anything about how to invest.
+Josh: I'll excuse you this time because I know catfish aren't really good with money, but don't say that again.[#angry]
+- WHAT??
+	=> one_punch
+- I should've known my place...
+	=> im_inferior
+
+
+
+~ insanity_plea
+Josh: Dude you're so brainwashed! You don't even know...[#angry]
+Josh: You're just gobbling up any fake news media puts in front of you.
+
+Josh: Stop being a snail dude. You really need to wake up. Listen to some [wait=1] Krilldrew Tate or something. 
+Josh: You're being a real beta right now.[#normal]
+
+- You are insufferable
+	=> insufferable
+- You know, I never thought about it that way...
+	=> crack_ping
+
+~ genius_vapeman
+Josh: Right !?!?!? Being an entrepreneur requires sacrifice. Look at[wait=1] Elon Mollusk. [#sparkle]
+Josh: THAT'S what a peak sea creature looks and behaves like.
+
+Josh: Like, miss me with that seacialist shit...[#angry]
+
+- You couldn't be more right...
+	[#normal]
+	=> omg_ur_so_right
+- Wait a minute, what am I saying?
+	[#normal]
+	=> turn_back
+
+~ omg_ur_so_right
+You really feel like you're bonding 
+Elon Mollusk [i]is[/i] the genius of our times. The government [i]does[/i] need to be stopped, lest it provide for the poor and needy
+The more he talks, the more unsure you are that the poor are even capable of thought.
+There's a dark voice inside you, one you've resisted throughout every breakup and layoff and hardship.
+It simply whispers[wait=1] [wave amp=25 freq=5]"Be a piece of shit"[/wave]
+You think it might be time to embrace it.
+Josh: We really need a 6 day work-week.
+- I never thought about it that way
+	=> crack_ping
+- Hang on, I have morals
+	=> turn_back
+
+
+
+
+~ crack_ping
+You feel like new ideas are awakening in you. You really want to see if you can fix him...
+- I can fix him
+	=> can_fix_him
+- Wait, what am I doing here?
+	=> turn_back
+~ can_fix_him
+Even though he's been nothing but a racist asshole, you decide that there is something in him worth saving...
+Something carnal inside you invites you into a holy journey of...
+
+Trying to fix him.
+You can fix him. 
+You must.
+- How about a second date?
+	=> second_date
+- TURN BACK
+	=> turn_back
+	
+~ second_date
+Josh: Oh so you'd like a sweet piece of [wave amp=25 freq=5]Josh[/wave], eh?[#sparkle]
+He bows weirdly again.
+Josh: So I shall deliver...
+Josh: But like, can you give me like ten bucks so I can take the bus to my anemone?[#nervous]
+- It's too late. Give him 10 bucks
+	[#normal]
+	=> ten_bux
+
+
+
+~ im_inferior
+He shrugs and smiles at you.[#sparkle]
+Josh: Yeah dude, it's tough to come to terms with your nature, but it is what it is.
+Josh: Like [wait=1][shake rate=20 level=10]jellyfish[/shake] for example...[#angry]
+
+He goes on an incredibly racist and sexist tirade.[#normal]
+- Interrupt him
+	=> interrupt
+- Let him speak
+	=> speaking
+
+~ interrupt
+You start to tell him how disturbed his world-views are. 
+He scratches his shrimp butt. He looks bemused. [#nervous]
+
+Josh: Whoa... whoa. Chill. You’re coming at me with, like, a lot of [shake rate=20 level=10]negative energy[/shake] right now. I can feel it in my carapace.
+
+He puts up his hands in mock surrender. You can see them tremble. [#angry]
+Josh: Listen, I just think if everyone stopped paying taxes and started flipping NFTs, the world would be a better place. [#basic]
+Josh: That’s not disturbed, that’s visionary. Ever heard of [wave amp=25 freq=5]passive income?[/wave]
+
+- You don't even have an active income
+	=> owned_shit
+- I never thought about it that way...
+	=> crack_ping
+
+
+~ speaking
+Josh: So like having an antenna doesn't mean...[#angry]
+His expressions are becoming even more unhinged.
+- Start walking away
+	[#normal]
+	=> walk_away
+- Let him talk
+	[#normal]
+
+
+~ turn_back
+
+
+~ owned_shit
+Josh: That's because all the companies hire Tiger Shrimps and Cherry Shrimps for [shake rate=20 level=10]"DEI"[/shake].[#angry]
+Josh: There's no work left for honest white shrimp anymore, noone cares about actual talent.[#normal]
+- Start walking away
+	=> walk_away
+- I never thought about it that way...
+	=> crack_ping
+	
+
+~ insufferable
+He's talking a mile a minute now. You begin to tune out
+
+Josh: ...and it's prawns like you who can't see how pathetic they are...[#angry]
+He's still going [#normal]
+Josh: ...like maybe do your own research sometime?? Instead of parroting what [wave amp=25 freq=5](((they)))[/wave] want you to think...[#angry]
+It won't stop [#normal]
+Josh: ...the krilldenberg group, the coral symposium, the international prawnetary fund...[#angry]
+...
+...
+It seems like maybe he's stopped. He's finally realised you've not said a word in forever.[#normal]
+
+Josh: Keep being a snail dude, I don't hang out with woke people.[#angry]
+
+Josh: See you never...
+
+He starts walking away.
+
+You feel relief.
+You hope you never see him again.
+do Globals.decrease_current_love()
+=> END
+
+~ one_punch
+You throw the punch before you even realise what's happening.[#nervous]
+Faintly, you realise a few things.
+You're yelling at him. About the racist crap he spews, how pathetic he is.
+And he's beneath you, crying in huge, blubbering sobs.[#sad]
+
+It's pretty cathartic. You think punching a racist was exactly what you needed right now.
+
+You walk away.
+do Globals.decrement_current_love()
+=> END!
+
+~ ten_bux
+Josh: Sweet dude, I'll see you later.[#hearts]
+He walks away, leaving a trail of seaweed smoke behind him.
+do Globals.increment_current_love()
+=> END
+
+~ walk_away
+Josh doesn't seem to notice you are leaving...
+He keeps talking about interspecies marriages...
+You leave quietly, hoping never to meet this sad man again.
+do Globals.decrement_current_love()
+=> END!
