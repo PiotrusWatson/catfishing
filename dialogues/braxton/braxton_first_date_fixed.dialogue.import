@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://3nvautfppxnt"
+path="res://.godot/imported/braxton_first_date_fixed.dialogue-6e50e96a30d01a09068c1d13067f2124.tres"
+
+[deps]
+
+source_file="res://dialogues/braxton/braxton_first_date_fixed.dialogue"
+dest_files=["res://.godot/imported/braxton_first_date_fixed.dialogue-6e50e96a30d01a09068c1d13067f2124.tres"]
+
+[params]
+
+defaults=true

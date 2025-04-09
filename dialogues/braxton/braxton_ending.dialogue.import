@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://fbqa15qqa1xn"
+path="res://.godot/imported/braxton_ending.dialogue-e6e7009083988735572bdfdafee856b1.tres"
+
+[deps]
+
+source_file="res://dialogues/braxton/braxton_ending.dialogue"
+dest_files=["res://.godot/imported/braxton_ending.dialogue-e6e7009083988735572bdfdafee856b1.tres"]
+
+[params]
+
+defaults=true

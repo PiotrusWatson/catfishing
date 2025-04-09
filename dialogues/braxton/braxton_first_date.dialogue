@@ -1,0 +1,206 @@
+~ start
+In front of you, you see a shrimp doing dumbbell curls
+Braxton: 24... Hnnghh... 25... 
+They're grunting...
+A lot...
+Like a lot...
+Braxton: Oh hell yeah, that feels nice. 
+Braxton: Sorry bro, had to finish my last set. Sup bro, I'm Braxton. What're you called?
+- You can call me Cat
+	=> call_me_cat
+
+~ call_me_cat
+Braxton: Alright, Big Cat. Love the name.
+Braxton: Cute overalls by the way, the color suits you.
+- Oh... Thanks!
+	=> thanks_i_like_them
+
+~ thanks_i_like_them
+Catfish: Oh, thanks! I really like them too. 
+Braxton: Yeah dude, dig the vibe. It's like they say 'I'm comfy and strong" ya know? Gotta respect that. 
+Braxton: Anyways, I've been practicing my slap shot more lately. Wanna see?
+
+- Yeah, sure.
+	=> hockey_scene
+- What's a slap shot?
+	=> slap_shot
+
+
+~ slap_shot
+They seem taken aback a bit. 
+Braxton: Dude... It's the core of the soul of hockey. You wind up your stick...
+They wind up their stick.
+Braxton: Imagine you're hitting your dad... I mean like, your nemesis or something like that.
+Braxton: I don't know why I said that. But anyways... 
+Braxton: Yeah imagine you're hitting someone you wanna hit full force.
+
+They're probably thinking about hitting their dad.
+Braxton: And BAM!
+They hit a sweet slap shot.
+
+- Damn, that was impressive. 
+	=> damn_that_was_impressive
+- It seems like you have family issues.
+	=> trauma_dump
+
+~ hockey_scene
+They procure a hockey stick.
+You haven't even seen them carrying one, but now they have one.
+They flex their body and put the puck in front of them.
+
+They wind up their stick and...
+
+BAM!
+
+They hit a sweet slap shot right into the lake.
+- Damn, that was impressive
+	=> damn_that_was_impressive
+- You sure know how to handle a stick.
+	=> florty
+
+~ florty
+Braxton: Yeah dude, I know how to handle a lot of things...
+They smile wickedly.
+
+Braxton: The trick with playing on ice is that you gotta be calculated, but also rough. Ya know?
+Braxton: Get too rough, you'll have no control. But if you're methodical, it feels like you're in a flow.
+- Oh, my...
+	=> ough
+- Are you sure you're just talking about hockey?
+	=> innuendo_queen
+
+~ ough
+Catfish: Oh, my... What do we have to do to see you on the field?
+Braxton: You seem cute enough. How about you come and watch me play this week?
+- I'm busy...
+	=> busy_to_hockey
+- Can't miss it!
+	=> wow_going_to_hockey
+
+~ innuendo_queen
+Braxton: You can't know 'til you come and see me play.
+Braxton: So, what do you say?
+- I'm busy...
+	=> busy_to_hockey
+- Can't miss it!
+	=> wow_going_to_hockey
+
+~ damn_that_was_impressive
+Braxton: That's why I play for Suolijärvi Iku-Tursos, baby.
+- Oh wow, didn't know you're famous
+	=> famous_lad
+- I've never heard of that team before
+	=> unknown_team
+
+~ unknown_team
+Braxton: Dude, you're kidding. So you've never seen us play?
+- No
+	=> never_seen_play
+- I don't watch hockey.
+	=> dont_watch_hockey
+
+~ never_seen_play
+Braxton: Ain't no way. You gotta come and watch me play, like this week!
+- Can't miss it.
+	=> wow_going_to_hockey
+- I'm busy...
+	=> busy_to_hockey
+
+~ dont_watch_hockey
+Braxton: Brooooo
+Braxton: I'm sure I can help you like it
+- Fine, I'll come
+	=> wow_going_to_hockey
+- Nope
+	=> rejection
+
+~ busy_to_hockey
+You try to control and stop yourself from going too fast. 
+Catfish: Well, I think I'm busy next week. But how about a raincheck?
+Braxton: Didn't you just say you wanted to watch me on the field? Come on dude, don't be so uptight. It's gonna be fun, I'll make sure!
+- I'm not uptight.
+	=> not_uptight
+- Fine, I'll come
+	=> wow_going_to_hockey
+	
+~ not_uptight
+Catfish: Hey, just because I don't want to go to a hockey game doesn't make me uptight. 
+Braxton: Woah dude, I didn't mean that. You gotta chill. 
+- You chill
+	=> chill_time
+- Sorry, just nerves
+	=> nerves
+
+~ famous_lad
+Braxton: Not to brag, but I'm kind of a big deal. We're the fourth best team in the lake. But I'm not stopping there.
+They flex their muscles. They look gorgeous.
+Braxton: I know I gotta work harder. One day my name's gonna be up there with the goats like Jari Krilli and Clawtrik Laine. 
+Braxton: Gotta make the family proud.
+- Does family mattter a lot to you?
+	=> family_matters
+- It seems like you have family issues.
+	=> trauma_dump
+
+~ trauma_dump
+They laugh awkwardly, rubbing their temple.
+
+Braxton: Yeah I guess you could say that... family issues is kinda like an understatement.
+Braxton: But like, what can you do? Just gotta keep moving forward, y’know?
+His voice softens a bit. He tries to hide it.
+Braxton: It’s not all bad though. Like, my team, they’re solid. I’ve got people who’ve got my back. So… yeah. I guess it’s not all bad.
+- Does family matter a lot to you?
+	=> family_matters
+- Sounds like you're just making excuses
+	=> brutal_end
+	
+~ family_matters
+They pause for a second, their eyes shy away from you as they scratch their head.
+Braxton: Uh… yeah, I mean, family’s, like… supposed to be important, right? But, uh, I guess mine’s a little… complicated. My dad? Doesn’t really get me, ya know? All he cares about is work, so I kinda had to figure stuff out on my own. It’s whatever though. I got my team. They’re my real family now.
+
+They shrug, trying to act nonchalant but there's a hint of frustration in their voice.
+Braxton: But hey, I’m still learning how to handle all that… stuff.
+They smile awkwardly.
+
+Braxton: I guess we all got our baggage, huh?
+- I get it.
+	=> bonding_over_shit_family
+- Sounds like you’re just making excuses.
+	=> brutal_end
+
+~ brutal_end
+Braxton: Hey dude, I just opened up to you and what you said was, like, super rude.
+Braxton: I ain't walking into whatever pot you're laying.
+do Globals.decrement_current_love()
+=> END
+
+~ bonding_over_shit_family
+Braxton: I dunno… it’s weird. It’s like, I’m supposed to just keep pushing through, but sometimes it gets old. Thanks, though. It helps just saying out loud you know?
+Catfish: I understand that. I sometimes wish I can say some things out loud so I feel lighter as well, but can't seem to do it.
+Braxton: How 'bout we talk about this next time then, huh?
+Catfish: I'd like that.
+do Globals.increment_current_love()
+=> END
+
+~ rejection
+Braxton: Fine dude, I thought you were interested in my craft.
+Braxton: Doesn't matter, I don't need you. My bros got me.
+Braxton seems pretty pissed off!
+do Globals.decrement_current_love()
+=> END
+
+~ chill_time
+Braxton: Hey dude, you gotta deal with your thing first until coming that strong. I ain't biting that.
+do Globals.decrement_current_love()
+=> END!
+
+~ wow_going_to_hockey
+Braxton: Hell yeah! I'll make sure I'm gonna put my best performance on for you!
+Braxton: And maybe we can talk about our second date after the game?
+do Globals.increment_current_love()
+=> END
+
+~ nerves
+Catfish: I'm sorry, I'm just nervous, didn't mean to be aggressive. I'd love to make it up to you for the next date.
+Braxton: Breh I get that, like I think at least. I'm playing the week after?
+do Globals.increment_current_love()
+=> END

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ShrimpType" load_steps=6 format=3 uid="uid://bpnh5uiwnicyr"]
+
+[ext_resource type="Script" uid="uid://dtjomkji7bwyx" path="res://scripts/shrimptype.gd" id="1_8eik8"]
+[ext_resource type="Resource" uid="uid://73sk1n6umrd6" path="res://resources/shrimps/real/shrimp_images/braxton.tres" id="1_af04n"]
+[ext_resource type="Resource" uid="uid://3nvautfppxnt" path="res://dialogues/braxton/braxton_first_date_fixed.dialogue" id="1_ve2m8"]
+[ext_resource type="Theme" uid="uid://sh6ju41csl7u" path="res://ui/character_theme.tres" id="2_358hq"]
+[ext_resource type="Resource" uid="uid://fbqa15qqa1xn" path="res://dialogues/braxton/braxton_ending.dialogue" id="3_3guve"]
+
+[resource]
+script = ExtResource("1_8eik8")
+name = "Braxton"
+images = ExtResource("1_af04n")
+backgrounds = Array[Texture2D]([])
+basic_dialogue = ExtResource("1_ve2m8")
+ending_dialogue = ExtResource("3_3guve")
+basic_theme = ExtResource("2_358hq")
+starting_love = 1
+metadata/_custom_type_script = "uid://dtjomkji7bwyx"

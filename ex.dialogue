@@ -1,0 +1,115 @@
+~ start
+It seems you fished someone quite familiar to you...
+- Get a closer look
+	=> closer_look
+- Rub your eyes, this cannot be right
+	=> rub_eyes
+
+~ closer_look
+You get closer to the shrimp standing in front of you.
+They seem to be none other than [wait=1]your ex.
+- PANICKKKKK
+	=> PANIC
+- Well, this is awkward
+	=> well_awkward
+
+~ rub_eyes
+Your eyes are definitely not deceiving you. You somehow successfully fished your ex.
+- PANICKKKKK
+	=> PANIC
+- Well, this is awkward
+	=> well_awkward
+
+
+~ PANIC
+You PaNiccKk and reach for an awkward handshake. Your ex seems to be weirded out by your impeccable handling of the situation. 
+But still, they reach for your hand.
+
+You suddenly remember again how it felt to hold their hand...
+- Awkwardly pull your hand back
+	=> awkward_hand_pull
+- Maintain eye contact and keep shaking their hand
+	=> hell_shake
+~ well_awkward
+Your Ex: Super awkward. I wasn't aware you were fishing today... I didn't mean to...[#nervous]
+
+They look as sheepishly as you do. [#normal]
+
+- Oh no, that's perfectly fine...
+
+- I'm not sure I'm ready to talk to you yet
+
+~ awkward_hand_pull
+The shrimp’s eyes widen slightly as you pull your hand back. There's a brief moment of tension, where everything feels... off. They rub the back of their neck, clearly unsure of what to do next.
+Your Ex: Uh... what? Did I—did I do something wrong?
+
+They laugh awkwardly, the sound almost forced. 
+Your Ex: I mean, it’s cool, no big deal, right? I guess... I guess you just didn’t like the, uh... the handshake. But hey, if that’s... well, if that’s how it is, I can totally... uh... respect that, or whatever.
+They look at you for a second longer than necessary, as if expecting something... anything... to happen. They awkwardly scratch their head again, then shift their weight on their feet.
+
+You are relieved that this isn't just awkward only for you.
+
+Your Ex: So... you wanna... try again, or...? Or do you want to just, y'know, pretend that didn't happen and keep going like nothing's weird?
+
+- Try again like, the relationship? 
+	=> woah_youre_back
+- Shake their hand again
+	=> shake_2
+
+~ hell_shake
+Your Ex: I know you missed me...
+They try to awkwardly laugh to their own ungraceful joke.
+Your Ex: ... but can I have my hand back?
+
+You realize what you're doing. Your eyes open wide in terror and you stop yourself.
+- Play it cool
+	=> it_cool
+
+~ it_cool
+Catfish: Yeah, sorry.
+You let go of their hand. 
+Your hand feels clammy.
+
+Catfish: Can we... Start this over?
+Your Ex: Yeah... Why not?
+
+- Shake their hand again
+	=> shake_2
+	
+~ its_fine
+
+~ not_ready
+
+~ woah_youre_back
+Your Ex: WOW. Uhm...
+They seem to struggle to find the correct words.
+Your Ex: What I meant was... I meant the handshake, Cat. 
+Your Ex: Not the whole thing. I thought we left it behind.
+- I didn't
+- I was joking
+
+~ shake_2
+You shake their hand again, this time with a smile on your face. 
+You feel calmer now. They seem calmer too.
+
+Their gaze penetrates you as they, haltingly, begin to talk again.
+
+Your Ex: So... uh... we good now? Or, uh, do we need to talk about... that whole thing?
+
+- Gods, no
+	=> gods_no
+- We all made mistakes
+
+~ gods_no
+Your Ex: Right, well... I guess we can just... forget about it. 
+Your Ex: I'm just glad I get to see you again.
+
+They clasp their hands behind them.
+Their left foot carves the sand in front of them rhythmically like the leg of a compass.
+
+Your Ex: So many things I wanted to say, but I can't seem to remember any of them.
+They look at you nervously.
+
+Your Ex: So like, are we, like... still cool? Or...?
+
+=> END
