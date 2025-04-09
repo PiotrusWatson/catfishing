@@ -9,7 +9,7 @@
 script = ExtResource("1_4wbk5")
 name = "Your Ex"
 images = ExtResource("1_ybohu")
-backgrounds = Array[Texture2D]([])
+backgrounds = Array[Texture2D]([null])
 basic_dialogue = ExtResource("1_fuwk7")
 ending_dialogue = ExtResource("2_mes1c")
 starting_love = 1

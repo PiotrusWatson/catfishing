@@ -1,11 +1,11 @@
 ~ start
 In front of you, you see a shrimp doing dumbbell curls
-Braxton: 24... Hnnghh... 25... 
+Braxton: 24... Hnnghh... 25... [#nervous]
 They're grunting...
 A lot...
 Like a lot...
-Braxton: Oh hell yeah, that feels nice. 
-Braxton: Sorry bro, had to finish my last set. Sup bro, I'm Braxton. What're you called?
+Braxton: Oh hell yeah, that feels nice. [#sparkle]
+Braxton: Sorry bro, had to finish my last set. Sup bro, I'm Braxton. What're you called? [#normal]
 - You can call me Cat
 	=> call_me_cat
 
@@ -27,20 +27,22 @@ Braxton: Anyways, I've been practicing my slap shot more lately. Wanna see?
 
 
 ~ slap_shot
-They seem taken aback a bit. 
-Braxton: Dude... It's the core of the soul of hockey. You wind up your stick...
+They seem taken aback a bit. [#sad]
+Braxton: Dude... It's the core of the soul of hockey. You wind up your stick...[#normal]
 They wind up their stick.
-Braxton: Imagine you're hitting your dad... I mean like, your nemesis or something like that.
-Braxton: I don't know why I said that. But anyways... 
-Braxton: Yeah imagine you're hitting someone you wanna hit full force.
+Braxton: Imagine you're hitting your dad... I mean like, your nemesis or something like that. [#angry]
+Braxton: I don't know why I said that. But anyways... [#nervous]
+Braxton: Yeah imagine you're hitting someone you wanna hit full force.[#angry]
 
 They're probably thinking about hitting their dad.
 Braxton: And BAM!
-They hit a sweet slap shot.
+They hit a sweet slap shot. [#sparkle]
 
 - Damn, that was impressive. 
+	[#normal]
 	=> damn_that_was_impressive
 - It seems like you have family issues.
+	[#normal]
 	=> trauma_dump
 
 ~ hockey_scene
@@ -48,14 +50,16 @@ They procure a hockey stick.
 You haven't even seen them carrying one, but now they have one.
 They flex their body and put the puck in front of them.
 
-They wind up their stick and...
+They wind up their stick and...[#angry]
 
 BAM!
 
-They hit a sweet slap shot right into the lake.
+They hit a sweet slap shot right into the lake.[#sparkle]
 - Damn, that was impressive
+	[#normal]
 	=> damn_that_was_impressive
 - You sure know how to handle a stick.
+	[#normal]
 	=> florty
 
 ~ florty

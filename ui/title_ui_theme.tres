@@ -1,6 +1,7 @@
-[gd_resource type="Theme" load_steps=4 format=3 uid="uid://2gdxtsf4t82y"]
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://2gdxtsf4t82y"]
 
 [ext_resource type="FontFile" uid="uid://bw7csb2v3xxdr" path="res://fonts/Ldfcomicsansbold-zgma.ttf" id="1_1yl33"]
+[ext_resource type="FontFile" uid="uid://e221dwkwx17l" path="res://fonts/Halogen.ttf" id="1_ptliw"]
 [ext_resource type="StyleBox" uid="uid://ckgdxc8f4gpyc" path="res://ui/button_style.tres" id="1_w5it2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w5it2"]
@@ -17,6 +18,7 @@ Button/constants/h_separation = 10
 Button/constants/icon_max_width = 100
 Button/constants/line_spacing = 10
 Button/font_sizes/font_size = 60
+Button/fonts/font = ExtResource("1_ptliw")
 Button/styles/hover = SubResource("StyleBoxFlat_w5it2")
 Button/styles/normal = ExtResource("1_w5it2")
 Label/colors/font_outline_color = Color(0, 0, 0, 1)

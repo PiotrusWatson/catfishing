@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bqs3qry1n25j7"]
+[gd_scene load_steps=21 format=3 uid="uid://bqs3qry1n25j7"]
 
 [ext_resource type="Script" uid="uid://dh828xw3ebhk4" path="res://worlds/fishing_signals.gd" id="1_585q5"]
 [ext_resource type="PackedScene" uid="uid://bjxfp5r5xfw4f" path="res://scenes/player/player.tscn" id="2_1kayd"]
@@ -6,15 +6,16 @@
 [ext_resource type="PackedScene" uid="uid://c5viyjrpp6xob" path="res://scenes/fishing_zone_physics.tscn" id="2_ncbgm"]
 [ext_resource type="Script" uid="uid://csli8svrwjc2p" path="res://scenes/hook_camera.gd" id="2_odgnr"]
 [ext_resource type="Texture2D" uid="uid://crwq8fv3dv4h0" path="res://assets/placeholder/placeholder_sky.png" id="3_2l1a4"]
-[ext_resource type="Resource" uid="uid://654d7dklnoik" path="res://resources/shrimps/placeholder/simp.tres" id="3_idyiq"]
 [ext_resource type="PackedScene" uid="uid://dn46lkmmrym33" path="res://scenes/fishing_shrimp/shimp.tscn" id="3_ncbgm"]
+[ext_resource type="Resource" uid="uid://bpnh5uiwnicyr" path="res://resources/shrimps/real/braxton.tres" id="3_svnk6"]
+[ext_resource type="Resource" uid="uid://disy54n5x36rg" path="res://resources/shrimps/real/ex.tres" id="4_5u7dg"]
 [ext_resource type="Texture2D" uid="uid://ccu6mlnvq64fy" path="res://assets/placeholder/placeholder_dock.png" id="4_gqmpw"]
-[ext_resource type="Resource" uid="uid://fwd73v0vtp10" path="res://resources/shrimps/placeholder/shompy.tres" id="6_2l1a4"]
 [ext_resource type="PackedScene" uid="uid://cor8igwxetpgn" path="res://addons/dynamic_water_2d/water.tscn" id="6_eo0ky"]
 [ext_resource type="Theme" uid="uid://by8wyn837d0af" path="res://ui/ui_theme.tres" id="7_585q5"]
 [ext_resource type="Script" uid="uid://d0votwagi38uu" path="res://ui/ui.gd" id="7_d3nh4"]
 [ext_resource type="PackedScene" uid="uid://brg78tl8y7spr" path="res://scenes/fishing_shrimp/item_shimp.tscn" id="11_p325l"]
 [ext_resource type="PackedScene" uid="uid://cjea8b7ceg8p7" path="res://ui/final_selection.tscn" id="12_mcxpu"]
+[ext_resource type="FontFile" uid="uid://e221dwkwx17l" path="res://fonts/Halogen.ttf" id="15_5u7dg"]
 [ext_resource type="AudioStream" uid="uid://d14w6y61yc0e7" path="res://audio/sfx/Catching Shrimp 2.wav" id="16_svnk6"]
 
 [sub_resource type="Gradient" id="Gradient_d3nh4"]
@@ -27,11 +28,11 @@ fill_to = Vector2(0.5, 0)
 
 [sub_resource type="Theme" id="Theme_6jn77"]
 Label/font_sizes/font_size = 30
-Label/fonts/font = null
+Label/fonts/font = ExtResource("15_5u7dg")
 
 [node name="FishingWorld" type="Node2D"]
 script = ExtResource("1_585q5")
-active_shrimps = Array[ExtResource("2_iq87m")]([ExtResource("3_idyiq"), ExtResource("6_2l1a4")])
+active_shrimps = Array[ExtResource("2_iq87m")]([ExtResource("3_svnk6"), ExtResource("4_5u7dg")])
 fishing_limit = 5
 
 [node name="HookCamera" type="Camera2D" parent="."]

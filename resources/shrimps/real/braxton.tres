@@ -10,7 +10,7 @@
 script = ExtResource("1_8eik8")
 name = "Braxton"
 images = ExtResource("1_af04n")
-backgrounds = Array[Texture2D]([])
+backgrounds = Array[Texture2D]([null])
 basic_dialogue = ExtResource("1_ve2m8")
 ending_dialogue = ExtResource("3_3guve")
 basic_theme = ExtResource("2_358hq")

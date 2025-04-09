@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=6 format=3 uid="uid://b7cfsb3ly6dfg"]
 
-[ext_resource type="FontFile" uid="uid://bw7csb2v3xxdr" path="res://fonts/Ldfcomicsansbold-zgma.ttf" id="1_u8wy7"]
+[ext_resource type="FontFile" uid="uid://e221dwkwx17l" path="res://fonts/Halogen.ttf" id="2_oxk5h"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u8wy7"]
 
@@ -15,10 +15,10 @@ bg_color = Color(0, 0, 0, 0.568627)
 [resource]
 Button/constants/h_separation = 10
 Button/font_sizes/font_size = 50
-Button/fonts/font = ExtResource("1_u8wy7")
+Button/fonts/font = ExtResource("2_oxk5h")
 CheckBox/styles/normal = SubResource("StyleBoxFlat_u8wy7")
 CheckBox/styles/pressed = SubResource("StyleBoxFlat_oxk5h")
 Label/font_sizes/font_size = 37
-Label/fonts/font = ExtResource("1_u8wy7")
+Label/fonts/font = ExtResource("2_oxk5h")
 Panel/styles/panel = SubResource("StyleBoxFlat_lxngi")
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_gpwhp")
