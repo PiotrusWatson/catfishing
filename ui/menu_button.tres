@@ -15,10 +15,11 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ml7d"]
 
 [resource]
-Button/colors/font_color = Color(0, 0, 0, 1)
-Button/colors/font_hover_color = Color(0.0941176, 0.709804, 0.392157, 1)
-Button/colors/font_outline_color = Color(0.0941176, 0.709804, 0.392157, 1)
-Button/font_sizes/font_size = 64
+Button/colors/font_color = Color(0.141176, 0.0666667, 0.0862745, 1)
+Button/colors/font_hover_color = Color(0.905882, 0.458824, 0.333333, 1)
+Button/colors/font_hover_pressed_color = Color(1, 0.780392, 0.635294, 1)
+Button/colors/font_outline_color = Color(0.141176, 0.0666667, 0.0862745, 1)
+Button/font_sizes/font_size = 67
 Button/fonts/font = ExtResource("1_ldcua")
 Button/styles/disabled = SubResource("StyleBoxEmpty_v7a2h")
 Button/styles/focus = SubResource("StyleBoxEmpty_n1akl")

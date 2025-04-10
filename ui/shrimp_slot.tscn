@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://c31pps066o5xw"]
+[gd_scene load_steps=6 format=3 uid="uid://c31pps066o5xw"]
 
 [ext_resource type="Theme" uid="uid://b7cfsb3ly6dfg" path="res://ui/item_slot_theme.tres" id="1_xmy22"]
 [ext_resource type="Texture2D" uid="uid://darx62eafnypx" path="res://placeholder/cross.svg" id="2_5s3dt"]
 [ext_resource type="Script" uid="uid://bt4hwnlnr7epc" path="res://ui/shrimp_slot.gd" id="2_hu8ol"]
 [ext_resource type="Theme" uid="uid://2gdxtsf4t82y" path="res://ui/title_ui_theme.tres" id="3_c2pfh"]
+[ext_resource type="Theme" uid="uid://6ukr3mcrbu77" path="res://ui/selection_button.tres" id="5_7fn4e"]
 
 [node name="ShrimpSlot" type="PanelContainer"]
 layout_direction = 2
@@ -55,10 +56,12 @@ theme_override_constants/separation = 10
 
 [node name="Yes" type="Button" parent="Menu/VBoxContainer/Selection"]
 layout_mode = 2
+theme = ExtResource("5_7fn4e")
 text = "Yes"
 
 [node name="No" type="Button" parent="Menu/VBoxContainer/Selection"]
 layout_mode = 2
+theme = ExtResource("5_7fn4e")
 text = "No
 "
 
