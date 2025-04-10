@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://654d7dklnoik" path="res://resources/shrimps/placeholder/simp.tres" id="3_sl8jx"]
 [ext_resource type="Resource" uid="uid://bpnh5uiwnicyr" path="res://resources/shrimps/real/braxton.tres" id="5_i4ary"]
 [ext_resource type="PackedScene" uid="uid://c31pps066o5xw" path="res://ui/shrimp_slot.tscn" id="5_sl8jx"]
-[ext_resource type="Resource" uid="uid://cd2lbvcylpatb" path="res://resources/shrimps/real/nerd.tres" id="6_m1wx5"]
+[ext_resource type="Resource" uid="uid://01o4o080b0ho" path="res://resources/shrimps/real/unfixable.tres" id="6_i4ary"]
 [ext_resource type="LabelSettings" uid="uid://bh7imdqglbjak" path="res://scenes/player/instruction_label.tres" id="7_ltlfj"]
 [ext_resource type="Theme" uid="uid://6ukr3mcrbu77" path="res://ui/selection_button.tres" id="8_ltlfj"]
 
@@ -19,9 +19,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_eq16i")
 script = ExtResource("1_owekc")
-debug_shrimps = Array[ExtResource("2_kt6t5")]([ExtResource("3_sl8jx"), ExtResource("3_sl8jx"), ExtResource("3_sl8jx"), ExtResource("5_i4ary"), ExtResource("6_m1wx5")])
+debug_shrimps = Array[ExtResource("2_kt6t5")]([ExtResource("3_sl8jx"), ExtResource("5_i4ary"), ExtResource("6_i4ary"), ExtResource("5_i4ary"), ExtResource("5_i4ary")])
 slot_scene = ExtResource("5_sl8jx")
-is_debug = true
 
 [node name="Panel" type="Panel" parent="."]
 self_modulate = Color(1, 1, 1, 0)
@@ -84,7 +83,7 @@ offset_bottom = 156.0
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("8_ltlfj")
-text = "Go it Alone"
+text = "Go Alone"
 
 [node name="TheQuestion" type="Panel" parent="."]
 layout_mode = 1

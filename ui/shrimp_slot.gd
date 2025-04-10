@@ -14,6 +14,6 @@ func fill_deets(shrimp: ShrimpType):
 
 
 func _on_gui_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton:
+	if event is InputEventMouseButton and event.is_released():
 		GlobalMusicPlayer.play_click()
 		picked_shrimp.emit(shrimp_info)
