@@ -23,14 +23,12 @@ func _ready():
 func set_rope(amount):
 	rope.rope_length = amount
 	reset_reel()
-	print("SETTING ROPE TO ", rope.rope_length)
 
 func increase_rope():
 	if rope.rope_length < max_size:
 		rope.rope_length += reel_amount
 		reel_amount += acceleration
 		
-	print("ROPE IS INCREASING TO ", rope.rope_length)
 		
 func decrease_rope():
 	if rope.rope_length > 1:
@@ -38,7 +36,6 @@ func decrease_rope():
 		reel_amount += acceleration
 	else:
 		rope.rope_length = 1
-	print("ROPE IS DECREASING TO ", rope.rope_length)
 
 func reset_reel():
 	reel_amount = starting_reel

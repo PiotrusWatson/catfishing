@@ -16,6 +16,8 @@ enum PlayerIs{IDLE, LEAVING_WATER, THROWING, CASTING, FISHING, HOOKING, CATCHING
 @onready var animator = $AnimationPlayer
 @onready var mewler = $Mewler
 @onready var reel = $Reel
+@onready var plop = $Plop
+@onready var slurp = $Slurp
 
 @export var rotation_speed = 0.5
 @export var max_force = 5.0
@@ -172,6 +174,7 @@ func get_target_from_mouse():
 func _on_cast_timer_timeout() -> void:
 	extension_timer.stop()
 	reel.stop()
+	plop.play()
 	stop_target.call_deferred()
 	player_status = PlayerIs.FISHING
 	fishing_rod.reset_reel()
@@ -188,6 +191,7 @@ func _on_force_increaser_timeout() -> void:
 func _on_leaving_water_timer_timeout() -> void:
 	reduction_timer.stop()
 	reel.stop()
+	slurp.play()
 	fishing_rod.reset_rope()
 	player_status = PlayerIs.IDLE
 	tooltip.fade_in()
