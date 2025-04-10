@@ -9,7 +9,9 @@ func _ready():
 	make_box()
 	if Globals.end_status == Enums.EndStatus.ALONE:
 		GlobalMusicPlayer.play_alone()
-	
+	elif Globals.end_status == Enums.EndStatus.PICKED:
+		GlobalMusicPlayer.play_together()
+
 func handle_end_dialogue(stuff):
 	if Globals.end_status == Enums.EndStatus.JUST_STARTED:
 		SceneChanger.change_scene(SceneChanger.Worlds.PHYSICS_FISHING)

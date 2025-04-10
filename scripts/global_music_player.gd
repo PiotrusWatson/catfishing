@@ -4,6 +4,7 @@ extends AudioStreamPlayer
 @onready var dating_music = preload("res://audio/music/ShrimpDate1.mp3")
 @onready var fishing_music = preload("res://audio/music/FishingGame1.2.5.mp3")
 @onready var alone_music = preload("res://audio/music/EndingSong_Alone_1.1.6..mp3")
+@onready var together_music = preload("res://audio/music/EndingSong_Together_1.7.mp3")
 @onready var menu_click = $MenuClick
 func play_menu():
 	stop()
@@ -23,6 +24,11 @@ func play_fishing():
 func play_alone():
 	stop()
 	stream = alone_music
+	play()
+	
+func play_together():
+	stop()
+	stream = together_music
 	play()
 
 func play_click():

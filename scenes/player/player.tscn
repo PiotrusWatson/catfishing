@@ -474,9 +474,11 @@ volume_db = 3.0
 
 [node name="Plop" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("18_uf5tr")
+volume_db = -5.0
 
 [node name="Slurp" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("19_lgqa7")
+volume_db = -5.333
 
 [connection signal="caught_shrimp" from="Pivot/FishingRod" to="." method="_on_fishing_rod_caught_shrimp"]
 [connection signal="changed_fishing_status" from="Pivot/FishingRod" to="." method="_on_fishing_rod_changed_fishing_status"]
