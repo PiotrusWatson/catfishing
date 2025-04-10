@@ -12,7 +12,7 @@
 particle_flag_disable_z = true
 emission_shape_scale = Vector3(0.4, 0.4, 0.4)
 emission_shape = 1
-emission_sphere_radius = 0.2
+emission_sphere_radius = 0.3
 spread = 6.429
 angular_velocity_min = -1.60933e-05
 angular_velocity_max = -1.60933e-05
@@ -21,15 +21,15 @@ linear_accel_min = -57.89
 linear_accel_max = 3.95
 radial_accel_min = -2.23517e-06
 radial_accel_max = 52.63
-scale_min = 0.01
-scale_max = 0.01
+scale_min = 0.05
+scale_max = 0.05
 alpha_curve = SubResource("CurveTexture_wjm5a")
 
 [node name="Emitter" type="GPUParticles2D"]
 z_index = 3
-position = Vector2(-115, -99)
+position = Vector2(-272, 97)
 emitting = false
-amount = 16
+amount = 24
 texture = ExtResource("1_rv8gu")
 lifetime = 3.0
 one_shot = true
@@ -37,6 +37,7 @@ preprocess = 1.33
 speed_scale = 2.78
 explosiveness = 0.9
 randomness = 0.64
+visibility_rect = Rect2(-100, -100, 500, 500)
 process_material = SubResource("ParticleProcessMaterial_unxdh")
 script = ExtResource("2_q25e1")
 hearts = ExtResource("1_rv8gu")
