@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bjxfp5r5xfw4f"]
+[gd_scene load_steps=19 format=3 uid="uid://bjxfp5r5xfw4f"]
 
 [ext_resource type="Script" uid="uid://b2u6pnq3whpdm" path="res://scenes/player/player.gd" id="1_qhqgy"]
 [ext_resource type="SpriteFrames" uid="uid://x7nr4ebm7nc4" path="res://scenes/player/player_anims.tres" id="2_qhqgy"]
@@ -11,6 +11,7 @@
 [ext_resource type="Theme" uid="uid://3ydsxh3h11mw" path="res://ui/tooltip_theme.tres" id="7_qek5x"]
 [ext_resource type="Script" uid="uid://c6h46m0d6uex1" path="res://ui/tooltip.gd" id="8_5gtgg"]
 [ext_resource type="PackedScene" uid="uid://c3k4tne8tirwg" path="res://ui/fader.tscn" id="10_h17s1"]
+[ext_resource type="LabelSettings" uid="uid://bh7imdqglbjak" path="res://scenes/player/instruction_label.tres" id="11_fm80t"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gmlin"]
 
@@ -396,6 +397,7 @@ texture = ExtResource("4_lvxji")
 position = Vector2(-1108, 6)
 
 [node name="UI" type="Control" parent="."]
+z_index = 1
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -439,8 +441,10 @@ offset_right = -81.0
 offset_bottom = 129.0
 text = "Hold to aim
 Release to cast
-The further you move the mouse,
+The further you
+ move the mouse,
 the further you cast"
+label_settings = ExtResource("11_fm80t")
 
 [node name="Fader" parent="UI/Tooltip" instance=ExtResource("10_h17s1")]
 

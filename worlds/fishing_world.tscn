@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bqs3qry1n25j7"]
+[gd_scene load_steps=35 format=3 uid="uid://bqs3qry1n25j7"]
 
 [ext_resource type="Script" uid="uid://dh828xw3ebhk4" path="res://worlds/fishing_signals.gd" id="1_585q5"]
 [ext_resource type="PackedScene" uid="uid://bjxfp5r5xfw4f" path="res://scenes/player/player.tscn" id="2_1kayd"]
@@ -8,10 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://dn46lkmmrym33" path="res://scenes/fishing_shrimp/shimp.tscn" id="3_ncbgm"]
 [ext_resource type="Resource" uid="uid://bpnh5uiwnicyr" path="res://resources/shrimps/real/braxton.tres" id="3_svnk6"]
 [ext_resource type="Resource" uid="uid://disy54n5x36rg" path="res://resources/shrimps/real/ex.tres" id="4_5u7dg"]
-[ext_resource type="Resource" uid="uid://cd2lbvcylpatb" path="res://resources/shrimps/real/nerd.tres" id="5_if13n"]
-[ext_resource type="Resource" uid="uid://01o4o080b0ho" path="res://resources/shrimps/real/unfixable.tres" id="6_aa186"]
+[ext_resource type="Resource" uid="uid://cd2lbvcylpatb" path="res://resources/shrimps/real/nerd.tres" id="5_umak0"]
 [ext_resource type="PackedScene" uid="uid://cor8igwxetpgn" path="res://addons/dynamic_water_2d/water.tscn" id="6_eo0ky"]
 [ext_resource type="Texture2D" uid="uid://baixus7mx330v" path="res://assets/environment/pilviä_small.png" id="6_h3v2a"]
+[ext_resource type="Resource" uid="uid://01o4o080b0ho" path="res://resources/shrimps/real/unfixable.tres" id="6_qsf8q"]
 [ext_resource type="Theme" uid="uid://by8wyn837d0af" path="res://ui/ui_theme.tres" id="7_585q5"]
 [ext_resource type="Script" uid="uid://d0votwagi38uu" path="res://ui/ui.gd" id="7_d3nh4"]
 [ext_resource type="Texture2D" uid="uid://degaq6pgcsc2g" path="res://assets/environment/rocdoc.png" id="7_p325l"]
@@ -25,30 +25,48 @@
 [ext_resource type="Texture2D" uid="uid://bdu3mogvkwtij" path="res://assets/environment/bottom_noplants.png" id="15_1thy1"]
 [ext_resource type="FontFile" uid="uid://e221dwkwx17l" path="res://fonts/Halogen.ttf" id="15_5u7dg"]
 [ext_resource type="AudioStream" uid="uid://d14w6y61yc0e7" path="res://audio/sfx/Catching Shrimp 2.wav" id="16_svnk6"]
+[ext_resource type="LabelSettings" uid="uid://bh7imdqglbjak" path="res://scenes/player/instruction_label.tres" id="19_if13n"]
+[ext_resource type="FontFile" uid="uid://k4rlbr6l5dpt" path="res://fonts/Janitor.ttf" id="21_0y3ke"]
 
-[sub_resource type="Gradient" id="Gradient_5u7dg"]
+[sub_resource type="Gradient" id="Gradient_if13n"]
 colors = PackedColorArray(0.917647, 1, 1, 1, 0, 0.870588, 0.956863, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_1thy1"]
-gradient = SubResource("Gradient_5u7dg")
+gradient = SubResource("Gradient_if13n")
 fill_from = Vector2(0.521368, 1)
 fill_to = Vector2(0.478632, 0.547009)
 
-[sub_resource type="Gradient" id="Gradient_d3nh4"]
+[sub_resource type="Gradient" id="Gradient_aa186"]
 colors = PackedColorArray(0, 0.0862745, 0.12549, 1, 0.366502, 0.83846, 0.766449, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_2l1a4"]
-gradient = SubResource("Gradient_d3nh4")
+gradient = SubResource("Gradient_aa186")
 fill_from = Vector2(0.518349, 1)
 fill_to = Vector2(0.5, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_if13n"]
+font = ExtResource("21_0y3ke")
+font_size = 200
+font_color = Color(0.635541, 1, 0.873817, 1)
+outline_size = 21
+outline_color = Color(0, 0.00392157, 0.113725, 1)
+shadow_size = 40
+shadow_color = Color(0, 0.00510203, 0.112549, 1)
+shadow_offset = Vector2(8.86, 12.26)
 
 [sub_resource type="Theme" id="Theme_6jn77"]
 Label/font_sizes/font_size = 30
 Label/fonts/font = ExtResource("15_5u7dg")
 
+[sub_resource type="LabelSettings" id="LabelSettings_by82m"]
+font = ExtResource("15_5u7dg")
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+outline_size = 10
+
 [node name="FishingWorld" type="Node2D"]
 script = ExtResource("1_585q5")
-active_shrimps = Array[ExtResource("2_iq87m")]([ExtResource("3_svnk6"), ExtResource("4_5u7dg"), ExtResource("5_if13n"), ExtResource("6_aa186")])
+active_shrimps = Array[ExtResource("2_iq87m")]([ExtResource("3_svnk6"), ExtResource("4_5u7dg"), ExtResource("5_umak0"), ExtResource("6_qsf8q")])
 fishing_limit = 5
 
 [node name="HookCamera" type="Camera2D" parent="."]
@@ -61,11 +79,6 @@ drag_left_margin = 1.0
 drag_right_margin = 1.0
 script = ExtResource("2_odgnr")
 speed = 0.2
-
-[node name="bottom2" type="Sprite2D" parent="."]
-position = Vector2(-51, 992)
-scale = Vector2(0.675, 1.37642)
-texture = ExtResource("15_1thy1")
 
 [node name="sky" type="TextureRect" parent="."]
 offset_left = -801.0
@@ -92,96 +105,8 @@ offset_bottom = 1247.0
 texture = SubResource("GradientTexture2D_2l1a4")
 expand_mode = 2
 
-[node name="watergrass3" type="Sprite2D" parent="."]
-modulate = Color(0.607843, 0.729412, 1, 0.784314)
-position = Vector2(-244, -117)
-rotation = 3.14159
-scale = Vector2(0.45, -0.45)
-texture = ExtResource("10_5u7dg")
-region_enabled = true
-region_rect = Rect2(217.766, 0, 782.234, 1061.42)
-
-[node name="Tree" type="Sprite2D" parent="."]
-position = Vector2(-290, -115)
-scale = Vector2(-0.137287, 0.137287)
-texture = ExtResource("7_svnk6")
-
-[node name="Dock" type="Sprite2D" parent="."]
-position = Vector2(437, -85)
-scale = Vector2(0.107, 0.081)
-texture = ExtResource("7_p325l")
-
-[node name="bottom" type="Sprite2D" parent="."]
-position = Vector2(-54, 1086)
-scale = Vector2(0.675, 0.674557)
-texture = ExtResource("15_1thy1")
-
-[node name="Lakeweed1" type="Sprite2D" parent="."]
-position = Vector2(-462.75, 1123.72)
-scale = Vector2(0.26083, 0.207556)
-texture = ExtResource("10_h3v2a")
-
-[node name="Lakeweed2" type="Sprite2D" parent="."]
-position = Vector2(-74.5001, 1143.47)
-rotation = -0.523599
-scale = Vector2(0.26083, 0.207556)
-texture = ExtResource("10_h3v2a")
-
 [node name="Player" parent="." instance=ExtResource("2_1kayd")]
 position = Vector2(503, -110)
-
-[node name="Lakeweed3" type="Sprite2D" parent="."]
-modulate = Color(0.605274, 0.605274, 0.605274, 1)
-position = Vector2(-564, 1392)
-scale = Vector2(0.566, 0.451)
-texture = ExtResource("10_h3v2a")
-
-[node name="Lakeweed4" type="Sprite2D" parent="."]
-modulate = Color(0.408329, 0.408329, 0.408329, 1)
-position = Vector2(-303, 1497)
-rotation = 0.279253
-scale = Vector2(0.646, 0.515)
-texture = ExtResource("10_h3v2a")
-
-[node name="watergrass" type="Sprite2D" parent="."]
-position = Vector2(401, -144)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("10_5u7dg")
-
-[node name="watergrass2" type="Sprite2D" parent="."]
-position = Vector2(-420, -119)
-scale = Vector2(-0.45, 0.45)
-texture = ExtResource("10_5u7dg")
-region_enabled = true
-region_rect = Rect2(217.766, 0, 782.234, 1061.42)
-
-[node name="Lakeweeds2" type="Sprite2D" parent="."]
-position = Vector2(144.125, 1107.98)
-rotation = -2.99673
-scale = Vector2(0.441, -0.329)
-texture = ExtResource("9_c7061")
-
-[node name="Lakeweeds3" type="Sprite2D" parent="."]
-self_modulate = Color(0.572988, 0.572988, 0.572988, 1)
-position = Vector2(44, 1386)
-rotation = -2.99673
-scale = Vector2(0.671, -0.501)
-texture = ExtResource("9_c7061")
-
-[node name="Lakeweeds" type="Sprite2D" parent="."]
-position = Vector2(-222.875, 1143.98)
-scale = Vector2(0.407938, 0.33086)
-texture = ExtResource("9_c7061")
-
-[node name="LakeweedsBlurry2" type="Sprite2D" parent="."]
-position = Vector2(440, 1161)
-scale = Vector2(-0.987, 0.703)
-texture = ExtResource("13_r7d3h")
-
-[node name="LakeweedsBlurry" type="Sprite2D" parent="."]
-position = Vector2(-551, 1149)
-scale = Vector2(0.993453, 0.83828)
-texture = ExtResource("13_r7d3h")
 
 [node name="Water" parent="." instance=ExtResource("6_eo0ky")]
 position = Vector2(-666, -198)
@@ -197,6 +122,15 @@ position = Vector2(-155, 424)
 thing_to_spawn = ExtResource("3_ncbgm")
 item_thing_to_spawn = ExtResource("11_p325l")
 shrimp_to_item_ratio = 1.0
+
+[node name="HookGoDown" parent="FishingZone/UI/ToolTip" index="1"]
+label_settings = ExtResource("19_if13n")
+
+[node name="HookGoUp" parent="FishingZone/UI/ToolTip" index="3"]
+label_settings = ExtResource("19_if13n")
+
+[node name="Label" parent="FishingZone/UI/ToolTip" index="4"]
+label_settings = ExtResource("19_if13n")
 
 [node name="UI" type="CanvasLayer" parent="."]
 script = ExtResource("7_d3nh4")
@@ -224,7 +158,8 @@ offset_right = 567.5
 offset_bottom = 119.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "SHRIMP ON"
+text = "SHRIMP ON!"
+label_settings = SubResource("LabelSettings_if13n")
 horizontal_alignment = 1
 
 [node name="FishesLeft" type="Label" parent="UI/UILayer"]
@@ -232,12 +167,14 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -266.0
-offset_right = -92.0
-offset_bottom = 239.0
+offset_left = -228.0
+offset_top = 22.0
+offset_right = 46.0
+offset_bottom = 261.0
 grow_horizontal = 0
 theme = SubResource("Theme_6jn77")
 text = "Fishes left: 9"
+label_settings = SubResource("LabelSettings_by82m")
 
 [node name="Timers" type="Node" parent="UI"]
 
@@ -249,6 +186,104 @@ love_threshold = 1
 
 [node name="Jingle" type="AudioStreamPlayer2D" parent="UI"]
 stream = ExtResource("16_svnk6")
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="bottom2" type="Sprite2D" parent="Background"]
+position = Vector2(-51, 992)
+scale = Vector2(0.675, 1.37642)
+texture = ExtResource("15_1thy1")
+
+[node name="watergrass3" type="Sprite2D" parent="Background"]
+modulate = Color(0.607843, 0.729412, 1, 0.784314)
+position = Vector2(-244, -117)
+rotation = 3.14159
+scale = Vector2(0.45, -0.45)
+texture = ExtResource("10_5u7dg")
+region_enabled = true
+region_rect = Rect2(217.766, 0, 782.234, 1061.42)
+
+[node name="Tree" type="Sprite2D" parent="Background"]
+position = Vector2(-290, -115)
+rotation = 3.14159
+scale = Vector2(0.137287, -0.137287)
+texture = ExtResource("7_svnk6")
+
+[node name="Dock" type="Sprite2D" parent="Background"]
+position = Vector2(437, -85)
+scale = Vector2(0.107, 0.081)
+texture = ExtResource("7_p325l")
+
+[node name="bottom" type="Sprite2D" parent="Background"]
+position = Vector2(-54, 1086)
+scale = Vector2(0.675, 0.674557)
+texture = ExtResource("15_1thy1")
+
+[node name="Lakeweed1" type="Sprite2D" parent="Background"]
+position = Vector2(-462.75, 1123.72)
+scale = Vector2(0.26083, 0.207556)
+texture = ExtResource("10_h3v2a")
+
+[node name="Lakeweed2" type="Sprite2D" parent="Background"]
+position = Vector2(-74.5001, 1143.47)
+rotation = -0.523599
+scale = Vector2(0.26083, 0.207556)
+texture = ExtResource("10_h3v2a")
+
+[node name="Lakeweed3" type="Sprite2D" parent="Background"]
+modulate = Color(0.605274, 0.605274, 0.605274, 1)
+position = Vector2(-564, 1392)
+scale = Vector2(0.566, 0.451)
+texture = ExtResource("10_h3v2a")
+
+[node name="Lakeweed4" type="Sprite2D" parent="Background"]
+modulate = Color(0.408329, 0.408329, 0.408329, 1)
+position = Vector2(-303, 1497)
+rotation = 0.279253
+scale = Vector2(0.646, 0.515)
+texture = ExtResource("10_h3v2a")
+
+[node name="watergrass" type="Sprite2D" parent="Background"]
+position = Vector2(401, -144)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_5u7dg")
+
+[node name="watergrass2" type="Sprite2D" parent="Background"]
+position = Vector2(-420, -119)
+rotation = 3.14159
+scale = Vector2(0.45, -0.45)
+texture = ExtResource("10_5u7dg")
+region_enabled = true
+region_rect = Rect2(217.766, 0, 782.234, 1061.42)
+
+[node name="Lakeweeds2" type="Sprite2D" parent="Background"]
+position = Vector2(144.125, 1107.98)
+rotation = -2.99673
+scale = Vector2(0.441, -0.329)
+texture = ExtResource("9_c7061")
+
+[node name="Lakeweeds3" type="Sprite2D" parent="Background"]
+self_modulate = Color(0.572988, 0.572988, 0.572988, 1)
+position = Vector2(44, 1386)
+rotation = -2.99673
+scale = Vector2(0.671, -0.501)
+texture = ExtResource("9_c7061")
+
+[node name="Lakeweeds" type="Sprite2D" parent="Background"]
+position = Vector2(-222.875, 1143.98)
+scale = Vector2(0.407938, 0.33086)
+texture = ExtResource("9_c7061")
+
+[node name="LakeweedsBlurry2" type="Sprite2D" parent="Background"]
+position = Vector2(440, 1161)
+rotation = 3.14159
+scale = Vector2(0.987, -0.703)
+texture = ExtResource("13_r7d3h")
+
+[node name="LakeweedsBlurry" type="Sprite2D" parent="Background"]
+position = Vector2(-551, 1149)
+scale = Vector2(0.993453, 0.83828)
+texture = ExtResource("13_r7d3h")
 
 [connection signal="caught_text_faded" from="UI" to="." method="_on_ui_caught_text_faded"]
 [connection signal="timeout" from="UI/Timers/FadeTimer" to="UI" method="_on_fade_timer_timeout"]

@@ -4,6 +4,7 @@ extends Control
 @onready var shrimp_image = $Shrimp
 @onready var background = $Background
 @onready var emotes = $Shrimp/Emotes
+@onready var emitter = $Shrimp/Emitter
 @export var dialogue_box_prefab: PackedScene
 @export var generic_item_ask_dialogue: DialogueResource
 @export var something_for_me_dialogue: DialogueResource
@@ -73,8 +74,10 @@ func parse_tags(line):
 			shrimp_image.texture = shrimp_data.images.nervous
 		elif tag == "sparkle":
 			shrimp_image.texture = shrimp_data.images.sparkle
+			emitter.emit_sparkles()
 		elif tag == "love":
 			shrimp_image.texture = shrimp_data.images.love
+			emitter.emit_hearts()
 		elif tag == "sad":
 			shrimp_image.texture = shrimp_data.images.sad
 		elif tag == "normal":
