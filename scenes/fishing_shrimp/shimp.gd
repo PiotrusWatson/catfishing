@@ -18,6 +18,8 @@ var left_wall: float
 var right_wall: float
 var away_direction: Vector2
 
+signal noticed_hook
+
 func _ready():
 	pick_direction()
 	
@@ -91,7 +93,9 @@ func _on_shimp_vision_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Hook") and shimp_status == ShimpIs.ROAMING and !body.is_hooked:
 		target = body
 		shimp_status = ShimpIs.CHASING
-		
+
+		noticed_hook.emit()
+
 
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	if will_stop:

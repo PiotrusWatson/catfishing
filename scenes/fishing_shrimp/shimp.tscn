@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dn46lkmmrym33"]
+[gd_scene load_steps=8 format=3 uid="uid://dn46lkmmrym33"]
 
 [ext_resource type="Script" uid="uid://04bklhku5jre" path="res://scenes/fishing_shrimp/shimp.gd" id="1_sx6ip"]
 [ext_resource type="Resource" uid="uid://654d7dklnoik" path="res://resources/shrimps/placeholder/simp.tres" id="2_wfdoo"]
+[ext_resource type="PackedScene" uid="uid://b2a5xtjo42m10" path="res://scenes/fishing_shrimp/attention_marker.tscn" id="3_atbdd"]
 [ext_resource type="Script" uid="uid://cuc7twhcgrsrw" path="res://addons/vision_cone_2d/vision_cone_2d.gd" id="3_hcvnh"]
 [ext_resource type="Texture2D" uid="uid://0hhgmiu67ibe" path="res://assets/shrimp_shadow.png" id="4_kyem3"]
 
@@ -68,6 +69,11 @@ collision_mask = 5
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SubShimp/ShimpVision"]
 
+[node name="AttentionMarker" parent="." instance=ExtResource("3_atbdd")]
+z_index = 2
+position = Vector2(0, -55)
+
+[connection signal="noticed_hook" from="." to="AttentionMarker" method="_on_shimp_noticed_hook"]
 [connection signal="timeout" from="Timers/BoredTimer" to="." method="_on_bored_timer_timeout"]
 [connection signal="timeout" from="Timers/FleeTimer" to="." method="_on_flee_timer_timeout"]
 [connection signal="body_entered" from="SubShimp/WallDetector" to="." method="_on_wall_detector_body_entered"]
