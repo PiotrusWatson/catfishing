@@ -40,5 +40,6 @@ func handle_giving(index: int):
 	Globals.temp_dating_state = Enums.DatingState.ITEM_RECEIVE
 	
 func _on_close_pressed() -> void:
+	GlobalMusicPlayer.play_click()
 	Globals.temp_dating_state = Enums.DatingState.CHARACTER
 	toggle_show(false)

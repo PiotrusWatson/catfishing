@@ -25,6 +25,7 @@ func _ready():
 	shrimp_dialogue = shrimp_data.basic_dialogue
 	background.texture = shrimp_data.backgrounds[0]
 	make_box()
+	GlobalMusicPlayer.play_dating()
 	
 func handle_start_dialogue():
 	spawned_box.set_theme(shrimp_data.basic_theme)

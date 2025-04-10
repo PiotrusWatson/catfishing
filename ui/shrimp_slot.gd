@@ -27,10 +27,12 @@ func _on_gui_input(event: InputEvent) -> void:
 
 
 func _on_no_pressed() -> void:
+	GlobalMusicPlayer.play_click()
 	toggle_menu(false)
 
 
 func _on_yes_pressed() -> void:
+	GlobalMusicPlayer.play_click()
 	Globals.current_shrimp = shrimp_info
 	Globals.end_status = Enums.EndStatus.PICKED
 	SceneChanger.change_scene(SceneChanger.Worlds.END_SCENE)

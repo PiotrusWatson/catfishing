@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://shh7avwjh53i"]
+[gd_scene load_steps=3 format=3 uid="uid://shh7avwjh53i"]
 
 [ext_resource type="Script" uid="uid://b05rschtcecm3" path="res://scripts/global_music_player.gd" id="1_s1g3d"]
+[ext_resource type="AudioStream" uid="uid://dmwja8xc47xkl" path="res://audio/sfx/Menu Clicking 1.wav" id="2_6vqc4"]
 
 [node name="GlobalMusicPlayer" type="AudioStreamPlayer"]
 script = ExtResource("1_s1g3d")
+
+[node name="MenuClick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_6vqc4")

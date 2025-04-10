@@ -34,8 +34,8 @@ func handle_music(last_scene: Worlds, new_scene: Worlds):
 		return
 	match scene_names_to_types[new_scene]:
 		Enums.SceneType.FISHING:
-			GlobalMusicPlayer.stop()
+			GlobalMusicPlayer.play_fishing()
 		Enums.SceneType.DATING:
-			GlobalMusicPlayer.play_dating()
+			GlobalMusicPlayer.stop()
 		Enums.SceneType.MENU:
 			GlobalMusicPlayer.play_menu()

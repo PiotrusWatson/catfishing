@@ -31,5 +31,6 @@ func show_shrimps(shrimps: Array[ShrimpType]):
 
 
 func _on_go_alone_pressed() -> void:
+	GlobalMusicPlayer.play_click()
 	Globals.end_status = Enums.EndStatus.ALONE
 	SceneChanger.change_scene(SceneChanger.Worlds.END_SCENE)
