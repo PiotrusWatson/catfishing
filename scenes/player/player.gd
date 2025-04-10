@@ -15,6 +15,7 @@ enum PlayerIs{IDLE, LEAVING_WATER, THROWING, CASTING, FISHING, HOOKING, CATCHING
 @onready var tooltip = $UI/Tooltip
 @onready var animator = $AnimationPlayer
 @onready var mewler = $Mewler
+@onready var reel = $Reel
 
 @export var rotation_speed = 0.5
 @export var max_force = 5.0
@@ -84,6 +85,7 @@ func handle_not_fishing_input(event: InputEvent):
 		force_increaser.stop()
 		fishing_rod.reset_reel()
 		extension_timer.start()
+		reel.play()
 		player_status = PlayerIs.THROWING
 		animator.play("fish")
 		mewler.mewl()
@@ -95,15 +97,19 @@ func handle_fishing_input(event: InputEvent):
 	if event.is_action_pressed("Throw"):
 		fishing_rod.reset_reel()
 		extension_timer.start()
+		reel.play()
 	elif event.is_action_released("Throw"):
 		extension_timer.stop()
 		fishing_rod.reset_reel()
+		reel.stop()
 		
 	if event.is_action_pressed("Pull"):
+		reel.play()
 		fishing_rod.reset_reel()
 		reduction_timer.start()
 		is_reeling = true
 	elif event.is_action_released("Pull"):
+		reel.stop()
 		reduction_timer.stop()
 		fishing_rod.reset_reel()
 		is_reeling = false
@@ -165,6 +171,7 @@ func get_target_from_mouse():
 
 func _on_cast_timer_timeout() -> void:
 	extension_timer.stop()
+	reel.stop()
 	stop_target.call_deferred()
 	player_status = PlayerIs.FISHING
 	fishing_rod.reset_reel()
@@ -180,6 +187,7 @@ func _on_force_increaser_timeout() -> void:
 
 func _on_leaving_water_timer_timeout() -> void:
 	reduction_timer.stop()
+	reel.stop()
 	fishing_rod.reset_rope()
 	player_status = PlayerIs.IDLE
 	tooltip.fade_in()

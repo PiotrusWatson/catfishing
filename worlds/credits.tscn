@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://c38f1v21f5iql"]
+[gd_scene load_steps=6 format=3 uid="uid://c38f1v21f5iql"]
 
 [ext_resource type="Theme" uid="uid://dklfh5537gj42" path="res://ui/credit_theme.tres" id="1_4ep43"]
 [ext_resource type="Script" uid="uid://b4d251acffa3p" path="res://worlds/credits.gd" id="2_coxcc"]
 [ext_resource type="FontFile" uid="uid://k4rlbr6l5dpt" path="res://fonts/Janitor.ttf" id="3_yqpls"]
+[ext_resource type="Theme" uid="uid://5256ncjfw5ax" path="res://ui/menu_button.tres" id="4_coxcc"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4ep43"]
 font = ExtResource("3_yqpls")
@@ -71,11 +72,11 @@ text = "Zoi: Artist, Narrative Consultant, Other Manager"
 
 [node name="Berk" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "Berk: Narrative Designer, Dialogue Writer, Datemaster"
+text = "Berk: Narrative Designer, Dialogue Writer, Datemaster, Cat"
 
 [node name="Alina" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "Alina: Artist, Musician, Shrimp"
+text = "Alina: Artist, Musician, Narrative Consultant, Shrimp"
 
 [node name="Maruf" type="Label" parent="VBoxContainer"]
 layout_mode = 2
@@ -95,6 +96,7 @@ offset_left = 754.0
 offset_top = 563.0
 offset_right = 1141.0
 offset_bottom = 635.0
+theme = ExtResource("4_coxcc")
 text = "Back To Menu
 "
 

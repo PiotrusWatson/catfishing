@@ -1,0 +1,28 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://5256ncjfw5ax"]
+
+[ext_resource type="FontFile" uid="uid://e221dwkwx17l" path="res://fonts/Halogen.ttf" id="1_ldcua"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v7a2h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n1akl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4futp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yrw67"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vnpgj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ml7d"]
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0.0941176, 0.709804, 0.392157, 1)
+Button/colors/font_outline_color = Color(0.0941176, 0.709804, 0.392157, 1)
+Button/font_sizes/font_size = 64
+Button/fonts/font = ExtResource("1_ldcua")
+Button/styles/disabled = SubResource("StyleBoxEmpty_v7a2h")
+Button/styles/focus = SubResource("StyleBoxEmpty_n1akl")
+Button/styles/hover = SubResource("StyleBoxEmpty_4futp")
+Button/styles/hover_mirrored = SubResource("StyleBoxEmpty_yrw67")
+Button/styles/normal = SubResource("StyleBoxEmpty_vnpgj")
+Button/styles/pressed = SubResource("StyleBoxEmpty_8ml7d")
