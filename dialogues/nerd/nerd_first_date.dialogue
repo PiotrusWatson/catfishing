@@ -27,7 +27,6 @@ Lauri: Oh… You scared me… Didn’t realize you were there.[#nervous]
 
 ~ continue_stare
 The man seems to be unyielding in his pursuit of eye-contact-avoidance. He stalwartly keeps reading his book.
-
 Lauri: Narratologist prick...
 - I thought you wanted to be here?
 	=> wanted_to_be_here
@@ -46,12 +45,9 @@ Lauri: Oh... I'm sorry. I sometimes lose my awareness when I'm deeply interested
 ~ like_that_book
 Lauri: Well...[#nervous]
 He seems to be fighting REALLY hard to not correct you...
-
 Lauri: It's not a book really...[#love]
 Yet he fails gloriously.[#normal]
-
 Lauri: You wouldn't be interested in it anyway, don't worry about it...
-
 - I'm taking an interest
 	=> taking_interest
 - You guessed right
@@ -60,11 +56,8 @@ Lauri: You wouldn't be interested in it anyway, don't worry about it...
 ~ taking_interest
 Lauri: Well! It's an article by [wave amp=25 freq=5]Espen Aarseth[/wave] where he defines what a video game is using several thousand flow charts [#love]
 Lauri: As you can see a game is made up of several "sub elements" involving "narrative segments", "paidea particles", "ludus particles", "infogrames"....[#sparkle]
-
 .... You tune out ....[#normal]
-
 .... Lauri doesn't notice....
-
 Lauri: .... And overall I think it's quite exhaustive but I'm unsure if [wait=1][wave amp=25 freq=5]"cozy games"[/wave] fit into this framework...
 .... You zone out again ....
 Lauri: ....Anyway! You've been so attentive!!! I never thought someone would care so much about formalist game studies!![#love]
@@ -77,22 +70,15 @@ Lauri: ....Anyway! You've been so attentive!!! I never thought someone would car
 
 ~ dream_sequence
 You find yourself in a dense coral reef, drifting lazilly in the deep.
-
 A little hole under a field of anemones piques your interest. You make your way towards it.
-
 Suddenly, disaster! A [wait=1]blue lobster jumps at you...
-
 Aggressive piano music echoes in your head...
-
 Claws [shake rate=20 level=10]clashing[/shake] and maxillipeds [wave amp=25 freq=5]vibrating[/wave]...
-
 It's so close now. You smell salt and metal. 
 It reaches for its own head, and with one swift movement tears it clean off.
 You're met with the unmistakable face of [wait=1][shake rate=20 level=10]your ex[/shake].
-
 You wake up with a start.
 Lauri is still talking...
-
 - Act natural
 	=> act_natural
 - I need to get out of here or I'll die
@@ -101,20 +87,13 @@ Lauri is still talking...
 ~ act_natural
 Lauri: So yeah, I think formalism is the best way to approach aesthetic experiences...[#sparkle]
 You're sure he didn't notice you falling asleep.[#normal]
-
 As a matter of fact, you don't even remember when he looked at you last.
 Lauri: ...especially when exploring narrative-heavy games. [#sparkle]
-
 He seems to be calming down now.[#normal]
-
 Lauri: This date went better than I expected. Thank you for being such a great listener...
-
 Lauri: I'd love to... Uhm...[#nervous]
-
 Lauri squeezes words out of his mouth.
-
 Lauri: Get to know you better!![#love]
-
 - I'd love another date
 	[#normal]
 	=> love_another_date
@@ -172,7 +151,6 @@ Lauri: That's why you called it a science, right?[#nervous]
 ~ never_thought_otherwise
 Lauri perks up and smiles at you. [#sparkle]
 He seems to be enjoying your presence.[#normal]
-
 Lauri: I'm glad I'm with a like-minded individual who is also interested in my passion!
 - I love passionate people
 	=> love_passion
@@ -182,7 +160,6 @@ Lauri: I'm glad I'm with a like-minded individual who is also interested in my p
 ~ love_passion
 Lauri clutches his article more tightly.[#nervous]
 Lauri: Well... I am really passionate about lots of stuff...
-
 Lauri: Especially about people I really care about...[#love]
 Lauri: I can be very passionate and giving when I'm with them...
 - I'd love to explore that side of you...
