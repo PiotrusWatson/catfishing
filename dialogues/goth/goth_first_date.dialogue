@@ -1,0 +1,157 @@
+~ start
+You hear the soft whizz of a frisbee slicing the air on the surface of the water...
+Followed by a solid clack as it ricochets off a piece of driftwood... 
+
+A small crowd of shrimp are watching from a distance, whispering.
+
+Then you see her, arms crossed, one claw idly spinning a matte black frisbee like it’s the only thing holding her in this reality. 
+
+Lilith: What are you looking at, [shake rate=20 level=10]buddy[/shake]??[#angry]
+- You?
+	=> im_lookin_at_you
+- I didn't realise that I was staring
+	=> didnt_realise_staring
+
+~ im_lookin_at_you
+Lilith: Oh [wave amp=15 freq=5]cute[/wave], a bold little Catfish.
+She stares daggers at you...
+
+Lilith: Well... at least you’ve got taste.[#normal]
+
+She spins a frisbee in her hand and keeps talking.
+Lilith: Most people around here can’t see past the apparel.
+
+Lilith: You might be off to a decent start.
+Lilith: Tell me, then, is this your first time in the tidepool, or do you just keep a low profile?
+- It's my first time after my breakup
+	=> trauma_dump
+- I've fished others as well
+	=> theres_others
+
+~ trauma_dump
+Lilith: Oh, I knew you looked haunted...
+Lilith: Not in a bad way though, I like the look.[#sparkle]
+Lilith: But no need to fear, I have the solution...[#normal]
+- What's the solution?
+	=> sick_tricks
+- A-are you the solution?
+	=> you_can_fix_me
+
+~ sick_tricks
+She puts the frisbee perpendicular to her left hand...[#sparkle]
+
+In a one swift move, the frisbee travels from her left hand to her shoulder. It's electrifying.
+
+And then to her right hand...
+
+She clasps the frisbee and starts spinning it.[#normal]
+- I'm so lost
+	=> lost_about_frisbee
+- Sweet move
+	=> sweet_move
+
+~ sweet_move
+Lilith sighs and starts talking again.[#sad]
+Lilith: It's so much more than a sweet move...
+
+Lilith: It’s about alignment. Left hand, shoulder, right hand—it’s one current. One thought. If you hesitate, it breaks. If you rush, it stutters...[#normal]
+
+She glances down at her shoulder, tracing where the disc traveled.
+
+Lilith: I don’t control the disc. [wait=1]I listen to it. I let it roll across me like... like memory. Like grief. You carry it, just long enough to pass it on.
+- It's just a frisbee
+	=> not_deep
+- Maybe I should also pass my grief on...
+	=> pass_grief_on
+
+~ lost_about_frisbee
+Lilith: It's frisbee, dude. Always has been....[#sparkle]
+She tosses the frisbee. It curves beautifully into a perfect bank shot off a tree and lands back in her hands.
+
+Lilith: You ever notice how a frisbee only flies right when you let go at just the right moment? [#normal]
+- That's a ridiculous metaphor
+	=> ridiculous_metaphor
+- I guess I also need to let go
+	=> need_to_let_go
+
+~ theres_others
+
+
+~ didnt_realise_staring
+
+~ you_can_fix_me
+Lilith: Wow, easy there...[#nervous]
+Lilith: Maybe wait like five minutes before you objectify me.[#angry]
+Lilith: So you saw the fishnets, the eyeliner, the vibe, and thought, ‘Oh, she’s a goth mommy shrimp, I bet she’ll step on me.'[#normal]
+
+Lilith: Pathetic.
+- But can you step on me?
+	=> step_on_me
+
+~ pass_grief_on
+Lilith: You should.
+She throws her frisbee again and it ricochets off two different trees...
+... and comes back to her...
+Lilith: Everyone deserves to fly...
+- Can I fly with you?
+
+- I'm happy on the ground
+
+~ need_to_let_go
+Lilith: Maybe. Or maybe you just need to [shake rate=20 level=10]THINK FAST[/shake][#sparkle]
+Before you know it, the frisbee is flying towards you. Fast. [#normal]
+- Catch it
+	=> caught_frisbee
+- Wait, what?
+	=> dodged_frisbee
+~ not_deep
+Lilith: I wasn't expecting you to understand it...[#sad]
+Lilith stares off into the horizon...
+
+Lilith: I never expected to be understood. It's pointless.[#normal]
+
+Lilith: We're done here. 
+Lilith faces away from you and leaves.
+do Globals.decrement_current_love()
+=> END
+
+~ step_on_me
+Lilith throws her frisbee to your head.[#angry]
+It hits your head with a loud [shake rate=20 level=10]"Thunk!"[/shake]
+It is obvious she wants you to leave.
+You leave.
+do Globals.decrement_current_love()
+=> END
+
+~ ridiculous_metaphor
+Lilith: [shake rate=20 level=10]You're[/shake] a ridiculous metaphor.[#angry]
+Lilith: I can't believe I even tried to talk with you on the level.
+Lilith: You're not worth my time.
+
+She leaves.
+do Globals.decrement_current_love()
+=> END!
+
+~ caught_frisbee
+Your hand snaps out and catches the frisbee. You look from it back to her, slightly unsure about what just happened.
+Lillith looks you up and down.
+Lillith: Impressive, Cat.
+She beckons you over. You reach to give her back her frisbee, when you notice it. Scrawled on the bottom are 10 digits.
+Almost like...a phone number...
+Before you realise what's happening, she's left. You're still holding the frisbee.
+You're pretty confused about what just happened.
+do Globals.increment_current_love()
+=> END
+
+~ fly_with_you
+
+
+~ dodged_frisbee
+The frisbee passes a hairs breadth from your face. Is she trying to kill you?
+You leap to your feet and glare at her. But Lillith just looks disappointed.
+Lillith: Unfortunate.
+Lillith: It was going so well...
+Quietly, she collects her frisbee and leaves.
+Was this some kind of test?
+do Globals.decrement_current_love()
+=> END

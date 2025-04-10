@@ -2,14 +2,93 @@
 You see a commanding shrimp figure emerge in front of you.
 She seems to be talking to someone on the phone.
 
-Hilma: I swear, Johnny, if ya don't fix yer attitude...[#angry]
-Hilma: I'll make sure you'll sleep with da fishes soon enough, y'hear?
+Hilma: I swear, Johnny, if ya don't fix yer [shake rate=20 level=10]attitude[/shake]...[#angry]
+Hilma: I'll make sure you'll sleep with da fishes soon enough, [wait=1]capeesh?
 
-Hilma: And not in a good way...
+Hilma:[wave amp=25 freq=5] And not in a good way...[/wave][#normal]
 
 She hangs up the phone and notices you...
 
 Her countenance and demeanor change immediately after seeing you.
 
-Hilma: Awwww who's this cuuutie heree???[#love]
+Hilma: Awwww who's this cuuutie heere???[#love]
+
+- I'm Cat
+	=> im_cat
+
+~ im_cat
+Hilma reaches for you in an attempt to pinch your cheeks.
+- Let her
+	=> let_pinch
+- Take a step back
+	=> step_back
+
+~ let_pinch
+Hilma pinches your cheeks and rattles your face in a fit of cute aggression...
+
+Hilma: YOU...[#nervous]
+Hilma: HAVE...[#angry]
+Hilma: SUCH...
+Hilma: SQUISHY...[#love]
+Hilma: [wave amp=25 freq=5]CHEEEKSS[/wave]!!!
+
+She keeps slushing your brain around like it's a goldfish in an aquarium...
+
+Hilma: AAARGHHHHHSSS YOU'RE SO CUUUTEE I'M GONNA DIEEE!!!!
+
+- Revel in the attention like the little pet you are
+	=> im_pet
+- IIII THINKGKK THATS ENOUGHHH
+	=> pls_stop
+
+~ pls_stop
+
+~ im_pet
+She pets you for like 5 minutes...[#normal]
+You decide to enjoy it...
+
+Hilma: Yer gonna kill meee with this cuutie toootie facee [wave amp=25 freq=5]AHHHRRGGHHH[/wave]!!![#love]
+
+Suddenly, she grins, and raises her hand back as if to spank you[#normal]
+
+- Wooww!!! We just met!
+	=> we_just_met
+- Embrace the buttslap
+	=> my_bum
+
+~ step_back
+
+~ we_just_met
+
+~ my_bum
+Hilma slaps your ass...
+
+An echoing sound emanates from the sudden union of Hilma's hand and your butt...
+
+The slap feels playful, but VERY strong...
+- Start crying
+	=> crying
+- Keep the tears inside
+	=> repression
+
+~ crying
+Hilma: Awwwww~ [wave amp=25 freq=5]I'm soooo sorry honeeyyy[/wave].... [#nervous]
+Hilma: My sweet delicate kittyy!!![#love]
+
+She reaches into her bag and procures a chocolate bar.
+
+Hilma: You wanna have a chocolate bar and feel better my [wait=1][wave amp=25 freq=5]cootiiee pattoootiee[/wave]???
+- Get the chocolate bar and eat it while crying
+	=> eat_chocolate
+- Run while you can
+	=> run_away
+
+~ repression
+
+~ eat_chocolate
+Hilma: OOOOhhh my heartt...[#sad]
+Hilma: I'm sowwy sweeetieee, let me make it up to you on our next daatee!!![#love]
+~ run_away
+
+
 => END

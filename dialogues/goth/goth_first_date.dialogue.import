@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://c4dg0djktib7v"
+valid=false
+
+[deps]
+
+source_file="res://dialogues/goth/goth_first_date.dialogue"
+
+[params]
+
+defaults=true
