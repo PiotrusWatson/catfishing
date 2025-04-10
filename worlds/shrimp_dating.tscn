@@ -121,6 +121,7 @@ region_enabled = true
 region_rect = Rect2(217.766, 0, 782.234, 1061.42)
 
 [node name="Shrimp" type="TextureRect" parent="."]
+z_index = 1
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -137,4 +138,6 @@ texture = ExtResource("1_tmjs4")
 expand_mode = 1
 
 [node name="Emitter" parent="Shrimp" instance=ExtResource("13_h7fn3")]
+z_index = 0
+z_as_relative = false
 position = Vector2(234, 273)

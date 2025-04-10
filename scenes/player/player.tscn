@@ -464,7 +464,7 @@ libraries = {
 speed_scale = 0.7
 
 [node name="Mewler" type="AudioStreamPlayer2D" parent="."]
-volume_db = 4.0
+volume_db = 10.0
 script = ExtResource("14_ugbui")
 mews = Array[AudioStream]([ExtResource("15_myrg7"), ExtResource("16_kvlxm")])
 

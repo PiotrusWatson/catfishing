@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://088lq5010q43"
+path="res://.godot/imported/boss_first_date.dialogue-8fe73705ad615c8f55dfd110c525ff7f.tres"
+
+[deps]
+
+source_file="res://dialogues/boss/boss_first_date.dialogue"
+dest_files=["res://.godot/imported/boss_first_date.dialogue-8fe73705ad615c8f55dfd110c525ff7f.tres"]
+
+[params]
+
+defaults=true
