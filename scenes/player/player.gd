@@ -14,6 +14,8 @@ enum PlayerIs{IDLE, LEAVING_WATER, THROWING, CASTING, FISHING, HOOKING, CATCHING
 @onready var fishing_bar = $UI/FishingBar
 @onready var tooltip = $UI/Tooltip
 @onready var animator = $AnimationPlayer
+@onready var mewler = $Mewler
+
 @export var rotation_speed = 0.5
 @export var max_force = 5.0
 @export var force_step = 0.3
@@ -84,6 +86,7 @@ func handle_not_fishing_input(event: InputEvent):
 		extension_timer.start()
 		player_status = PlayerIs.THROWING
 		animator.play("fish")
+		mewler.mewl()
 	
 func handle_fishing_input(event: InputEvent):
 	if event is InputEventMouseMotion:

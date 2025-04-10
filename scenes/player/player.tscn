@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bjxfp5r5xfw4f"]
+[gd_scene load_steps=23 format=3 uid="uid://bjxfp5r5xfw4f"]
 
 [ext_resource type="Script" uid="uid://b2u6pnq3whpdm" path="res://scenes/player/player.gd" id="1_qhqgy"]
 [ext_resource type="SpriteFrames" uid="uid://x7nr4ebm7nc4" path="res://scenes/player/player_anims.tres" id="2_qhqgy"]
@@ -13,6 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://c3k4tne8tirwg" path="res://ui/fader.tscn" id="10_h17s1"]
 [ext_resource type="LabelSettings" uid="uid://bh7imdqglbjak" path="res://scenes/player/instruction_label.tres" id="11_fm80t"]
 [ext_resource type="Texture2D" uid="uid://dxp5jvox6yl38" path="res://ui/mouse_l.png" id="11_gx1jg"]
+[ext_resource type="Script" uid="uid://chqjgnhj0dosf" path="res://scenes/player/mewler.gd" id="14_ugbui"]
+[ext_resource type="AudioStream" uid="uid://detj8w16xj6g8" path="res://audio/sfx/Meow.mp3" id="15_myrg7"]
+[ext_resource type="AudioStream" uid="uid://cq7hi6jve6sdk" path="res://audio/sfx/Meow2.mp3" id="16_kvlxm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gmlin"]
 
@@ -456,6 +459,11 @@ libraries = {
 &"": SubResource("AnimationLibrary_je7p5")
 }
 speed_scale = 0.7
+
+[node name="Mewler" type="AudioStreamPlayer2D" parent="."]
+volume_db = 4.0
+script = ExtResource("14_ugbui")
+mews = Array[AudioStream]([ExtResource("15_myrg7"), ExtResource("16_kvlxm")])
 
 [connection signal="caught_shrimp" from="Pivot/FishingRod" to="." method="_on_fishing_rod_caught_shrimp"]
 [connection signal="changed_fishing_status" from="Pivot/FishingRod" to="." method="_on_fishing_rod_changed_fishing_status"]
