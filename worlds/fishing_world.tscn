@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://bqs3qry1n25j7"]
+[gd_scene load_steps=41 format=3 uid="uid://bqs3qry1n25j7"]
 
 [ext_resource type="Script" uid="uid://dh828xw3ebhk4" path="res://worlds/fishing_signals.gd" id="1_585q5"]
 [ext_resource type="PackedScene" uid="uid://bjxfp5r5xfw4f" path="res://scenes/player/player.tscn" id="2_1kayd"]
@@ -25,7 +25,9 @@
 [ext_resource type="Texture2D" uid="uid://bdu3mogvkwtij" path="res://assets/environment/bottom_noplants.png" id="15_1thy1"]
 [ext_resource type="FontFile" uid="uid://e221dwkwx17l" path="res://fonts/Halogen.ttf" id="15_5u7dg"]
 [ext_resource type="AudioStream" uid="uid://d14w6y61yc0e7" path="res://audio/sfx/Catching Shrimp 2.wav" id="16_svnk6"]
+[ext_resource type="Texture2D" uid="uid://dxp5jvox6yl38" path="res://ui/mouse_l.png" id="18_clv50"]
 [ext_resource type="LabelSettings" uid="uid://bh7imdqglbjak" path="res://scenes/player/instruction_label.tres" id="19_if13n"]
+[ext_resource type="Texture2D" uid="uid://dvg5and1psvj2" path="res://ui/mouse_r.png" id="20_xcj63"]
 [ext_resource type="FontFile" uid="uid://k4rlbr6l5dpt" path="res://fonts/Janitor.ttf" id="21_0y3ke"]
 [ext_resource type="Texture2D" uid="uid://c7kd4capun6dy" path="res://assets/environment/pexels-pixabay-261403.jpg" id="27_qsf8q"]
 
@@ -68,6 +70,33 @@ font_size = 32
 font_color = Color(0, 0, 0, 1)
 outline_size = 10
 
+[sub_resource type="Animation" id="Animation_yh0t1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.405084, 0.840063)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-111.5, 1315.75)]
+}
+
 [sub_resource type="Animation" id="Animation_qsf8q"]
 resource_name = "waves"
 length = 10.0
@@ -95,33 +124,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(64, 1320), Vector2(-111.5, 1012.25)]
-}
-
-[sub_resource type="Animation" id="Animation_yh0t1"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0.405084, 0.840063)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-111.5, 1315.75)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_clv50"]
@@ -224,8 +226,27 @@ thing_to_spawn = ExtResource("3_ncbgm")
 item_thing_to_spawn = ExtResource("11_p325l")
 shrimp_to_item_ratio = 1.0
 
+[node name="UI" parent="FishingZone" index="4"]
+z_index = 1
+
+[node name="LeftClick" parent="FishingZone/UI/ToolTip" index="0"]
+offset_left = 17.0
+offset_top = 3.0
+offset_right = 657.0
+offset_bottom = 883.0
+texture = ExtResource("18_clv50")
+stretch_mode = 0
+
 [node name="HookGoDown" parent="FishingZone/UI/ToolTip" index="1"]
 label_settings = ExtResource("19_if13n")
+
+[node name="TextureRect" parent="FishingZone/UI/ToolTip" index="2"]
+offset_left = 17.0
+offset_top = 96.0
+offset_right = 687.0
+offset_bottom = 996.0
+texture = ExtResource("20_xcj63")
+stretch_mode = 0
 
 [node name="HookGoUp" parent="FishingZone/UI/ToolTip" index="3"]
 label_settings = ExtResource("19_if13n")
