@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ShrimpType" load_steps=6 format=3 uid="uid://cbsrempnmybuw"]
+
+[ext_resource type="Resource" uid="uid://c3125ba8ba88s" path="res://resources/shrimps/real/shrimp_images/goth.tres" id="1_0i4kx"]
+[ext_resource type="Script" uid="uid://dtjomkji7bwyx" path="res://scripts/shrimptype.gd" id="1_d5q78"]
+[ext_resource type="Resource" uid="uid://c4dg0djktib7v" path="res://dialogues/goth/goth_first_date.dialogue" id="1_ssj3t"]
+[ext_resource type="Resource" uid="uid://c0bs2jdm6nxjd" path="res://dialogues/goth/goth_ending.dialogue" id="2_1skw1"]
+[ext_resource type="Theme" uid="uid://sh6ju41csl7u" path="res://ui/character_theme.tres" id="2_sphyi"]
+
+[resource]
+script = ExtResource("1_d5q78")
+name = "Lilith"
+images = ExtResource("1_0i4kx")
+backgrounds = Array[Texture2D]([null])
+basic_dialogue = ExtResource("1_ssj3t")
+ending_dialogue = ExtResource("2_1skw1")
+basic_theme = ExtResource("2_sphyi")
+starting_love = 1
+metadata/_custom_type_script = "uid://dtjomkji7bwyx"

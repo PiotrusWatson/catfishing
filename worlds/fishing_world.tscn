@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://bqs3qry1n25j7"]
+[gd_scene load_steps=42 format=3 uid="uid://bqs3qry1n25j7"]
 
 [ext_resource type="Script" uid="uid://dh828xw3ebhk4" path="res://worlds/fishing_signals.gd" id="1_585q5"]
 [ext_resource type="PackedScene" uid="uid://bjxfp5r5xfw4f" path="res://scenes/player/player.tscn" id="2_1kayd"]
@@ -16,6 +16,7 @@
 [ext_resource type="Script" uid="uid://d0votwagi38uu" path="res://ui/ui.gd" id="7_d3nh4"]
 [ext_resource type="Texture2D" uid="uid://degaq6pgcsc2g" path="res://assets/environment/rocdoc.png" id="7_p325l"]
 [ext_resource type="Texture2D" uid="uid://dlxifx2uyr7d" path="res://assets/environment/tregrarock.png" id="7_svnk6"]
+[ext_resource type="Resource" uid="uid://cbsrempnmybuw" path="res://resources/shrimps/real/goth.tres" id="7_xcj63"]
 [ext_resource type="Texture2D" uid="uid://cc51hytgj6fsx" path="res://assets/environment/lakeweeds.png" id="9_c7061"]
 [ext_resource type="Texture2D" uid="uid://bcfbip3jxr8si" path="res://assets/environment/grassss.png" id="10_5u7dg"]
 [ext_resource type="Texture2D" uid="uid://dgkxxhq2kgkr" path="res://assets/environment/lakeweed1.png" id="10_h3v2a"]
@@ -134,7 +135,7 @@ _data = {
 
 [node name="FishingWorld" type="Node2D"]
 script = ExtResource("1_585q5")
-active_shrimps = Array[ExtResource("2_iq87m")]([ExtResource("3_svnk6"), ExtResource("4_5u7dg"), ExtResource("5_umak0"), ExtResource("6_qsf8q")])
+active_shrimps = Array[ExtResource("2_iq87m")]([ExtResource("3_svnk6"), ExtResource("4_5u7dg"), ExtResource("5_umak0"), ExtResource("6_qsf8q"), ExtResource("7_xcj63")])
 fishing_limit = 4
 
 [node name="HookCamera" type="Camera2D" parent="."]

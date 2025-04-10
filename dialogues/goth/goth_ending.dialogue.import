@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://c0bs2jdm6nxjd"
+path="res://.godot/imported/goth_ending.dialogue-e8700ae56c2e72c1147368745b49cb98.tres"
+
+[deps]
+
+source_file="res://dialogues/goth/goth_ending.dialogue"
+dest_files=["res://.godot/imported/goth_ending.dialogue-e8700ae56c2e72c1147368745b49cb98.tres"]
+
+[params]
+
+defaults=true

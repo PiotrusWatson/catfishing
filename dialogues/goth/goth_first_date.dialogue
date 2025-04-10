@@ -39,9 +39,7 @@ Lilith: But no need to fear, I have the solution...[#normal]
 
 ~ sick_tricks
 She puts the frisbee perpendicular to her left hand...[#sparkle]
-
 In a one swift move, the frisbee travels from her left hand to her shoulder. It's electrifying.
-
 And then to her right hand...
 
 She clasps the frisbee and starts spinning it.[#normal]
@@ -75,27 +73,86 @@ Lilith: You ever notice how a frisbee only flies right when you let go at just t
 	=> need_to_let_go
 
 ~ theres_others
+Lilith seems impressed. [#sparkle]
 
+She eyes you from head to foot...
+
+Lilith: So, are you like poly or, just looking or something??[#normal]
+- I'm poly
+	=> poly_bad
+- Just trying to meet people
+	=> trying_to_meet_people
+
+~ trying_to_meet_people
+She blinks once, like your honesty surprised her more than it should’ve.[#nervous]
+Lilith: Yeah? That’s... rare. Most shrimp around here are just trying to be seen. Big difference.[#normal]
+
+She twirls the frisbee again, slower this time, more thoughtful.
+
+Lilith: Meeting someone means you show up. Flaws and all. Not just the parts you polished.
+
+She finally looks at you. Really looks, while spinning her frisbee.
+
+Lilith: So... who are you trying to meet? Anyone? 
+Lilith: Or someone who might actually see you back?
+- I'm looking for meaning
+	=> meaning
+- I'm looking for a goth girl who can step on me
+	=> goth_step
+
+~ goth_step
+Lilith: Is that what you only see when you look at me?[#angry]
+Lilith: Pathetic.
+Lilith: Just leave, dude.
+- Leave
+	=> leave
+- But can you step on me?
+	=> step_on_me
+
+~ meaning
+Lilith: Aren’t we all? [#sad]
+She looks down at the frisbee in her claws, then turns it slowly, as if the answer might be carved into the rim.
+
+Lilith: Everyone wants something to hold onto. A sign. A purpose. Something that says, ‘You’re not just drifting in the current'.
+
+She turns to you with expectance on her face. [#normal]
+
+Lilith: But maybe...
+
+Lilith: We can just fly, instead of drifting.
+- Can I fly with you?
+	=> need_to_let_go
+- I'm happy on the ground
+	=> grounded
 
 ~ didnt_realise_staring
+Lilith: Mmhm. That’s what they all say...[#angry]
+Lilith: Next time, try owning it. [wave amp=15 freq=5]The ocean’s full of cowards.[/wave][#normal]
 
+Lilith: And I’m not impressed by accidental glances.
+Lilith: Tell me, is this your first time in the tidepool?
+- It's my first time after my breakup
+	=> trauma_dump
+- I've fished others as well
+	=> theres_others
 ~ you_can_fix_me
 Lilith: Wow, easy there...[#nervous]
 Lilith: Maybe wait like five minutes before you objectify me.[#angry]
 Lilith: So you saw the fishnets, the eyeliner, the vibe, and thought, ‘Oh, she’s a goth mommy shrimp, I bet she’ll step on me.'[#normal]
 
-Lilith: Pathetic.
+Lilith: [shake rate=20 level=10]Pathetic.[/shake][#angry]
 - But can you step on me?
 	=> step_on_me
 
 ~ pass_grief_on
-Lilith: You should.
-She throws her frisbee again and it ricochets off two different trees...
-... and comes back to her...
-Lilith: Everyone deserves to fly...
+Lilith: You should.[#sparkle]
+She throws her frisbee again. It ricochets off two different trees...
+... and comes back to her.
+Lilith: Everyone deserves to fly.[#normal]
 - Can I fly with you?
-
+	=> need_to_let_go
 - I'm happy on the ground
+	=> grounded
 
 ~ need_to_let_go
 Lilith: Maybe. Or maybe you just need to [shake rate=20 level=10]THINK FAST[/shake][#sparkle]
@@ -104,6 +161,7 @@ Before you know it, the frisbee is flying towards you. Fast. [#normal]
 	=> caught_frisbee
 - Wait, what?
 	=> dodged_frisbee
+
 ~ not_deep
 Lilith: I wasn't expecting you to understand it...[#sad]
 Lilith stares off into the horizon...
@@ -143,8 +201,6 @@ You're pretty confused about what just happened.
 do Globals.increment_current_love()
 => END
 
-~ fly_with_you
-
 
 ~ dodged_frisbee
 The frisbee passes a hairs breadth from your face. Is she trying to kill you?
@@ -155,3 +211,33 @@ Quietly, she collects her frisbee and leaves.
 Was this some kind of test?
 do Globals.decrement_current_love()
 => END
+
+~ grounded
+Lilith shrugs. [#normal]
+Lilith: It's your life.
+Lilith: Why would I care?
+
+She throws her frisbee in the air...
+... and it lands in her bag.
+
+She doesn't say anything else. She just leaves.
+do Globals.decrement_current_love()
+=> END
+
+~ poly_bad
+Lilith: Well, that's a shame...[#sad]
+
+Lilith: Didn't know you were so spineless.[#angry]
+
+Lilith: Go elsewhere with your commitment issues.
+
+Lilith: I don't do poly, [shake rate=20 level=10]buddy[/shake]. Get lost.
+
+It seems like Lilith isn't interested in you anymore.
+do Globals.decrement_current_love()
+=> END!
+
+~ leave
+You leave. 
+do Globals.decrement_current_love()
+=> END!

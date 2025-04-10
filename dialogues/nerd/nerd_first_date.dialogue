@@ -3,14 +3,12 @@ You see a preoccupied shrimp caught up in his book. He seems to be mumbling to h
 If you had to guess his name, it'd probably be "Lauri".
 Lauri: [shake rate=20 level=10]Huizinga?[/shake] … No… No…[#nervous]
 - Make eye contact
-	[#normal]
 	=> contact
 - Who's Huizinga?
-	[#normal]
 	=> whos_huizinga
 
 ~ contact
-You try to make eye contact, but it is almost like he is deliberately avoiding your gaze.
+You try to make eye contact, but it is almost like he is deliberately avoiding your gaze.[#normal]
 - Keep staring at him
 	=> continue_stare
 - Who's Huizinga?
@@ -19,15 +17,13 @@ You try to make eye contact, but it is almost like he is deliberately avoiding y
 ~ whos_huizinga
 Lauri: Oh… You scared me… Didn’t realize you were there.[#nervous]
 - I literally fished you like five seconds ago.
-	[#normal]
 	=> fished_you_five_seconds
 - It's alright, I also get lost in stories sometimes
-	[#normal]
 	=> get_lost_in_stories
 
 ~ continue_stare
-The man seems to be unyielding in his pursuit of eye-contact-avoidance. He stalwartly keeps reading his book.
-Lauri: Narratologist prick...
+The man seems to be unyielding in his pursuit of eye-contact-avoidance. He stalwartly keeps reading his book.	[#normal]
+Lauri: Narratologist prick...[#angry]
 - I thought you wanted to be here?
 	=> wanted_to_be_here
 - You seem to really like that book
@@ -36,10 +32,8 @@ Lauri: Narratologist prick...
 ~ wanted_to_be_here
 Lauri: Oh... I'm sorry. I sometimes lose my awareness when I'm deeply interested in something.[#nervous]
 - It's alright...I also get lost in stories sometimes
-	[#normal]
 	=> get_lost_in_stories
 - Don't come here if you can't hold a conversation
-	[#normal]
 	=> brutal_rejection
 	
 ~ like_that_book
@@ -62,14 +56,12 @@ Lauri: .... And overall I think it's quite exhaustive but I'm unsure if [wait=1]
 .... You zone out again ....
 Lauri: ....Anyway! You've been so attentive!!! I never thought someone would care so much about formalist game studies!![#love]
 - I love passionate people
-	[#normal]
 	=> love_passion
 - Did I fall asleep standing up??
-	[#normal]
 	=> dream_sequence
 
 ~ dream_sequence
-You find yourself in a dense coral reef, drifting lazilly in the deep.
+You find yourself in a dense coral reef, drifting lazilly in the deep. [#normal]
 A little hole under a field of anemones piques your interest. You make your way towards it.
 Suddenly, disaster! A [wait=1]blue lobster jumps at you...
 Aggressive piano music echoes in your head...
@@ -95,19 +87,15 @@ Lauri: I'd love to... Uhm...[#nervous]
 Lauri squeezes words out of his mouth.
 Lauri: Get to know you better!![#love]
 - I'd love another date
-	[#normal]
 	=> love_another_date
 - I don't think this can work
-	[#normal]
 	=> cant_work
 
 ~ fished_you_five_seconds
 Lauri: I'm sorry, I'm just nervous... It was my aunt's idea to get into the dating pool. I'm not quite sure if I'm ready to date yet...[#nervous]
 - You shouldn't blindly follow other people's advice
-	[#normal]
 	=> advice_rejection
 - You seem to really like that book
-	[#normal]
 	=> like_that_book
 
 
@@ -116,7 +104,6 @@ Lauri looks upset. [#sad]
 Lauri: So... you really don't care about social sciences??
 
 - I couldn't care less about social whatever
-	[#normal]
 	=> hate_social_whatever
 
 ~ get_lost_in_stories
@@ -132,20 +119,16 @@ Lauri: A-are you sure???[#love]
 Lauri: Nobody's ever taken an interest in my reading before....[#nervous]
 
 - I'm taking an interest
-	[#normal]
 	=> taking_interest
 - lmao pranked sorry ahahaaha u fell for it
-	[#normal]
 	=> pranked_bro
 
 ~ rather_talk_about_anything_else
 Lauri: Oh, I'm glad you think the social sciences are actually as respectable as other sciences...[#love]
 Lauri: That's why you called it a science, right?[#nervous]
 - Never thought otherwise
-	[#normal]
 	=> never_thought_otherwise
 - I couldn't care less about social whatever
-	[#normal]
 	=> hate_social_whatever
 	
 ~ never_thought_otherwise
@@ -163,10 +146,8 @@ Lauri: Well... I am really passionate about lots of stuff...
 Lauri: Especially about people I really care about...[#love]
 Lauri: I can be very passionate and giving when I'm with them...
 - I'd love to explore that side of you...
-	[#normal]
 	=> love_kink
 - Too much information
-	[#normal]
 	=> too_much_info
 	
 ~ love_kink
@@ -177,10 +158,8 @@ Lauri: Well....[#sparkle]
 
 Lauri: How about a second date?[#nervous]
 - I'd love another date
-	[#normal]
 	=> love_another_date
 - I don't think this can work
-	[#normal]
 	=> cant_work
 
 
@@ -249,7 +228,7 @@ do Globals.decrement_current_love()
 => END!
 
 ~ leave
-You make up a petty excuse to leave Lauri.
+You make up a petty excuse to leave Lauri.[#normal]
 Lauri seems glum, but replies understandingly...[#sad]
 
 Lauri: Oh, I understand...
