@@ -31,20 +31,20 @@
 [ext_resource type="FontFile" uid="uid://k4rlbr6l5dpt" path="res://fonts/Janitor.ttf" id="21_0y3ke"]
 [ext_resource type="Texture2D" uid="uid://c7kd4capun6dy" path="res://assets/environment/pexels-pixabay-261403.jpg" id="27_qsf8q"]
 
-[sub_resource type="Gradient" id="Gradient_if13n"]
+[sub_resource type="Gradient" id="Gradient_clv50"]
 colors = PackedColorArray(0.917647, 1, 1, 1, 0, 0.870588, 0.956863, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_1thy1"]
-gradient = SubResource("Gradient_if13n")
+gradient = SubResource("Gradient_clv50")
 fill_from = Vector2(0.521368, 1)
 fill_to = Vector2(0.478632, 0.547009)
 
-[sub_resource type="Gradient" id="Gradient_aa186"]
+[sub_resource type="Gradient" id="Gradient_xcj63"]
 offsets = PackedFloat32Array(0, 0.00682594, 1)
 colors = PackedColorArray(0, 0.0862745, 0.12549, 1, 0.0572, 0.13, 0.11908, 1, 0.366502, 0.83846, 0.766449, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_2l1a4"]
-gradient = SubResource("Gradient_aa186")
+gradient = SubResource("Gradient_xcj63")
 width = 200
 height = 200
 fill_from = Vector2(0.518349, 1)
@@ -138,6 +138,7 @@ active_shrimps = Array[ExtResource("2_iq87m")]([ExtResource("3_svnk6"), ExtResou
 fishing_limit = 4
 
 [node name="HookCamera" type="Camera2D" parent="."]
+visible = false
 position = Vector2(-14, 111)
 offset = Vector2(0, -2.5)
 position_smoothing_enabled = true
@@ -161,6 +162,7 @@ offset_top = -1476.0
 offset_right = 698.0
 offset_bottom = 286.0
 texture = SubResource("GradientTexture2D_1thy1")
+metadata/_edit_use_anchors_ = true
 
 [node name="Parallax2D" type="Parallax2D" parent="BG_back"]
 scroll_offset = Vector2(-9, -13)
@@ -180,6 +182,7 @@ offset_right = 620.0
 offset_bottom = 1247.0
 texture = SubResource("GradientTexture2D_2l1a4")
 expand_mode = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="watergrass3" type="Sprite2D" parent="BG_back"]
 modulate = Color(0.607843, 0.729412, 1, 0.784314)

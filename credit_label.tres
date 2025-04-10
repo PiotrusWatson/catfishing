@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://g7ng5hj3ofk6"]
+
+[ext_resource type="FontFile" uid="uid://e221dwkwx17l" path="res://fonts/Halogen.ttf" id="1_ewpde"]
+
+[resource]
+font = ExtResource("1_ewpde")
+font_size = 32
+font_color = Color(0.141176, 0.0666667, 0.0862745, 1)

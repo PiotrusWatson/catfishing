@@ -1,0 +1,11 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cyx10panfshw4"]
+
+[ext_resource type="FontFile" uid="uid://k4rlbr6l5dpt" path="res://fonts/Janitor.ttf" id="1_nbc1e"]
+
+[resource]
+font = ExtResource("1_nbc1e")
+font_size = 101
+font_color = Color(0.141176, 0.0666667, 0.0862745, 1)
+shadow_size = 6
+shadow_color = Color(0.905882, 0.458824, 0.333333, 1)
+shadow_offset = Vector2(4.48, 4.755)

@@ -1,4 +1,4 @@
-extends PanelContainer
+extends Control
 
 @onready var image = $ShrimpDeets/Image
 @onready var name_text = $ShrimpDeets/Name

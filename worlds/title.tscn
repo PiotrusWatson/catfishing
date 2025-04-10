@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dwkykno188pt"]
+[gd_scene load_steps=8 format=3 uid="uid://dwkykno188pt"]
 
 [ext_resource type="Theme" uid="uid://2gdxtsf4t82y" path="res://ui/title_ui_theme.tres" id="1_l580b"]
 [ext_resource type="Script" uid="uid://b7sfgrdmmt2gh" path="res://worlds/title.gd" id="2_8ml7d"]
 [ext_resource type="Texture2D" uid="uid://cnlkk5of52yts" path="res://ui/logo.png" id="3_k5pgb"]
 [ext_resource type="Theme" uid="uid://5256ncjfw5ax" path="res://ui/menu_button.tres" id="4_8ml7d"]
+[ext_resource type="Texture2D" uid="uid://d25kmskker8im" path="res://ui/logothingy.png" id="4_v7a2h"]
 
 [sub_resource type="Gradient" id="Gradient_8ml7d"]
 colors = PackedColorArray(1, 0.28, 0.364, 1, 0.976667, 1, 0.65, 1)
@@ -24,6 +25,7 @@ theme = ExtResource("1_l580b")
 script = ExtResource("2_8ml7d")
 
 [node name="TextureRect2" type="TextureRect" parent="."]
+visible = false
 layout_mode = 0
 offset_left = -18.0
 offset_top = -9.0
@@ -39,18 +41,10 @@ offset_right = 1017.0
 offset_bottom = 446.0
 texture = ExtResource("3_k5pgb")
 
-[node name="Title" type="Label" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -466.0
-offset_top = 164.0
-offset_right = 466.0
-offset_bottom = 344.0
-grow_horizontal = 2
-text = "CAT FISHING"
+[node name="Logothingy" type="Sprite2D" parent="."]
+position = Vector2(587, 336)
+scale = Vector2(0.626389, 0.626389)
+texture = ExtResource("4_v7a2h")
 
 [node name="ButtonContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -59,10 +53,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -73.0
-offset_top = 144.0
-offset_right = 89.0
-offset_bottom = 230.0
+offset_left = -71.0
+offset_top = 165.0
+offset_right = 91.0
+offset_bottom = 251.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1

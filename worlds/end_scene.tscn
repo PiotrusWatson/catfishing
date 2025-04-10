@@ -1,9 +1,100 @@
-[gd_scene load_steps=5 format=3 uid="uid://deov2kdhtl76e"]
+[gd_scene load_steps=22 format=3 uid="uid://deov2kdhtl76e"]
 
 [ext_resource type="Script" uid="uid://wc71ix3ttpy1" path="res://worlds/end_scene.gd" id="1_55mtw"]
 [ext_resource type="Resource" uid="uid://dmuggkrnqv1dx" path="res://dialogues/alone_end.dialogue" id="2_qdqlm"]
 [ext_resource type="PackedScene" uid="uid://boje87mxmaur3" path="res://ui/placeholder_balloon.tscn" id="3_40n01"]
 [ext_resource type="Resource" uid="uid://b3gtvbfimoxc5" path="res://dialogues/intro_dialogue.dialogue" id="3_xrqaw"]
+[ext_resource type="Texture2D" uid="uid://bdu3mogvkwtij" path="res://assets/environment/bottom_noplants.png" id="5_rxeju"]
+[ext_resource type="Texture2D" uid="uid://baixus7mx330v" path="res://assets/environment/pilviä_small.png" id="6_nxup0"]
+[ext_resource type="Texture2D" uid="uid://bcfbip3jxr8si" path="res://assets/environment/grassss.png" id="7_72roh"]
+[ext_resource type="Texture2D" uid="uid://dlxifx2uyr7d" path="res://assets/environment/tregrarock.png" id="8_sivox"]
+[ext_resource type="Texture2D" uid="uid://degaq6pgcsc2g" path="res://assets/environment/rocdoc.png" id="9_csguy"]
+[ext_resource type="Texture2D" uid="uid://dgkxxhq2kgkr" path="res://assets/environment/lakeweed1.png" id="10_mdebi"]
+[ext_resource type="Texture2D" uid="uid://cc51hytgj6fsx" path="res://assets/environment/lakeweeds.png" id="11_csguy"]
+[ext_resource type="Texture2D" uid="uid://dpvc520la0k68" path="res://assets/environment/lakeweeds_blurry.png" id="12_mdebi"]
+[ext_resource type="Texture2D" uid="uid://c7kd4capun6dy" path="res://assets/environment/pexels-pixabay-261403.jpg" id="13_x3irx"]
+[ext_resource type="PackedScene" uid="uid://cor8igwxetpgn" path="res://addons/dynamic_water_2d/water.tscn" id="14_0mtl7"]
+
+[sub_resource type="Gradient" id="Gradient_if13n"]
+colors = PackedColorArray(0.917647, 1, 1, 1, 0, 0.870588, 0.956863, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_x3irx"]
+gradient = SubResource("Gradient_if13n")
+fill_from = Vector2(0.521368, 1)
+fill_to = Vector2(0.478632, 0.547009)
+
+[sub_resource type="Gradient" id="Gradient_aa186"]
+offsets = PackedFloat32Array(0, 0.00682594, 1)
+colors = PackedColorArray(0, 0.0862745, 0.12549, 1, 0.0572, 0.13, 0.11908, 1, 0.366502, 0.83846, 0.766449, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0mtl7"]
+gradient = SubResource("Gradient_aa186")
+width = 200
+height = 200
+fill_from = Vector2(0.518349, 1)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="Animation" id="Animation_yh0t1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.405084, 0.840063)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-111.5, 1315.75)]
+}
+
+[sub_resource type="Animation" id="Animation_qsf8q"]
+resource_name = "waves"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4.99),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.405084, 0.840063), Vector2(0.405084, 0.626931)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4.99),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(64, 1320), Vector2(-111.5, 1012.25)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_clv50"]
+_data = {
+&"RESET": SubResource("Animation_yh0t1"),
+&"waves": SubResource("Animation_qsf8q")
+}
 
 [node name="EndScene" type="Control"]
 layout_mode = 3
@@ -16,3 +107,154 @@ script = ExtResource("1_55mtw")
 bad_end_scene = ExtResource("2_qdqlm")
 intro_scene = ExtResource("3_xrqaw")
 dialogue_box_prefab = ExtResource("3_40n01")
+
+[node name="BG_back" type="Node2D" parent="."]
+position = Vector2(608, 341)
+
+[node name="bottom2" type="Sprite2D" parent="BG_back"]
+position = Vector2(-51, 992)
+scale = Vector2(0.675, 1.37642)
+texture = ExtResource("5_rxeju")
+
+[node name="sky" type="TextureRect" parent="BG_back"]
+offset_left = -801.0
+offset_top = -1476.0
+offset_right = 698.0
+offset_bottom = 286.0
+texture = SubResource("GradientTexture2D_x3irx")
+metadata/_edit_use_anchors_ = true
+
+[node name="Parallax2D" type="Parallax2D" parent="BG_back"]
+scroll_offset = Vector2(-9, -13)
+repeat_size = Vector2(1000, 0)
+autoscroll = Vector2(10, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="BG_back/Parallax2D"]
+position = Vector2(22, -163)
+texture = ExtResource("6_nxup0")
+
+[node name="lake" type="TextureRect" parent="BG_back"]
+clip_children = 2
+offset_left = -779.0
+offset_top = 115.0
+offset_right = 620.0
+offset_bottom = 1247.0
+texture = SubResource("GradientTexture2D_0mtl7")
+expand_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="watergrass3" type="Sprite2D" parent="BG_back"]
+modulate = Color(0.607843, 0.729412, 1, 0.784314)
+position = Vector2(-244, -117)
+rotation = 3.14159
+scale = Vector2(0.45, -0.45)
+texture = ExtResource("7_72roh")
+region_enabled = true
+region_rect = Rect2(217.766, 0, 782.234, 1061.42)
+
+[node name="Tree" type="Sprite2D" parent="BG_back"]
+position = Vector2(-290, -115)
+rotation = 3.14159
+scale = Vector2(0.137287, -0.137287)
+texture = ExtResource("8_sivox")
+
+[node name="Dock" type="Sprite2D" parent="BG_back"]
+position = Vector2(437, -85)
+scale = Vector2(0.107, 0.081)
+texture = ExtResource("9_csguy")
+
+[node name="bottom" type="Sprite2D" parent="BG_back"]
+position = Vector2(-54, 1086)
+scale = Vector2(0.675, 0.674557)
+texture = ExtResource("5_rxeju")
+
+[node name="Lakeweed1" type="Sprite2D" parent="BG_back"]
+position = Vector2(-462.75, 1123.72)
+scale = Vector2(0.26083, 0.207556)
+texture = ExtResource("10_mdebi")
+
+[node name="Lakeweed2" type="Sprite2D" parent="BG_back"]
+position = Vector2(-74.5001, 1143.47)
+rotation = -0.523599
+scale = Vector2(0.26083, 0.207556)
+texture = ExtResource("10_mdebi")
+
+[node name="BG_foreground" type="Node2D" parent="."]
+position = Vector2(566, 347)
+
+[node name="Lakeweed3" type="Sprite2D" parent="BG_foreground"]
+modulate = Color(0.605274, 0.605274, 0.605274, 1)
+position = Vector2(-564, 1392)
+scale = Vector2(0.566, 0.451)
+texture = ExtResource("10_mdebi")
+
+[node name="Lakeweed4" type="Sprite2D" parent="BG_foreground"]
+modulate = Color(0.408329, 0.408329, 0.408329, 1)
+position = Vector2(-303, 1497)
+rotation = 0.279253
+scale = Vector2(0.646, 0.515)
+texture = ExtResource("10_mdebi")
+
+[node name="watergrass" type="Sprite2D" parent="BG_foreground"]
+position = Vector2(401, -144)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_72roh")
+
+[node name="watergrass2" type="Sprite2D" parent="BG_foreground"]
+position = Vector2(-420, -119)
+rotation = 3.14159
+scale = Vector2(0.45, -0.45)
+texture = ExtResource("7_72roh")
+region_enabled = true
+region_rect = Rect2(217.766, 0, 782.234, 1061.42)
+
+[node name="Lakeweeds2" type="Sprite2D" parent="BG_foreground"]
+position = Vector2(144.125, 1107.98)
+rotation = -2.99673
+scale = Vector2(0.441, -0.329)
+texture = ExtResource("11_csguy")
+
+[node name="Lakeweeds3" type="Sprite2D" parent="BG_foreground"]
+self_modulate = Color(0.572988, 0.572988, 0.572988, 1)
+position = Vector2(44, 1386)
+rotation = -2.99673
+scale = Vector2(0.671, -0.501)
+texture = ExtResource("11_csguy")
+
+[node name="Lakeweeds" type="Sprite2D" parent="BG_foreground"]
+position = Vector2(-222.875, 1143.98)
+scale = Vector2(0.407938, 0.33086)
+texture = ExtResource("11_csguy")
+
+[node name="LakeweedsBlurry2" type="Sprite2D" parent="BG_foreground"]
+position = Vector2(440, 1161)
+rotation = 3.14159
+scale = Vector2(0.987, -0.703)
+texture = ExtResource("12_mdebi")
+
+[node name="LakeweedsBlurry" type="Sprite2D" parent="BG_foreground"]
+position = Vector2(-551, 1149)
+scale = Vector2(0.993453, 0.83828)
+texture = ExtResource("12_mdebi")
+
+[node name="water_texture" type="Sprite2D" parent="BG_foreground"]
+modulate = Color(1, 1, 1, 0.0666667)
+position = Vector2(-111.5, 1315.75)
+scale = Vector2(0.405084, 0.840063)
+texture = ExtResource("13_x3irx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BG_foreground/water_texture"]
+libraries = {
+&"": SubResource("AnimationLibrary_clv50")
+}
+autoplay = "waves"
+
+[node name="Water" parent="." instance=ExtResource("14_0mtl7")]
+position = Vector2(-34, 145)
+scale = Vector2(2.56, 4.96)
+surface_thickness = 3.0
+surface_color = Color(0.776471, 0.984314, 0.952941, 1)
+water_color = Color(0.529412, 0.878431, 0.843137, 0)
+point_per_distance = 20
+point_independent_stiffness = 3.0

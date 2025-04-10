@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cjea8b7ceg8p7"]
+[gd_scene load_steps=9 format=3 uid="uid://cjea8b7ceg8p7"]
 
 [ext_resource type="Theme" uid="uid://b7cfsb3ly6dfg" path="res://ui/item_slot_theme.tres" id="1_eq16i"]
 [ext_resource type="Script" uid="uid://8etsp4bfmcgm" path="res://ui/final_selection.gd" id="1_owekc"]
@@ -6,7 +6,8 @@
 [ext_resource type="Resource" uid="uid://654d7dklnoik" path="res://resources/shrimps/placeholder/simp.tres" id="3_sl8jx"]
 [ext_resource type="Resource" uid="uid://fwd73v0vtp10" path="res://resources/shrimps/placeholder/shompy.tres" id="5_sabvf"]
 [ext_resource type="PackedScene" uid="uid://c31pps066o5xw" path="res://ui/shrimp_slot.tscn" id="5_sl8jx"]
-[ext_resource type="Theme" uid="uid://2gdxtsf4t82y" path="res://ui/title_ui_theme.tres" id="7_sabvf"]
+[ext_resource type="LabelSettings" uid="uid://bh7imdqglbjak" path="res://scenes/player/instruction_label.tres" id="7_ltlfj"]
+[ext_resource type="Theme" uid="uid://6ukr3mcrbu77" path="res://ui/selection_button.tres" id="8_ltlfj"]
 
 [node name="FinalSelection" type="Control"]
 layout_mode = 3
@@ -21,16 +22,17 @@ debug_shrimps = Array[ExtResource("2_kt6t5")]([ExtResource("3_sl8jx"), ExtResour
 slot_scene = ExtResource("5_sl8jx")
 
 [node name="Panel" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -441.0
-offset_top = -231.0
-offset_right = 442.0
-offset_bottom = 174.0
+offset_left = -440.0
+offset_top = -252.0
+offset_right = 443.0
+offset_bottom = 153.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -38,20 +40,24 @@ grow_vertical = 2
 clip_contents = true
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_right = 0.998
+anchor_bottom = 1.205
 offset_top = 99.0
-offset_right = -2.0
-offset_bottom = -73.0
+offset_right = -0.234009
+offset_bottom = -0.0250244
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Shrimp" type="Label" parent="Panel"]
 layout_mode = 0
-offset_right = 880.0
-offset_bottom = 95.0
-text = "The day is over. As is tradition, you now have to pick a shrimp you want to have a second date with (more dates in the final version :))"
+offset_left = -2.0
+offset_top = -15.0
+offset_right = 878.0
+offset_bottom = 87.0
+text = "The day is over. As is tradition, you now have to pick a shrimp you want to have a second date with!"
+label_settings = ExtResource("7_ltlfj")
+horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="GoAlone" type="Button" parent="Panel"]
@@ -61,12 +67,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -155.5
-offset_top = -72.0
-offset_right = 141.5
+offset_left = -139.5
+offset_top = 84.0
+offset_right = 157.5
+offset_bottom = 156.0
 grow_horizontal = 2
 grow_vertical = 0
-theme = ExtResource("7_sabvf")
+theme = ExtResource("8_ltlfj")
 text = "Go it Alone"
 
 [connection signal="pressed" from="Panel/GoAlone" to="." method="_on_go_alone_pressed"]

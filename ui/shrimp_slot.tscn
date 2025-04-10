@@ -1,12 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://c31pps066o5xw"]
+[gd_scene load_steps=7 format=3 uid="uid://c31pps066o5xw"]
 
 [ext_resource type="Theme" uid="uid://b7cfsb3ly6dfg" path="res://ui/item_slot_theme.tres" id="1_xmy22"]
 [ext_resource type="Texture2D" uid="uid://darx62eafnypx" path="res://placeholder/cross.svg" id="2_5s3dt"]
 [ext_resource type="Script" uid="uid://bt4hwnlnr7epc" path="res://ui/shrimp_slot.gd" id="2_hu8ol"]
 [ext_resource type="Theme" uid="uid://2gdxtsf4t82y" path="res://ui/title_ui_theme.tres" id="3_c2pfh"]
+[ext_resource type="LabelSettings" uid="uid://bh7imdqglbjak" path="res://scenes/player/instruction_label.tres" id="4_3rppu"]
+[ext_resource type="Theme" uid="uid://6ukr3mcrbu77" path="res://ui/selection_button.tres" id="5_7fn4e"]
 
-[node name="ShrimpSlot" type="PanelContainer"]
+[node name="ShrimpSlot" type="Control"]
 layout_direction = 2
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -19,6 +22,9 @@ script = ExtResource("2_hu8ol")
 
 [node name="ShrimpDeets" type="VBoxContainer" parent="."]
 layout_mode = 2
+offset_left = 248.0
+offset_right = 917.0
+offset_bottom = 648.0
 
 [node name="Image" type="TextureRect" parent="ShrimpDeets"]
 layout_mode = 2
@@ -28,16 +34,21 @@ expand_mode = 2
 
 [node name="Name" type="Label" parent="ShrimpDeets"]
 layout_mode = 2
-text = "Empty Slot"
+label_settings = ExtResource("4_3rppu")
 horizontal_alignment = 1
 
-[node name="Menu" type="PanelContainer" parent="."]
+[node name="Menu" type="Control" parent="."]
 z_index = 2
 layout_mode = 2
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
 mouse_filter = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Menu"]
 layout_mode = 2
+offset_right = 1152.0
+offset_bottom = 648.0
 
 [node name="Label" type="Label" parent="Menu/VBoxContainer"]
 z_index = 2
@@ -46,19 +57,24 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 30
 text = "Commit to a loving and beautiful relationship with this shrimp?"
+label_settings = ExtResource("4_3rppu")
+horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="Selection" type="HBoxContainer" parent="Menu/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_c2pfh")
 theme_override_constants/separation = 10
+alignment = 1
 
 [node name="Yes" type="Button" parent="Menu/VBoxContainer/Selection"]
 layout_mode = 2
+theme = ExtResource("5_7fn4e")
 text = "Yes"
 
 [node name="No" type="Button" parent="Menu/VBoxContainer/Selection"]
 layout_mode = 2
+theme = ExtResource("5_7fn4e")
 text = "No
 "
 
