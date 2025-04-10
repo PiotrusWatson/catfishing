@@ -3,11 +3,12 @@
 importer="dialogue_manager_compiler_14"
 type="Resource"
 uid="uid://c4dg0djktib7v"
-valid=false
+path="res://.godot/imported/goth_first_date.dialogue-e448db8760ff90c9fbd5b15dff533ed1.tres"
 
 [deps]
 
 source_file="res://dialogues/goth/goth_first_date.dialogue"
+dest_files=["res://.godot/imported/goth_first_date.dialogue-e448db8760ff90c9fbd5b15dff533ed1.tres"]
 
 [params]
 

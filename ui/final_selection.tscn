@@ -1,11 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://cjea8b7ceg8p7"]
+[gd_scene load_steps=10 format=3 uid="uid://cjea8b7ceg8p7"]
 
 [ext_resource type="Theme" uid="uid://b7cfsb3ly6dfg" path="res://ui/item_slot_theme.tres" id="1_eq16i"]
 [ext_resource type="Script" uid="uid://8etsp4bfmcgm" path="res://ui/final_selection.gd" id="1_owekc"]
 [ext_resource type="Script" uid="uid://dtjomkji7bwyx" path="res://scripts/shrimptype.gd" id="2_kt6t5"]
 [ext_resource type="Resource" uid="uid://654d7dklnoik" path="res://resources/shrimps/placeholder/simp.tres" id="3_sl8jx"]
-[ext_resource type="Resource" uid="uid://fwd73v0vtp10" path="res://resources/shrimps/placeholder/shompy.tres" id="5_sabvf"]
+[ext_resource type="Resource" uid="uid://bpnh5uiwnicyr" path="res://resources/shrimps/real/braxton.tres" id="5_i4ary"]
 [ext_resource type="PackedScene" uid="uid://c31pps066o5xw" path="res://ui/shrimp_slot.tscn" id="5_sl8jx"]
+[ext_resource type="Resource" uid="uid://cd2lbvcylpatb" path="res://resources/shrimps/real/nerd.tres" id="6_m1wx5"]
 [ext_resource type="LabelSettings" uid="uid://bh7imdqglbjak" path="res://scenes/player/instruction_label.tres" id="7_ltlfj"]
 [ext_resource type="Theme" uid="uid://6ukr3mcrbu77" path="res://ui/selection_button.tres" id="8_ltlfj"]
 
@@ -18,8 +19,9 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_eq16i")
 script = ExtResource("1_owekc")
-debug_shrimps = Array[ExtResource("2_kt6t5")]([ExtResource("3_sl8jx"), ExtResource("5_sabvf")])
+debug_shrimps = Array[ExtResource("2_kt6t5")]([ExtResource("3_sl8jx"), ExtResource("3_sl8jx"), ExtResource("3_sl8jx"), ExtResource("5_i4ary"), ExtResource("6_m1wx5")])
 slot_scene = ExtResource("5_sl8jx")
+is_debug = true
 
 [node name="Panel" type="Panel" parent="."]
 self_modulate = Color(1, 1, 1, 0)
@@ -36,18 +38,26 @@ offset_bottom = 153.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Characters" type="HBoxContainer" parent="Panel"]
-clip_contents = true
-custom_minimum_size = Vector2(100, 0)
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel"]
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.998
-anchor_bottom = 1.205
-offset_top = 99.0
-offset_right = -0.234009
-offset_bottom = -0.0250244
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -7.0
+offset_top = 68.0
+offset_right = -7.0
+offset_bottom = -37.0
 grow_horizontal = 2
 grow_vertical = 2
+horizontal_scroll_mode = 2
+vertical_scroll_mode = 0
+
+[node name="Characters" type="HBoxContainer" parent="Panel/ScrollContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="Shrimp" type="Label" parent="Panel"]
 layout_mode = 0
@@ -76,4 +86,45 @@ grow_vertical = 0
 theme = ExtResource("8_ltlfj")
 text = "Go it Alone"
 
+[node name="TheQuestion" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="TheQuestion"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -116.0
+offset_top = -130.0
+offset_right = 111.0
+offset_bottom = -92.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Are you sure?"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TheQuestion"]
+layout_mode = 0
+offset_left = 476.0
+offset_top = 277.0
+offset_right = 657.0
+offset_bottom = 336.0
+theme_override_constants/separation = 50
+
+[node name="Yes" type="Button" parent="TheQuestion/HBoxContainer"]
+layout_mode = 2
+text = "Yes"
+
+[node name="No" type="Button" parent="TheQuestion/HBoxContainer"]
+layout_mode = 2
+text = "No"
+
 [connection signal="pressed" from="Panel/GoAlone" to="." method="_on_go_alone_pressed"]
+[connection signal="pressed" from="TheQuestion/HBoxContainer/Yes" to="." method="_on_yes_pressed"]
+[connection signal="pressed" from="TheQuestion/HBoxContainer/No" to="." method="_on_no_pressed"]
