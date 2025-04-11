@@ -84,11 +84,11 @@ func _on_body_entered(body: Node2D) -> void:
 
 
 func _on_body_exited(body: Node2D) -> void:
-	if body.has_method("toggle_fishing"):
+	if body.has_method("toggle_fishing") and body.global_position.y < global_position.y:
 		body.toggle_fishing(false)
 		tooltip.fade_out()
 		
-	if body.is_in_group("Hook"):
+	if body.is_in_group("Hook") and body.global_position.y < global_position.y:
 		body.catch_shrimp()
 	
 func pick_point_in_bounds():
