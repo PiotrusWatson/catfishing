@@ -136,7 +136,7 @@ _data = {
 [node name="FishingWorld" type="Node2D"]
 script = ExtResource("1_585q5")
 active_shrimps = Array[ExtResource("2_iq87m")]([ExtResource("7_xcj63"), ExtResource("3_svnk6"), ExtResource("5_umak0"), ExtResource("6_qsf8q"), ExtResource("4_5u7dg")])
-fishing_limit = 7
+fishing_limit = 4
 
 [node name="HookCamera" type="Camera2D" parent="."]
 position = Vector2(-14, 111)

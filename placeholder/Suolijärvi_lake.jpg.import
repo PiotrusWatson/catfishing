@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbhukjwr2y67w"
 path.s3tc="res://.godot/imported/Suolijärvi_lake.jpg-c59958faf0268cd866de638cc4b67fab.s3tc.ctex"
+path.etc2="res://.godot/imported/Suolijärvi_lake.jpg-c59958faf0268cd866de638cc4b67fab.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://placeholder/Suolijärvi_lake.jpg"
-dest_files=["res://.godot/imported/Suolijärvi_lake.jpg-c59958faf0268cd866de638cc4b67fab.s3tc.ctex"]
+dest_files=["res://.godot/imported/Suolijärvi_lake.jpg-c59958faf0268cd866de638cc4b67fab.s3tc.ctex", "res://.godot/imported/Suolijärvi_lake.jpg-c59958faf0268cd866de638cc4b67fab.etc2.ctex"]
 
 [params]
 
