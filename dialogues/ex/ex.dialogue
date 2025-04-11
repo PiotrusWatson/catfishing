@@ -22,10 +22,10 @@ Your eyes are definitely not deceiving you. You somehow successfully fished your
 
 
 ~ PANIC
-You PaNiccKk and reach for an awkward handshake. Your ex seems to be weirded out by your impeccable handling of the situation. 
+You [wave amp=25 freq=5]PaNiccKk[/wave] and reach for an awkward handshake. Your ex seems to be weirded out by your impeccable handling of the situation. [#nervous]
 But still, they reach for your hand.
 
-You suddenly remember again how it felt to hold their hand...
+You suddenly remember again how it felt to hold their hand...[#normal]
 - Awkwardly pull your hand back
 	=> awkward_hand_pull
 - Maintain eye contact and keep shaking their hand
@@ -40,8 +40,8 @@ They look as sheepishly as you do. [#normal]
 - I'm not sure I'm ready to talk to you yet
 	=> not_ready
 ~ awkward_hand_pull
-The shrimp’s eyes widen slightly as you pull your hand back. There's a brief moment of tension, where everything feels... off. They rub the back of their neck, clearly unsure of what to do next.
-Your Ex: Uh... what? Did I—did I do something wrong?
+The shrimp’s eyes widen slightly as you pull your hand back. There's a brief moment of tension, where everything feels... off. They rub the back of their neck, clearly unsure of what to do next.[#nervous]
+Your Ex: Uh... [shake rate=20 level=10]what?[/shake] Did I—did I do something wrong?
 
 They laugh awkwardly, the sound almost forced. 
 Your Ex: I mean, it’s cool, no big deal, right? I guess... I guess you just didn’t like the, uh... the handshake. But hey, if that’s... well, if that’s how it is, I can totally... uh... respect that, or whatever.
@@ -49,7 +49,7 @@ They look at you for a second longer than necessary, as if expecting something..
 
 You are relieved that this isn't just awkward only for you.
 
-Your Ex: So... you wanna... try again, or...? Or do you want to just, y'know, pretend that didn't happen and keep going like nothing's weird?
+Your Ex: So... you wanna... try again, or...? Or do you want to just, y'know, pretend that didn't happen and keep going like nothing's weird?[#normal]
 
 - Try again like, the relationship? 
 	=> woah_youre_back
@@ -57,9 +57,9 @@ Your Ex: So... you wanna... try again, or...? Or do you want to just, y'know, pr
 	=> shake_2
 
 ~ hell_shake
-Your Ex: I know you missed me...
+Your Ex: I know you missed me...[#nervous]
 They try to awkwardly laugh to their own ungraceful joke.
-Your Ex: ... but can I have my hand back?
+Your Ex: ... but can I have my hand back?[#normal]
 
 You realize what you're doing. Your eyes open wide in terror and you stop yourself.
 - Play it cool
@@ -78,13 +78,13 @@ Your Ex: Yeah... Why not?
 	
 ~ its_fine
 You rub behind your neck.
-Your Ex: Soooo... How have you been?
+Your Ex: Soooo... How have you been?[#nervous]
 - We don't need to pretend we care 
 	=> huge_rejection
 - I've been excellent...
 	=> been_excellent
 ~ not_ready
-Your Ex: Yeah, I'm not sure as well. 
+Your Ex: Yeah, I'm not sure as well. [#normal]
 Your Ex: Although, it's been a while, and I wonder how you've been.
 
 - We don't need to pretend we care
@@ -95,16 +95,16 @@ Your Ex: Although, it's been a while, and I wonder how you've been.
 ~ funny_joke
 OBVIOUSLY, you were joking. 
 Catfish: I know what you meant. I was just teasing you.
-They chuckle nervously.
+They chuckle nervously.[#nervous]
 
-Catfish: I missed seeing you laugh. So let's try again.
+Catfish: I missed seeing you laugh. So let's try again.[#normal]
 - Shake their hand again
 	=> shake_2
 
 ~ woah_youre_back
-Your Ex: WOW. Uhm...
+Your Ex: WOW. Uhm...[#angry]
 They seem to struggle to find the correct words.
-Your Ex: What I meant was... I meant the handshake, Cat. 
+Your Ex: What I meant was... I meant the handshake, Cat. [#normal]
 Your Ex: Not the whole thing. I thought we left it behind.
 - I didn't
 	=> down_bad
@@ -112,7 +112,7 @@ Your Ex: Not the whole thing. I thought we left it behind.
 	=> funny_joke
 
 ~ shake_2
-You shake their hand again, this time with a smile on your face. 
+You shake their hand again, this time with a smile on your face. [#normal]
 You feel calmer now. They seem calmer too.
 
 Their gaze penetrates you as, haltingly, they begin to talk again.
@@ -125,13 +125,13 @@ Your Ex: So... uh... we good now? Or, uh, do we need to talk about... that whole
 	=> all_mistakes
 	
 ~ gods_no
-Your Ex: Right, well... I guess we can just... forget about it. 
-Your Ex: I'm just glad I get to see you again.
+Your Ex: Right, well... I guess we can just... forget about it. [#sad]
+Your Ex: I'm just glad I get to see you again.[#normal]
 
 They clasp their hands behind them.
 Their left foot carves the sand in front of them rhythmically like the leg of a compass.
 
-Your Ex: So many things I wanted to say, but I can't seem to remember any of them.
+Your Ex: So many things I wanted to say, but I can't seem to remember any of them.[#nervous]
 They look at you nervously.
 
 Your Ex: So like, are we, like... still cool? Or...?
@@ -140,7 +140,7 @@ Your Ex: So like, are we, like... still cool? Or...?
 - I'm not sure I'm ready to talk to you yet
 	=> not_ready
 ~ all_mistakes
-You don't feel the need to dwell in the past. 
+You don't feel the need to dwell in the past. [#normal]
 You're not sure if you want to try things again, but it seems like you have forgiven them.
 
 Your Ex: So... We don't need to talk about how things went last time we talked right?
@@ -150,16 +150,16 @@ Your Ex: So... We don't need to talk about how things went last time we talked r
 	=> leave_behind
 	
 ~ leave_behind
-Your Ex: So, you mean, you don't want to talk to me?
+Your Ex: So, you mean, you don't want to talk to me?[#sad]
 
-Catfish: I don't know...
+Catfish: I don't know...[#normal]
 - Maybe we can talk again?
 	=> maybe_talk
 - I spent a lot of energy...
-
+	=> rejection_3
 ~ we_cool
-Your Ex: Alright, that’s... that’s a huge relief.
-Your Ex: I mean, I don’t like to mess things up, but, y’know, sometimes I do. Guess I’m just... not always great with the whole 'social' thing.
+Your Ex: Alright, that’s... that’s a huge relief.[#sparkle]
+Your Ex: I mean, I don’t like to mess things up, but, y’know, sometimes I do. Guess I’m just... not always great with the whole 'social' thing.[#normal]
 
 They look you in the eyes for a moment, and there’s a slight, unspoken understanding between the two of you, like you both know things could’ve gone really weird but, somehow, they didn’t.
 Your Ex: So uh... what's next?
@@ -177,11 +177,11 @@ Your Ex: Well... Glad to hear that, really.
 - How have you been?
 	=> awkward_rejection
 ~ down_bad
-You blurt out the words. 
+You blurt out the words. [#normal]
 It almost felt like you had no control over your huge mouth.
 
-Your Ex: Cat, I'm sorry but... I really don't want to reopen old wounds. 
-Your Ex: It took me a great while to heal from... What we had...
+Your Ex: Cat, I'm sorry but... I really don't want to reopen old wounds. [#nervous]
+Your Ex: It took me a great while to heal from... What we had...[#normal]
 Your Ex: So I guess it's better to back off while I can. I don't want us to get hurt again.
 
 Deep down, you know they are right.
@@ -198,12 +198,12 @@ Catfish: You made it VERY clear that you didn't care about me anymore the last t
 
 Your voice shakes, but your pride stands firm, or so you think.
 
-Your Ex: Oh, here we go, always the victim. You know what... Just... Just toss me back.
+Your Ex: Oh, here we go, always the victim. You know what... Just... Just toss me back.[#angry]
 do Globals.decrement_current_love()
 => END!
 
 ~ awkward_rejection
-Your Ex: Well, you know. It's been rough but I feel better now. 
+Your Ex: Well, you know. It's been rough but I feel better now. [#normal]
 Your Ex: Went to the vacation I always wanted to take. 
 Your Ex: Got to see new places and all...
 You have a cordial conversation for exactly 10 minutes, and then part ways
@@ -212,7 +212,7 @@ do Globals.decrement_current_love()
 => END!
 
 ~ maybe_talk
-Your Ex: Sure, I'll be around. Catch me later, I guess?
+Your Ex: Sure, I'll be around. Catch me later, I guess?[#normal]
 do Globals.increment_current_love()
 => END!
 
@@ -220,6 +220,6 @@ do Globals.increment_current_love()
 Catfish: I spent a lot of energy to leave you behind. So I'm sorry but...
 Catfish: I don't really want to step in the same river twice.
 
-Your Ex: Fine, I guess that's for the best.
+Your Ex: Fine, I guess that's for the best.[#normal]
 do Globals.decrement_current_love()
 => END!
