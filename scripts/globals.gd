@@ -2,6 +2,7 @@ extends Node
 
 var first_time = true
 var current_shrimp: ShrimpType
+var shrimp_pool: Array[ShrimpType]
 var current_scene_type: Enums.SceneType
 var current_love: int
 var number_of_successful_fishes: int

@@ -57,7 +57,6 @@ func get_possible_items():
 
 func pick_item():
 	var possible_items = get_possible_items()
-	print(possible_items)
 	if len(possible_items) == 0:
 		return null
 	return possible_items.pick_random()

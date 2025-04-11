@@ -12,6 +12,7 @@ func _ready():
 		Globals.number_of_successful_fishes = fishing_limit
 		for shrimp in active_shrimps:
 			shrimp.reset()
+		Globals.shrimp_pool = active_shrimps
 		Inventory.reset()
 		Globals.end_status = Enums.EndStatus.NOT_END
 	
