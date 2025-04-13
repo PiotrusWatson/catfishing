@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://cjea8b7ceg8p7"]
 
-[ext_resource type="Theme" uid="uid://b7cfsb3ly6dfg" path="res://ui/item_slot_theme.tres" id="1_eq16i"]
+[ext_resource type="Theme" uid="uid://b7cfsb3ly6dfg" path="res://ui/themes/item_slot_theme.tres" id="1_eq16i"]
 [ext_resource type="Script" uid="uid://8etsp4bfmcgm" path="res://ui/final_selection.gd" id="1_owekc"]
 [ext_resource type="Script" uid="uid://dtjomkji7bwyx" path="res://scripts/shrimptype.gd" id="2_kt6t5"]
 [ext_resource type="Resource" uid="uid://654d7dklnoik" path="res://resources/shrimps/placeholder/simp.tres" id="3_sl8jx"]
@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c31pps066o5xw" path="res://ui/shrimp_slot.tscn" id="5_sl8jx"]
 [ext_resource type="Resource" uid="uid://01o4o080b0ho" path="res://resources/shrimps/real/unfixable.tres" id="6_i4ary"]
 [ext_resource type="LabelSettings" uid="uid://bh7imdqglbjak" path="res://scenes/player/instruction_label.tres" id="7_ltlfj"]
-[ext_resource type="Theme" uid="uid://6ukr3mcrbu77" path="res://ui/selection_button.tres" id="8_ltlfj"]
+[ext_resource type="Theme" uid="uid://6ukr3mcrbu77" path="res://ui/themes/selection_button.tres" id="8_ltlfj"]
 
 [node name="FinalSelection" type="Control"]
 layout_mode = 3

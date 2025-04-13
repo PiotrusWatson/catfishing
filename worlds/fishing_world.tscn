@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cor8igwxetpgn" path="res://addons/dynamic_water_2d/water.tscn" id="6_eo0ky"]
 [ext_resource type="Texture2D" uid="uid://baixus7mx330v" path="res://assets/environment/pilviä_small.png" id="6_h3v2a"]
 [ext_resource type="Resource" uid="uid://01o4o080b0ho" path="res://resources/shrimps/real/unfixable.tres" id="6_qsf8q"]
-[ext_resource type="Theme" uid="uid://by8wyn837d0af" path="res://ui/ui_theme.tres" id="7_585q5"]
+[ext_resource type="Theme" uid="uid://by8wyn837d0af" path="res://ui/themes/ui_theme.tres" id="7_585q5"]
 [ext_resource type="Script" uid="uid://d0votwagi38uu" path="res://ui/ui.gd" id="7_d3nh4"]
 [ext_resource type="Texture2D" uid="uid://degaq6pgcsc2g" path="res://assets/environment/rocdoc.png" id="7_p325l"]
 [ext_resource type="Texture2D" uid="uid://dlxifx2uyr7d" path="res://assets/environment/tregrarock.png" id="7_svnk6"]

@@ -1,11 +1,11 @@
 [gd_scene load_steps=16 format=3 uid="uid://c38f1v21f5iql"]
 
-[ext_resource type="Theme" uid="uid://dklfh5537gj42" path="res://ui/credit_theme.tres" id="1_4ep43"]
+[ext_resource type="Theme" uid="uid://dklfh5537gj42" path="res://ui/themes/credit_theme.tres" id="1_4ep43"]
 [ext_resource type="Script" uid="uid://b4d251acffa3p" path="res://worlds/credits.gd" id="2_coxcc"]
 [ext_resource type="FontFile" uid="uid://e221dwkwx17l" path="res://fonts/Halogen.ttf" id="3_bakly"]
 [ext_resource type="FontFile" uid="uid://k4rlbr6l5dpt" path="res://fonts/Janitor.ttf" id="3_yqpls"]
-[ext_resource type="LabelSettings" uid="uid://cyx10panfshw4" path="res://worlds/Title_label.tres" id="4_wquvd"]
-[ext_resource type="LabelSettings" uid="uid://g7ng5hj3ofk6" path="res://credit_label.tres" id="5_bakly"]
+[ext_resource type="LabelSettings" path="res://worlds/Title_label.tres" id="4_wquvd"]
+[ext_resource type="LabelSettings" path="res://credit_label.tres" id="5_bakly"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_6mhpm"]
 

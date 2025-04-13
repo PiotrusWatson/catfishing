@@ -3,7 +3,7 @@
 [ext_resource type="Theme" uid="uid://2gdxtsf4t82y" path="res://ui/title_ui_theme.tres" id="1_l580b"]
 [ext_resource type="Script" uid="uid://b7sfgrdmmt2gh" path="res://worlds/title.gd" id="2_8ml7d"]
 [ext_resource type="Texture2D" uid="uid://cnlkk5of52yts" path="res://ui/logo.png" id="3_k5pgb"]
-[ext_resource type="Theme" uid="uid://5256ncjfw5ax" path="res://ui/menu_button.tres" id="4_8ml7d"]
+[ext_resource type="Theme" uid="uid://5256ncjfw5ax" path="res://ui/themes/menu_button.tres" id="4_8ml7d"]
 [ext_resource type="Texture2D" uid="uid://d25kmskker8im" path="res://ui/logothingy.png" id="4_v7a2h"]
 
 [sub_resource type="Gradient" id="Gradient_8ml7d"]

@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://016fsx1pi425" path="res://ui/fishing_bar.gd" id="6_75vfm"]
 [ext_resource type="Texture2D" uid="uid://bbngse38wqni8" path="res://ui/exclamation_mark.png" id="6_gx1jg"]
 [ext_resource type="PackedScene" uid="uid://bow3giawr2rd" path="res://ui/left_click.tscn" id="7_0owmy"]
-[ext_resource type="Theme" uid="uid://3ydsxh3h11mw" path="res://ui/tooltip_theme.tres" id="7_qek5x"]
+[ext_resource type="Theme" uid="uid://3ydsxh3h11mw" path="res://ui/themes/tooltip_theme.tres" id="7_qek5x"]
 [ext_resource type="Script" uid="uid://c6h46m0d6uex1" path="res://ui/tooltip.gd" id="8_5gtgg"]
 [ext_resource type="PackedScene" uid="uid://c3k4tne8tirwg" path="res://ui/fader.tscn" id="10_h17s1"]
 [ext_resource type="LabelSettings" uid="uid://bh7imdqglbjak" path="res://scenes/player/instruction_label.tres" id="11_fm80t"]

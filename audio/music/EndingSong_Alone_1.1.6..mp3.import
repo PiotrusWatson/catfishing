@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/EndingSong_Alone_1.1.6..mp3-ff822d434b5cd1d17
 
 [params]
 
-loop=false
-loop_offset=0
-bpm=0
+loop=true
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4

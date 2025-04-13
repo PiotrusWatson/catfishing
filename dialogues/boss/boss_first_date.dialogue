@@ -36,59 +36,261 @@ She keeps slushing your brain around like it's a goldfish in an aquarium...
 
 Hilma: AAARGHHHHHSSS YOU'RE SO CUUUTEE I'M GONNA DIEEE!!!!
 
-- Revel in the attention like the little pet you are
+- This feels good. I like this. 
 	=> im_pet
-- IIII THINKGKK THATS ENOUGHHH
+- IiIi THinKgkKkK THaAAaAatTSsS ENoUGgGGhHhHH
 	=> pls_stop
 
 ~ pls_stop
+You croak the words out. It seems like your cheeks being ripped apart does not help with articulation. 
+
+But she seems to understand the sentiment of what you're saying and leaves your cheeks alone.
+
+Hilma: Awwww~ did I hurt my little booboo!! [#sad]
+
+Hilma: I'm sorry sweetie, I'll be more careful next time.[#normal]
+
+Hilma: I just like can't hold myself sometimes when I'm with such [wave amp=25 freq=5]adorable little kitties[/wave]!!!
+
+She pauses for a minute, as if she's suddenly had an idea.
+
+Hilma: So... do you wanna go someplace more fun? [#sparkle]
+
+She winks at you. For some reason you can feel your blood running a bit colder.
+
+- Why not? Sounds fun!
+	=> why_not
+- Umm...where are you taking me??
+	=> where_we_goin
 
 ~ im_pet
-She pets you for like 5 minutes...[#normal]
-You decide to enjoy it...
+After a while, you start to enjoy the shaking. It's kinda soothing, even.
+Hilma: You're gonna kill meee with this cuutie toootie facee!!! AHHHRRGGHHH!!![#sparkle]
 
-Hilma: Yer gonna kill meee with this cuutie toootie facee [wave amp=25 freq=5]AHHHRRGGHHH[/wave]!!![#love]
+She beckons you closer.
+Hilma: Hows abouts we continue this somewhere more fun...?
 
-Suddenly, she grins, and raises her hand back as if to spank you[#normal]
-
-- Wooww!!! We just met!
-	=> we_just_met
-- Embrace the buttslap
-	=> my_bum
+- Umm...where are you taking me??
+	=> where_we_goin
+- Why not? Sounds fun!
+	=> why_not
 
 ~ step_back
+Hilma seems a bit annoyed by your evasive maneuver.
 
-~ we_just_met
+Hilma: Like, I love this all personal space thing for you. [#angry]
 
-~ my_bum
-Hilma slaps your ass...
+Hilma: Buuuttt... If I'm gonna get to know you, you gotta be comfy with physical affection...[#normal]
 
-An echoing sound emanates from the sudden union of Hilma's hand and your butt...
+Her countenance suddenly turns to a dangerous expression.
 
-The slap feels playful, but VERY strong...
-- Start crying
-	=> crying
-- Keep the tears inside
-	=> repression
+Hilma: Are we clear, sweetie?[#angry]
+- Pls don't hurt me...
+	=> dont_hurt_me
 
-~ crying
-Hilma: Awwwww~ [wave amp=25 freq=5]I'm soooo sorry honeeyyy[/wave].... [#nervous]
-Hilma: My sweet delicate kittyy!!![#love]
+~ dont_hurt_me
+Hilma: Ohmygosh don’t worry—I’d never hurt you, silly![#love]
 
-She reaches into her bag and procures a chocolate bar.
+Hilma: Don't be riddiculous!!! [#normal]
 
-Hilma: You wanna have a chocolate bar and feel better my [wait=1][wave amp=25 freq=5]cootiiee pattoootiee[/wave]???
-- Get the chocolate bar and eat it while crying
-	=> eat_chocolate
-- Run while you can
+Hilma: Like, I'd [wave amp=25 freq=5]nevVER[/wave] do that to you...
+
+Hilma's expression suddenly turns dark again.[#angry]
+
+Hilma: Unless I see you flirting with anyone else of course!!
+
+Then she suddenly smiles and dons a cheerful attitude.[#sparkle]
+
+Hilma: Even then I'd hurt themmm, not youuuu!!!![#love]
+
+- Pls don't hurt...anyone??
+	=> dont_hurt_anyone
+- It feels good to be protected...
+	=> protection_feels_good
+
+~ dont_hurt_anyone
+Hilma: Awww~ baby… you’re soooo [wait=1][wave amp=25 freq=5]cute[/wave] and[wait=1] [wave amp=25 freq=5]caring![/wave] [#love]
+Hilma: But like… why would you say that? You think I’d do something bad? Just because someone looked at you for a little too long?[#nervous]
+
+Hilma: Teehheee~ okay, maybe I did break someone’s phone last week... But like who even are they?? Right??[#sparkle]
+
+Her phone rings suddenly.
+
+She answers...
+
+Hilma: Johnny, I swear to [shake rate=20 level=10]FUCKING GOD[/shake] if ya tell me ya don't have da money...[#angry]
+Hilma: You'll be pickin yer [shake rate=20 level=10]FUCKIN[/shake] bones up off the sidewalk, y'hear?
+Hilma: ARE WE FUCKING CLEAR??
+
+
+You hear a mumbled yes from the other side of the phone...
+
+She hangs up.[#normal]
+
+Hilma: I'm sorry baby... I had to take that.
+
+Hilma: Oughhh I hate work calls when I'm out!!![#angry]
+- Run away while you can
 	=> run_away
+- That's impressive
+	=> impressive
 
-~ repression
+~ protection_feels_good
 
-~ eat_chocolate
-Hilma: OOOOhhh my heartt...[#sad]
-Hilma: I'm sowwy sweeetieee, let me make it up to you on our next daatee!!![#love]
+~ where_we_goin
+Hilma: Babe I dig your vibe and all, buuut you're SO TIMID!!! 
+
+Hilma: Like, loosen up a bittt!!
+
+Hilma: It's only going to be my super nice luxury mansion.[#sparkle]
+
+Hilma: With my beautiful gardens.[#love]
+
+Hilma: And my private basement....Which is absolutely OUT of bounds.[#nervous]
+
+Hilma: Come onnnnn, it will be fun![#normal]
+
+- Come up with an excuse to escape
+	=> escape_excuse
+
+~ why_not
+Hilma: Yayyyy![#love]
+Hilma: We're gonna have [wait=1]sooooo[wait=1] much [wait=1][wave amp=25 freq=5]funnn[/wave]![#sparkle]
+
+Hilma takes out her pink phone and in a dizzying flash takes a series of selfies with you.
+
+She's holding you with a vice-like grip. You can barely breathe. [#normal]
+
+Hilma: Omgggg we like, look [wave amp=25 freq=5]soooooo cute[/wave] in this pic.[#love]
+
+She shows you the picture. You look stupid. She somehow looks perfectly posed.
+
+- I don't know about this one...
+	=> run_end
+- Bravissimo!!! You should post it <3
+	=> enthusiastic_postage
+
+~ run_end
+Hilma: Well, [i]I[/i] think it looks great![#sparkle] 
+Hilma: What's with you? [#nervous]
+Her phone rings suddenly.
+She answers...
+
+Hilma: Johnny, I swear to [shake rate=20 level=10]FUCKING GOD[/shake] if ya tell me ya don't have da money one more god damn time...[#angry]
+
+Hilma: ...let me talk ya through it. I'll start with yer little finger. Break it in two. [wave amp=25 freq=5]Clean cut, y'know[/wave]? 
+Hilma: Then I'll work my way to yer fingernails...
+She describes a variety of actions that you're sure were banned by the Geneva Convention. It feels like it takes forever.[#normal]
+Hilma: ...and that's just the start of what's in store for ya if you don't give me what you owe.[#angry]
+Hilma: ARE WE [shake rate=20 level=10]FUCKING[/shake] CLEAR??
+
+You hear a mumbled yes from the other side of the phone. 
+
+She hangs up.[#normal]
+
+Hilma: I'm sorry baby I had to take that...
+Hilma: I really need to get going now my sweet little [wave amp=25 freq=5]pumpkin pie[/wave]. Can I see you again sooonn???? [wave amp=25 freq=5]pweeeaseee[/wave]???[#love]
+- Run away while you can
+	=> run_away
+	
+~ enthusiastic_postage
+Hilma: Omgomg!!! You're soooo right! Let me get my Finstagram really quick...[#sparkle]
+Her phone rings suddenly...
+
+She answers...
+Hilma: Johnny, I swear to [shake rate=20 level=10]FUCKING GOD[/shake] if ya tell me ya don't have da money...[#angry]
+Hilma: You'll be pickin yer [shake rate=20 level=10]FUCKIN[/shake] bones up off the sidewalk, y'hear?
+Hilma: ARE WE FUCKING CLEAR??
+
+You hear a mumbled yes from the other side of the phone. 
+
+She hangs up.[#normal]
+
+Hilma: I'm sorry baby I had to take that...
+Hilma: I really need to get going now my sweet little [wave amp=25 freq=5]pumpkin pie[/wave]. Can I see you again sooonn???? [wave amp=25 freq=5]pweeeaseee[/wave]???[#love]
+
+- I'm all for it!
+	=> see_you_later
+- No no no
+	=> no_no_no
+	
+~ impressive
+She pinches your cheeks again...[#sparkle]
+Hilma: I'm glad you like my girl boss mode too, [wave amp=25 freq=5]honey[/wave]!!
+
+Hilma: Mwwwahhh!!![#love]
+
+She blows you a kiss.
+- Pretend you catch the kiss
+	=> catch_kiss
+- Smile awkwardly
+	=> awkward_smile
+
+~ catch_kiss
+Hilma puts her right hand on her chest.[#love]
+
+Hilma: Ommmmmgggg staaahhpp you're MELTINGG MEEEE!!!
+
+Her hands approach your cheeks again in looming fashion. You can already feel your face ache...[#normal]
+
+- Embrace the pinching
+	=> embrace_pinches
+- No no no!
+	=> no_no_no
+
+~ awkward_smile
+Hilma: Babeee you've been so [wave amp=25 freq=5]sweet[/wave]!!! [#love]
+
+Hilma: Can I see you again [wave amp=25 freq=5]soooon[/wave]???
+
+- I'm all for it 
+	=> see_you_later
+- No no no!
+	=> no_no_no
+
+~ see_you_later
+Hilma: OMG perfect![#love]
+Hilma: I'll pick you up at yours, ok? I'll bring the outfits...
+Before you can ask her what she means, she's gone
+do Globals.increment_current_love()
+=> END!
+
+~ no_no_no
+Hilma: Awwwwww...[#sad]
+Hilma: Do you really hate me that much?? [#nervous]
+Hilma: I just can't help myself when I see such cute lil[wave amp=25 freq=5] cheeeeeks[/wave] [#love]
+She reaches for your cheeks again. You break into a run.
+do Globals.decrement_current_love()
+=> END
+
 ~ run_away
+You run while you still can. 
 
+Hilma: Staaahhpppp!!![#sad]
 
+You don't even look back.
+
+You keep running and leave.
+do Globals.decrement_current_love()
+=> END
+
+~ escape_excuse
+Cat: Uhhh... I just rembered I left my.... oven.....on?
+Hilma: Uggghhhh I can't even with you...[#angry]
+
+Hilma: Leave before I do something I'll regret...
+
+You leave.
+do Globals.decrement_current_love()
+=> END
+
+~ embrace_pinches
+You accept your fate. 
+
+Hilma shakes your face one more time while squealing. Maybe it is kind of cute...
+
+She gives you her number and leaves with a wink.
+
+You decide that this date went well.
+do Globals.increment_current_love()
 => END
