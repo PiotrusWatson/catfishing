@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ShrimpType" load_steps=6 format=3 uid="uid://b1l7vc16mvwug"]
+
+[ext_resource type="Script" uid="uid://dtjomkji7bwyx" path="res://scripts/shrimptype.gd" id="1_i4eei"]
+[ext_resource type="Resource" uid="uid://088lq5010q43" path="res://dialogues/boss/boss_first_date.dialogue" id="1_wt0wh"]
+[ext_resource type="Theme" uid="uid://sh6ju41csl7u" path="res://ui/themes/character_theme.tres" id="2_ipjtd"]
+[ext_resource type="Resource" uid="uid://cvd464evqkrh8" path="res://dialogues/boss/boss_ending.dialogue" id="3_ipjtd"]
+[ext_resource type="Resource" uid="uid://qld85sf5f3ua" path="res://resources/shrimps/real/shrimp_images/boss.tres" id="3_qijyt"]
+
+[resource]
+script = ExtResource("1_i4eei")
+name = "Hilma"
+images = ExtResource("3_qijyt")
+backgrounds = Array[Texture2D]([null])
+basic_dialogue = ExtResource("1_wt0wh")
+ending_dialogue = ExtResource("3_ipjtd")
+basic_theme = ExtResource("2_ipjtd")
+starting_love = 1
+metadata/_custom_type_script = "uid://dtjomkji7bwyx"

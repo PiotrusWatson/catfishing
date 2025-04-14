@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://cvd464evqkrh8"
+path="res://.godot/imported/boss_ending.dialogue-f9a85902e9a3cbbb6289b528f75562cc.tres"
+
+[deps]
+
+source_file="res://dialogues/boss/boss_ending.dialogue"
+dest_files=["res://.godot/imported/boss_ending.dialogue-f9a85902e9a3cbbb6289b528f75562cc.tres"]
+
+[params]
+
+defaults=true
