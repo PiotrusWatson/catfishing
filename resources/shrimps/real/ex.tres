@@ -4,7 +4,7 @@
 [ext_resource type="Resource" uid="uid://ddnqdhb2s32ki" path="res://dialogues/ex/ex.dialogue" id="1_fuwk7"]
 [ext_resource type="Resource" uid="uid://b8r4l10nhk8qe" path="res://resources/shrimps/real/shrimp_images/ex.tres" id="1_ybohu"]
 [ext_resource type="Resource" uid="uid://sv2l4e6vcgww" path="res://dialogues/ex/ex_ending.dialogue" id="2_mes1c"]
-[ext_resource type="Theme" uid="uid://sh6ju41csl7u" path="res://ui/themes/character_theme.tres" id="2_vgv24"]
+[ext_resource type="Theme" uid="uid://bna47gwfu22kn" path="res://ui/themes/character_boxes/ex.tres" id="2_vgv24"]
 
 [resource]
 script = ExtResource("1_4wbk5")

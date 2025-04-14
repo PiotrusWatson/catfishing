@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dtjomkji7bwyx" path="res://scripts/shrimptype.gd" id="1_8eik8"]
 [ext_resource type="Resource" uid="uid://73sk1n6umrd6" path="res://resources/shrimps/real/shrimp_images/braxton.tres" id="1_af04n"]
 [ext_resource type="Resource" uid="uid://3nvautfppxnt" path="res://dialogues/braxton/braxton_first_date_fixed.dialogue" id="1_ve2m8"]
-[ext_resource type="Theme" uid="uid://sh6ju41csl7u" path="res://ui/themes/character_theme.tres" id="2_358hq"]
+[ext_resource type="Theme" uid="uid://b5j4brkhrarso" path="res://ui/themes/character_boxes/jock.tres" id="2_ve2m8"]
 [ext_resource type="Resource" uid="uid://fbqa15qqa1xn" path="res://dialogues/braxton/braxton_ending.dialogue" id="3_3guve"]
 
 [resource]
@@ -13,6 +13,6 @@ images = ExtResource("1_af04n")
 backgrounds = Array[Texture2D]([null])
 basic_dialogue = ExtResource("1_ve2m8")
 ending_dialogue = ExtResource("3_3guve")
-basic_theme = ExtResource("2_358hq")
+basic_theme = ExtResource("2_ve2m8")
 starting_love = 1
 metadata/_custom_type_script = "uid://dtjomkji7bwyx"

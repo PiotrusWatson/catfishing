@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dtjomkji7bwyx" path="res://scripts/shrimptype.gd" id="1_o58wa"]
 [ext_resource type="Resource" uid="uid://crmyi38usf82h" path="res://dialogues/nerd/nerd_first_date.dialogue" id="1_whlcy"]
-[ext_resource type="Theme" uid="uid://sh6ju41csl7u" path="res://ui/themes/character_theme.tres" id="2_qra42"]
+[ext_resource type="Theme" uid="uid://ccy6s6ayky7f3" path="res://ui/themes/character_boxes/nerd.tres" id="2_qra42"]
 [ext_resource type="Resource" uid="uid://d0gq7taf31pjk" path="res://resources/shrimps/real/shrimp_images/nerd.tres" id="2_xhma1"]
 [ext_resource type="Resource" uid="uid://mun0o0kf214y" path="res://dialogues/nerd/nerd_ending.dialogue" id="3_nnomb"]
 

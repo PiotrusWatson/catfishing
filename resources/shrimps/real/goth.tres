@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dtjomkji7bwyx" path="res://scripts/shrimptype.gd" id="1_d5q78"]
 [ext_resource type="Resource" uid="uid://c4dg0djktib7v" path="res://dialogues/goth/goth_first_date.dialogue" id="1_ssj3t"]
 [ext_resource type="Resource" uid="uid://c0bs2jdm6nxjd" path="res://dialogues/goth/goth_ending.dialogue" id="2_1skw1"]
-[ext_resource type="Theme" uid="uid://sh6ju41csl7u" path="res://ui/themes/character_theme.tres" id="2_sphyi"]
+[ext_resource type="Theme" uid="uid://c5ieqjm1vwo4v" path="res://ui/themes/character_boxes/goth.tres" id="2_sphyi"]
 
 [resource]
 script = ExtResource("1_d5q78")

@@ -8,6 +8,7 @@ extends Control
 @export var dialogue_box_prefab: PackedScene
 @export var generic_item_ask_dialogue: DialogueResource
 @export var something_for_me_dialogue: DialogueResource
+@export var default_theme: Theme
 @export var debug_shrimp: ShrimpType
 @onready var end_dialogue = preload("res://dialogues/end_dialogue.dialogue")
 
@@ -63,9 +64,16 @@ func handle_end_dialogue(resource):
 func make_box():
 	DialogueManager.dialogue_ended.connect(handle_end_dialogue)
 	DialogueManager.got_dialogue.connect(parse_tags)
+	DialogueManager.got_dialogue.connect(change_theme)
 	spawned_box = dialogue_box_prefab.instantiate()
 	spawned_box.ready.connect(handle_start_dialogue)
 	add_child(spawned_box)
+
+func change_theme(line: DialogueLine):
+	if line.character == shrimp_data.name:
+		spawned_box.balloon.theme = shrimp_data.basic_theme
+	else:
+		spawned_box.balloon.theme = default_theme
 	
 func parse_tags(line):
 	for tag in line.tags:

@@ -1,0 +1,25 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://ccy6s6ayky7f3"]
+
+[ext_resource type="FontFile" uid="uid://e221dwkwx17l" path="res://fonts/Halogen.ttf" id="1_1fjhj"]
+[ext_resource type="StyleBox" uid="uid://n88fkdpsu5fe" path="res://ui/themes/original_disabled_button_theme.tres" id="2_vuqbo"]
+[ext_resource type="StyleBox" uid="uid://ble4buvuh03fj" path="res://ui/themes/original_focyused_button_box.tres" id="3_xevw7"]
+[ext_resource type="StyleBox" uid="uid://dfqskxw68v2le" path="res://ui/themes/original_hover_button_box.tres" id="4_lfhbf"]
+[ext_resource type="StyleBox" uid="uid://c4tjdusdrlafs" path="res://ui/themes/original_style_box.tres" id="5_dbpcr"]
+[ext_resource type="StyleBox" uid="uid://2dpjl40xce1g" path="res://ui/themes/original_panel_theme.tres" id="6_bytma"]
+
+[resource]
+default_font_size = 20
+Button/fonts/font = ExtResource("1_1fjhj")
+Button/styles/disabled = ExtResource("2_vuqbo")
+Button/styles/focus = ExtResource("3_xevw7")
+Button/styles/hover = ExtResource("4_lfhbf")
+Button/styles/normal = ExtResource("5_dbpcr")
+MarginContainer/constants/margin_bottom = 15
+MarginContainer/constants/margin_left = 30
+MarginContainer/constants/margin_right = 30
+MarginContainer/constants/margin_top = 15
+Panel/styles/panel = ExtResource("6_bytma")
+RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
+RichTextLabel/colors/font_outline_color = Color(0.356863, 0.780392, 0.847059, 1)
+RichTextLabel/constants/outline_size = 2
+RichTextLabel/fonts/normal_font = ExtResource("1_1fjhj")
