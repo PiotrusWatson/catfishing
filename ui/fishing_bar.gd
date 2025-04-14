@@ -1,4 +1,4 @@
-extends VSlider
+extends ProgressBar
 
 func init(max, step, value):
 	min_value = value

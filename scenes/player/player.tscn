@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bjxfp5r5xfw4f"]
+[gd_scene load_steps=27 format=3 uid="uid://bjxfp5r5xfw4f"]
 
 [ext_resource type="Script" uid="uid://b2u6pnq3whpdm" path="res://scenes/player/player.gd" id="1_qhqgy"]
 [ext_resource type="SpriteFrames" uid="uid://x7nr4ebm7nc4" path="res://scenes/player/player_anims.tres" id="2_qhqgy"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://016fsx1pi425" path="res://ui/fishing_bar.gd" id="6_75vfm"]
 [ext_resource type="Texture2D" uid="uid://bbngse38wqni8" path="res://ui/exclamation_mark.png" id="6_gx1jg"]
 [ext_resource type="PackedScene" uid="uid://bow3giawr2rd" path="res://ui/left_click.tscn" id="7_0owmy"]
+[ext_resource type="Theme" uid="uid://02hxyfmkh8im" path="res://ui/themes/slider.tres" id="7_8ydkj"]
 [ext_resource type="Theme" uid="uid://3ydsxh3h11mw" path="res://ui/themes/tooltip_theme.tres" id="7_qek5x"]
 [ext_resource type="Script" uid="uid://c6h46m0d6uex1" path="res://ui/tooltip.gd" id="8_5gtgg"]
 [ext_resource type="PackedScene" uid="uid://c3k4tne8tirwg" path="res://ui/fader.tscn" id="10_h17s1"]
@@ -411,19 +412,20 @@ offset_right = 40.0
 offset_bottom = 40.0
 mouse_filter = 2
 
-[node name="FishingBar" type="VSlider" parent="UI"]
+[node name="FishingBar" type="ProgressBar" parent="UI"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 42.0
-offset_top = -21.0
-offset_right = 58.0
-offset_bottom = 69.0
+offset_left = -81.0
+offset_top = -77.0
+offset_right = -49.0
+offset_bottom = -100.0
 grow_horizontal = 2
 grow_vertical = 2
-editable = false
-scrollable = false
+theme = ExtResource("7_8ydkj")
+show_percentage = false
 script = ExtResource("6_75vfm")
 
 [node name="Tooltip" type="Control" parent="UI"]
@@ -450,9 +452,8 @@ offset_right = -81.0
 offset_bottom = 129.0
 text = "Hold to aim
 Release to cast
-The further you
- move the mouse,
-the further you cast"
+The cast tries to reach where
+your cursor is"
 label_settings = ExtResource("11_fm80t")
 
 [node name="Fader" parent="UI/Tooltip" instance=ExtResource("10_h17s1")]
