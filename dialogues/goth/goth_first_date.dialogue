@@ -77,8 +77,8 @@ Lilith seems impressed. [#sparkle]
 
 She eyes you from head to foot...
 
-Lilith: So, are you like poly or, just looking or something??[#normal]
-- I'm poly
+Lilith: So, are you looking or something or just fooling around??[#normal]
+- I have a crippling fear of commitment
 	=> poly_bad
 - Just trying to meet people
 	=> trying_to_meet_people
@@ -225,13 +225,15 @@ do Globals.decrement_current_love()
 => END
 
 ~ poly_bad
+She blinks once, like your honesty surprised her more than it should’ve.[#nervous]
+And then her expression hardens. [#angry]
 Lilith: Well, that's a shame...[#sad]
 
 Lilith: Didn't know you were so spineless.[#angry]
 
 Lilith: Go elsewhere with your commitment issues.
 
-Lilith: I don't do poly, [shake rate=20 level=10]buddy[/shake]. Get lost.
+Lilith: I don't do casual,[shake rate=20 level=10]buddy[/shake]. Get lost.
 
 It seems like Lilith isn't interested in you anymore.
 do Globals.decrement_current_love()
