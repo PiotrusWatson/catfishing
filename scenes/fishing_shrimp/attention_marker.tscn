@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://b2a5xtjo42m10"]
 
-[ext_resource type="Script" uid="uid://xfbhka3cnrvg" path="res://scenes/fishing_shrimp/attention_marker.gd" id="1_mgml4"]
-[ext_resource type="Texture2D" uid="uid://bbngse38wqni8" path="res://ui/exclamation_mark.png" id="2_6kbfc"]
+[ext_resource type="Script" path="res://scenes/fishing_shrimp/attention_marker.gd" id="1_mgml4"]
+[ext_resource type="Texture2D" uid="uid://k408abu6xwjp" path="res://ui/ui_elements/exclamation_mark.png" id="2_mgml4"]
 
 [sub_resource type="Animation" id="Animation_g47a2"]
 length = 0.001
@@ -171,7 +171,7 @@ script = ExtResource("1_mgml4")
 z_index = 4096
 z_as_relative = false
 scale = Vector2(0.075, 0.075)
-texture = ExtResource("2_6kbfc")
+texture = ExtResource("2_mgml4")
 offset = Vector2(0, -155.92)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

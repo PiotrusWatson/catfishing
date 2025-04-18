@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://bw7csb2v3xxdr" path="res://fonts/Ldfcomicsansbold-zgma.ttf" id="1_1yl33"]
 [ext_resource type="FontFile" uid="uid://e221dwkwx17l" path="res://fonts/Halogen.ttf" id="1_ptliw"]
-[ext_resource type="StyleBox" uid="uid://ckgdxc8f4gpyc" path="res://ui/button_style.tres" id="1_w5it2"]
+[ext_resource type="StyleBox" uid="uid://ckgdxc8f4gpyc" path="res://ui/themes/button_style.tres" id="1_w5it2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w5it2"]
 bg_color = Color(1.49205e-06, 0.478195, 0.2391, 1)

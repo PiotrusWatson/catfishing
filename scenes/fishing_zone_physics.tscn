@@ -5,7 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://bow3giawr2rd" path="res://ui/left_click.tscn" id="3_4ncjp"]
 [ext_resource type="Theme" uid="uid://3ydsxh3h11mw" path="res://ui/themes/tooltip_theme.tres" id="3_ca631"]
 [ext_resource type="Script" uid="uid://dfam5toopoauv" path="res://scenes/tool_tip.gd" id="4_0cchh"]
-[ext_resource type="Texture2D" uid="uid://b6y6jd8ss432a" path="res://placeholder/mice.png" id="5_fi7oa"]
+[ext_resource type="Texture2D" uid="uid://c731jk5giasol" path="res://ui/ui_elements/mouse_l.png" id="6_xqfk0"]
+[ext_resource type="Texture2D" uid="uid://bli8i2ghewawn" path="res://ui/ui_elements/mouse_r.png" id="7_t43ef"]
 [ext_resource type="Script" uid="uid://b4ox8c53hnxuw" path="res://ui/ui_fader.gd" id="7_xqfk0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fi7oa"]
@@ -22,10 +23,6 @@ size = Vector2(1146, 33)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ca631"]
 size = Vector2(1086, 1101)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ca631"]
-atlas = ExtResource("5_fi7oa")
-region = Rect2(825.536, 0, 821.641, 1000)
 
 [node name="FishingZone" type="Area2D"]
 collision_layer = 3
@@ -94,6 +91,8 @@ offset_left = 11.0
 offset_top = -3.0
 offset_right = 859.0
 offset_bottom = 1024.0
+texture = ExtResource("6_xqfk0")
+stretch_mode = 0
 
 [node name="HookGoDown" type="Label" parent="UI/ToolTip"]
 layout_mode = 0
@@ -103,16 +102,15 @@ offset_right = 260.0
 offset_bottom = 66.0
 text = "Extend line (hook go down)"
 
-[node name="TextureRect" type="TextureRect" parent="UI/ToolTip"]
+[node name="RightClick" type="TextureRect" parent="UI/ToolTip"]
 layout_mode = 0
 offset_left = 10.0
 offset_top = 93.0
 offset_right = 860.0
 offset_bottom = 1133.0
 scale = Vector2(0.1, 0.1)
-texture = SubResource("AtlasTexture_ca631")
+texture = ExtResource("7_t43ef")
 expand_mode = 4
-stretch_mode = 1
 
 [node name="HookGoUp" type="Label" parent="UI/ToolTip"]
 layout_mode = 0

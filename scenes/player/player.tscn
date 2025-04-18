@@ -5,15 +5,15 @@
 [ext_resource type="PackedScene" uid="uid://1ar3xmeq1eis" path="res://scenes/player/fishing_rod_verlet.tscn" id="4_dqkch"]
 [ext_resource type="Texture2D" uid="uid://bxe1umjjl3h5b" path="res://assets/fishingrod.png" id="4_je7p5"]
 [ext_resource type="Script" uid="uid://bhuv78l3b3rx8" path="res://scenes/player/gravity_point.gd" id="4_p47bc"]
+[ext_resource type="Texture2D" uid="uid://k408abu6xwjp" path="res://ui/ui_elements/exclamation_mark.png" id="6_8ydkj"]
 [ext_resource type="Script" uid="uid://016fsx1pi425" path="res://ui/fishing_bar.gd" id="6_75vfm"]
-[ext_resource type="Texture2D" uid="uid://bbngse38wqni8" path="res://ui/exclamation_mark.png" id="6_gx1jg"]
 [ext_resource type="PackedScene" uid="uid://bow3giawr2rd" path="res://ui/left_click.tscn" id="7_0owmy"]
 [ext_resource type="Theme" uid="uid://02hxyfmkh8im" path="res://ui/themes/slider.tres" id="7_8ydkj"]
 [ext_resource type="Theme" uid="uid://3ydsxh3h11mw" path="res://ui/themes/tooltip_theme.tres" id="7_qek5x"]
 [ext_resource type="Script" uid="uid://c6h46m0d6uex1" path="res://ui/tooltip.gd" id="8_5gtgg"]
 [ext_resource type="PackedScene" uid="uid://c3k4tne8tirwg" path="res://ui/fader.tscn" id="10_h17s1"]
 [ext_resource type="LabelSettings" uid="uid://bh7imdqglbjak" path="res://scenes/player/instruction_label.tres" id="11_fm80t"]
-[ext_resource type="Texture2D" uid="uid://dxp5jvox6yl38" path="res://ui/mouse_l.png" id="11_gx1jg"]
+[ext_resource type="Texture2D" uid="uid://c731jk5giasol" path="res://ui/ui_elements/mouse_l.png" id="12_8ydkj"]
 [ext_resource type="Script" uid="uid://chqjgnhj0dosf" path="res://scenes/player/mewler.gd" id="14_ugbui"]
 [ext_resource type="AudioStream" uid="uid://detj8w16xj6g8" path="res://audio/sfx/Meow.mp3" id="15_myrg7"]
 [ext_resource type="AudioStream" uid="uid://cq7hi6jve6sdk" path="res://audio/sfx/Meow2.mp3" id="16_kvlxm"]
@@ -399,7 +399,7 @@ shape = SubResource("CircleShape2D_gmlin")
 [node name="Sprite2D" type="Sprite2D" parent="GravityPoint"]
 visible = false
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("6_gx1jg")
+texture = ExtResource("6_8ydkj")
 
 [node name="GravitySpawnPoint" type="Marker2D" parent="."]
 position = Vector2(-1108, 6)
@@ -441,7 +441,7 @@ offset_left = -603.0
 offset_top = 4.0
 offset_right = 197.0
 offset_bottom = 1134.0
-texture = ExtResource("11_gx1jg")
+texture = ExtResource("12_8ydkj")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="UI/Tooltip"]
